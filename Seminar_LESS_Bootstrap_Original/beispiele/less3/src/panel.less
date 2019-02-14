@@ -1,0 +1,26 @@
+
+// Defaultpanel, Info ... etc
+
+.panel {
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin: 2em 0;
+    &_header {
+        padding: 10px;
+    }
+    &_body {
+        padding: 10px; 
+    }
+    &-default {
+        .panelColor(@default);
+    }
+    &-info {
+        .panelColor(@info);
+    }
+    &-warnung {
+        .panelColor(@warnung);
+    }
+    &-success {
+        .panelColor(@success);
+    }    
+}

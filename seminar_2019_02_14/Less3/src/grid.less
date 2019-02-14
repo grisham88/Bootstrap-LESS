@@ -1,0 +1,49 @@
+.grid {
+    width: @basisbreite;
+}
+
+.grid_row {
+    width: @basisbreite; 
+    clear: both;
+    float:left;
+}
+.generiereColumns(@counter) when (@counter <= @spaltenzahl) {
+
+    // 1. Element:
+    .grid-@{selektor}-@{counter} {
+        width: @grideinheit * @counter - @gutter*2;
+        margin: 5px @gutter;
+        background-color: #eee;
+        float:left;
+    }
+
+    .generiereColumns(@counter + 1) // rekursiv!
+}
+
+.generiereColumns(1);
+
+// arbeitet einmal!
+.tuwas() {
+    p {
+        color:black;
+    }
+}
+
+// guarded mixin kann rekursiv arbeiten
+.tuwasMehrmals(@counter) when (@counter < 7) {
+    // h1, h2, h3, ...
+    h@{counter} {
+        color:black;
+    }
+    .tuwasMehrmals(@counter + 1)
+}
+
+// @breite: 50px;
+// .@{selektor}-3 {
+//     width: @breite;
+// }
+
+// Parametermixin als "Function":
+// .tuwas();
+// dto., ruft sich rekursiv weiter auf. Wir starten hier nur:
+// .tuwasMehrmals(1);

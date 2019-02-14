@@ -20,6 +20,7 @@ Inhalt
 		* 2.4.4. [Module](#Module)
 		* 2.4.5. [Gridsystem](#Gridsystem)
 		* 2.4.6. [Responsive CSS](#ResponsiveCSS)
+		* 2.4.7. [Importe](#Importe)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -352,14 +353,14 @@ BEM (Yandex)
 - Superset von CSS (.CSS kann zu .Less-Datei gemacht werden)
 - lesscss.org
 
-Eigenschaften:  
-- Variablen
-- Mixins
-- Hierachien
-- Module
-- Gridsystem
-- Responsive CSS
-
+Eigenschaften:
+- Mixins  
+    - Variablen
+    - Mixins
+    - Hierachien
+    - Module
+    - Gridsystem
+    - Responsive CSS
 - Importe
 - Funktionen
 - Extensions
@@ -1451,3 +1452,6 @@ p {
   }
 }
 ```
+
+####  2.4.7. <a name='Importe'></a>Importe
+- http://lesscss.org/features/#import-atrules-feature

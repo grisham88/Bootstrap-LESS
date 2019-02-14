@@ -1,0 +1,35 @@
+// Mixins Button
+.btnBasis() {
+    padding: 10px;
+    border: none;
+    outline:none;
+}
+.btnAusA() {
+    text-decoration: none;
+    display: inline-block;
+    font-family: verdana;
+    font-size: 1em;
+}
+
+.btnColor(@color) {
+    color: darken(@color, 20%);
+    background-color: lighten(@color, 10%);
+
+    // Hierarchie geht auch im Mixin:
+    &:hover {
+        background-color: lighten(@color, 20%);
+    }
+}
+
+// Mixin Panel:
+.panelColor(@color) {
+    border-color: @color;  
+    
+    // Elementvarianten:
+    & .panel_header {
+        color:@color;
+    } 
+    & .panel_body {
+        background-color: lighten(@color, 30%);
+    } 
+}
