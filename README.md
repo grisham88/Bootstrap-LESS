@@ -17,6 +17,7 @@ Inhalt
 		* 2.4.1. [Beispiele mit Variablen](#BeispielemitVariablen)
 		* 2.4.2. [Mixins](#Mixins)
 		* 2.4.3. [Hierarchien](#Hierarchien)
+		* 2.4.4. [Module](#Module)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -350,8 +351,14 @@ BEM (Yandex)
 - lesscss.org
 
 Eigenschaften:  
-- Bildung von Variablen möglich
+- Variablen
 - Mixins
+- Hierachien
+- Module
+- Gridsystem
+- Responsive CSS
+
+- Importe
 - Funktionen
 - Extensions
 - Mediaqueries
@@ -474,9 +481,6 @@ Zugehörige Anzeige in html
 ```
 
 ####  2.4.2. <a name='Mixins'></a>Mixins
-- Gridsystem
-- Responsive CSS
-- Importe
 
 ##### 2.4.2.1. <a name='BeispielMixinVariantenNormalParametermixins'></a>Beispiel Mixin Varianten (Normal/Parametermixins)
 
@@ -907,6 +911,257 @@ Zugehörige Anzeige in html
         <input type="button" class="btn btn-success" value="Blauer Button">
         <a class="btn btn-warnung">Roter Button</a>
     </p>
+</body>
+
+</html>
+```
+
+#####  2.4.4.2. <a name='BeispielModule'></a>Beispiel Styles und Module
+button.less
+```less
+// Variablen
+@default: #aaa;
+@warnung: rgb(180, 39, 39);
+@info: rgb(34, 122, 34);
+@success: rgb(62, 62, 182);
+
+// Mixins
+.btnBasis() {
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.btnAusA() {
+    text-decoration: none;
+    display: inline-block;
+    font-family: verdana;
+    font-size: 1em;
+}
+
+.btnColor(@color) {
+    color: darken(@color, 20%);
+    background-color: lighten(@color, 10%);
+
+    // Hierarchie geht auch im Mixin:
+    &:hover {
+        background-color: lighten(@color, 20%);
+    }
+}
+
+// Button Modul
+.btn {
+    .btnBasis();
+    .btnAusA();
+
+    // Varianten:
+    &-default {
+        .btnColor(@default);
+    }
+    &-warnung {
+        .btnColor(@warnung);
+    }
+    &-info {
+        .btnColor(@info);
+    }
+    &-success {
+        .btnColor(@success);
+    }
+}
+```
+Konvertierte css aus button.less
+```css
+.btn {
+  padding: 10px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  font-family: verdana;
+  font-size: 1em;
+}
+
+.btn-default {
+  color: #777777;
+  background-color: #c3c3c3;
+}
+
+.btn-default:hover {
+  background-color: #dddddd;
+}
+
+.btn-warnung {
+  color: #601515;
+  background-color: #d43a3a;
+}
+
+.btn-warnung:hover {
+  background-color: #dd6464;
+}
+
+.btn-info {
+  color: #0c2a0c;
+  background-color: #2da22d;
+}
+
+.btn-info:hover {
+  background-color: #3ac83a;
+}
+
+.btn-success {
+  color: #24246a;
+  background-color: #5f5fc8;
+}
+
+.btn-success:hover {
+  background-color: #8585d5;
+}
+```
+panel.less
+```less
+// Variablen
+@default: #aaa;
+@warnung: rgb(180, 39, 39);
+@info: rgb(34, 122, 34);
+@success: rgb(62, 62, 182);
+
+// Mixin:
+.panelColor(@color) {
+    border-color: @color;
+
+    // Elementvarianten:
+    & .panel_header {
+        color: @color;
+    }
+    & .panel_body {
+        background-color: lighten(@color, 30%);
+    }
+}
+
+// Defaultpanel, Info ... etc
+
+.panel {
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin: 2em 0;
+
+    &_header {
+        padding: 10px;
+    }
+    &_body {
+        padding: 10px;
+    }
+    &-default {
+        .panelColor(@default);
+    }
+    &-info {
+        .panelColor(@info);
+    }
+    &-warnung {
+        .panelColor(@warnung);
+    }
+    &-success {
+        .panelColor(@success);
+    }
+}
+```
+Konvertierte css aus panel.less
+```css
+.panel {
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin: 2em 0;
+}
+
+.panel_header {
+  padding: 10px;
+}
+
+.panel_body {
+  padding: 10px;
+}
+
+.panel-default {
+  border-color: #aaa;
+}
+
+.panel-default .panel_header {
+  color: #aaa;
+}
+
+.panel-default .panel_body {
+  background-color: #f6f6f6;
+}
+
+.panel-info {
+  border-color: #227a22;
+}
+
+.panel-info .panel_header {
+  color: #227a22;
+}
+
+.panel-info .panel_body {
+  background-color: #62d362;
+}
+
+.panel-warnung {
+  border-color: #b42727;
+}
+
+.panel-warnung .panel_header {
+  color: #b42727;
+}
+
+.panel-warnung .panel_body {
+  background-color: #e68e8e;
+}
+
+.panel-success {
+  border-color: #3e3eb6;
+}
+
+.panel-success .panel_header {
+  color: #3e3eb6;
+}
+
+.panel-success .panel_body {
+  background-color: #ababe2;
+}
+```
+Zugehörige Anzeige in html
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test der Styles und Module</title>
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/panel.css">
+</head>
+
+<body>
+    <h1>Meine Testseite</h1>
+    <h2>Buttons:</h2>
+    <p><button class="btn btn-warnung">Roter Button</button></p>
+    <h2>Panels</h2>
+    <div class="panel panel-default">
+        <!-- panel -->
+        <!-- panel_header -->
+        <h1 class="panel_header">Panelheader</h1>
+        <!-- panel_body -->
+        <div class="panel_body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatibus?</div>
+    </div>
+    <div class="panel panel-info">
+        <!-- panel -->
+        <!-- panel_header -->
+        <h1 class="panel_header">Panelheader</h1>
+        <!-- panel_body -->
+        <div class="panel_body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatibus?</div>
+    </div>
 </body>
 
 </html>

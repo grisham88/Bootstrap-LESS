@@ -1,0 +1,49 @@
+// Variablen
+@default: #aaa;
+@warnung: rgb(180, 39, 39);
+@info: rgb(34, 122, 34);
+@success: rgb(62, 62, 182);
+
+// Mixins
+.btnBasis() {
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.btnAusA() {
+    text-decoration: none;
+    display: inline-block;
+    font-family: verdana;
+    font-size: 1em;
+}
+
+.btnColor(@color) {
+    color: darken(@color, 20%);
+    background-color: lighten(@color, 10%);
+
+    // Hierarchie geht auch im Mixin:
+    &:hover {
+        background-color: lighten(@color, 20%);
+    }
+}
+
+// Button Modul
+.btn {
+    .btnBasis();
+    .btnAusA();
+
+    // Varianten:
+    &-default {
+        .btnColor(@default);
+    }
+    &-warnung {
+        .btnColor(@warnung);
+    }
+    &-info {
+        .btnColor(@info);
+    }
+    &-success {
+        .btnColor(@success);
+    }
+}
