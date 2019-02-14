@@ -1,0 +1,23 @@
+div#navigation {
+  width: 170px;
+}
+div#navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+div#navigation ul li {
+  margin-bottom: 5px;
+}
+div#navigation ul li a {
+  padding: 10px;
+  display: block;
+  background-color: #ddd;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+}
+div#navigation ul li a:hover {
+  background-color: #eee;
+}

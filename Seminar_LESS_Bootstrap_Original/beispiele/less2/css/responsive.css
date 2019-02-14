@@ -1,0 +1,26 @@
+h1 {
+  color: red;
+}
+@media (min-width: 480px) {
+  h1 {
+    color: green;
+  }
+}
+@media (min-width: 600px) {
+  h1 {
+    color: blue;
+  }
+}
+p {
+  color: black;
+}
+@media (min-width: 480px) {
+  p {
+    color: green;
+  }
+}
+@media (min-width: 600px) {
+  p {
+    color: blue;
+  }
+}
