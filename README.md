@@ -14,12 +14,9 @@ Inhalt
 	* 2.2. [Beispiel classes und ids](#Beispielclassesundids)
 	* 2.3. [Beispiel only classes](#Beispielonlyclasses)
 	* 2.4. [Less](#Less)
-		* 2.4.1. [ Beispiele mit Variablen](#BeispielemitVariablen)
-	* 2.5. [Mixins](#Mixins)
-		* 2.5.1. [ Beispiel Mixin Varianten (Normal/Parametermixins)](#BeispielMixinVariantenNormalParametermixins)
-		* 2.5.2. [ Beispiel Hierarchien](#BeispielHierarchien)
-		* 2.5.3. [ Beispiel Hierarchien & Module](#BeispielHierarchienModule)
-		* 2.5.4. [ Beispiel Module](#BeispielModule)
+		* 2.4.1. [Beispiele mit Variablen](#BeispielemitVariablen)
+		* 2.4.2. [Mixins](#Mixins)
+		* 2.4.3. [Hierarchien](#Hierarchien)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -361,7 +358,7 @@ Eigenschaften:
 
 Nutzung des Farbrads mit Komplentärfarben für Farbharmonien
 
-####  2.4.1. <a name='BeispielemitVariablen'></a> Beispiele mit Variablen
+####  2.4.1. <a name='BeispielemitVariablen'></a>Beispiele mit Variablen
 LESS-Datei
 ```less
 @basisfarbe: #999;
@@ -476,16 +473,12 @@ Zugehörige Anzeige in html
 </html>
 ```
 
-###  2.5. <a name='Mixins'></a>Mixins
-- Hierarchische Menüstruktur (Hierarchie)
-    - z.B. Menu Parentselektor
-- Modul
-    - Button Panel
+####  2.4.2. <a name='Mixins'></a>Mixins
 - Gridsystem
 - Responsive CSS
 - Importe
 
-####  2.5.1. <a name='BeispielMixinVariantenNormalParametermixins'></a> Beispiel Mixin Varianten (Normal/Parametermixins)
+##### 2.4.2.1. <a name='BeispielMixinVariantenNormalParametermixins'></a>Beispiel Mixin Varianten (Normal/Parametermixins)
 
 ```less
 // Wir betrachten Mixins...
@@ -622,7 +615,11 @@ Zugehörige Anzeige in html
 </html>
 ```
 
-####  2.5.2. <a name='BeispielHierarchien'></a> Beispiel Hierarchien
+####  2.4.3. <a name='Hierarchien'></a>Hierarchien
+- Hierarchische Menüstruktur (Hierarchie)
+    - z.B. Menu Parentselektor
+
+#####  2.4.3.1. <a name='BeispielHierarchien'></a>Beispiel Hierarchien
 ```less
 div#navigation {
     width: 170px;
@@ -715,7 +712,7 @@ Zugehörige Anzeige in html
 </html>
 ```
 
-####  2.5.3. <a name='BeispielHierarchienModule'></a> Beispiel Hierarchien & Module
+##### 2.4.3.2. <a name='BeispielHierarchienModule'></a>Beispiel Hierarchien & Module
 ```less
 // ein Textmodul (oder so)
 .text {
@@ -787,9 +784,130 @@ Konvertierte css aus less
 }
 ```
 
-####  2.5.4. <a name='BeispielModule'></a> Beispiel Module
+####  2.4.4. <a name='Module'></a>Module
+Beispiel mit Buttons
+
+#####  2.4.4.1. <a name='BeispielModule'></a>Beispiel Module
 ```less
+// Variablen
+@default: #aaa;
+@warnung: rgb(180, 39, 39);
+@info: rgb(34, 122, 34);
+@success: rgb(62, 62, 182);
+
+// Mixins
+.btnBasis() {
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.btnAusA() {
+    text-decoration: none;
+    display: inline-block;
+    font-family: verdana;
+    font-size: 1em;
+}
+
+.btnColor(@color) {
+    color: darken(@color, 20%);
+    background-color: lighten(@color, 10%);
+    
+    // Hierarchie geht auch im Mixin:
+    &:hover {
+        background-color: lighten(@color, 20%);
+    }
+}
+
+// Button Modul
+.btn {
+    .btnBasis();
+    .btnAusA(); 
+    
+    // Varianten:
+    &-default {
+        .btnColor(@default);
+    }
+    &-warnung {
+        .btnColor(@warnung);
+    }
+    &-info {
+        .btnColor(@info);
+    }
+    &-success {
+        .btnColor(@success);
+    }
+}
 ```
 Konvertierte css aus less
 ```css
+.btn {
+    padding: 10px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    font-family: verdana;
+    font-size: 1em;
+}
+
+.btn-default {
+    color: #777777;
+    background-color: #c3c3c3;
+}
+
+.btn-default:hover {
+    background-color: #dddddd;
+}
+
+.btn-warnung {
+    color: #601515;
+    background-color: #d43a3a;
+}
+
+.btn-warnung:hover {
+    background-color: #dd6464;
+}
+
+.btn-info {
+    color: #0c2a0c;
+    background-color: #2da22d;
+}
+
+.btn-info:hover {
+    background-color: #3ac83a;
+}
+
+.btn-success {
+    color: #24246a;
+    background-color: #5f5fc8;
+}
+
+.btn-success:hover {
+    background-color: #8585d5;
+}
+```
+Zugehörige Anzeige in html
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Less: Module</title>
+    <link rel="stylesheet" href="button.css">
+</head>
+
+<body>
+    <h1>Module in LESS</h1>
+    <p>
+        <button class="btn btn-default">Standardbutton</button>
+        <input type="button" class="btn btn-success" value="Blauer Button">
+        <a class="btn btn-warnung">Roter Button</a>
+    </p>
+</body>
+
+</html>
 ```
