@@ -1,10 +1,7 @@
-@basisfarbe: #555;
+@basisfarbe: #777;
 
 @defaultfarbe: @basisfarbe;
 @warnfarbe: red;
-
-@komplement: spin(@warnfarbe, 180);
-
 @successfarbe: rgb(46, 194, 125);
 @infofarbe: blue;
 
@@ -23,12 +20,12 @@
 h1 {
     color: @defaultTextFarbe;
     border: 1px solid @defaultBorderFarbe;
-    background-color: @defaultBgFarbe; 
-    
-    // Kommentare mit // werden nicht nach .css kompiliert
+    background-color: @defaultBgFarbe;
+    // Kommentar in LESS:
     // color: darken(@basisfarbe, 10%);
     // border: 1px solid darken(@basisfarbe, 10%);
     // background-color: lighten(@basisfarbe, 30%);
+    
     padding: @standardpadding;
     margin: @standardmargin;
 }
@@ -36,24 +33,19 @@ h1 {
 p {
     color: @defaultTextFarbe;
     border: 1px solid @defaultBorderFarbe;
-    background-color: @defaultBgFarbe; 
-    
-    // Kommentare mit /**/ werden nach .css kompiliert
-    /* 
-    color: darken(@basisfarbe, 10%);
-    border: 1px solid @basisfarbe;
-    background-color: lighten(@basisfarbe, 30%);
-    */
+    background-color: @defaultBgFarbe;
+
+    // color: darken(@basisfarbe, 10%);
+    // border: 1px solid darken(@basisfarbe, 10%);
+    // background-color: lighten(@basisfarbe, 30%);
+
     padding: @standardpadding;
     margin: @standardmargin;
 }
-
 p.warning {
     color: @warnTextFarbe;
     border: 1px solid @warnBorderFarbe;
     background-color: @warnBgFarbe;
-}
-
-p.komplement{
-    color: @komplement;
+    padding: @standardpadding;
+    margin: @standardmargin;    
 }

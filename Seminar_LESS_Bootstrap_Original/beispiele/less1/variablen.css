@@ -1,0 +1,21 @@
+h1 {
+  color: #5e5e5e;
+  border: 1px solid #5e5e5e;
+  background-color: #c3c3c3;
+  padding: 15px 15px 30px 45px;
+  margin: 30px;
+}
+p {
+  color: #5e5e5e;
+  border: 1px solid #5e5e5e;
+  background-color: #c3c3c3;
+  padding: 15px 15px 30px 45px;
+  margin: 30px;
+}
+p.warning {
+  color: #cc0000;
+  border: 1px solid #cc0000;
+  background-color: #ff9999;
+  padding: 15px 15px 30px 45px;
+  margin: 30px;
+}

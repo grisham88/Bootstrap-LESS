@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        /* à la SCSS */
+
+        /* Resets */
+        body {
+            margin:0;
+        }
+
+        /* Layout */
+
+        .l-nav {
+            width: 150px;
+            float: left;
+        }
+
+        .l-content {
+            margin-left: 170px;
+        }
+
+        .l-nav-reverse {
+            float:right;
+        }
+        .l-content-reverse {
+            margin-left: 0;
+            margin-right: 170px;
+        }
+
+        /* Generische Styles */
+
+            /* Schriftgrößen, Abstände etc. allgemein ... */
+
+        /* Modul meinwidget */
+
+        .meinwidget {
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .meinwidget-variante {}
+
+        .meinwidget_headline {
+            color: red;
+            background-color: #fff;
+        }
+        .meinwidget_content {
+            background-color: #fff;
+        }
+        .meinwidget_content-active { /* Moduleigener Modifier*/
+            background-color: #ddd;
+        }        
+        .meinwidget_subline {
+            color: #000;
+        }
+        .meinwidget_buttoncontainer {
+            padding: 5px;
+        }
+
+        .meinwidget_button {
+
+        }
+
+        /* Modul btn */
+
+        .btn {              /* Basisklasse */
+            padding: 5px;
+            border-radius: 3px;
+            min-width:80px;
+        }
+
+        .btn-default {      /* Modifierklasse */
+            background-color: #ddd;
+            border: 1px solid #000;
+        }
+        .btn-default:hover {      /* Modifierklasse */
+            background-color: rgb(235, 235, 235);
+            border: 1px solid #000;
+        }
+        
+        .btn-info {         /* Modifierklasse */
+            background-color: lightblue;
+            border: 1px solid blue;
+        }
+        .btn-info:hover {         /* Modifierklasse */
+            background-color: rgb(205, 230, 238);
+            border: 1px solid blue;
+        }        
+        .btn-success {      /* Modifierklasse */
+            background-color: lightgreen;
+            border: 1px solid green;
+        }
+        .btn-success:hover {      /* Modifierklasse */
+            background-color: rgb(177, 241, 177);
+            border: 1px solid green;
+        }
+
+
+        /* States bzw. Modifier */
+
+        /* Idee: Präfixes, z.B. l- (Layout), 
+                                u- (Utility), 
+                                t- (Theme) 
+                                is-, has-, did-, can- (Zustand) 
+         */
+
+        .is-active {
+            background-color: #ddd;
+        }
+
+        .has-sidebar {
+            padding-left: 20px;
+        }
+
+        .is-disabled {
+            color: #999;
+        }
+
+        .l-big-padding {
+            padding: 15px;
+        }
+
+        .u-float-left {
+            float:left;
+        }
+        .u-float-right {
+            float:right;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="l-nav l-nav-reverse">
+        <ul>
+            <li><a href="">Beispielnav</a></li>
+            <li><a href="">Beispielnav</a></li>
+            <li><a href="">Beispielnav</a></li>
+            <li><a href="">Beispielnav</a></li>
+            <li><a href="">Beispielnav</a></li>
+        </ul>
+    </div>
+    <div class="l-content l-content-reverse">
+        <h1>Modulares CSS</h1>
+        <div class="meinwidget">
+            <h2 class="meinwidget_headline">Überschrift des Widgets</h2>
+            <p class="meinwidget_content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, quisquam! Sint, possimus consequuntur? Error, temporibus?</p>
+            <p class="meinwidget_buttoncontainer">
+                <button class="btn btn-success meinwidget_button meinwidget_button-ja">Ja</button>
+                <button class="btn btn-info meinwidget_button meinwidget_button-nein">Nein</button>
+                <input type="button" value="Vielleicht" 
+                       class="btn btn-default meinwidget_button meinwidget_button-vielleicht">
+            </p>
+            <p class="meinwidget_subline js-select-me">Soll anders aussehen...</p>
+
+        </div>
+    </div>
+</body>
+</html>
