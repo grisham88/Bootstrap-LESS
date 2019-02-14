@@ -14,10 +14,11 @@ Inhalt
 	* 2.2. [Beispiel classes und ids](#Beispielclassesundids)
 	* 2.3. [Beispiel only classes](#Beispielonlyclasses)
 	* 2.4. [Less](#Less)
-		* 2.4.1. [Beispiele mit Variablen](#BeispielemitVariablen)
+		* 2.4.1. [Variablen](#Variablen)
 		* 2.4.2. [Mixins](#Mixins)
 		* 2.4.3. [Hierarchien](#Hierarchien)
 		* 2.4.4. [Module](#Module)
+		* 2.4.5. [Gridsystem](#Gridsystem)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -365,7 +366,10 @@ Eigenschaften:
 
 Nutzung des Farbrads mit Komplentärfarben für Farbharmonien
 
-####  2.4.1. <a name='BeispielemitVariablen'></a>Beispiele mit Variablen
+####  2.4.1. <a name='Variablen'></a>Variablen
+- http://lesscss.org/features/#variables-feature
+
+#####  2.4.1.1 <a name='BeispielemitVariablen'></a>Beispiele mit Variablen
 LESS-Datei
 ```less
 @basisfarbe: #999;
@@ -473,7 +477,8 @@ Zugehörige Anzeige in html
 
 <body>
     <h1>Variablen in LESS</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, pariatur aspernatur velit quidem voluptate illum.
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quis, pariatur aspernatur velit quidem voluptate illum.
     </p>
     <p class="warning">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 </body>
@@ -481,6 +486,7 @@ Zugehörige Anzeige in html
 ```
 
 ####  2.4.2. <a name='Mixins'></a>Mixins
+- http://lesscss.org/features/#mixins-feature
 
 ##### 2.4.2.1. <a name='BeispielMixinVariantenNormalParametermixins'></a>Beispiel Mixin Varianten (Normal/Parametermixins)
 
@@ -622,6 +628,8 @@ Zugehörige Anzeige in html
 ####  2.4.3. <a name='Hierarchien'></a>Hierarchien
 - Hierarchische Menüstruktur (Hierarchie)
     - z.B. Menu Parentselektor
+- https://css-tricks.com/strategies-keeping-css-specificity-low/
+- http://lesscss.org/features/#parent-selectors-feature
 
 #####  2.4.3.1. <a name='BeispielHierarchien'></a>Beispiel Hierarchien
 ```less
@@ -789,7 +797,8 @@ Konvertierte css aus less
 ```
 
 ####  2.4.4. <a name='Module'></a>Module
-Beispiel mit Buttons
+- https://css-tricks.com/css-modules-part-1-need/
+- Beispiel mit Buttons
 
 #####  2.4.4.1. <a name='BeispielModule'></a>Beispiel Module
 ```less
@@ -916,7 +925,7 @@ Zugehörige Anzeige in html
 </html>
 ```
 
-#####  2.4.4.2. <a name='BeispielModule'></a>Beispiel Styles und Module
+#####  2.4.4.2. <a name='BeispielStylesundModule'></a>Beispiel Styles und Module
 button.less
 ```less
 // Variablen
@@ -1161,6 +1170,215 @@ Zugehörige Anzeige in html
         <h1 class="panel_header">Panelheader</h1>
         <!-- panel_body -->
         <div class="panel_body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatibus?</div>
+    </div>
+</body>
+
+</html>
+```
+
+####  2.4.5. <a name='Gridsystem'></a>Gridsystem
+- https://designshack.net/articles/css/introducing-the-less-css-grid/
+
+Nutzung von Funktionen:
+- http://lesscss.org/features/#mixins-feature-loops-feature
+- http://lesscss.org/features/#mixins-feature-mixin-guards-feature
+
+#####  2.4.5.1. <a name='BeispielGridsystem'></a>Beispiel Gridsystem
+```less
+// Gridmodul
+@selektor: col;
+@basisbreite: 100%;
+@spaltenzahl: 12;
+@grideinheit: @basisbreite / @spaltenzahl;
+// Abstände?? Vielleicht später...
+@gutter:0.5%;
+
+.grid {
+    width: @basisbreite;
+}
+
+.grid_row {
+    width: @basisbreite;
+    clear: both;
+    float: left;
+}
+
+.generiereColumns(@counter) when (@counter <= @spaltenzahl) {
+    // 1. Element:
+    // Zugriff auf den Variablen-Namen für Selektoren @counter muss mit
+    // @{counter} aufgerufen werden
+    .grid-@{selektor}-@{counter} {
+        width: @grideinheit * @counter -  @gutter*2;
+        margin: 5px;
+        background-color: #eee;
+        float: left;
+    }
+    .generiereColumns(@counter + 1) // rekursiv!
+}
+
+.generiereColumns(1);
+
+// arbeitet einmal!
+.tuwas() {
+    p {
+        color: black;
+    }
+}
+
+// guarded mixin kann rekursiv arbeiten
+.tuwasMehrmals(@counter) when (@counter < 7) {
+    // h1, h2, h3, ...
+    h@{counter} {
+        color: black;
+    }
+    .tuwasMehrmals(@counter + 1)
+}
+
+// @breite: 50px;
+// .@{selektor}-3 {
+//     width: @breite;
+// }
+// Parametermixin als "Function":
+// .tuwas();
+// dto., ruft sich rekursiv weiter auf. Wir starten hier nur:
+// .tuwasMehrmals(1);
+```
+Konvertierte css aus less
+```css
+.grid {
+  width: 100%;
+}
+.grid_row {
+  width: 100%;
+  clear: both;
+  float: left;
+}
+.grid-col-1 {
+  width: 7.33333333%;
+  margin: 5px;
+  background-color: #eee;
+  float: left;
+}
+.grid-col-2 {
+  width: 15.66666667%;
+  margin: 5px;
+  background-color: #eee;
+  float: left;
+}
+.grid-col-3 {
+  width: 24%;
+  margin: 5px;
+  background-color: #eee;
+  float: left;
+}
+.grid-col-4 {
+  width: 32.33333333%;
+  margin: 5px;
+  background-color: #eee;
+  float: left;
+}
+.grid-col-5 {
+  width: 40.66666667%;
+  margin: 5px;
+  background-color: #eee;
+  float: left;
+}
+.grid-col-6 {
+  width: 49%;
+  margin: 5px;
+  background-color: #eee;
+  float: left;
+}
+.grid-col-7 {
+  width: 57.33333333%;
+  margin: 5px;
+  background-color: #eee;
+  float: left;
+}
+.grid-col-8 {
+  width: 65.66666667%;
+  margin: 5px;
+  background-color: #eee;
+  float: left;
+}
+.grid-col-9 {
+  width: 74%;
+  margin: 5px;
+  background-color: #eee;
+  float: left;
+}
+.grid-col-10 {
+  width: 82.33333333%;
+  margin: 5px;
+  background-color: #eee;
+  float: left;
+}
+.grid-col-11 {
+  width: 90.66666667%;
+  margin: 5px;
+  background-color: #eee;
+  float: left;
+}
+.grid-col-12 {
+  width: 99%;
+  margin: 5px;
+  background-color: #eee;
+  float: left;
+}
+```
+Zugehörige Anzeige in html
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test der Styles und Module</title>
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/panel.css">
+    <link rel="stylesheet" href="css/grid.css">
+</head>
+
+<body>
+    <h1>Meine Testseite</h1>
+    <h2>Buttons:</h2>
+    <p><button class="btn btn-warnung">Roter Button</button></p>
+    <h2>Panels</h2>
+    <div class="panel panel-default">
+        <!-- panel -->
+        <!-- panel_header -->
+        <h1 class="panel_header">Panelheader</h1>
+        <!-- panel_body -->
+        <div class="panel_body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatibus?</div>
+    </div>
+    <div class="panel panel-info">
+        <!-- panel -->
+        <!-- panel_header -->
+        <h1 class="panel_header">Panelheader</h1>
+        <!-- panel_body -->
+        <div class="panel_body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatibus?</div>
+    </div>
+    <h2>Grid</h2>
+    <div class="grid">
+        <div class="grid_row">
+            <div class="grid-col-3">3 Einheiten Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Dolore fugit magni inventore!</div>
+            <div class="grid-col-5">5 Einheiten Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ut
+                doloribus voluptas similique amet in?</div>
+            <div class="grid-col-4">4 Einheiten</div>
+        </div>
+        <div class="grid_row">
+            <div class="grid-col-4">4 Einheiten</div>
+            <div class="grid-col-4">4 Einheiten</div>
+            <div class="grid-col-4">4 Einheiten</div>
+        </div>
+        <div class="grid_row">
+            <div class="grid-col-6">6 Einheiten</div>
+            <div class="grid-col-2">2 Einheiten</div>
+            <div class="grid-col-4">4 Einheiten</div>
+        </div>
     </div>
 </body>
 
