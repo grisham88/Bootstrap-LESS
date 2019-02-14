@@ -1,6 +1,6 @@
 # Bootstrap-LESS Seminar
 
-#Inhalt
+Inhalt
 <!-- vscode-markdown-toc -->
 * 1. [Ausführung und Installation mittels Visual Studio Code](#AusfhrungundInstallationmittelsVisualStudioCode)
 	* 1.1. [Visual Studio Code](#VisualStudioCode)
@@ -8,11 +8,15 @@
 	* 1.3. [Extensions für VS Code](#ExtensionsfrVSCode)
 	* 1.4. [Emmet Cheatsheets](#EmmetCheatsheets)
 	* 1.5. [Bootstrap](#Bootstrap)
-	
-* 2. [Ausführung und Installation mittels Visual Studio Code](#AusfhrungundInstallationmittelsVisualStudioCode)
-	* 2.1. [ACHTUNG](#ACHTUNG)
-	* 2.2. [Hilfsfunktionen für VS Code](#HilfsfunktionenfrVSCode)
-	* 2.3. [Extensions für VS Code](#ExtensionsfrVSCode)
+	* 1.6. [LESS](#LESS)
+* 2. [Bootstrap](#Bootstrap-1)
+	* 2.1. [Modulares CSS](#ModularesCSS)
+	* 2.2. [Beispiel classes und ids](#Beispielclassesundids)
+	* 2.3. [Beispiel only classes](#Beispielonlyclasses)
+	* 2.4. [Lelesss](#Less)
+		* 2.4.1. [ Beispiele](#Beispiele)
+	* 2.5. [Bootstrap](#Bootstrap-1)
+
 <!-- vscode-markdown-toc-config
 	numbering=true
 	autoSave=true
@@ -62,9 +66,19 @@ Installation:
 npm install --save @ng-bootstrap/ng-bootstrap
 ```
 
-##  2. <a name='BootstrapLESS'></a>Bootstrap
+###  1.6. <a name='LESS'></a>LESS
+Installation: 
+```html
+npm install -g less
+```
+Abfrage der Version: 
+```html
+lessc --version
+```
 
-### 2.1 <a name ='ModularesCSS'></a>Modulares CSS
+##  2. <a name='Bootstrap-1'></a>Bootstrap
+
+###  2.1. <a name='ModularesCSS'></a>Modulares CSS
 Großes Webprojekt
 - Unübersichtlich
 	- Nomenklatur
@@ -96,7 +110,7 @@ BEM (Yandex)
 		- block__element
 			- block--modifier
 
-### 2.1.1 <a name ='ModularesCSSBeispielClassesUndIds'></a>Beispiel classes und ids
+###  2.2. <a name='Beispielclassesundids'></a>Beispiel classes und ids
 ```css
 <style>
 	#content .meinwidget {
@@ -139,7 +153,7 @@ BEM (Yandex)
 </body>
 ```
 
-### 2.1.2 <a name ='ModularesCSSBeispielOnlyClasses'></a>Beispiel only classes
+###  2.3. <a name='Beispielonlyclasses'></a>Beispiel only classes
 ```css
 <style>
         /* à la SCSS */
@@ -316,12 +330,22 @@ BEM (Yandex)
     </div>
 </body>
 ```
-### 2.2 <a name ='Less'></a>Less
+###  2.4. <a name='Less'></a>Less
 - Alex Sellier (Urheber)
 - CSS Präprozessor
 - Superset von CSS (.CSS kann zu .Less-Datei gemacht werden)
+- lesscss.org
 
-### 2.3 <a name ='Bootstrap'></a>Bootstrap
+Eigenschaften:  
+- Bildung von Variablen möglich
+- Mixins
+- Funktionen
+- Extensions
+- Mediaqueries
+
+####  2.4.1. <a name='Beispiele'></a> Beispiele
+
+###  2.5. <a name='Bootstrap-1'></a>Bootstrap
 - CSS-Framework
 	- Version 3 -> 3.3.7 Less  
 	- Version 4 -> 4.x SASS
