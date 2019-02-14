@@ -1,0 +1,29 @@
+.text {
+    color: black;
+    padding: 5px;
+}
+
+.text:hover {
+    color: red;
+}
+
+.text.active {
+    background-color: lightblue;
+}
+
+.text-info {
+    color: green;
+    background-color: lightgreen;
+}
+
+.text_header {
+    font-weight: bold;
+}
+
+.text span {
+    color: purple;
+}
+
+.content .text {
+    color: blue;
+}

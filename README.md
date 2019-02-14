@@ -7,15 +7,19 @@ Inhalt
 	* 1.2. [Hilfsfunktionen für VS Code](#HilfsfunktionenfrVSCode)
 	* 1.3. [Extensions für VS Code](#ExtensionsfrVSCode)
 	* 1.4. [Emmet Cheatsheets](#EmmetCheatsheets)
-	* 1.5. [Bootstrap](#Bootstrap)
-	* 1.6. [LESS](#LESS)
-* 2. [Bootstrap](#Bootstrap-1)
+	* 1.5. [Bootstrap Installation](#BootstrapInstallation)
+	* 1.6. [LESS Installation](#LESSInstallation)
+* 2. [Bootstrap](#Bootstrap)
 	* 2.1. [Modulares CSS](#ModularesCSS)
 	* 2.2. [Beispiel classes und ids](#Beispielclassesundids)
 	* 2.3. [Beispiel only classes](#Beispielonlyclasses)
 	* 2.4. [Less](#Less)
-		* 2.4.1. [ Beispiele](#Beispiele)
-	* 2.5. [Bootstrap](#Bootstrap-1)
+		* 2.4.1. [ Beispiele mit Variablen](#BeispielemitVariablen)
+	* 2.5. [Mixins](#Mixins)
+		* 2.5.1. [ Beispiel Mixin Varianten (Normal/Parametermixins)](#BeispielMixinVariantenNormalParametermixins)
+		* 2.5.2. [ Beispiel Hierarchien](#BeispielHierarchien)
+		* 2.5.3. [ Beispiel Hierarchien & Module](#BeispielHierarchienModule)
+		* 2.5.4. [ Beispiel Module](#BeispielModule)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -60,7 +64,7 @@ Installationen durchführen für folgende Extensions:
 ###  1.4. <a name='EmmetCheatsheets'></a>Emmet Cheatsheets
 - https://docs.emmet.io/cheat-sheet/
 
-###  1.5. <a name='Bootstrap'></a>Bootstrap
+###  1.5. <a name='BootstrapInstallation'></a>Bootstrap Installation
 Eingabe im Terminal
 
 Installation: 
@@ -68,23 +72,27 @@ Installation:
 npm install --save @ng-bootstrap/ng-bootstrap
 ```
 
-###  1.6. <a name='LESS'></a>LESS
+###  1.6. <a name='LESSInstallation'></a>LESS Installation
 Eingabe im Terminal
 
 Installation: 
 ```html
 npm install -g less
 ```
-Abfrage der Version: ```html
+Abfrage der Version: 
+```html
 lessc --version
 ```
-
 .less zu .css wandeln
 ```html
 lessc variablen.less variablen.css
 ```
 
-##  2. <a name='Bootstrap-1'></a>Bootstrap
+##  2. <a name='Bootstrap'></a>Bootstrap
+- CSS-Framework
+	- Version 3 -> 3.3.7 Less  
+	- Version 4 -> 4.x SASS
+- Modulares CSS
 
 ###  2.1. <a name='ModularesCSS'></a>Modulares CSS
 Großes Webprojekt
@@ -353,7 +361,7 @@ Eigenschaften:
 
 Nutzung des Farbrads mit Komplentärfarben für Farbharmonien
 
-####  2.4.1. <a name='Beispiele'></a> Beispiele
+####  2.4.1. <a name='BeispielemitVariablen'></a> Beispiele mit Variablen
 LESS-Datei
 ```less
 @basisfarbe: #999;
@@ -468,8 +476,320 @@ Zugehörige Anzeige in html
 </html>
 ```
 
-###  2.5. <a name='Bootstrap-1'></a>Bootstrap
-- CSS-Framework
-	- Version 3 -> 3.3.7 Less  
-	- Version 4 -> 4.x SASS
-- Modulares CSS
+###  2.5. <a name='Mixins'></a>Mixins
+- Hierarchische Menüstruktur (Hierarchie)
+    - z.B. Menu Parentselektor
+- Modul
+    - Button Panel
+- Gridsystem
+- Responsive CSS
+- Importe
+
+####  2.5.1. <a name='BeispielMixinVariantenNormalParametermixins'></a> Beispiel Mixin Varianten (Normal/Parametermixins)
+
+```less
+// Wir betrachten Mixins...
+// ein Mixin kann aussehen wie...
+// eine Klasse:
+.btnprops {
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+// ein ID-Selektor (ungebräuchlich)
+// hier als Param-mixin
+// Durch () wird die Klasse im .css nicht mehr ausgegeben
+#btnprops2() {
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+// Es gibt auch "Parametermixins":
+// Durch () wird die Klasse im .css nicht mehr ausgegeben
+.btnfarben() {
+    color: black;
+    border: 1px solid #000;
+    background-color: lightgrey;
+}
+
+.btnfarbenMitParam(@color) {
+    color: @color;
+    border: 1px solid @color;
+    background-color: lighten(@color, 30%);
+}
+
+//Mit Defaultparameter
+.btnfarbenMitDefault(@color: black) {
+    color: @color;
+    border: 1px solid @color;
+    background-color: lighten(@color, 50%);
+}
+
+//Aufruf eines Parametermixins mit Defaultparameter
+.btn {
+    // Mixin verwenden:
+    .btnprops;
+    .btnfarbenMitDefault;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+//Aufruf eines Parametermixins
+.blue-btn {
+    #btnprops2;
+    .btnfarbenMitParam(blue);
+}
+
+//Aufruf eines Parametermixins
+.red-btn {
+    .btnfarbenMitParam(red);
+    .btnprops;
+}
+```
+Konvertierte css aus less
+```css
+.btnprops {
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.btn {
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  border: 1px solid black;
+  background-color: #808080;
+}
+.btn:hover {
+  background-color: #ddd;
+}
+.blue-btn {
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: blue;
+  border: 1px solid blue;
+  background-color: #9999ff;
+}
+.red-btn {
+  color: red;
+  border: 1px solid red;
+  background-color: #ff9999;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+```
+Zugehörige Anzeige in html
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Less: Mixins</title>
+    <link rel="stylesheet" href="mixins.css">
+</head>
+
+<body>
+    <h1>Mixins</h1>
+    <p>
+        <button class="btn">Standardbutton</button>
+        <button class="blue-btn">Blauer Button</button>
+        <button class="red-btn">Roter Button</button>
+    </p>
+</body>
+
+</html>
+```
+
+####  2.5.2. <a name='BeispielHierarchien'></a> Beispiel Hierarchien
+```less
+div#navigation {
+    width: 170px;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            margin-bottom: 5px;
+            a {
+                padding: 10px;
+                display: block;
+                background-color: #ddd;
+                text-decoration: none;
+                color: #000;
+                text-align: center;
+                font-weight: bold; // Parent-Selektor &
+                &:hover {
+                    background-color: #eee;
+                } 
+                // NIMM :hover
+                // schreibe davor: div#navigation ul li  a
+                // daher &:hover wird zu:
+                // div#navigation ul li a:hover
+            } 
+            // so ginge es (ist aber nicht so gut):
+            // a:hover {
+            //     background-color: #eee;
+            // }
+        }
+    }
+}
+```
+Konvertierte css aus less
+```css
+div#navigation {
+    width: 170px;
+}
+
+div#navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+div#navigation ul li {
+    margin-bottom: 5px;
+}
+
+div#navigation ul li a {
+    padding: 10px;
+    display: block;
+    background-color: #ddd;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+}
+
+div#navigation ul li a:hover {
+    background-color: #eee;
+}
+```
+Zugehörige Anzeige in html
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Less: Hierarchische Strukturen</title>
+    <link rel="stylesheet" href="hierarchisch01.css">
+</head>
+
+<body>
+    <div id="navigation">
+        <!-- ul>li*5>a{Beispielmenü $} -->
+        <ul>
+            <li><a href="#">Beispielmenü 1</a></li>
+            <li><a href="#">Beispielmenü 2</a></li>
+            <li><a href="#">Beispielmenü 3</a></li>
+            <li><a href="#">Beispielmenü 4</a></li>
+            <li><a href="#">Beispielmenü 5</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
+```
+
+####  2.5.3. <a name='BeispielHierarchienModule'></a> Beispiel Hierarchien & Module
+```less
+// ein Textmodul (oder so)
+.text {
+    color: black;
+    padding: 5px;
+    
+    &:hover {
+        color: red;
+    }
+
+    &.active {
+        background-color: lightblue;
+    } 
+    
+    // Modifier
+    &-info {
+        color: green;
+        background-color: lightgreen;
+    } 
+    
+    // Element
+    &_header {
+        font-weight: bold;
+    }
+
+    & span {
+        color: purple;
+    } 
+    // im Content soll das anders aussehen
+    .content & {
+        color: blue
+    }
+}
+
+// .content .text {
+//     color:blue
+// }
+```
+Konvertierte css aus less
+```css
+.text {
+    color: black;
+    padding: 5px;
+}
+
+.text:hover {
+    color: red;
+}
+
+.text.active {
+    background-color: lightblue;
+}
+
+.text-info {
+    color: green;
+    background-color: lightgreen;
+}
+
+.text_header {
+    font-weight: bold;
+}
+
+.text span {
+    color: purple;
+}
+
+.content .text {
+    color: blue;
+}
+```
+
+####  2.5.4. <a name='BeispielModule'></a> Beispiel Module
+```less
+```
+Konvertierte css aus less
+```css
+```

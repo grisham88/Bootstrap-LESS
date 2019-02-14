@@ -1,0 +1,36 @@
+// ein Textmodul (oder so)
+.text {
+    color: black;
+    padding: 5px;
+    
+    &:hover {
+        color: red;
+    }
+
+    &.active {
+        background-color: lightblue;
+    } 
+    
+    // Modifier
+    &-info {
+        color: green;
+        background-color: lightgreen;
+    } 
+    
+    // Element
+    &_header {
+        font-weight: bold;
+    }
+
+    & span {
+        color: purple;
+    } 
+    // im Content soll das anders aussehen
+    .content & {
+        color: blue
+    }
+}
+
+// .content .text {
+//     color:blue
+// }

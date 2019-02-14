@@ -1,0 +1,65 @@
+// Wir betrachten Mixins...
+// ein Mixin kann aussehen wie...
+// eine Klasse:
+.btnprops {
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+// ein ID-Selektor (ungebräuchlich)
+// hier als Param-mixin
+// Durch () wird die Klasse im .css nicht mehr ausgegeben
+#btnprops2() {
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+// Es gibt auch "Parametermixins":
+// Durch () wird die Klasse im .css nicht mehr ausgegeben
+.btnfarben() {
+    color: black;
+    border: 1px solid #000;
+    background-color: lightgrey;
+}
+
+.btnfarbenMitParam(@color) {
+    color: @color;
+    border: 1px solid @color;
+    background-color: lighten(@color, 30%);
+}
+
+//Mit Defaultparameter
+.btnfarbenMitDefault(@color: black) {
+    color: @color;
+    border: 1px solid @color;
+    background-color: lighten(@color, 50%);
+}
+
+//Aufruf eines Parametermixins mit Defaultparameter
+.btn {
+    // Mixin verwenden:
+    .btnprops;
+    .btnfarbenMitDefault;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+//Aufruf eines Parametermixins
+.blue-btn {
+    #btnprops2;
+    .btnfarbenMitParam(blue);
+}
+
+//Aufruf eines Parametermixins
+.red-btn {
+    .btnfarbenMitParam(red);
+    .btnprops;
+}
