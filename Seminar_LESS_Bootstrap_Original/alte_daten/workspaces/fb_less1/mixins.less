@@ -1,0 +1,49 @@
+// Mixins und Parametermixins
+// .mixin {
+//     ein: normales Mixin;
+// }
+
+// .parameterMixin(@Parameter) {
+//     propName: @Parameter;
+// }
+
+// Parametermixin ohne Parameter
+.btnBasisProps() {
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-transform:uppercase;
+    font-weight: bold;
+}
+// Parametermixin mit Parameter UND Defaultwert
+.btnColorProps(@color: grey) {
+    background: lighten(@color, 30%);
+    border:1px solid darken(@color, 10%);
+}
+
+.btn {
+    .btnBasisProps();
+    // Defaultwert tritt in Kraft:
+    .btnColorProps;
+}
+
+.btn:hover {
+    background: lighten(lightgrey, 10%);
+}
+
+.blue-btn {
+    .btnBasisProps;
+    .btnColorProps(blue);
+}
+.blue-btn:hover {
+    background: lighten(lightblue, 10%);
+}
+
+.red-btn {
+    .btnBasisProps;
+    .btnColorProps(red);
+}
+// hier müssen wir noch ran!!
+.red-btn:hover {
+    background: lighten(red, 40%);
+}

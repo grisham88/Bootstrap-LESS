@@ -1,0 +1,16 @@
+/* Das allererste Beispiel */
+
+// Variablen:
+@basisfarbe: red;
+
+@textfarbe : darken(@basisfarbe, 10%);
+@borderfarbe: @basisfarbe;
+@bgfarbe: lighten(@basisfarbe, 40%);
+
+// ist das cool?
+p {
+    font-size:1.2em;
+    color: @textfarbe;
+    border: 1px solid @borderfarbe;
+    background-color: @bgfarbe;
+}

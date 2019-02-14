@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap: Das Grid-System</title>
+    <link rel="stylesheet" href="css/myBootstrap.css">
+    <style>
+        .myCol {
+            background: #ddd;
+        }
+        .myColr {
+            background: pink;
+
+            transition: left 1s;
+        }
+        .myColg {
+            background: lightgreen;
+        }   
+        .myColb {
+            background: lightblue;
+        }     
+        .row {
+            /* sichtbar machen: */
+            outline: 2px solid red;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Das Grid-System: jetzt 16 Spalten</h1>
+        <h3 class="visible-lg bg-info">Layout Large</h3>
+        <h3 class="visible-md bg-info">Layout Medium</h3>
+        <h3 class="visible-sm bg-info">Layout Small</h3>
+        <h3 class="visible-xs bg-info">Layout XSmall</h3>
+        <div id="nav" class="hidden-print">
+            <h3>Diese Navigation erscheint NICHT im Druck!</h3>
+            <ul>
+                <li><a href="">Tolle Navigation</a></li>
+                <li><a href="">Tolle Navigation</a></li>
+                <li><a href="">Tolle Navigation</a></li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="myCol col-md-4">Spalte 1:  col-md-4</div>
+            <div class="myColb col-md-4">Spalte 2:  col-md-4</div>
+            <div class="myCol col-md-4">Spalte 3:  col-md-4</div>
+        </div>
+        <div class="row">
+            <div class="myCol col-md-4 col-lg-8">
+                <h3>Spalte 1:  col-md-4 col-lg-6</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos harum accusantium eum nostrum nihil quis ad eveniet dolores totam, qui, voluptatum, rerum nemo itaque?</p>
+            </div>
+            <div class="myColg col-md-4 col-lg-8">
+                <h3>Spalte 2:  col-md-4 col-lg-6</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos harum accusantium eum nostrum nihil quis ad eveniet dolores totam, qui, voluptatum, rerum nemo itaque?</p>
+            </div>
+            <div class="myCol col-md-8 col-lg-16">
+                <h3>Spalte 3:  col-md-4 col-lg-16</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos harum accusantium eum nostrum nihil quis ad eveniet dolores totam, qui, voluptatum, rerum nemo itaque?</p>
+            </div>
+        </div>
+       <div class="row">
+            <div class="myColr col-md-6 col-lg-6 col-lg-push-6">
+                <h3>Spalte 1:  col-md-6 col-lg-6</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos harum accusantium eum nostrum nihil quis ad eveniet dolores totam, qui, voluptatum, rerum nemo itaque?</p>
+            </div>
+            <div class="myColg col-md-10 col-lg-10 col-lg-pull-6">
+                <h3>Spalte 2:  col-md-6 col-lg-6</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos harum accusantium eum nostrum nihil quis ad eveniet dolores totam, qui, voluptatum, rerum nemo itaque?</p>
+            </div>
+        </div>
+        <div class="row">
+                <div class="myCol col-sm-6 col-md-4">
+                    <h3>Spalte 1:  col-sm-6 col-md-4</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos harum accusantium eum nostrum nihil quis ad eveniet dolores totam, qui, voluptatum, rerum nemo itaque?</p>
+                </div>
+                <div class="myCol  col-sm-6 col-md-4">
+                    <h3>Spalte 2: col-sm-6 col-md-4</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos harum accusantium eum nostrum nihil quis ad eveniet dolores totam, qui, voluptatum, rerum nemo itaque?</p>
+                </div>
+                <div class="myColb hidden-sm hidden-xs  col-md-4">
+                    <h3>Spalte 3:  col-md-4</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos harum accusantium eum nostrum nihil quis ad eveniet dolores totam, qui, voluptatum, rerum nemo itaque?</p>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="myCol col-sm-6 col-md-4">
+                        <h3>Spalte 1:  col-sm-6 col-md-4</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos harum accusantium eum nostrum nihil quis ad eveniet dolores totam, qui, voluptatum, rerum nemo itaque?</p>
+                    </div>
+                    <div class="myCol  col-sm-6 col-md-4">
+                        <h3>Spalte 2: col-sm-6 col-md-4</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos harum accusantium eum nostrum nihil quis ad eveniet dolores totam, qui, voluptatum, rerum nemo itaque?</p>
+                    </div>
+                    <div class="myColb hidden-sm hidden-xs  col-md-4">
+                        <h3>Spalte 3:  col-md-4</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos harum accusantium eum nostrum nihil quis ad eveniet dolores totam, qui, voluptatum, rerum nemo itaque?</p>
+                    </div>
+                </div>
+
+    </div><!-- ENDE .container -->
+</body>
+</html>

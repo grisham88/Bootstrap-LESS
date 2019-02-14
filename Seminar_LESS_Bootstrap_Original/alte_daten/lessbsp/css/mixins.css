@@ -1,0 +1,32 @@
+.allgemeine-eigenschaften {
+  padding: 15px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+.test {
+  color: black;
+}
+p {
+  padding: 15px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #eee;
+  color: black;
+}
+.panel {
+  padding: 15px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #ffcccc;
+  color: red;
+}
+.card {
+  padding: 15px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+.container {
+  background-color: #eee;
+  color: black;
+  border-radius: 15px;
+}

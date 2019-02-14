@@ -1,0 +1,7 @@
+{
+    "less.compile": {
+        "out": "${workspaceRoot}\\css\\myBootstrap.css",
+        "main": "myBootstrap.less",
+        "compress": false
+    }
+}

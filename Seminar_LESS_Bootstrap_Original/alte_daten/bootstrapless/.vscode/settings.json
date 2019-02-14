@@ -1,0 +1,6 @@
+{
+    "less.compile": {
+        "out":  "../dist/css/bootstrap.css",
+        "main": "bootstrap.less"      
+    }
+}

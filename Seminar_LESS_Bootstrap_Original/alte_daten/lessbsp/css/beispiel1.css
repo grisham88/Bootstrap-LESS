@@ -1,0 +1,7 @@
+/* Das allererste Beispiel */
+p {
+  font-size: 1.2em;
+  color: #cc0000;
+  border: 1px solid red;
+  background-color: #ffcccc;
+}

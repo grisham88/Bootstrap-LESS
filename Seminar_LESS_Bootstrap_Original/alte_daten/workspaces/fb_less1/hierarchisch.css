@@ -1,0 +1,21 @@
+div#nav {
+  width: 150px;
+}
+div#nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+div#nav ul li {
+  margin-bottom: 3px;
+}
+div#nav ul li a {
+  display: block;
+  text-decoration: none;
+  background: lightgrey;
+  padding: 10px;
+  color: black;
+}
+div#nav ul li a:hover {
+  background: grey;
+}

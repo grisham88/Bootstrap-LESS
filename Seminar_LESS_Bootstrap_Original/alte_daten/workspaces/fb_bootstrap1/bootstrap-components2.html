@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weitere Components</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</head>
+<body>
+    <!-- Navbar hier -->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="" class="navbar-brand">
+                    Meine Firma
+                </a>
+                <!--
+                <ul class="nav navbar-nav pull-left">
+                        <li><a href="">Rundtrip</a></li>
+                  </ul>
+                 -->
+                <!-- nach rechts gefloatet! -->
+                <button class="navbar-toggle collapsed"
+                        title="Navigation toggeln!"
+                        data-toggle="collapse"
+                        data-target="#myNavbarCollapse"
+                 >
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                    <!--
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                    -->
+                </button>
+                <!-- Menü im Header MIT pull-left !!!  -->
+                <ul class="nav navbar-nav pull-left">
+                    <li><a href="">Rundtrip</a></li>
+                </ul>
+            </div>
+            <div class="navbar-collapse collapse" 
+                 id="myNavbarCollapse">
+                 <ul class="nav navbar-nav">
+                     <li><a href="">Rosen</a></li>
+                     <li><a href="">Tulpen</a></li>
+                     <li><a href="">Nelken</a></li>
+                     <li><a href="">Veilchen</a></li>
+                     <li  class="hidden-md hidden-sm"><a href="">Geranien</a></li>                    
+                 </ul>
+                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="">Impressum</a></li>
+                    <li><a href="">AGB</a></li>
+                </ul>                 
+            </div>
+        </div>
+    </div>
+    <!-- ab hier die Inhalte -->
+    <div class="container">
+
+            <h3 class="visible-lg bg-info">Layout Large</h3>
+            <h3 class="visible-md bg-info">Layout Medium</h3>
+            <h3 class="visible-sm bg-info">Layout Small</h3>
+            <h3 class="visible-xs bg-info">Layout XSmall</h3>
+
+        <h3>Dropdown Component</h3>
+        <div class="dropdown">
+            <button class="btn btn-default"
+                    data-toggle="dropdown"
+             >
+                Dropdown auf/zu
+            </button>
+            <ul class="dropdown-menu" id="myDropdown">
+                <li><a href="#">Rosen</a></li>
+                <li><a href="#">Tulpen</a></li>
+                <li><a href="#">nelken</a></li>
+            </ul>
+        </div>
+        <h3>Collapse-Component</h3>
+        <p>
+            <a href="#myCollapser" 
+               class="btn btn-default"
+               data-toggle="collapse"
+              >Auf/Zu</a>
+            <button 
+               class="btn btn-default"
+               data-toggle="collapse"
+               data-target="#myCollapser"
+             >Auf/zu</button>
+        </p>
+        <div class="collapse" id="myCollapser">
+            <h3>Collapser</h3>
+            <p>Kombiniere, ich bin ein Collapser...</p>
+        </div>
+    </div>
+</body>
+</html>

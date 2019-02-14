@@ -1,0 +1,60 @@
+// Less hilft
+
+// Variablen:
+
+@defaultradius: 5px;
+
+// ... das ist ein MIXIN
+
+
+
+.allgemeine-eigenschaften {
+    padding: 15px;
+    border: 1px solid #000;
+    .makeRadius; // 5px (Default)
+}
+
+// ... das ist ein Parametermixin:
+.colors() {
+    background-color: #eee;
+    color:black;
+}
+
+.colorsParam(@inputcolor) {
+    background-color: lighten(@inputcolor, 40%);
+    color:@inputcolor;
+}
+
+.makeRadius(@radius: @defaultradius) {
+    border-radius: @radius;
+}
+.selectWas(@typ) 
+when (@typ = 1) {
+    color: black;
+}
+
+.test {
+  .selectWas(1)
+}
+
+p {
+    // allgemeine Containereigenschaften
+    // padding: 10px;
+    // border: 1px solid #000;
+    // border-radius: 5px;
+    .allgemeine-eigenschaften;
+    .colors;
+}
+
+.panel {
+    .allgemeine-eigenschaften;
+    .colorsParam(red);
+}
+
+.card {
+    .allgemeine-eigenschaften;
+}
+.container {
+    .colors;
+    .makeRadius(@defaultradius * 3); // 15px !
+}

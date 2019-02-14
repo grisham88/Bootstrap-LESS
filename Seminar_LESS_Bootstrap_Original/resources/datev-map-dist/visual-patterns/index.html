@@ -1,0 +1,2952 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>DATEV DNA Pattern Library - Visuals</title>
+
+
+    <!-- DNA-theme -->
+    <link href="../assets/css/dna-theme.css" rel="stylesheet">
+    <!-- Projektspezifische Styles -->
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../assets/js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../assets/js/bootstrap.js"></script>
+    <!-- Datepicker -->
+    <script src="../assets/js/bootstrap-datepicker.js"></script>
+    <!--MAP Libarry Color-Annotator-->
+    <script src="../assets/js/map-color-annotator.js"></script>
+
+</head>
+
+<body onload="colorAnnotator()" class="pattern-library map-layout-base">
+
+    <!------------------------------------------------------------------------------------------------------------------------------->
+    <!--                                                    NAVIGATION                                                             -->
+    <!------------------------------------------------------------------------------------------------------------------------------->
+
+    <aside>
+        <nav class="map-nav">
+            <a href="../index.html" class="start-link"><span class="glyphicon glyphicon glyphicon-menu-left" aria-hidden="true"></span> Start</a></li>
+
+
+            <div class="map-accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="map-accordion-pane">
+                    <div role="tab" id="heading-1">
+                        <h5>
+                            <a href="#basics">Grundlagen</a>
+                            <a class="pull-right" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="true"
+                                aria-controls="collapse-1">
+                                <span class="glyphicon glyphicon-menu-down"></span>
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapse-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-1">
+                        <ul>
+                            <li><a href="#theme">Design DNA Theme</a></li>
+                            <li><a href="#bootstrap">Bootstrap</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="map-accordion-pane">
+                    <div role="tab" id="heading-2">
+                        <h5>
+                            <a href="#grundmerkmale">Visuelle Merkmale</a>
+                            <a class="pull-right" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="true"
+                                aria-controls="collapse-2">
+                                <span class="glyphicon glyphicon-menu-down"></span>
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapse-2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-2">
+                        <ul>
+                            <li><a href="#farbe">Farbe</a></li>
+                            <li><a href="#typografie">Typografie</a></li>
+                            <!--<li><a href="#icons">Icons</a></li>-->
+                            <li><a href="#form-und-haptik">Form und Haptik</a></li>
+                            <!--<li><a href="#animationen">Animationen</a></li>-->
+                        </ul>
+                    </div>
+                </div>
+                <div class="map-accordion-pane">
+                    <div role="tab" id="heading-3">
+                        <h5>
+                            <a href="#layout">Layout</a>
+                            <a class="pull-right" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="true"
+                                aria-controls="collapse-3">
+                                <span class="glyphicon glyphicon-menu-down"></span>
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapse-3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-3">
+                        <ul>
+                            <li><a href="#layout-einheiten">Einheiten</a></li>
+                            <li><a href="#layout-aufbau">Aufbau</a></li>
+                            <li><a href="#layout-struktur">Visuelle Struktur der Oberflächen</a></li>
+                            <li><a href="#layout-responsive">Responsiveness</a></li>
+                            <li><a href="#layout-bootstrap">Bootstrap Layout-Grid</a></li>
+                            <li><a href="#layout-spaces">Abstände</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="map-accordion-pane">
+                    <div role="tab" id="heading-4">
+                        <h5>
+                            <a href="#elemente">Elemente</a>
+                            <a class="pull-right" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="true"
+                                aria-controls="collapse-4">
+                                <span class="glyphicon glyphicon-menu-down"></span>
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapse-4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-4">
+                        <ul>
+                            <li><a href="#button">Button</a></li>
+                            <li><a href="#button-light">Button Light</a></li>
+                            <li><a href="#textbox">Textbox</a></li>
+                            <li><a href="#select">Select</a></li>
+                            <li><a href="#datepicker">Datepicker</a></li>
+                            <li><a href="#dropdown-button">Dropdown Button</a></li>
+                            <li><a href="#dropdown-button-light">Dropdown Button Light</a></li>
+                            <li><a href="#checkbox">Checkbox</a></li>
+                            <li><a href="#radiobutton">Radiobutton</a></li>
+                            <li><a href="#link">Link</a></li>
+                            <li><a href="#link-text">Link im Fließtext</a></li>
+                            <li><a href="#breadcrumb">Breadcrumb</a></li>
+                            <li><a href="#lists">Liste</a></li>
+                            <!--<li><a href="#TabControl">TabControl</a></li>-->
+                            <li><a href="#table">Tabelle</a></li>
+                            <li><a href="#kacheln">Kachel</a></li>
+                            <li><a href="#modal">Modal / Dialog</a></li>
+                            <li><a href="#alert">Alert / Meldung</a></li>
+                            <!--<li><a href="#toast">Toast</a></li>-->
+                            <li><a href="#ladeanimationen">Ladeanimation</a></li>
+                            <!--<li><a href="#meldungen">Meldungen</a></li>-->
+                        </ul>
+                    </div>
+                </div>
+                <div class="map-accordion-pane">
+                    <div role="tab" id="heading-5">
+                        <h5>
+                            <a href="#beispiele">Beispiele</a>
+                            <a class="pull-right" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-5" aria-expanded="true"
+                                aria-controls="collapse-5">
+                                <span class="glyphicon glyphicon-menu-down"></span>
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapse-5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-5">
+                        <ul>
+                            <li><a href="#samples-basics">Grundaufbau</a></li>
+                            <li><a href="#samples-content">Inhaltstypen</a></li>
+                            <li><a href="#samples-notifications">Notifications</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#"><span class="glyphicon glyphicon glyphicon-menu-up" aria-hidden="true"></span> nach oben</a>
+
+
+            <!--Collapse of Accordion-->
+            <script>
+                $('.collapse').collapse()
+            </script>
+
+            <!--
+            <h4><a href="#inspirationen"> Inspirationen</a></h4>
+            <div class="underline-inspirationen"></div>
+            <ul>
+                <li><a href="#leuchttuerme">Leuchttürme</a></li>
+                <li><a href="#samples">samples</a></li>
+            </ul>
+            <h4><a href="#feedback">Feedback</a></h4>
+            <div class="underline-feedback"></div>
+            <ul>
+                <li><a href="#studien">Studien</a></li>
+            </ul>
+            -->
+        </nav>
+        <div class="map-aside-bottom">
+            <div class="map-contact">
+                <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> <a href="mailto:ng2bs-support@datev.de">Kontakt: Birgit Stenzel</a>
+            </div>
+            <div class="map-copyright">&#169; DATEV eG 2016</div>
+        </div>
+    </aside>
+
+    <!------------------------------------------------------------------------------------------------------------------------------->
+    <!--                                                          MAIN                                                             -->
+    <!------------------------------------------------------------------------------------------------------------------------------->
+
+    <main>
+        <div class="alert alert-warning map-alert">
+            <h5><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> <strong>Designer on board?</strong></h5>
+            <p>Der Einsatz und der Freiraum der DATEV-Design DNA setzt profunde Gestaltungskenntnisse voraus. Daher ist bei
+                Design-DNA-Projekten der Einbezug eines Designers (Hauptabteilungsdesigner oder aus dem zentralen Designteam
+                EM131) erforderlich.</p>
+        </div>
+        <section id="start" class="page-header">
+            <div class="intro">
+                <h1>Design DNA</h1>
+                <h4>Visuelle Patterns und Elemente für die Umsetzung von Oberflächen</h4>
+
+                <p>Die hier beschriebenen Visuellen Patterns machen in ihrer Kombination mit den <a href="../conceptual-patterns/index.html">Konzeptuellen Patterns</a>                    die DATEV-Design DNA aus. Der konsequente Einsatz in Produkt und Kommunikation ist ein MUSS und die Grundvoraussetzung
+                    für deren Wirksamkeit.</p>
+
+                <p>Die Grundtechnologie der bestehenden Produkte wird mit der Einführung der Design DNA nicht infrage gestellt,
+                    daher gibt es bei der Umsetzung der einzelnen Merkmale Einschränkungen auf unterschiedlichen Technologien.
+                    Außerdem gibt es in den unterschiedlichen Medien (z.B. datev.de, Printkommunikation) Gestaltungsfreiräume.</p>
+            </div>
+            <!--<img src="../assets/images/DNA-Baum.png">-->
+
+        </section>
+        <section id="basics" class="section-basics">
+            <div class="jumbotron">
+                <h2>Grundlagen</h2>
+                <p>First things first</p>
+            </div>
+            <article id="theme">
+                <h3 class="underline">Design DNA Theme</h3>
+                <p>Die Design DNA wird einer der HTML-Anwendung durch ein Theme "angezogen". Dieses Theme beinhaltet alle nachfolgend
+                    beschriebenen Eigenschaften und Merkmale.</p>
+
+                <p>Das Theme besteht aus der CSS-Datei <code>dna-theme.css</code> sowie einigen Assets die eingebunden werden
+                    müssen. Zusätzlich muss dem <code>body</code> die Klasse <code>"genepool"</code> gegeben werden.
+                </p>
+                <h4>Source Code</h4>
+                <p>Die Sourcen hierzu sind im internen <strong>git-Projekt <a href="https://git.bk.datev.de/datev-ria/datev-ria">datev-ria</a></strong>                    zu finden. </p>
+                <p>Allgemeine Information stehen zudem auf <strong><a href="https://sharepoint.bk.datev.de/sites/InnerSource/Projekte/ng2bs/SitePages/Homepage.aspx">go/ng</a></strong>.</p>
+
+                <h3 class="underline">Bootstrap</h3>
+                <p>Die vorliegende Umsetzung basiert technisch auf dem HTML5-Oberflächen-Framework Bootstrap und folgt dessen
+                    Struktur. Das Theme funktioniert adhoc nur im Zusammenspiel mit dem Framework, die Vorgaben können aber
+                    auch ohne Bootstrap umgesetzt werden.</p>
+
+                <div class="alert alert-info map-alert">
+                    <h5><span class="glyphicon glyphicon-book"></span> <strong>Guide</strong></h5>
+                    <p>Die Dokumentation von Bootstrap dient als Basis: <a href="http://i/getbootstrap.com/">http://getbootstrap.com/</a></p>
+                </div>
+            </article>
+        </section>
+
+        <section id="grundmerkmale" class="section-grundmerkmale">
+            <div class="jumbotron">
+                <h2>Visuelle Gestaltungsmerkmale</h2>
+                <p>Basics für das Look&Feel</p>
+            </div>
+            <ul class="table-of-contents">
+                <li><a href="#farbe">Farbe</a></li>
+                <li><a href="#typografie">Typografie</a></li>
+                <!--<li><a href="#icons">Icons</a></li>-->
+                <li><a href="#form-und-haptik">Form und Haptik</a></li>
+                <!--<li><a href="#animationen">Animationen</a></li>-->
+            </ul>
+            <article id="farbe">
+                <h3 class="underline">Farbe</h3>
+                <h4>Grundfarben</h4>
+                <p>Die Grundtöne der Design DNA bestehen aus einem neutralen Spektrum an warmen Grautönen sowie markengerechten
+                    Grün- und Petroltönen als Primärfarben.</p>
+                <h5 id="farbe-neutral">Neutrale Farben</h5>
+                <div class="map-color"><span class="map-color-swatch dna-hellgrau"></span>Hellgrau</div>
+                <div class="map-color"><span class="map-color-swatch dna-mittelgrau"></span>Mittelgrau</div>
+                <div class="map-color"><span class="map-color-swatch dna-dunkelgrau"></span>Dunkelgrau</div>
+                <h5 id="farbe-primaer">Primärfarben</h5>
+                <div class="map-color"><span class="map-color-swatch dna-hellgruen-A"></span>Hellgrün A</div>
+                <div class="map-color"><span class="map-color-swatch dna-mittelgruen"></span>Mittelgrün</div>
+                <div class="map-color"><span class="map-color-swatch dna-petrol"></span>Petrol</div>
+                <p>Von diesen Grundfarben sind viele der zusätzlich verwendeten Farben abgeleitet, sodass sich ein harmonisches
+                    Farbbild ergibt.</p>
+
+                <h4>Verhältnis der Farben</h4>
+                <p>Die Farben sollen sich auf der Oberfläche in folgendem Verhältnis wiederfinden:</p>
+                <figure>
+                    <img src="../assets/images/Farbverhältnis.png" alt="Farbverhältnis" />
+                    <figcaption>Farbverhältnis</figcaption>
+                </figure>
+                <p>Die <a href="#farbe-neutral">neutralen Farben</a> dienen dabei als großflächige Hintergründe. Die <a href="#farbe-primaer">Primärfarben</a>                    werden bei Elementen verwendet, die hervorgehoben werden sollen. Zusätzlich kommen andere Farben zum
+                    Einsatz.
+                </p>
+
+                <h4>Farb-Palette</h4>
+                <p>Sammlung aller Farben in den Farbtonklassen</p>
+
+                <h5>Hellgrau bis Weiß</h5>
+                <div class="map-color">
+                    <span class="map-color-swatch dna-hellgrau"></span>
+                    <div class="color-name">Hellgrau</div>
+                    <code class="map-token">@dna-hellgrau</code>
+                </div>
+                <div class="map-color">
+                    <span class="map-color-swatch map-color-swatch-frame dna-weiss-A"></span>
+                    <div class="color-name">Weiß A</div>
+                    <code class="map-token">@dna-weiss-A</code>
+                </div>
+                <div class="map-color"><span class="map-color-swatch map-color-swatch-frame dna-weiss"></span>
+                    <div class="color-name">Weiß</div><code class="map-token">@dna-weiss</code></div>
+
+                <h5>Mittelgrau-Töne bis Schwarz-Töne</h5>
+                <div class="map-color"><span class="map-color-swatch dna-mittelgrau-E"></span>
+                    <div class="color-name">Mittelgrau E</div><code class="map-token">@dna-mittelgrau-E</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-mittelgrau"></span>
+                    <div class="color-name">Mittelgrau</div><code class="map-token">@dna-mittelgrau</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-mittelgrau-B"></span>
+                    <div class="color-name">Mittelgrau B</div><code class="map-token">@dna-mittelgrau-B</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-mittelgrau-A"></span>
+                    <div class="color-name">Mittelgrau A</div><code class="map-token">@dna-mittelgrau-A</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-mittelgrau-D"></span>
+                    <div class="color-name">Mittelgrau D <br />Text C</div><code class="map-token">@dna-mittelgrau-D <br>@dna-text-C</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-mittelgrau-C"></span>
+                    <div class="color-name">Mittelgrau C</div><code class="map-token">@dna-mittelgrau-C</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-text-A"></span>
+                    <div class="color-name">Text A</div><code class="map-token">@dna-text-A</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-text-D"></span>
+                    <div class="color-name">Text D</div><code class="map-token">@dna-text-D</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-text"></span>
+                    <div class="color-name">Text</div><code class="map-token">@dna-text</code></div>
+
+                <h5>Dunkelgrau-Töne</h5>
+                <div class="map-color"><span class="map-color-swatch dna-dunkelgrau"></span>
+                    <div class="color-name">Dunkelgrau</div><code class="map-token">@dna-dunkelgrau</code></div>
+
+                <h5>Hellgrün-Töne</h5>
+                <div class="map-color"><span class="map-color-swatch dna-hellgruen-A"></span>
+                    <div class="color-name">Hellgrün A</div><code class="map-token">@dna-hellgruen-A</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-hellgruen-C"></span>
+                    <div class="color-name">Hellgrün C</div><code class="map-token">@dna-hellgruen-C</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-hellgruen"></span>
+                    <div class="color-name">Hellgrün</div><code class="map-token">@dna-hellgruen</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-hellgruen-D"></span>
+                    <div class="color-name">Hellgrün D</div><code class="map-token">@dna-hellgruen-D</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-hellgruen-E"></span>
+                    <div class="color-name">Hellgrün E</div><code class="map-token">@dna-hellgruen-E</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-hellgruen-F"></span>
+                    <div class="color-name">Hellgrün F</div><code class="map-token">@dna-hellgruen-F</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-hellgruen-G"></span>
+                    <div class="color-name">Hellgrün G</div><code class="map-token">@dna-hellgruen-G</code></div>
+
+                <h5>Mittelgrün-Töne</h5>
+                <div class="map-color"><span class="map-color-swatch dna-mittelgruen"></span>
+                    <div class="color-name">Mittelgrün</div><code class="map-token">@dna-mittelgruen</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-mittelgruen-A"></span>
+                    <div class="color-name">Mittelgrün A</div><code class="map-token">@dna-mittelgruen-A</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-dunkelgruen"></span>
+                    <div class="color-name">Dunkelgrün</div><code class="map-token">@dna-dunkelgruen</code></div>
+
+                <h5>Petrol-Töne</h5>
+                <div class="map-color"><span class="map-color-swatch dna-petrol"></span>
+                    <div class="color-name">Petrol</div><code class="map-token">@dna-petrol</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-petrol-F"></span>
+                    <div class="color-name">Petrol-F</div><code class="map-token">@dna-petrol-F</code></div>
+
+                <h5>Weitere Farben</h5>
+                <div class="map-color"><span class="map-color-swatch dna-rot"></span>
+                    <div class="color-name">Rot</div><code class="map-token">@dna-rot</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-gelb"></span>
+                    <div class="color-name">Gelb</div><code class="map-token">@dna-gelb</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-blau"></span>
+                    <div class="color-name">Blau</div><code class="map-token">@dna-blau</code></div>
+                <div class="map-color"><span class="map-color-swatch dna-schatten"></span>
+                    <div class="color-name">Schatten</div><code class="map-token">@dna-schatten</code></div>
+
+                <h5>Business-Grafiken</h5>
+                <p>Für Businessgrafiken gibt es zusätzliche Farben, die dort entsprechend definiert sind.</p>
+                <!-- ToDo Link-->
+
+                <h4>Farbeinsatz</h4>
+                <p>Typische Einsatzzwecke für Farben</p>
+
+                <h5>Farben für Hintergründe und Flächen</h5>
+                <p>Der Standardhintergrund einer Anwendung ist Hellgrau; Weiß A dient als Hintergrund zur Darstellung von Texten
+                    und Informationen, Mittelgrau dient meist als Hintergrund für Controls und Formulare.</p>
+                <div class="map-color"><span class="map-color-swatch map-color-swatch-frame dna-weiss-A"></span>Weiß A</div>
+                <div class="map-color"><span class="map-color-swatch dna-hellgrau"></span>Hellgrau</div>
+                <div class="map-color"><span class="map-color-swatch dna-mittelgrau"></span>Mittelgrau</div>
+
+                <h5>Farben für Konturen</h5>
+                <p>Controls haben meist dunkle Konturen, Container meiste helle Konturen</p>
+                <div class="map-color">
+                    <span class="map-color-swatch map-color-swatch-border dna-mittelgrau-C"></span>
+                    <div class="color-name">Mittelgrau C</div>
+                    <code class="map-token">@dna-border-dark</code>
+                </div>
+
+                <div class="map-color">
+                    <span class="map-color-swatch map-color-swatch-border dna-mittelgrau-A"></span>
+                    <div class="color-name">Mittelgrau A</div>
+                    <code class="map-token">@dna-border-light</code>
+                </div>
+
+                <h5>Farben für Feedback von Interaktionen</h5>
+                <p>Kann ein Nutzer mit einem Element auf der Oberfläche interagieren, so muss hierbei ein visuelles Feedback
+                    zurückgegeben werden.</p>
+
+                <h6>Neutrale Feedbackfarben</h6>
+                <p>Interaktionen auf Elementen mit dunklen, farbigen oder variablen Hintergründen erhalten visuelle Feedbacks
+                    in transparenten, neutralen Farben. Beispiel: <a href="#button-light">Light-Button</a>.</p>
+                <div class="map-color">
+                    <span>Mouseover</span>
+                    <span class="map-color-swatch dna-hover"></span>
+                    <div class="color-name">Schwarz 6% Opacity</div>
+                    <code class="map-token">@dna-hover-bg</code>
+                </div>
+                <div class="map-color">
+                    <span>Pressed</span>
+                    <span class="map-color-swatch dna-pressed"></span>
+                    <div class="color-name">Schwarz 9% Opacity</div>
+                    <code class="map-token">@dna-pressed-bg</code>
+                </div>
+
+                <h6>Primär-Feedbackfarben</h6>
+                <p>Diese Farben dienen für visuelles Feedback auf weißen bzw. sehr hellen Hintergründen. Beispiel hierfür ist
+                    das Grid oder (Dropdown-)Menüs.</p>
+                <div class="map-color">
+                    <span>Mouseover</span>
+                    <span class="map-color-swatch dna-hellgruen-E"></span>
+                    <div class="color-name">Hellgrün E</div>
+                    <code class="map-token">@dna-hover-primary-bg</code>
+                </div>
+                <div class="map-color">
+                    <span>Pressed</span>
+                    <span class="map-color-swatch dna-hellgruen-D"></span>
+                    <div class="color-name">Hellgrün D</div>
+                    <code class="map-token">@dna-pressed-primay-bg</code>
+                </div>
+                <div class="map-color">
+                    <span>Selektiert</span>
+                    <span class="map-color-swatch dna-hellgruen"></span>
+                    <div class="color-name">Hellgrün</div>
+                    <code class="map-token">@dna-selected-bg</code>
+                </div>
+                <div class="map-color">
+                    <span>Selekt. + Mouseover</span>
+                    <span class="map-color-swatch dna-hellgruen-C"></span>
+                    <div class="color-name">Hellgrün C</div>
+                    <code class="map-token">@dna-selected-hover-primary-bg</code>
+                </div>
+                <div class="map-color">
+                    <span>Selektiert + Pressed</span>
+                    <span class="map-color-swatch dna-hellgruen-A"></span>
+                    <div class="color-name">Hellgrün A</div>
+                    <code class="map-token">@dna-selected-pressed-primary-bg</code>
+                </div>
+
+                <h6>Fokus</h6>
+                <div class="map-color"><span class="map-color-swatch map-color-swatch-border dna-mittelgruen"></span>
+                    <div class="color-name">Mittelgrün (Fokus)</div><code class="map-token">@dna-focus</code></div>
+
+                <h6>Validierung/Information</h6>
+                <div>
+                    <div class="map-color">
+                        <span>Fehler</span>
+                        <span class="map-color-swatch dna-rot"></span>
+                        <div class="color-name">Rot</div>
+                        <code class="map-token">@brand-danger</code>
+                    </div>
+                    <div class="map-color">
+                        <span>Warnung</span>
+                        <span class="map-color-swatch dna-gelb"></span>
+                        <div class="color-name">Gelb</div>
+                        <code class="map-token">@brand-warning</code>
+                    </div>
+                    <div class="map-color">
+                        <span>Information</span>
+                        <span class="map-color-swatch dna-blau"></span>
+                        <div class="color-name">Blau</div>
+                        <code class="map-token">@brand-info</code>
+                    </div>
+                </div>
+                <div>
+                    <div class="map-color">
+                        <span>Fehler - Border</span>
+                        <span class="map-color-swatch map-color-swatch-border dna-rot"></span>
+                        <div class="color-name">Rot</div>
+                        <code class="map-token">@state-danger-border</code>
+                    </div>
+                    <div class="map-color">
+                        <span>Warnung - Border</span>
+                        <span class="map-color-swatch map-color-swatch-border dna-gelb"></span>
+                        <div class="color-name">Gelb</div>
+                        <code class="map-token">@state-warning-border</code>
+                    </div>
+                    <div class="map-color">
+                        <span>Information - Border</span>
+                        <span class="map-color-swatch map-color-swatch-border dna-blau"></span>
+                        <div class="color-name">Blau</div>
+                        <code class="map-token">@state-info-border</code>
+                    </div>
+                </div>
+
+
+                <h5>Farben für Text</h5>
+                <div class="map-color">
+                    <span>Standardtext</span>
+                    <span class="map-color-swatch map-color-swatch-type dna-text"></span>
+                    <div class="color-name">Text</div>
+                    <code class="map-token">@text-color-base</code>
+                </div>
+                <div class="map-color">
+                    <span>Label</span>
+                    <span class="map-color-swatch map-color-swatch-type dna-text-D"></span>
+                    <div class="color-name">Text D</div>
+                    <code class="map-token">@text-color-label</code>
+                </div>
+                <div class="map-color">
+                    <span>Inaktiver Text</span>
+                    <span class="map-color-swatch map-color-swatch-type dna-text-A"></span>
+                    <div class="color-name">Text A</div>
+                    <code class="map-token">@text-color-disabled</code>
+                </div>
+                <div class="map-color">
+                    <span>Hilfstexte in Inputs</span>
+                    <span class="map-color-swatch map-color-swatch-type dna-text-C"></span>
+                    <div class="color-name">Text C</div>
+                    <code class="map-token">@dna-text-color-placeholder</code>
+                </div>
+                <div class="map-color">
+                    <span>Überschriften</span>
+                    <span class="map-color-swatch map-color-swatch-type dna-petrol"></span>
+                    <div class="color-name">Petrol</div>
+                    <code class="map-token">@headings-color</code>
+                </div>
+                <div class="map-color">
+                    <span>Interaktiver Text</span>
+                    <span class="map-color-swatch map-color-swatch-type dna-mittelgruen-A"></span>
+                    <div class="color-name">Mittelgrün A</div>
+                    <code class="map-token">@link-color</code>
+                </div>
+
+                <h6><span class="glyphicon glyphicon-eye-close"></span> Accessibilty</h6>
+                <p>Bei der Auswahl der Schriftfarbe ist auf einen ausreichenden Kontrast zum Hintergrund zu achten. Siehe
+                    <a href="../conceptual-patterns/index.html#accessibility">Accessibility-Guidelines</a></p>
+            </article>
+
+            <article id="typografie">
+                <h3 class="underline">Typografie</h3>
+
+                <h4>Schriftarten</h4>
+                <p>
+                    In den Anwendungen wird Kombination aus der modernen serifenbetonten Hausschrift "Compatil DATEV" und serifenloser "Segoe
+                    UI" eingesetzt. Die Standardschriftart ist die "Segoe UI", für große Überschriften wird die "Compatil
+                    DATEV" verwendet.
+                </p>
+                <div class="map-font">
+                    <p class="h4">Segoe UI</p>
+                    <code class="map-token">@font-family-sans-serif</code>
+                </div>
+                <div class="map-font">
+                    <p class="h3">Compatil DATEV</p>
+                    <code class="map-token">@font-family-serif</code>
+                </div>
+
+                <p><em>Die Compatil DATEV darf ab einer Schriftgröße von 16px eingesetzt werden. Bei kleineren Größen kann keine
+                    gute Bildschirmdarstellung garantiert werden.</em></p>
+
+                <h4>Schrifteinsatz</h4>
+                <p>Die Überschriften dienen zur Kennzeichnung und Abtrennung von Inhaltsblöcken. Dabei ist die wichtigste Überschrift
+                    die <code>h1</code> bis zur unwichtigsten <code>h6</code>.</p>
+                <p>Welcher Überschriftentyp verwendet wird, steht dabei frei - die Auswahl erfolgt jeweils entsprechend ihrer
+                    Wichtigkeit und anhand von visuellen Merkmalen. Die Reihenfolge gilt wie angegeben, jedoch muss nicht
+                    jede Überschriftenklasse verwendet werden. Z.B. kann auf einer Seite nur die h2 und die h4 verwendet
+                    werden.
+                </p>
+                <p>Die <code>h1</code> sollte maximal einmal pro Seite verwendet werden.</p>
+                <div class="genepool map-sample-control">
+                    <div class="h1">Überschrift 1</div>
+                    <div class="h2">Überschrift 2</div>
+                    <div class="h3">Überschrift 3</div>
+                    <div class="h4">Überschrift 4</div>
+                    <div class="h5">Überschrift 5</div>
+                </div>
+
+                <table class="table map-table">
+                    <tr>
+                        <td></td>
+                        <td>Variable</td>
+                        <td>Wert</td>
+                    </tr>
+                    <!--h1-->
+                    <tr>
+                        <td rowspan="3">
+                            <pre class="map-code"><code>&lt;h1&gt;...&lt;/h1&gt;</code></pre>
+                        </td>
+                        <td><code class="map-token">@headings-font-family</code></td>
+                        <td><code class="map-token">@font-family-serif</code> (Compatil DATEV)</td>
+                    </tr>
+                    <tr>
+                        <td><code class="map-token">@headings-color</code></td>
+                        <td><code class="map-token">@dna-petrol</code></td>
+                    </tr>
+                    <tr>
+                        <td><code class="map-token">@font-size-h1</code></td>
+                        <td>32dp</td>
+                    </tr>
+                    <!--h2-->
+                    <tr>
+                        <td rowspan="3">
+                            <pre class="map-code"><code>&lt;h2&gt;...&lt;/h2&gt;</code></pre>
+                        </td>
+                        <td><code class="map-token">@headings-font-family</code></td>
+                        <td><code class="map-token">@font-family-serif</code> (Compatil DATEV)</td>
+                    </tr>
+                    <tr>
+                        <td><code class="map-token">@headings-color</code></td>
+                        <td><code class="map-token">@dna-petrol</code></td>
+                    </tr>
+                    <tr>
+                        <td><code class="map-token">@font-size-h2</code></td>
+                        <td>22dp</td>
+                    </tr>
+                    <!--h3-->
+                    <tr>
+                        <td rowspan="3">
+                            <pre class="map-code"><code>&lt;h3&gt;...&lt;/h3&gt;</code></pre>
+                        </td>
+                        <td><code class="map-token">@headings-font-family</code></td>
+                        <td><code class="map-token">@font-family-serif</code> (Compatil DATEV)</td>
+                    </tr>
+                    <tr>
+                        <td><code class="map-token">@headings-color</code></td>
+                        <td><code class="map-token">@dna-petrol</code></td>
+                    </tr>
+                    <tr>
+                        <td><code class="map-token">@font-size-h3</code></td>
+                        <td>18dp</td>
+                    </tr>
+                    <!--h4-->
+                    <tr>
+                        <td rowspan="4">
+                            <pre class="map-code"><code>&lt;h4&gt;...&lt;/h4&gt;</code></pre>
+                        </td>
+                        <td><code class="map-token">@headings-font-family</code></td>
+                        <td><code class="map-token">@font-family-sans-serif</code> (Segoe UI)</td>
+                    </tr>
+                    <tr>
+                        <td><code class="map-token">@headings-color</code></td>
+                        <td><code class="map-token">@text-color-base</code></td>
+                    </tr>
+                    <tr>
+                        <td><code class="map-token">@font-size-h4</code></td>
+                        <td>16dp</td>
+                    </tr>
+                    <tr>
+                        <td><code class="map-token">@dna-headings-small-font-weight</code></td>
+                        <td>600 (semibold)</td>
+                    </tr>
+                    <!--h4-->
+                    <tr>
+                        <td rowspan="4">
+                            <pre class="map-code"><code>&lt;h5&gt;...&lt;/h5&gt;</code></pre>
+                        </td>
+                        <td><code class="map-token">@headings-font-family</code></td>
+                        <td><code class="map-token">@font-family-sans-serif</code> (Segoe UI)</td>
+                    </tr>
+                    <tr>
+                        <td><code class="map-token">@headings-color</code></td>
+                        <td><code class="map-token">@text-color-base</code></td>
+                    </tr>
+                    <tr>
+                        <td><code class="map-token">@font-size-h5</code></td>
+                        <td>14dp</td>
+                    </tr>
+                    <tr>
+                        <td><code class="map-token">@dna-headings-small-font-weight</code></td>
+                        <td>600 (semibold)</td>
+                    </tr>
+                </table>
+
+                <div class="genepool map-sample-control">
+                    Standard für Text
+                    <p>und Text im Fließtext</p>
+                </div>
+
+                <table class="table map-table">
+                    <tr>
+                        <td></td>
+                        <td>Variable</td>
+                        <td>Wert</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">
+                            <pre class="map-code"><code data-lang="html">Text</code><br><code>&lt;p&gt;...&lt;/p&gt;</code></pre>
+                        </td>
+                        <td><code class="map-token">@font-family-base</code></td>
+                        <td><code class="map-token">@font-family-sans-serif</code> (Segoe UI)</td>
+                    </tr>
+                    <tr>
+                        <td><code class="map-token">@text-color-base</code></td>
+                        <td><code class="map-token">@dna-text</code></td>
+                    </tr>
+                    <tr>
+                        <td><code class="map-token">@font-size-base</code></td>
+                        <td>13dp</td>
+                    </tr>
+                </table>
+
+                <div class="genepool map-sample-control">
+                    <label>Label für Controls</label>
+                </div>
+
+                <table class="table map-table">
+                    <tr>
+                        <td></td>
+                        <td>Variable</td>
+                        <td>Wert</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">
+                            <pre class="map-code"><code>&lt;label&gt;...&lt;/label&gt;</code></pre>
+                        </td>
+                        <td><code class="map-token">@font-family-base</code></td>
+                        <td><code class="map-token">@font-family-sans-serif</code> (Segoe UI)</td>
+                    </tr>
+                    <tr>
+                        <td><code class="map-token">@text-color-base</code></td>
+                        <td><code class="map-token">@dna-text-D</code></td>
+                    </tr>
+                    <tr>
+                        <td><code class="map-token">@font-size-base</code></td>
+                        <td>13dp</td>
+                    </tr>
+                    <tr>
+                    </tr>
+                </table>
+
+            </article>
+
+            <article id="form-und-haptik">
+                <h3 class="underline">Form und Haptik</h3>
+                <p>Ein wichtiger Aspekt for das Look&Feel der DATEV Design DNA sind die Wahl der Formen und die Haptik der Elemente.</p>
+
+                <div class="map-sample-control genepool">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" value="Eingabe">
+                            <button type="button" class="btn btn-primary">Button</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="panel dna-panel-info">
+                                <div class="panel-body">
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="panel dna-panel-start">
+                                <div class="panel-body">
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Formen</h4>
+                <p>Formen in der Design DNA sind präzise und abgerundet.</p>
+
+                <h5>Radien</h5>
+                <p>Der Standardradius von Elementen, wie z.B. der Info-Kachel beträgt 5dp.</p>
+                <pre class="map-code"><code class="map-token">@border-radius-base</code>: 5dp</pre>
+                <p>Die Startkacheln haben als besonderes Element unten links einen größeren Radius. Dieser findet sich auch
+                    in der Form der Programm-Icons wieder.</p>
+
+                <h5>Unterstrich</h5>
+                <p>To Do</p>
+
+                <h5>Pfeile</h5>
+                <p>Zur Visualisierung von Prozessen oder Zeitabläufen können Pfeile verwendet werden. Diese ist als Grafik-Ressource
+                    erhältlich.
+                </p>
+                <img class="inline-block" src="../assets/images/Prozesspfeil.png" />
+
+                <h4>Licht und Schatten</h4>
+                <p>DNA-Oberflächen erhalten durch Licht und Schatten eine besondere Tiefe. Ebenen lassen sich durch Schatten
+                    voneinander abheben.</p>
+
+                <h5>Schatten</h5>
+                <div class="map-color"><span class="map-color-swatch map-color-swatch-shadow dna-shadow-light"></span>
+                    <div class="color-name">Schatten</div><code class="map-token">.dna-shadow-light</code></div>
+                <div class="map-color"><span class="map-color-swatch map-color-swatch-shadow dna-shadow-high"></span>
+                    <div class="color-name">Schatten</div><code class="map-token">.dna-shadow-high</code></div>
+                <div class="map-color"><span class="map-color-swatch map-color-swatch-shadow dna-shadow-high-dark"></span>
+                    <div class="color-name">Schatten</div><code class="map-token">.dna-shadow-high-dark</code></div>
+                <div class="map-color"><span class="map-color-swatch map-color-swatch-shadow dna-shadow-sharp"></span>
+                    <div class="color-name">Schatten</div><code class="map-token">.dna-shadow-sharp</code></div>
+
+                <h5>Schattenkante</h5>
+                <div class="map-sample-control">
+                    <img src="../assets/images/schattenkante.png" width="100%" />
+                </div>
+
+                <h5>Prägungen</h5>
+                <p>Zur Darstellung der Haptik werden sowohl nach unten geprägte als auch herausgehobene Elemente verwendet.
+                    Dies erzeugt Tiefe in der Anwendung und kann auch zur visuellen Strukturierung der Anwendung genutzt
+                    werden.
+                </p>
+                <p>Beispiele:</p>
+                <div class="map-sample-control map-sample-images">
+                    <img class="inline-block" src="../assets/images/Prozesspfeil.png" />
+                    <img class="inline-block" src="../assets/images/praegung-ladeanimation.png" />
+                    <img class="inline-block" src="../assets/images/Prozessbutton.png" />
+                    <!--Beispiel Lasche ergänzen-->
+                </div>
+
+            </article>
+
+            <!--<article id="icons">
+                <h3>Icons</h3>
+                <div class="underline-grundmerkmale"></div>
+                <h4>...</h4>
+            </article>-->
+
+            <!--<article id="interaktionskategorien">
+                <h3>interaktionskategorien</h3>
+                <div class="underline-grundmerkmale"></div>
+                <h4>...</h4>
+            </article>-->
+
+            <!--<article id="animationen">
+                <h3>Animationen</h3>
+                <div class="underline-grundmerkmale"></div>
+                <h4>Feeling</h4>
+                <h4>...</h4>
+            </article>-->
+
+
+        </section>
+
+        <section id="layout" class="section-layout">
+            <div class="jumbotron">
+                <h2>Layout</h2>
+                <p>Aufbau und Struktur von Oberflächen</p>
+            </div>
+
+            <ul class="table-of-contents">
+                <li><a href="#layout-einheiten">Einheiten</a></li>
+                <li><a href="#layout-aufbau">Aufbau</a></li>
+                <li><a href="#layout-struktur">Visuelle Struktur der Oberflächen</a></li>
+                <li><a href="#layout-responsive">Responsiveness</a></li>
+                <li><a href="#layout-bootstrap">Bootstrap Layout-Grid</a></li>
+                <li><a href="#layout-spaces">Abstände</a></li>
+            </ul>
+
+            <article id="layout-einheiten">
+                <h3 class="underline">Einheiten</h3>
+                <p>Sowohl in der Implementierung als auch im Entwurf sollte nicht mehr in Pixeln gedacht und gearbeitet werden,
+                    da die physikalische Größe eines Pixels inzwischen ganz vom Gerät abhängt. An die Stelle des Pixels treten
+                    skalierende und unabhängige Einheiten: <em>dp</em> und <em>rem</em>.
+                </p>
+                <h4>"dp" im Entwurf</h4>
+                <p>Für die Angabe von Größen hier wird die Einheit <strong><em>dp</em></strong> ("density independent pixel")
+                    verwendet. Dies indiziert, dass sich die Größen entsprechend der Pixeldichte des anzeigenden Geräts anpassen
+                    müssen.
+                </p>
+                <p> Dabei gilt <strong>1dp = 1px bei 96dpi</strong> (100% Skalierung). </p>
+                <p>In der Implementierung übernimmt das <code>rem</code> diese Aufgabe.</p>
+                <h4>"rem" im code</h4>
+                <div class="alert alert-success map-alert">
+                    <h6><span class="glyphicon glyphicon-ok"></span>DO</h6>
+                    <p>Arbeite in CSS mit der Einheit <strong>rem</strong> anstatt px</p>
+                </div>
+                <p>Die Einheit <strong>rem</strong> wird abhängig von der (vom System und Nutzer gesteuerten) Grundschriftgröße
+                    und Skalierung definiert und verändert sich entsprechend.</p>
+                <p>Dabei gilt innerhalb des Themes <strong>1rem = 10dp</strong> (=10px bei 96dpi; 100% Skalierung).
+                </p>
+            </article>
+
+            <article id="layout-aufbau">
+                <h3 class="underline">Aufbau</h3>
+                <p>Grundsätzlich bestimmt die <a href="https://i/de.wikipedia.org/wiki/Informationsarchitektur">Informationsarchitiktur</a>                    einer Anwendung - also der Inhalt, die Struktur und die Prozesse - deren Aufbau. Einfachere Anwendung
+                    benötigen auf Grund ihres reduzierten Funktionsumfangs meist nur ein einfaches Layout. Komplexere Anwendungen
+                    benötigen unter Umständen ein komplexeres Layout, um Funktionen und Navigationsmöglichkeiten passend
+                    darstellen zu können.</p>
+                <div class="row">
+                    <figure class="col-md-9">
+                        <img src="../assets/images/layout/Layout-fixed-footer.png" alt="Einfaches Layout" />
+                        <figcaption>Einfaches Layout mit fester Breite</figcaption>
+                    </figure>
+                    <figure class="col-md-9">
+                        <img src="../assets/images/layout/Layout-1-L.png" alt="Komplexeres Layout" />
+                        <figcaption>Komplexeres Layout</figcaption>
+                    </figure>
+                </div>
+
+                <h4>Fensterbereiche</h4>
+                <p>Jede Anwendung besteht mindestens aus einem <strong>Header</strong>-Bereich und einem <strong>Content</strong>-Bereich.
+                    Zusätzlich kann es weitere Bereiche geben.</p>
+                <dl>
+                    <dt>Header</dt>
+                    <dd>Der Header enthält Informationen über die Anwendung und Absprungpunkte zu wichtigen Informationen/Funktionen.</dd>
+                    <dd>Beispiele inkl. Code-Snippets gibt es unter <a href="#samples">Beispielseiten - Header-Typen</a>.</dd>
+
+                    <dt>Content</dt>
+                    <dd>Der Content oder <em>Arbeitsbereich</em> enthält den eigentlichen Inhalt der Anwendung - dieser wechselt
+                        von Seite zu Seite.</dd>
+
+                    <dt>Footer (optional)</dt>
+                    <dd>Der Footer ist ein optionaler Bereich am unteren Ende der Seite bzw. des Contents. Er kann für zwei verschiedene
+                        Zwecke verwendet werden:
+                        <ol type="a">
+                            <li><strong>Seiten-Footer</strong>: Enthält sekundäre Informationen und Absprungspunkte wie z.B.
+                                zum Impressum</li>
+                            <li><strong>Content-Footer</strong>: Enthält Informationen und Bedienelemente, die zum Content gehören</li>
+                        </ol>
+                        Innerhalb einer Anwendung sollte der Footer nur für die eine oder die andere Variante genutzt werden.
+                    </dd>
+                    <dd>Der Footer kann am unteren Ende der Seite fixiert sein oder mit dem Content mitscrollen.
+                    </dd>
+
+                    <dt>Schublade (optional)</dt>
+                    <dd>Die "Schublade" ist ein optionaler Bereich am linken Rand der Seite. Dieser Bereich kann kollabieren
+                        und ist in der Regel im geschlossenen Zustand. Er kann seltener genutzte Absprungpunkte (<em>"infrequent
+                        navigation"</em>) und Funktionen enthalten. Es kann nur eine Schublade pro Anwendung geben.
+                    </dd>
+                    <!--
+                    <dt>Hauptfunktionen</dt>
+                    <dd>Die Hauptfunktionen einer Seite befinden sich in der Regel unterhalb des Inhalts, auf den sie sich auswirken.
+                        Sie sind rechtsbündig angeordnet. Häufig befinden sie sich am unteren Ende des Contents, ggf. auch
+                        im Content-Footer.
+                    </dd>-->
+                </dl>
+                <div class="row">
+                    <figure class="col-md-9">
+                        <img src="../assets/images/layout/Layout-3-Schublade-beschriftet.png" alt="Fensterbereiche" />
+                        <figcaption>Fensterbereiche einer Beispielseite: Schublade (links), Header (oben), Content (mittig) mit Content-Footer
+                            (unten) </figcaption>
+                    </figure>
+                </div>
+
+                <h4>Layout-Arten</h4>
+                <p>Es gibt verschiedenste Arten, Layouts aufzubauen. Zwei grundsätzliche Möglichkeiten sind die folgenden:</p>
+
+                <h5 id="layout-aufbau-fixed">Responsive Fixed-Width Layout</h5>
+                <p>Ein typisches Layout ist das Fixed-width Layout. Es hat eine feste Maximalbreite - hat es diese erreicht,
+                    ordnen sich die Inhalte mittig an. Bei Breiten, die kleiner als die Maximalbreite sind verhält sich die
+                    Seite responsiv, in dem sie entweder sprungweise kleinere, feste Breiten erhält oder sich fluid verkleinert.</p>
+                <p>Diese Art von Layout eignet sich vor allem für einfachere Anwendungen mit Header, Content und ggf. Seiten-Footer.
+                    Es sollte keine Schublade integriert werden.</p>
+                <div class="row">
+                    <figure class="col-md-9">
+                        <img src="../assets/images/layout/Layout-fixed-1-L-margins.png" alt="Fixed-Width-Layout" />
+                        <figcaption>Fixed-Width Layout, das seine Maximalbreite erreicht hat</figcaption>
+                    </figure>
+                </div>
+                <p>Hierfür muss dem äußersten Container eine feste Breite (ggf. je Breakpoint) zugewiesen werden.</p>
+                <p><a href="map-layout-app.html#app-fixed-width"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Beispielumsetzung Fixed-width Layout</a>
+                </p>
+
+                <h5 id="layout-aufbau-fluid">Fluid Layout</h5>
+                <p>Eine weiterere Layoutart ist das Fluid Layout. Hier ist das Ziel, die gesamte Größe des Screens möglichst
+                    sinnvoll zu nutzen (full-width). Die Inhalte "fließen" dabei je nach Screengröße in andere Zusammenstellungen.</p>
+                <p>Diese Art von Layout ist schwieriger sauber zu gestalten, eignet sich aber auch für komplexe Anwendungen.
+                    Es kann die Schublade integriert werden.</p>
+                <div class="row">
+                    <figure class="col-md-9">
+                        <img src="../assets/images/layout/Layout-3.png" alt="Fluid Layout" />
+                        <figcaption>Fluid Layout</figcaption>
+                    </figure>
+                    <figure class="col-md-9">
+                        <img src="../assets/images/layout/Layout-3-Schublade.png" alt="Fluid Layout mit Schublade" />
+                        <figcaption>Fluid Layout mit geöffneter Schublade</figcaption>
+                    </figure>
+                </div>
+                <p><a href="map-layout-app.html#app-fluid"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Beispielumsetzung Fluid Layout</a>
+                </p>
+            </article>
+
+            <article id="layout-struktur">
+                <h3 class="underline">Visuelle Struktur der Oberflächen</h3>
+
+                <h4>Ausrichtung</h4>
+                <p>Um ein sauberes, harmonisches und leicht erfassbares Interface zu gestalten, sollten alle Elemente entlang
+                    von <strong>Fluchtlinien</strong> ausgerichtet werden. Die äußerste Grenze und zugleich Fluchten bilden
+                    die Margins.</p>
+                <div class="row">
+                    <figure class="col-md-9">
+                        <img src="../assets/images/layout/Layout-fixed-1-M-margins.png" alt="Margins" />
+                        <figcaption>1-Spaltiges Layout ausgerichtet an den Margins (rot)</figcaption>
+                    </figure>
+                </div>
+                <p>Die Verwendung von Fluchten zieht sich bis ins letzte Detail, wie z.B. in Formularen.</p>
+                <div class="row">
+                    <figure class="col-md-9">
+                        <img src="../assets/images/layout/Fluchten.png" alt="Fluchten" />
+                        <figcaption>Vertikale Fluchtlinien in einem Formular</figcaption>
+                    </figure>
+                </div>
+
+                <h5>Besonderheit: Kacheln</h5>
+                <p>Die Besonderheit bei der Verwendung von Kacheln ist, dass hier der Text oder Inhalt innerhalb der Kacheln
+                    den Fluchten folgt. Die Kacheln stehen am äußeren Rand nach außen ab.</p>
+                <p>Siehe auch: <a href="#layout-bootstrap">Bootstrap Layout-Grid - Besonderheiten im DATEV-Theme</a></p>
+                <div class="row">
+                    <figure class="col-md-9">
+                        <img src="../assets/images/layout/Layout-1-M-Margins.png" alt="Textflucht" />
+                        <figcaption>1-Spaltiges Layout mit "abstehenden" Kacheln</figcaption>
+                    </figure>
+                </div>
+                <div class="row">
+                    <figure class="col-md-9">
+                        <img src="../assets/images/layout/Layout-2-Fluchten.png" alt="Textflucht" />
+                        <figcaption>1-Spaltiges Layout mit "abstehenden" Kacheln</figcaption>
+                    </figure>
+                </div>
+
+                <h4>Spalten</h4>
+                <p>Die Aufteilung eines Bereichs in <strong>vertikale Zeilen und horizontale Spalten</strong> hilft, eine harmonische
+                    Struktur der Oberfläche aufzubauen. Die Spalten dienen dazu die grobe Struktur festzulegen und großflächige
+                    Controls sowie Gruppen von Controls daran auszurichten. Durch Skalierung und die Definition von Umbrüchen
+                    kann mit variablen Fenstergrößen einfach umgegangen werden.
+                </p>
+                <div class="row">
+                    <figure class="col-md-9">
+                        <img src="../assets/images/layout/Layout-1-L-grid.png" alt="2-Spaltiges Layout mit Kacheln" />
+                        <figcaption>2-Spaltiges Layout mit Kacheln</figcaption>
+                    </figure>
+                    <figure class="col-md-9">
+                        <img src="../assets/images/layout/Layout-1-L-grid2.png" alt="2-Spaltiges Layout mit Kacheln - Textausrichtung" />
+                        <figcaption>2-Spaltiges Layout mit Kacheln - Textausrichtung</figcaption>
+                    </figure>
+                </div>
+                <div class="row">
+                    <figure class="col-md-9">
+                        <img src="../assets/images/layout/Layout-2-grid.png" alt="2-Spaltiges Layout mit Kacheln und Text" />
+                        <figcaption>2-Spaltiges Layout mit Kacheln, Buttons und Text</figcaption>
+                    </figure>
+                    <figure class="col-md-9">
+                        <img src="../assets/images/layout/Layout-2-grid2.png" alt="2-Spaltiges Layout mit Kacheln und Text - Textausrichtung" />
+                        <figcaption>2-Spaltiges Layout mit Kacheln, Buttons und Text - Textausrichtung</figcaption>
+                    </figure>
+                </div>
+                <h4>Raster</h4>
+                <p>Um die Erstellung der Spalten zu systematisieren, sollte ein <strong><em>Rasters</em></strong> oder <strong><em>Layout-Grids</em></strong>                    verwendet werden. Die sorgt dafür, dass die Spalten immer dieselben diskreten und harmonischen Größen
+                    haben und bei Seitenwechsel keine Sprünge auftreten. Wir empfehlen ein Raster mit <strong>18</strong>                    gleichbreiten Spalten (<code>columns</code>), deren Zwischenräume (<code>gutter</code>) <strong>32dp</strong>                    betragen. Die Breite der Spalten hängt von der Breite des jeweiligen Fensters ab und ändert sich mit
+                    ihr.
+                </p>
+                <p>18 Spalten mit 32dp Abstand ist der Default im datev-bootstrap-theme.</p>
+
+                <div class="row">
+                    <figure class="col-md-9">
+                        <img src="../assets/images/layout/Layout-5-Raster.png" alt="Raster mit 18 columns" />
+                        <figcaption>Raster mit 18 columns</figcaption>
+                    </figure>
+                    <figure class="col-md-9">
+                        <img src="../assets/images/layout/Layout-5-Raster-Content.png" alt="Inahlt in Raster mit 18 columns" />
+                        <figcaption>Ausrichtung des Inhalts über 12 und 6 columns</figcaption>
+                    </figure>
+                </div>
+                <p>Oberflächenelemnte (Container, Controls, Gruppen,...) spannen jeweils über eine festgelegte Anzahl von columns.
+                    Die gutter dienen zur Abgrenzung und definieren die Abstände zwischen den Elementen. Nicht jede column
+                    muss in einem Layout aktiv genutzt werden und nicht jedes Control muss am Raster ausgerichtet sein. Die
+                    Struktur der Seite sollte dem jedoch folgen.</p>
+
+                <h4>Lenken der Aufmerksamkeit</h4>
+                <p>Ein gutes Layout nutzt unter anderem zwei Effekte um die Aufmerksamkeit des Nutzers an die richtige Stelle
+                    zu lenken.</p>
+
+                <h5>Leserichtung</h5>
+                <p>Das Z-Layout entspricht der natürlichen Bewegungsrichtung der Augen beim Lesen oder Erfassen eines Dokuments.
+                    Das Auge wandert von links oben nach rechts unten, bzw. zeilenweise von links nach rechts. Dieses Z-Layout
+                    hilft Lesern beim schnellen Erfassen der Inhalte auf dem Screen</p>
+                <div class="row">
+                    <figure class="col-md-9">
+                        <img src="../assets/images/layout/Layout-1-L-Leserichtung.png" alt="Leserichtung von Layouts" />
+                        <figcaption>Leserichtung in Z-Form</figcaption>
+                    </figure>
+                </div>
+
+                <h5>Fokus</h5>
+                <p>Die Größe der Spalten der Contentbereiche sowie deren "visuelles Gewicht" schafft bewusst Hierarchien und
+                    lenkt die Aufmerksamkeit. Aufgrund der Leserichtung sollte der Hauptfokus in der linken Spalte stehen
+                    - die rechte Spalte kann sekundäre Inhalte enthalten.</p>
+                <div class="row">
+                    <figure class="col-md-9">
+                        <img src="../assets/images/layout/Layout-2-prio.png" alt="Gewichtung" />
+                        <figcaption>Gewichtung und Fokus des Inhalts</figcaption>
+                    </figure>
+                </div>
+
+                <p>Die beiden Effekte <em>Fokus</em> und <em>Leserichtung</em> können sich überschneiden. Je nach Gestaltung
+                    wirkt der eine oder andere Effekt stärker. Im Idealfall verstärken sie sich gegenseitig.
+                </p>
+            </article>
+
+            <article id="layout-responsive">
+                <h3 class="underline">Responsiveness</h3>
+                <p>Das Layout sollte sich an verschiedenste Screengrößen anpassen können - soweit wie möglich und sinnvoll.</p>
+                <p>Siehe auch <a href="../conceptual-patterns/index.html#responsiveness">Konzept Responsiveness</a></p>
+
+                <div class="row">
+                    <figure class="col-md-8">
+                        <img src="../assets/images/layout/Layout-1-L.png" alt="großer Screen" />
+                        <figcaption>Großer Screen</figcaption>
+                    </figure>
+                    <figure class="col-md-6">
+                        <img src="../assets/images/layout/Layout-1-M.png" alt="mittlerer Screen" />
+                        <figcaption>Mittlerer Screen</figcaption>
+                    </figure>
+                    <figure class="col-md-3">
+                        <img src="../assets/images/layout/Layout-1-XS.png" alt="Kleiner Screen" />
+                        <figcaption>Kleiner Screen</figcaption>
+                    </figure>
+                </div>
+                <h4>Skalierung</h4>
+                <p>Oberflächenelemente und -gruppen, die an Spalten ausgerichtet sind, skalieren mit diesen mit. Wenn ein Bereich
+                    vergrößert wird, vergrößern sich darin die Spalten (da nur die Zwischenräume eine feste Breite haben).
+                    Mit den Spalten werden auch die Elemente/Gruppen breiter. Analog bei einer Verkleinerung.</p>
+
+                <h4>Breakpoints</h4>
+                <p>Da Fenster zum Teil in sehr verschiedenen Breiten verwendet werden können, sollten die Elemente/Gruppen eine
+                    Mindest- und eine Maximalgröße haben, bei der die Zahl der columns, über die sie sich erstrecken, umbricht.
+                    Die Größen, an denen der Umbruch geschieht, heißen <strong>Breakpoints</strong>. Hierfür bietet das
+                    <a href="#layout-bootstrap">Layout-Grid von Bootstrap</a> einfache Werkzeuge.
+                </p>
+                <p>Die Standard-Screenbreiten sind:</p>
+
+                <div class="map-table-container">
+                    <table class="table map-table">
+                        <tr>
+                            <th>Größe</th>
+                            <th>Typ</th>
+                            <th>Maße</th>
+                            <th>Breakpoint</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Large</strong></td>
+                            <td>Desktop</td>
+                            <td>größer als 1300px</td>
+                            <td><code>@screen-lg-min</code>: 1300px</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Medium</strong></td>
+                            <td>Laptop</td>
+                            <td>1008px bis 1300px</td>
+                            <td><code>@screen-md-min</code>: 1008px</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Small</strong></td>
+                            <td>Tablet</td>
+                            <td>640px bis 1007px</td>
+                            <td><code>@screen-sm-min</code>: 640px</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Extra Small</strong></td>
+                            <td>Phones</td>
+                            <td>320px bis 640px</td>
+                            <td><code>@screen-xs-min</code>: 320px</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <h4>Schublade</h4>
+                <p>Die Schublade zeigt ein besonderes Verhalten: bei großen Screengrößen schiebt sie Header und Content zur
+                    Seite und kann parallel bedient werden. Bei kleinen Screengrößen (Small und Extra Small) legt sie sich
+                    temporär über die Seite.</p>
+                <div class="row">
+                    <figure class="col-md-8">
+                        <img src="../assets/images/layout/Layout-3-Schublade.png" alt="großer Screen mit Schublade" />
+                        <figcaption>Großer Screen mit Schublade</figcaption>
+                    </figure>
+                    <figure class="col-md-3">
+                        <img src="../assets/images/layout/Layout-3-Schublade-XS.png" alt="Kleiner Screen mit Schublade" />
+                        <figcaption>Kleiner Screen mit Schublade</figcaption>
+                    </figure>
+                </div>
+            </article>
+            <article id="layout-bootstrap">
+                <h3 class="underline">Bootstrap Layout-Grid</h3>
+
+                <p>Das Layout-Grid von Bootstrap ist die Basis für den Aufbau des Layouts von responsiven Seiten.</p>
+
+                <div class="alert alert-info map-alert">
+                    <h5><span class="glyphicon glyphicon-book"></span> <strong>Guide</strong></h5>
+                    <p>Die Dokumentation von Bootstrap
+                        <a href="http://i/getbootstrap.com/css/#overview-container">http://getbootstrap.com/css/#grid</a>                        beschreibt den Einsatz ausführlich.</p>
+                </div>
+
+                <h4>Zusammenfassung</h4>
+                <p>Das Layout-Grid von Bootstrap schafft eine Serie von Zeilen (<em>rows</em>) und Spalten (<em>columns</em>),
+                    in die Inhalte eingefügt werden können:</p>
+                <ul class="map-ul">
+                    <li>Zeilen (<em>rows</em>) müssen in einen <code>.container</code> (<a href="#layout-aufbau-fixed">fixed-width Layout</a>)
+                        oder <code>.container-fluid</code> (<a href="#layout-aufbau-fluid">fluid Layout</a>) eingefügt werden,
+                        damit Abstände und Anordnung passen
+                    </li>
+                    <li>Mit Hilfe von <strong><em>rows</em></strong> können horizontale Gruppen erzeugt werden</li>
+                    <li>I nhalte sollten innerhalb von <strong><em>columns</em></strong> platziert werden; nur <em>columns</em>                        dürfen unmittelbare Kinder von <em>rows</em> sein
+                    </li>
+                    <li><em>Columns</em> erzeugen Spaltenabstände via Padding. Dieses Padding wird an der ersten und letzten
+                        <em>column</em> an der <em>row</em> durch entsprechende negative margins wieder ausgeglichen. Dadurch
+                        sind die Inhalte immer in einer Flucht, auch wenn sie sich nicht im Layout-Grid befinden.
+                    </li>
+                </ul>
+
+                <h4>Verwendung</h4>
+                <p>Vordefinierte Grid-Klassen wie <code>.row</code> und <code>.col-xs-4</code> dienen der schnellen Erstellung
+                    des Grid-Layouts; zusätzlich gibt es less-mixins.</p>
+                <ul class="map-ul">
+                    <li>Zeilen werden über die Klasse <code>.row</code> erzeugt</li>
+                    <li>Je nach Breakpoint müssen entsprechende column-Klassen vergeben werden:
+                        <ul>
+                            <li>Screengröße Extra Small: <strong><code>.col-xs-*</code></strong></li>
+                            <li>Screengröße Small: <strong><code>.col-sm-*</code></strong></li>
+                            <li>Screengröße Medium: <strong><code>.col-md-*</code></strong></li>
+                            <li>Screengröße Large: <strong><code>.col-lg-*</code></strong></li>
+                        </ul>
+                    </li>
+                    <li>Blöcke innerhalb der Grid-columns werden erzeugt, indem die Anzahl der zu überspannenden Grid-Spalten
+                        angegeben wird, z.B. für einen 3-Spalten-Block <code>.col-xs-3</code> </li>
+                    <li>Wenn mehr als die verfügbare Zahl von columns genötigt wird, werden die "herausragenden" Blöcke in eine
+                        neue Zeile verschoben. </li>
+                    <li>Die Grid-Klassen beziehen sich auf Screen-Größen die <strong>größer oder gleich</strong> der Breakpoint-Größe
+                        sind; sie
+                        <strong>überschreiben</strong> jeweils die Grid-Klassen, die sich auf kleinere Screen-Größen beziehen.
+                        Wird z.B. eine <code>.col-md-*</code>-Klasse auf ein Element gesetzt, so beeinflusst sie das Styling
+                        auf den Medium-Screengrößen UND auch auf allen breiteren Screens, solange für diese nichts anderes
+                        angegeben ist (<code>.col-lg-*</code>-Klasse). Kleine Screens werden nicht beeinflusst.</li>
+                </ul>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;div class=&quot;row&quot;&gt;
+     &lt;div class=&quot;col-md-12&quot;&gt;...&lt;/div&gt;
+     &lt;div class=&quot;col-md-6&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <h4>Besonderheiten im DATEV-Theme</h4>
+                <p>Das Grid im DNA-Theme wurde auf die Anforderungen DATEV-Web-Apps angepasst und Eigenschaften hinzugefügt,
+                    die häufig verwendet werden.</p>
+                <ul class="map-ul">
+                    <li>Das Grid im DNA-Theme hat <strong>18 Spalten</strong> zur feineren Justierung der Inhalte</li>
+                    <li>Der Standard-Spaltenabstand im Grid sind <strong>32dp</strong></li>
+                </ul>
+                <div class="alert alert-warning map-alert">
+                    <p>Um die Inhalte von <strong>Zeilen mit Panels, Grids oder ähnlichen Container-Elementen</strong> mit dem
+                        Rest auf eine Linie zu bringen benötigen diese zusätzlich zur Klasse <code>.row</code> die Klasse
+                        <strong><code>.row-panels</code></strong>. Dadurch bildet der Text aller rows eine Linie. </p>
+                </div>
+                <h5>Formulare</h5>
+                <ul class="map-ul">
+                    <li>Formulare werden normalerweise in einem <strong>horizontales Layout</strong> angelegt (Klasse
+                        <code>.form-horizontal</code>). Dieses springt bei Größen kleiner Breakpoint S automatisch in ein
+                        vertikales Layout um. </li>
+                </ul>
+                <div class="alert alert-warning map-alert">
+                    <p>Für ein korrektes Layout müssen die Klassen <code>.row</code> und die DNA-Klasse <strong><code>.row-form</code></strong>                        für das Kapseln der Formular-Elemente verwendet werden; in der Regel sind das Gruppen aus Label und
+                        input </p>
+                </div>
+                <ul class="map-ul">
+                    <li>Der Standard-<strong>Spaltenabstand</strong> innerhalb von Formularen (<code>.row-form</code> oder
+                        <code>.form-group</code> Elemente) reduziert sich auf <strong>12dp</strong></li>
+                </ul>
+
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;form class=&quot;form-horizontal&quot;&gt;
+    &lt;div class=&quot;row row-form&quot;&gt;
+        &lt;label class=&quot;control-label col-sm-3&quot; for=&quot;beispielInput&quot;&gt;Label:&lt;/label&gt;
+        &lt;div class=&quot;col-sm-10&quot;&gt;
+            &lt;input class=&quot;form-control&quot; &iacute;d=&quot;beispielInput&quot; /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row row-form&quot;&gt;
+        &lt;label class=&quot;control-label col-sm-3&quot; for=&quot;weiteresInput&quot;&gt;Label:&lt;/label&gt;
+        &lt;div class=&quot;col-sm-5&quot;&gt;
+            &lt;input class=&quot;form-control&quot; &iacute;d=&quot;weiteresInput&quot; /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+
+            </article>
+            <article id="layout-spaces">
+                <h3 class="underline">Abstände</h3>
+                <p>Beim Layout einer Oberfläche sollte immer entschieden und auf Detail bedacht vorgegangen werden. Kleine Abweichungen
+                    lassen Oberflächen undurchdacht und inkonsistent wirken. Wenn bespielweise zwei Bereiche etwa den gleichen
+                    Platz brauchen, sollten sie exakt gleich groß sein. Wenn zwei Bereiche nicht gleich groß sein sollen,
+                    dann sollte der Unterschied deutlich erkennbar sein.</p>
+
+                <h4>Grundeinheit</h4>
+                <p>Um kleine Abweichungen in Abständen zu vermeiden, betragen die Abstände zwischen Controls, am Rand von Masken,
+                    zwischen Inhaltlichen Gruppen usw. immer ein Vielfaches von <strong>8dp</strong> als Grundeinheit
+                    <a href="#layout-einheiten">(8px bei 96dpi)</a>.</p>
+
+                <h4>Verwendung</h4>
+                <p>Zur Vereinfachung wurden ein Set von Variablen und Klassen geschaffen, die jeweils Vielfache der Grundeinheit
+                    bilden:
+                </p>
+                <h5>Variablen</h5>
+                <ul class="map-ul">
+                    <li><strong><code>@dna-margin-base</code></strong> = .8rem</li>
+                    <li><code>@dna-margin-xs</code> = 1 x @dna-margin-base = .8rem</li>
+                    <li><code>@dna-margin-sm</code> = 1,5 x @dna-margin-base = 1.2rem</li>
+                    <li><code>@dna-margin-md</code> = 2 x @dna-margin-base = 1.6rem</li>
+                    <li><code>@dna-margin-lg</code> = 3 x @dna-margin-base = 2.4rem</li>
+                    <li><code>@dna-margin-xl</code> = 5 x @dna-margin-base = 4rem</li>
+                </ul>
+
+                <h5>Klassen</h5>
+                <p>Die Klassen verwenden die entsprechenden Größen der Variablen</p>
+
+                <div class="map-table-container">
+                    <table class="table map-table">
+                        <tr>
+                            <th>Variablen</th>
+                            <th><code>@dna-margin-xs</code></th>
+                            <th><code>@dna-margin-sm</code></th>
+                            <th><code>@dna-margin-md</code></th>
+                            <th><code>@dna-margin-lg</code></th>
+                            <th><code>@dna-margin-xl</code></th>
+                        </tr>
+                        <tr>
+                            <td>Abstand nach unten</td>
+                            <td><code>.margin-bottom-xs</code></td>
+                            <td><code>.margin-bottom-sm</code></td>
+                            <td><code>.margin-bottom-md</code></td>
+                            <td><code>.margin-bottom-lg</code></td>
+                            <td><code>.margin-bottom-xl</code></td>
+                        </tr>
+                        <tr>
+                            <td>Abstand nach oben</td>
+                            <td><code>.margin-top-xs</code></td>
+                            <td><code>.margin-top-sm</code></td>
+                            <td><code>.margin-top-md</code></td>
+                            <td><code>.margin-top-lg</code></td>
+                            <td><code>.margin-top-xl</code></td>
+                        </tr>
+                        <tr>
+                            <td>Abstand nach rechts</td>
+                            <td><code>.margin-right-xs</code></td>
+                            <td><code>.margin-right-sm</code></td>
+                            <td><code>.margin-right-md</code></td>
+                            <td><code>.margin-right-lg</code></td>
+                            <td><code>.margin-right-xl</code></td>
+                        </tr>
+                        <tr>
+                            <td>Abstand nach links</td>
+                            <td><code>.margin-left-xs</code></td>
+                            <td><code>.margin-left-sm</code></td>
+                            <td><code>.margin-left-md</code></td>
+                            <td><code>.margin-left-lg</code></td>
+                            <td><code>.margin-left-xl</code></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <h4>Abstände in Masken und zwischen Controls</h4>
+                <h5>Abstände zum Rand</h5>
+                <p>Grundsätzlicher Abstand innerhalb von Bereichen und Kacheln beträgt <strong>20dp</strong> zum Rand. Dies
+                    bringen die meisten entsprechenden Elemente schon als Padding mit.</p>
+
+                <h5>Abstände zwischen Gruppen / Containerelementen</h5>
+                <p>Der Abstand zwischen zwei Control-Gruppen, Gruppen mit Überschriften, Containerelementen oder unabhängigen
+                    Controls beträgt mindestens
+                    <strong>24dp</strong> (<code>@dna-margin-lg</code>) - vertikal und horizontal. Dieser Abstand kann auch
+                    größer sein, z.B. 40dp <code>@dna-margin-xl</code>.</p>
+
+                <h5>Abstände zwischen Controls / Textelementen</h5>
+                <p>Zwischen zwei aufeinanderfolgenden Controls oder Textelementen ist ein Abstand von mindestens <strong>12dp</strong>                    (<code>@dna-margin-sm</code>) vorgesehen. Sowohl vertikal als auch horizontal. Dies gilt auch für den
+                    horizontalen Abstand zwischen breitestem Label und Control bei mehreren vertikal gestapelten Controls
+                    mit Label.</p>
+                <div class="row">
+                    <figure class="col-md-8">
+                        <img src="../assets/images/layout/Abstände.png" alt="Abstände in Formular" />
+                        <figcaption>Abstände in Formular</figcaption>
+                    </figure>
+                </div>
+                <p>Bei der Verwendung des Bootstrap Layout-Grids bei Formularen wird dieser Abstand automatisch als Spaltenabstand
+                    erzeugt.
+                </p>
+
+            </article>
+
+        </section>
+
+        <section id="elemente" class="section-elemente">
+            <div class="jumbotron">
+                <h2>Elemente</h2>
+                <p>Controls, Container und Co. in Design DNA</p>
+            </div>
+
+            <ul class="table-of-contents">
+                <li><a href="#button">Button</a></li>
+                <li><a href="#button-light">Button Light</a></li>
+                <li><a href="#textbox">Textbox</a></li>
+                <li><a href="#select">Select</a></li>
+                <li><a href="#datepicker">Datepicker</a></li>
+                <li><a href="#dropdown-button">Dropdown Button</a></li>
+                <li><a href="#dropdown-button-light">Dropdown Button Light</a></li>
+                <li><a href="#checkbox">Checkbox</a></li>
+                <li><a href="#radiobutton">Radiobutton</a></li>
+                <li><a href="#link">Link</a></li>
+                <li><a href="#link-text">Link im Fließtext</a></li>
+                <li><a href="#breadcrumb">Breadcrumb</a></li>
+                <li><a href="#lists">Liste</a></li>
+                <!--<li><a href="#TabControl">TabControl</a></li>-->
+                <li><a href="#table">Tabelle</a></li>
+                <li><a href="#kacheln">Kachel</a></li>
+                <li><a href="#ladeanimationen">Ladeanimation</a></li>
+                <!--<li><a href="#meldungen">Meldungen</a></li>-->
+            </ul>
+
+            <!-- Buttons -->
+            <article id="button">
+                <h3 class="underline">Button</h3>
+
+                <h4>Standardbutton</h4>
+                <div id="buttons" class="genepool map-sample-control">
+                    <div class="btn-bar btn-bar-left">
+                        <button type="button" class="btn btn-default">Standardbutton</button>
+                        <button type="button" class="btn btn-default" disabled>Button disabled</button>
+                    </div>
+                </div>
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;button type="button" class="btn btn-default"&gt;Label&lt;/button&gt;
+&lt;button type="button" class="btn btn-default" disabled&gt;Label&lt;/button&gt;</code>
+                </pre>
+
+                <h4>Primary Button</h4>
+                <p>Der Primary Button Style dient zur besonderen Hervorhebung der Hauptaktion. Pro Maske sollte nur ein Button
+                    entsprechend hervorgehoben werden.</p>
+                <div id="buttons-primary" class="genepool map-sample-control">
+                    <div class="btn-bar btn-bar-left">
+                        <button type="button" class="btn btn-primary">Primary Button</button>
+                        <button type="button" class="btn btn-primary" disabled>Primary Button disabled</button>
+                    </div>
+                </div>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;button type="button" class="btn btn-primary"&gt;Label&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary" disabled&gt;Label&lt;/button&gt;</code>
+                </pre>
+
+                <h4>Danger Button</h4>
+                <p>Der Danger Button Style dient zur besonderen Hervorhebung einer destruktiven Aktion, wie z.B. Löschen, wenn
+                    diese die primäre Aktion ist. Dieser Style sollte <strong>nur in Absprache mit dem Designer</strong>                    verwendet werden.</p>
+                <div id="buttons-danger" class="genepool map-sample-control">
+                    <div class="btn-bar btn-bar-left">
+                        <button type="button" class="btn btn-danger">Danger Button</button>
+                        <button type="button" class="btn btn-danger" disabled>Danger Button disabled</button>
+                    </div>
+                </div>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;button type="button" class="btn btn-danger"&gt;Label&lt;/button&gt;
+&lt;button type="button" class="btn btn-danger" disabled&gt;Label&lt;/button&gt;</code>
+                </pre>
+
+                <h4>Image Button</h4>
+                <p>Image Buttons enthalten ausschließlich ein Icon - keinen Text</p>
+                <div id="buttons-img" class="genepool map-sample-control">
+                    <div class="btn-bar btn-bar-left">
+                        <button type="button" class="btn btn-default btn-img" title="Aktualisieren">
+                            <img src="../assets/images/FI_Aktualisieren_16x16.png" alt="Aktualisieren" />
+                        </button>
+                        <button type="button" class="btn btn-default btn-img" title="Aktualisieren" disabled>
+                            <img src="../assets/images/FI_Aktualisieren_16x16.png" alt="Aktualisieren" />
+                        </button>
+                    </div>
+                </div>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;button type="button" class="btn btn-default btn-img" title="..."&gt;&lt;img src="..." alt="..."/&gt;&lt;/button&gt;
+&lt;button type="button" class="btn btn-default btn-img" title="..." disabled&gt;&lt;img src="..." alt="..."/&gt;&lt;/button&gt;</code>
+                </pre>
+
+                <h6><span class="glyphicon glyphicon-eye-close"></span> Accessibilty</h6>
+                <p>Der Inhalt muss für den Tooltip als <code>title</code> und als <code>alt</code>-text im <code>img</code>                    hinterlegt werden.</p>
+
+                <h4>Mittelgroße Buttons</h4>
+                <p>Mittelgroße Button unterscheiden sich nur in der Größe von den normalen Buttons. Sie sind größer als die
+                    normalen Buttons, aber kleiner als die Large-Buttons von Bootstrap. Der Style kann an geeigneter Stelle
+                    für eine zusätzliche Hervorhebung genutzt werden.</p>
+                <div id="buttons-lg" class="genepool map-sample-control">
+                    <div class="btn-bar btn-bar-left">
+                        <button type="button" class="btn btn-default btn-md">Mittelgroßer Button</button>
+                        <button type="button" class="btn btn-default btn-md" disabled>Mittelgroßer Button disabled </button>
+                        <button type="button" class="btn btn-primary btn-md">Mittelgroßer Primary Button</button>
+                    </div>
+                </div>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;button type="button" class="btn btn-default btn-md"&gt;...&lt;/button&gt;
+&lt;button type="button" class="btn btn-default btn-md" disabled&gt;...&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary btn-md"&gt;...&lt;/button&gt;</code></pre>
+
+            </article>
+
+
+            <!-- Button Light -->
+
+            <article id="button-light">
+                <h3 class="underline">Button Light</h3>
+
+                <p>Light-Buttons enthalten immer ein Icon, können aber auch ohne Label als Image Button Light verwendet werden.
+                    Den Light-Buttons sind die haptischen Standard-Buttons vorzuziehen, da diese eine bessere Affordanz (schnellere
+                    Erkennbarkeit) haben. Sie sollten nur für sekundäre Funktionen eingesetzt werden.
+                </p>
+
+                <div id="light-buttons" class="map-sample-control genepool">
+                    <div class="btn-bar btn-bar-left">
+                        <button type="button" class="btn btn-light"><img src="../assets/images/FI_Aktualisieren_16x16.png" />Standard Light Button</button>
+                        <button type="button" class="btn btn-light" disabled><img src="../assets/images/FI_Aktualisieren_16x16.png" />Disabled Light Button</button>
+                        <button type="button" class="btn btn-light btn-img" title="Aktualisieren">
+                            <img src="../assets/images/FI_Aktualisieren_16x16.png" alt="Aktualisieren" />
+                        </button>
+                    </div>
+                </div>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;button type="button" class="btn btn-light"&gt;&lt;img /&gt;Label&lt;/button&gt;
+&lt;button type="button" class="btn btn-light" disabled&gt;&lt;img /&gt;Label&lt;/button&gt;
+&lt;button type="button" class="btn btn-light btn-img" title="..."&gt;&lt;img src="..." alt="..."/&gt;&lt;/button&gt;</code>
+                </pre>
+
+            </article>
+
+
+            <!-- Textbox -->
+
+            <article id="textbox">
+                <h3 class="underline">Textbox</h3>
+
+                <div class="map-sample-control genepool">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <input type="text" name="textbox" class="form-control">
+                            <input type="text" name="textbox" class="form-control" value="Eingabe">
+                            <input type="text" name="textbox" class="form-control" placeholder="Eingabehilfe">
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="text" name="textbox" class="form-control" readonly value="readonly">
+                            <input type="text" name="textbox" class="form-control" disabled value="disabled">
+                            <input type="text" name="textbox" class="form-control" required value="required">
+                        </div>
+
+                        <!--<div class="col-sm-4">
+                                <div class="has-error">
+                                    <input type="text" name="textbox" class="form-control" value="Fehler">
+                                </div>
+                                <div class="has-warning">
+                                    <input type="text" name="textbox" class="form-control" value="Warnung">
+                                </div>
+                                <div class="has-info">
+                                    <input type="text" name="textbox" class="form-control" value="Info">
+                                </div>
+                            </div>-->
+                    </div>
+                </div>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;input type="text" name="textbox1" class="form-control"&gt;
+&lt;input type="text" name="textbox2" class="form-control" placeholder="Eingabehilfe"&gt;
+&lt;input type="text" name="textbox3" class="form-control" readonly&gt;
+&lt;input type="text" name="textbox4" class="form-control" disabled&gt;
+&lt;input type="text" name="textbox5" class="form-control" required&gt;</code>
+                </pre>
+
+
+                <!--</div>-->
+
+            </article>
+
+            <article id="label">
+                <h3 class="underline">Label</h3>
+                <p>Label dienen als Beschreibung für Eingabeelemente, die diese benötigen, wie z.B. ein Textfeld.</p>
+                <p>Labels stehen in der Regel vor dem Control, bei Platzmangel aber auch darüber. Wichtig ist eine enge räumliche
+                    Beziehung zwischen Label und Control, damit deren verknüpfung verständlich ist.</p>
+
+                <div class="map-sample-control genepool">
+                    <label>Label</label>
+                </div>
+                <pre class="map-code"><code>&lt;label for="..."&gt;Label&lt;/label&gt;</code></pre>
+
+                <h5>Beispiel: Textbox mit Label</h5>
+                <div class="map-sample-control genepool">
+                    <form class="form-horizontal">
+                        <div class="row row-form">
+                            <label for="textbox1" class="control-label col-sm-2 col-md-1">Label</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="textbox1" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;div&gt;
+    &lt;label for="textbox1"&gt;Label&lt;/label&gt;
+    &lt;input type="text"class="form-control"id="textbox1"/&gt;
+&lt;/div&gt;</code></pre>
+
+                <div class="alert alert-danger map-alert">
+                    <h6><span class="glyphicon glyphicon-remove"></span>DON'T</h6>
+                    <ul>
+                        <li>Verwende Label nicht alleinstehend als Textelement</li>
+                        <li>Dem Label folgt kein Doppelpunkt</li>
+                    </ul>
+                </div>
+
+            </article>
+
+
+            <!-- Select -->
+
+            <article id="select">
+                <h3 class="underline">Select</h3>
+                <p>Das Select dient zur Auswahl eines Wertes aus einer Liste.</p>
+
+                <div class="map-sample-control genepool">
+                    <select class="form-control input-width">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3 mit viel Text</option>
+                    </select>
+                </div>
+                <p><em>Dies ist das "gestylte" html-select; eine vollumfängliche, gestylte ComboBox folgt</em></p>
+
+            </article>
+
+            <!-- Datepicker -->
+            <article id="datepicker">
+                <h3 class="underline">Datepicker</h3>
+
+                <div class="map-sample-control map-sample-control-datepicker genepool">
+                    <div class="row">
+                        <div class="col-sm-9 col-md-4 col-lg-3">
+                            <div class="input-group date" data-provide="datepicker" id="datepicker-example">
+                                <input type="text" class="form-control" placeholder="TT.MM.JJJJ">
+                                <span class="input-group-addon"><i></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $('#datepicker-example').datepicker({
+                         orientation: "bottom auto"
+                    });
+                </script>
+                <script>
+                    $('#datepicker-example').click(function() {
+                        $(this).toggleClass( "open" );
+                    });
+                </script>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> Angular-Komponente: <a href="https://git.bk.datev.de/datev-ria/datev-ria/tree/master/modules/angular2/src/components/datev-datepicker">DATEV Datepicker</a></h6>
+                <p><em>Anm.: Das Beispiel hier entspricht der Komponente nur in Teilen - der hier verwendete Code weicht ab und bietet nicht die volle Funktionalität.</em></p>
+
+            </article>
+
+
+            <!-- Dropdown Button -->
+
+            <article id="dropdown-button">
+                <h3 class="underline">Dropdown Button</h3>
+                <p>Dropdown Buttons enthalten eine aufklappbare Liste von möglichen Aktionen. Beim Klick auf die entsprechende
+                    Aktion in der Liste wird diese wie bei einem Button ausgeführt.</p>
+
+                <div class="map-sample-control genepool">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdown-menu1" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">
+                            Dropdown
+                            <span class="caret"></span>
+                        </button>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdown-menu1">
+                            <li><a href="#no-link">Action</a></li>
+                            <li><a href="#no-link">Another action</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#no-link">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--Beispielcode-->
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;div class="dropdown"&gt;
+    &lt;button class="btn btn-default dropdown-toggle" id="dropdown-menu1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"&gt;
+        Label
+        &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu" aria-labelledby="dropdown-menu1"&gt;
+        &lt;li&gt;&lt;a href="..."&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="..."&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="..."&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+                <div class="alert alert-danger map-alert">
+                    <h6><span class="glyphicon glyphicon-remove"></span>DON'T</h6>
+                    <p>Verwende den Dropdown Button <strong>nicht</strong> zur Auswahl eines Wertes! Hierfür muss ein Select
+                        oder eine ComboBox verwendet werden.</p>
+                </div>
+
+            </article>
+
+            <!-- Dropdown Button Light -->
+
+            <article id="dropdown-button-light">
+                <h3 class="underline">Dropdown Button Light</h3>
+                <p>Der Dropdown Button Light ist eine visuell reduzierte Version des Dropdown Buttons. Funktional sind sie identisch.</p>
+                <div>
+
+                    <div class="map-sample-control genepool">
+                        <div class="dropdown">
+                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdown-light-menu" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="true">
+                                Dropdown
+                                <span class="caret"></span>
+                            </button>
+
+                            <ul class="dropdown-menu" aria-labelledby="dropdown-light-menu">
+                                <li><a href="#no-link">Action</a></li>
+                                <li><a href="#no-link">Another action</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#no-link">Separated link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                    <pre class="map-code"><code>&lt;div class="dropdown"&gt;
+    &lt;button class="btn btn-default btn-light dropdown-toggle" id="dropdown-menu-light" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"&gt;
+        Label
+        &lt;span&nbsp;class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu" aria-labelledby="dropdown-menu-light"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+                </div>
+            </article>
+
+            <!-- Checkbox -->
+
+            <article id="checkbox">
+                <h3 class="underline">Checkbox</h3>
+
+                <div id="checkboxen" class="map-sample-control genepool">
+                    <div class="inline-block">
+                        <div class="checkbox">
+                            <input type="checkbox" id="checkbox1">
+                            <label for="checkbox1">Checkbox</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="checkbox2" checked>
+                            <label for="checkbox2">Checkbox checked</label>
+                        </div>
+                    </div>
+                    <div class="inline-block">
+                        <div class="checkbox">
+                            <input type="checkbox" value="" id="checkbox3" disabled>
+                            <label for="checkbox3">Checkbox disabled</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" value="" id="checkbox4" disabled checked>
+                            <label for="checkbox4">Checkbox disabled checked</label>
+                        </div>
+                    </div>
+                    <!--<div class="inline-block">
+                        <div class="checkbox">
+                            <input type="checkbox" value="" id="checkbox5" required>
+                            <label for="checkbox5">Checkbox</label>
+                        </div>
+                    </div>-->
+                </div>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;div class="checkbox"&gt;
+    &lt;input type="checkbox" id="checkbox1"&gt;
+    &lt;label for="checkbox1"&gt;Checkbox&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
+            </article>
+
+
+            <!-- Radiobutton -->
+            <article id="radiobutton">
+                <h3 class="underline">Radiobutton</h3>
+
+                <div id="radioButtons" class="map-sample-control genepool">
+
+                    <div class="inline-block">
+                        <div class="radio">
+                            <input type="radio" name="radios" id="radioOption1" value="option1" checked>
+                            <label for="radioOption1">Option 1</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="radios" id="radioOption2" value="option2">
+                            <label for="radioOption2">Option 2</label>
+                        </div>
+                    </div>
+                    <div class="inline-block">
+                        <div class="radio disabled">
+                            <input type="radio" name="radiosDis" id="radioDisOption1" value="option1" disabled>
+                            <label for="optionsRadios3">Option 1 ist disabled</label>
+                        </div>
+                        <div class="radio disabled">
+                            <input type="radio" name="radiosDis" id="radioDisOption2" value="option2" disabled checked>
+                            <label for="optionsRadios4">Option 2 ist disabled und checked</label>
+                        </div>
+                    </div>
+
+                </div>
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;div&nbsp;class="radio"&gt;
+    &lt;input type="radio" name="radios" id="radioOption1" value="option1"&gt;
+    &lt;label for="radioOption1"&gt;Option 1&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="radio"&gt;
+    &lt;input type="radio" name="radios" id="radioOption2" value="option2"&gt;
+    &lt;label&nbsp;for="radioOption2"&gt;Option 2&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
+            </article>
+            <!-- Link -->
+
+            <article id="link">
+                <h3 class="underline">Link-Button</h3>
+                <p>Links, die auf der Oberfläche alleine stehen, können den Link-Button-Style erhalten, um ihre Funktion deutlicher
+                    anzuzeigen.
+                </p>
+
+                <div class="map-sample-control genepool">
+                    <div class="inline-block">
+                        <a class="btn-link" href="#no-link">Standard Link</a>
+                        <a class="btn-link" disabled>Disabled Link</a>
+                    </div>
+                    <div class="inline-block">
+                        <button class="btn-link" href="#no-link">Button als Link</button>
+                        <button class="btn-link" disabled>disabled Button als Link</button>
+                    </div>
+                </div>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;a class="btn-link" href="#"&gt;Linktext&lt;/a&gt;</code></pre>
+
+                <h6><span class="glyphicon glyphicon-eye-close"></span> Accessibilty</h6>
+                <p><em>Achtung:</em> Bei <code>&lt;a&gt;</code>-Elementen entweder <code>href</code> oder <code>role="link"</code>                    bzw. <code>"button"</code> sowie <code>tabindex="0"</code> einfügen, um grundlegende Accessibilty und
+                    Tastatursteuerung (Fokus) zu gewährleisten.</p>
+                <p>Alternativ: Link auf Basis des Buttons (wenn eine Funktion auf der Seite ausgeführt werden soll)</p>
+                <pre class="map-code"><code>&lt;button class="btn-link"&gt;Linktext&lt;/button&gt;</code></pre>
+
+                <div class="alert alert-success map-alert">
+                    <h6><span class="glyphicon glyphicon-ok"></span>DO</h6>
+                    <p>Verwende den Link-Button für einzelne Navigationspunkte im Content.</p>
+                </div>
+                <div class="alert alert-danger map-alert">
+                    <h6><span class="glyphicon glyphicon-remove"></span>DON'T</h6>
+                    <p>Verwende den Link-Button nicht für eine Sammlung von Links - hierfür dient die (Absprung-)Liste.</p>
+                </div>
+
+            </article>
+
+            <!-- Link im Fließtext-->
+
+            <article id="link-text">
+                <h3 class="underline">Link im Fließtext</h3>
+                <div class="map-sample-control genepool">
+                    <div class="inline-block">
+                        <p>Überall dieselbe alte Leier. Das <a>Layout</a> ist fertig, der Text lässt auf sich warten. Damit
+                            das <a href="#no-link">Layout</a> nun nicht nackt im Raume steht und sich klein und leer vorkommt,
+                            springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen, immer im
+                            <a href="#no-link">Schatten meines großen Bruders</a> »Lorem Ipsum«, freue ich mich jedes Mal,
+                            wenn Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden. Und weil
+                            Sie nun schon die Güte haben, mich ein paar weitere Sätze lang zu begleiten, möchte ich diese
+                            Gelegenheit nutzen, Ihnen nicht nur als Lückenfüller zu dienen, sondern auf etwas hinzuweisen,
+                            das es ebenso verdient wahrgenommen zu werden: Webstandards nämlich. Sehen Sie, Webstandards
+                            sind das Regelwerk, auf dem Webseiten aufbauen. So gibt es Regeln für HTML, CSS, JavaScript oder
+                            auch XML; Worte, die Sie vielleicht schon einmal von Ihrem Entwickler gehört haben. Diese Standards
+                            sorgen dafür, dass alle Beteiligten aus einer Webseite den größten Nutzen ziehen. Im Gegensatz
+                            zu <a href="#">früheren Webseiten</a> müssen wir zum Beispiel nicht mehr zwei verschiedene Webseiten
+                            für den Internet Explorer und einen anderen Browser programmieren. Es reicht eine Seite, die
+                            - richtig angelegt - sowohl auf verschiedenen Browsern im Netz funktioniert, aber ebenso gut
+                            für den Ausdruck.</p>
+                    </div>
+                </div>
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;a href="..."&gt;Linktext&lt;/a&gt;</code></pre>
+                <h6><span class="glyphicon glyphicon-eye-close"></span> Accessibilty</h6>
+                <p><em>Achtung:</em> Bei <code>&lt;a&gt;</code>-Elementen entweder <code>href</code> oder <code>role="link"</code>                    sowie <code>tabindex="0"</code> einfügen, um grundlegende Accessibilty und Tastatursteuerung (Fokus)
+                    zu gewährleisten.
+                </p>
+            </article>
+
+            <!-- Breadcrumb -->
+            <article id="breadcrumb">
+                <h3 class="underline">Breadcrumb</h3>
+
+                <h6>Reguläre Darstellung</h6>
+                <div class="map-sample-control genepool">
+                    <nav role="navigation" class="dna-breadcrumb">
+                        <label id="breadcrumb-label" class="dna-breadcrumb-label">Du bist hier:</label>
+                        <ol class="breadcrumb" aria-labelledby="breadcrumb-label">
+                            <li class="dna-breadcrumb-item"><a href="#no-link" title="Home">Start</a></li>
+                            <li class="dna-breadcrumb-item"><a href="#no-link" title="Products">Ebene 1</a></li>
+                            <li class="dna-breadcrumb-item"><a href="#no-link" title="Products">Ebene 2</a></li>
+                            <li class="dna-breadcrumb-item"><a href="#no-link" title="Products">Ebene 3</a></li>
+                            <li class="dna-breadcrumb-item active"><a href="#no-link">Aktuelle Seite</a></li>
+                        </ol>
+                    </nav>
+                </div>
+                <h6>Responsives Verhalten: Verkürzung auf schmalen Screens</h6>
+                <div class="map-sample-control genepool">
+                    <nav role="navigation" class="dna-breadcrumb">
+                        <label id="breadcrumb-label" class="dna-breadcrumb-label">Du bist hier:</label>
+                        <ol class="breadcrumb" aria-labelledby="breadcrumb-label">
+                            <li class="dna-breadcrumb-item">
+                                <a href="#no-link" title="Home">Ebene 3</a>
+                                <span class="dropdown">
+                                    <button class="btn btn-light btn-img dropdown-toggle" type="button" id="breadcrumb-dropdown-menu" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="breadcrumb-dropdown-menu">
+                                        <li><a href="#no-link">Ebene 2</a></li>
+                                        <li><a href="#no-link">Ebene 1</a></li>
+                                        <li><a href="#no-link">Start</a></li>
+                                    </ul>
+                                </span>
+                            </li>
+                            <li class="dna-breadcrumb-item active"><a href="#no-link">Aktuelle Seite</a></li>
+                        </ol>
+                    </nav>
+
+                    <!--<div class="dropdown">
+                        <button class="btn btn-light btn-img dropdown-toggle" type="button" id="dropdown-menu1" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">
+                            <span class="caret"></span>
+                        </button>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdown-menu1">
+                            <li><a href="#no-link">Action</a></li>
+                            <li><a href="#no-link">Another action</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#no-link">Separated link</a></li>
+                        </ul>
+                    </div>-->
+                </div>
+
+                <!--<h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;nav role="navigation" class="dna-breadcrumb"&gt;
+    &lt;p class="breadcrumb-label"&gt;Du bist hier:&lt;/p&gt;
+    &lt;ol class="breadcrumb" aria-labelledby="breadcrumb-label"&gt;
+        &lt;li&gt;&lt;a href="..." title="..."&gt;...&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="..." title="..."&gt;...&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="active"&gt;&lt;a href="..." title="..."&gt;...&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+                <p>bzw.</p>-->
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> Angular-Komponente: <a href="https://git.bk.datev.de/datev-ria/datev-ria/tree/master/modules/angular2/src/components/datev-breadcrumb">DATEV Breadcrumb</a></h6>
+                <p><em>Anm.: Das Beispiel hier entspricht der Komponente nur in Teilen - der hier verwendete Code weicht ab und bietet nicht die volle Funktionalität.</em></p>
+
+            </article>
+            <!-- TabControl -->
+            <!--<article id="TabControl">
+                <h3 class="underline">TabControl</h3>
+
+                <div id="tab-control" class="map-sample-control genepool">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+                    </ul>
+                </div>
+
+            </article>-->
+            <!-- Grid -->
+
+            <article id="lists">
+                <h3 class="underline">Liste</h3>
+                <p> Listen dienen der Auflistung von gleichartigen Datensätzen.</p>
+                <p> siehe auch <a href="../conceptual-patterns/index.html#liste-vs-tabelle">Liste vs. Tabelle</a></p>
+                <p> Listen basieren auf der Bootstrap list-group. Durch zusätzliche Klassen können sie im Style angepasst werden.
+                    Der Standard-Listenaufbau besteht aus der Klasse <code>list-group</code> auf dem Container, z.B. einem
+                    <code>ul</code> oder <code>div</code> sowie der Klasse <code>.list-group-item</code> auf den einzelnen
+                    Items (<code>li</code>, <code>div</code>, <code>a</code> usw.).</p>
+                <p>Es kann jedoch auch ganz reduzierte Listen ohne diese Style geben.</p>
+
+                <h4>Basis-Liste</h4>
+
+                <div class="map-sample-control genepool">
+                    <ul class="list-group">
+                        <li class="list-group-item">Äpfel</li>
+                        <li class="list-group-item">Birnen</li>
+                        <li class="list-group-item">Kirschen</li>
+                    </ul>
+                </div>
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;ul class=&quot;<em>list-group</em>&quot;&gt;
+    &lt;li class=&quot;<em>list-group-item</em>&quot;&gt;...&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+                <h4>Liste mit komplexerem Inhalt</h4>
+                <div class="map-sample-control genepool">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <h4 class="h4 list-group-item-heading">Äpfel</h4>
+                            <p class="list-group-item-text">Der Apfel fällt nicht weit vom Stamm</p>
+                        </li>
+                        <li class="list-group-item">
+                            <h4 class="h4 list-group-item-heading">Birnen</h4>
+                            <p class="list-group-item-text">Wir würden niemals Äpfel mit Birnen vergleichen</p>
+                        </li>
+                        <li class="list-group-item">
+                            <h4 class="h4 list-group-item-heading">Kirschen</h4>
+                            <p class="list-group-item-text">Es empfiehlt sich die Kirsche im Dorf zu lassen</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <p>Überschriften in einem List-Group-Item erhalten mit der Klasse <code>.list-group-item-heading</code> die
+                    passenden Abstände. Für Text-Elemente kann <code>.list-group-item-text</code> verwendet werden. Das Layout
+                    kann aber auch individuell angepasst werden.</p>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;ul class=&quot;list-group&quot;&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;
+        &lt;h4 class=&quot;<em>list-group-item-heading</em>&quot;&gt;...&lt;/h4&gt;
+        &lt;p class=&quot;<em>list-group-item-text</em>&quot;&gt;...&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+                <div class="map-sample-control genepool">
+                    <ul class="list-group">
+                        <li class="list-group-item flex-baseline">
+                            <div class="flex-item-minor">#21</div>
+                            <div class="flex-item-major">
+                                <h4 class="h4 list-group-item-heading">Äpfel</h4>
+                                <p class="list-group-item-text">Der Apfel fällt nicht weit vom Stamm</p>
+                            </div>
+                            <div class="flex-item-right">Apfel</div>
+                        </li>
+                        <li class="list-group-item flex-baseline">
+                            <div class="flex-item-minor">#22</div>
+                            <div class="flex-item-major">
+                                <h4 class="h4 list-group-item-heading">Birnen</h4>
+                                <p class="list-group-item-text">Wir würden niemals Äpfel mit Birnen vergleichen</p>
+                            </div>
+                            <div class="flex-item-right">Birne</div>
+                        </li>
+                        <li class="list-group-item flex-baseline">
+                            <div class="flex-item-minor">#23</div>
+                            <div class="flex-item-major">
+                                <h4 class="h4 list-group-item-heading">Kirschen</h4>
+                                <p class="list-group-item-text">Es empfiehlt sich die Kirsche im Dorf zu lassen</p>
+                            </div>
+                            <div class="flex-item-right">Kirsche</div>
+                        </li>
+                    </ul>
+                </div>
+                <p>Komplexere Layouts können entweder über die Verwendung des Layout-Grids erzeugt werden oder über den Einsatz
+                    von Flexbox. Hier stehen die Klassen <code>.flex</code> bzw. <code>.flex-baseline</code> sowie <code>.flex-item-minor</code>,
+                    <code>.flex-item-major</code> und <code>.flex-item-right</code> zu Verfügung</p>
+                <div class="alert alert-warning map-alert">
+                    <p><span class="glyphicon glyphicon-exclamation-sign"></span> <strong>Flexbox</strong> ist ein CSS-Feature,
+                        dass nicht bei allen Browsern zur Verfügung steht. Insbesondere der Internet Explorer unterstützt
+                        es nicht oder nur teilweise (siehe <a href="http://i/caniuse.com/flexbox" target="blank">caniuse.com/flexbox</a>).
+                        Daher sollte bei Verwendung der Flexbox ggf. ein sinnvoller Fallback integriert werden (Prinzip
+                        <em>graceful degredation</em>).</p>
+                </div>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;li class=&quot;list-group-item <em>flex-baseline</em>&quot;&gt; 
+    &lt;div class=&quot;<em>flex-item-minor</em>&quot;&gt;...&lt;/div&gt;
+    &lt;div class=&quot;<em>flex-item-major</em>&quot;&gt;...&lt;/div&gt; 
+    &lt;div class=&quot;<em>flex-item-right</em>&quot;&gt;...&lt;/div&gt;
+&lt;/li&gt;</code></pre>
+
+                <h4>Liste im Kachel-Stil</h4>
+                <p>Listen können in eine Kachel integriert werden, wobei die Liste die gesamte Kachel füllt.</p>
+
+                <div class="map-sample-control genepool">
+                    <div class="panel dna-panel-info">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <h4 class="h4 list-group-item-heading">Äpfel</h4>
+                                <p class="list-group-item-text">Der Apfel fällt nicht weit vom Stamm</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h4 class="h4 list-group-item-heading">Birnen</h4>
+                                <p class="list-group-item-text">Wir würden niemals Äpfel mit Birnen vergleichen</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h4 class="h4 list-group-item-heading">Kirschen</h4>
+                                <p class="list-group-item-text">Es empfiehlt sich die Kirsche im Dorf zu lassen</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p>Wird die Liste in ein <code>.panel</code> integriert, erscheint sie auotmatisch in einem angepassten Style.
+                    Für den <a href="#kacheln">Panel-Style</a> sollte die <strong>Infokachel</strong> gewählt werden, aber
+                    auch die Startseiten-Kachel oder die Cockpitkachel sind möglich.
+                </p>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;div class=&quot;<em>panel dna-panel-info</em>&quot;&gt;
+    &lt;ul class=&quot;list-group&quot;&gt;
+        &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+        &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+        &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+                <h4>Kacheln als List-Items</h4>
+                <p>Es ist möglich, eine Liste aus Kacheln aufzubauen. Wenn die einzelnen Einträge sehr komplex sind, erlauben
+                    die Kacheln eine sehr gute Abgrenzung. Dies macht jedoch nur bei einer begrenzten Anzahl (d.h. weniger
+                    als 10) an List items Sinn.</p>
+                <div class="map-sample-control genepool">
+                    <ul class="list-group">
+                        <li class="list-group-item panel dna-panel-info">
+                            <h4 class="h4 list-group-item-heading">Äpfel</h4>
+                            <p class="list-group-item-text">Der Apfel fällt nicht weit vom Stamm</p>
+                        </li>
+                        <li class="list-group-item panel dna-panel-info">
+                            <h4 class="h4 list-group-item-heading">Birnen</h4>
+                            <p class="list-group-item-text">Wir würden niemals Äpfel mit Birnen vergleichen</p>
+                        </li>
+                        <li class="list-group-item panel dna-panel-info">
+                            <h4 class="h4 list-group-item-heading">Kirschen</h4>
+                            <p class="list-group-item-text">Es empfiehlt sich die Kirsche im Dorf zu lassen</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;ul class=&quot;list-group&quot;&gt;
+    &lt;li class=&quot;list-group-item <em>panel dna-panel-info</em>&quot;&gt;...&lt;/li&gt;
+    &lt;li class=&quot;list-group-item <em>panel dna-panel-info</em>&quot;&gt;...&lt;/li&gt;
+    &lt;li class=&quot;list-group-item <em>panel dna-panel-info</em>&quot;&gt;...&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+
+                <h4>Interaktive Liste</h4>
+
+                <p>Listeneinträge können "interaktiv" sein, und z.B. als Links zur Navigation dienen. Dann erhalten die List
+                    items ein besonderes Styling zur Kennzeichnung der verschiedenen Zustände als visuelles Feedback.</p>
+                <p>Dies kann auf zwei Wegen erreicht werden:</p>
+                <ul>
+                    <li>Verwendung von <strong><code>&lt;a&gt;</code></strong>- oder ggf. <code>&lt;button&gt;</code>-Elementen
+                        anstatt der <code>&lt;li&gt;</code>-Elemente. Entsprechend wird das <code>&lt;ul&gt;</code> durch
+                        ein
+                        <strong><code>&lt;div&gt;</code></strong> ersetzt.</li>
+                    und/oder
+                    <li>Hinzufügen der Klasse <strong><code>.dna-list-group-links</code></strong> zur <code>.list-group</code>.
+                        Dies erzeugt zusätzlich ein <strong>Pfeil-Icon</strong> am Ende jedes Listeneintrags zur Verdeutlichung
+                        der Interakivität.</li>
+                </ul>
+                <p>Idealerweise werden beide Wege kombiniert.</p>
+
+                <h6><span class="glyphicon glyphicon-exclamation-sign"></span> Interaktive Listen ohne Pfeil-Icons</h6>
+                <p>Die Kennzeichnung durch die Pfeil-Icons sollte nur weggelassen werden, wenn im Kontext der Seite der Link-Status
+                    der Einträge klar erkenntlich ist. Insbesondere wenn interaktive und nicht-interaktive Listen gemischt
+                    werden, ist die Kennzeichung zur Unterscheidung erforderlich. Diese Entscheidung sollte der zuständige
+                    UX-Designer treffen.</p>
+
+                <h5>Interaktive Liste nur mit &lt;a&gt;-Elementen</h5>
+
+                <div class="map-sample-control genepool">
+                    <div class="list-group">
+                        <a class="list-group-item" tabindex="0" role="link">Äpfel</a>
+                        <a class="list-group-item" tabindex="0" role="link">Birnen</a>
+                        <a class="list-group-item" tabindex="0" role="link">Kirschen</a>
+                    </div>
+                </div>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;div class=&quot;list-group&quot;&gt;
+    <em>&lt;a</em> class=&quot;list-group-item&quot;&gt;...&lt;/a&gt;
+    <em>&lt;a</em> class=&quot;list-group-item&quot;&gt;...&lt;/a&gt;
+    <em>&lt;a</em> class=&quot;list-group-item&quot;&gt;...&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+                <h5>Interaktive Liste mit Pfeil-Icon / Absprungliste</h5>
+                <p>Die Basis-Liste (ohne Kachel) mit Pfeil-Icon wird auch <strong>"Absprungliste"</strong> genannt.</p>
+                <div class="map-sample-control genepool">
+                    <ul class="list-group dna-list-group-links">
+                        <li class="list-group-item" tabindex="0" role="link">Äpfel</li>
+                        <li class="list-group-item" tabindex="0" role="link">Birnen</li>
+                        <li class="list-group-item" tabindex="0" role="link">Kirschen</li>
+                    </ul>
+                </div>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;ul class=&quot;list-group <em>dna-list-group-links</em>&quot;&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <p>oder noch besser:</p>
+                <pre class="map-code"><code>&lt;div class=&quot;list-group <em>dna-list-group-links</em>&quot;&gt;
+    <em>&lt;a</em> class=&quot;list-group-item&quot;&gt;...&lt;/a&gt;
+    <em>&lt;a</em> class=&quot;list-group-item&quot;&gt;...&lt;/a&gt;
+    <em>&lt;a</em> class=&quot;list-group-item&quot;&gt;...&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+                <h6><span class="glyphicon glyphicon-eye-close"></span> Accessibilty</h6>
+                <p><em>Achtung:</em> Bei den einzelnen list items entweder <code>href</code> oder <code>role="link"</code> sowie
+                    <code>tabindex="0"</code> einfügen, um grundlegende Accessibilty und Tastatursteuerung (Fokus) zu gewährleisten.
+                </p>
+
+                <h5>Interaktive Liste im Kachel-Stil</h5>
+                <div class="map-sample-control genepool">
+                    <div class="panel dna-panel-info ">
+                        <div class="list-group dna-list-group-links">
+                            <a class="list-group-item" tabindex="0" role="link">
+                                <h4 class="h4 list-group-item-heading">Äpfel</h4>
+                                <p class="list-group-item-text">Der Apfel fällt nicht weit vom Stamm</p>
+                            </a>
+                            <a class="list-group-item" tabindex="0" role="link">
+                                <h4 class="h4 list-group-item-heading">Birnen</h4>
+                                <p class="list-group-item-text">Wir würden <em>niemals</em> Äpfel mit Birnen vergleichen</p>
+                            </a>
+                            <a class="list-group-item" tabindex="0" role="link">
+                                <h4 class="h4 list-group-item-heading">Kirschen</h4>
+                                <p class="list-group-item-text">Es empfiehlt sich die Kirsche <strong>im Dorf</strong> zu lassen</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;div class=&quot;panel dna-panel-info&quot;&gt;
+    &lt;div class=&quot;list-group <em>dna-list-group-links</em>&quot;&gt;
+        <em>&lt;a</em> class=&quot;list-group-item&quot;&gt;...&lt;/a&gt;
+        <em>&lt;a</em> class=&quot;list-group-item&quot;&gt;...&lt;/a&gt;
+        <em>&lt;a</em> class=&quot;list-group-item&quot;&gt;...&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                <h5>Kacheln als interaktive List-Items</h5>
+                <div class="map-sample-control genepool">
+                    <div class="list-group dna-list-group-links">
+                        <a class="list-group-item panel dna-panel-info" tabindex="0" role="link">
+                            <h4 class="h4 list-group-item-heading">Äpfel</h4>
+                            <p class="list-group-item-text">Der Apfel fällt nicht weit vom Stamm</p>
+                        </a>
+                        <a class="list-group-item panel dna-panel-info" tabindex="0" role="link">
+                            <h4 class="h4 list-group-item-heading">Birnen</h4>
+                            <p class="list-group-item-text">Wir würden niemals Äpfel mit Birnen vergleichen</p>
+                        </a>
+                        <a class="list-group-item panel dna-panel-info" tabindex="0" role="link">
+                            <h4 class="h4 list-group-item-heading">Kirschen</h4>
+                            <p class="list-group-item-text">Es empfiehlt sich die Kirsche im Dorf zu lassen</p>
+                        </a>
+                    </div>
+                </div>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;div class=&quot;list-group <em>dna-list-group-links</em>&quot;&gt;
+    <em>&lt;a</em> class=&quot;list-group-item panel dna-panel-info&quot;&gt;...&lt;/a&gt;
+    <em>&lt;a</em> class=&quot;list-group-item panel dna-panel-info&quot;&gt;...&lt;/a&gt;
+    <em>&lt;a</em> class=&quot;list-group-item panel dna-panel-info&quot;&gt;...&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+                <!--<h4 id="absprungliste">Absprungliste</h4>
+                <p>Die Absprungliste dient als dezidiertes Navigationselement.</p>
+                <div class="map-sample-control genepool">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="list-group dna-jumplist">
+                                <a class="list-group-item" href="#"><em>123</em> Äpfel</a>
+                                <a class="list-group-item" href="#"><em>27</em> Birnen</a>
+                                <a class="list-group-item" href="#"><em>89</em> Kirschen</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>Der Look wird durch die Klasse <code>dna-jumplist</code> erzeugt.</p>
+                <p>Hier ist die Verwendung von <code>a</code>-Elementen als List-Items sinnvoll.</p>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;div class=&quot;list-group <em>dna-jumplist</em>&quot;&gt;
+    &lt;a class=&quot;list-group-item&quot; href=&quot;#&quot;&gt;List-group-item&lt;/a&gt;
+    &lt;a class=&quot;list-group-item&quot; href=&quot;#&quot;&gt;List-group-item&lt;/a&gt;
+    &lt;a class=&quot;list-group-item&quot; href=&quot;#&quot;&gt;List-group-item&lt;/a&gt;
+&lt;/div&gt;</code></pre>-->
+
+                <h4>Liste innerhalb der Kachel</h4>
+                <p>Absprunglisten tauchen häufig in Kacheln auf - parallel zu anderem Inhalt.</p>
+                <div class="map-sample-control genepool">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="panel dna-panel-start">
+                                <div class="panel-body">
+                                    <h3 class="h3">Obstsorten</h3>
+                                    <p class="margin-bottom-lg">Die Frucht einer Pflanze ist die Gesamtheit der Organe, die aus einer Blüte hervorgehen,
+                                        und die die Samen bis zu deren Reife umschließen.</p>
+                                    <div class="list-group dna-list-group-links dna-list-group-condensed">
+                                        <a class="list-group-item" href="#no-link">Äpfel</a>
+                                        <a class="list-group-item" href="#no-link">Birnen</a>
+                                        <a class="list-group-item" href="#no-link">Kirschen</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>Um die Liste passend zu anderem Inhalt innerhalb von Kacheln auszurichten, gibt es die Klasse <code>.dna-list-group-condensed</code>,
+                    welche die horizontalen Abstände etwas verkleinert und die Trennlinien nach Außen schiebt, sodass der
+                    Text in einer Flucht steht. Diese Klasse sollte <strong>nur auf die Basis-Liste</strong> und nicht auf
+                    Listen im Kachel-Stil angewendet werden.</p>
+                <p>Die Liste sitzt hier im <code>.panel-body</code>, sodass sich der Kachel-Style nicht auf Liste auswirkt.</p>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;div class=&quot;panel dna-panel-start&quot;&gt;
+    <em>&lt;div class=&quot;panel-body&quot;&gt;</em>
+        ...    
+        &lt;div class=&quot;list-group dna-list-group-links <em>dna-list-group-condensed</em>&quot;&gt;
+            &lt;a class=&quot;list-group-item&quot;&gt;...&lt;/a&gt;
+            &lt;a class=&quot;list-group-item&quot;&gt;...&lt;/a&gt;
+            &lt;a class=&quot;list-group-item&quot;&gt;...&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+            </article>
+
+
+            <article id="table">
+                <h3 class="underline">Tabelle</h3>
+
+                <div class="map-sample-control genepool">
+                    <div class="map-table-container">
+                        <table class="table table-striped table-hover dna-table">
+                            <thead>
+                                <tr>
+                                    <th>Nummer</th>
+                                    <th>Name</th>
+                                    <th>Land</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>100</td>
+                                    <td>Rajah Peterson</td>
+                                    <td>France</td>
+                                </tr>
+                                <tr>
+                                    <td>101</td>
+                                    <td>Neil Rollins</td>
+                                    <td>Armenia</td>
+                                </tr>
+                                <tr>
+                                    <td>102</td>
+                                    <td>Hammett Grant</td>
+                                    <td>Tajikistan</td>
+                                </tr>
+                                <tr>
+                                    <td>103</td>
+                                    <td>Kasimir Elliott</td>
+                                    <td>Saudi Arabia</td>
+                                </tr>
+                                <tr>
+                                    <td>104</td>
+                                    <td>Benjamin Craft</td>
+                                    <td>Gibraltar</td>
+                                </tr>
+                                <tr>
+                                    <td>105</td>
+                                    <td>Elmo Simon</td>
+                                    <td>Palau</td>
+                                </tr>
+                                <tr>
+                                    <td>106</td>
+                                    <td>Abraham Andrews</td>
+                                    <td>Venezuela</td>
+                                </tr>
+                                <tr>
+                                    <td>107</td>
+                                    <td>Austin Savage</td>
+                                    <td>Armenia</td>
+                                </tr>
+                                <tr>
+                                    <td>108</td>
+                                    <td>Herman Palmer</td>
+                                    <td>Palau</td>
+                                </tr>
+                                <tr>
+                                    <td>109</td>
+                                    <td>Philip Acosta</td>
+                                    <td>Fiji</td>
+                                </tr>
+                                <tr>
+                                    <td>110</td>
+                                    <td>Steven Sanford</td>
+                                    <td>Japan</td>
+                                </tr>
+                                <tr>
+                                    <td>111</td>
+                                    <td>Dustin Benjamin</td>
+                                    <td>Korea, South</td>
+                                </tr>
+                                <tr>
+                                    <td>112</td>
+                                    <td>Mufutau Hendricks</td>
+                                    <td>Falkland Islands</td>
+                                </tr>
+                                <tr>
+                                    <td>113</td>
+                                    <td>Josiah Vincent</td>
+                                    <td>Anguilla</td>
+                                </tr>
+                                <tr>
+                                    <td>114</td>
+                                    <td>Mannix Hoffman</td>
+                                    <td>Suriname</td>
+                                </tr>
+                                <tr>
+                                    <td>115</td>
+                                    <td>Simon Edwards</td>
+                                    <td>Czech Republic</td>
+                                </tr>
+                                <tr>
+                                    <td>116</td>
+                                    <td>Ishmael Waller</td>
+                                    <td>Tanzania</td>
+                                </tr>
+                                <tr>
+                                    <td>117</td>
+                                    <td>Kevin Castaneda</td>
+                                    <td>Bolivia</td>
+                                </tr>
+                                <tr>
+                                    <td>118</td>
+                                    <td>Wayne Kirby</td>
+                                    <td>Liberia</td>
+                                </tr>
+                                <tr>
+                                    <td>119</td>
+                                    <td>Simon Goodwin</td>
+                                    <td>Maldives</td>
+                                </tr>
+                                <tr>
+                                    <td>120</td>
+                                    <td>Donovan Waller</td>
+                                    <td>El Salvador</td>
+                                </tr>
+                                <tr>
+                                    <td>121</td>
+                                    <td>Griffith Robbins</td>
+                                    <td>Belgium</td>
+                                </tr>
+                                <tr>
+                                    <td>122</td>
+                                    <td>Xanthus Walton</td>
+                                    <td>Jamaica</td>
+                                </tr>
+                                <tr>
+                                    <td>123</td>
+                                    <td>Fletcher Carr</td>
+                                    <td>Bolivia</td>
+                                </tr>
+                                <tr>
+                                    <td>124</td>
+                                    <td>Armand Dyer</td>
+                                    <td>Niue</td>
+                                </tr>
+                                <tr>
+                                    <td>125</td>
+                                    <td>Lamar Kerr</td>
+                                    <td>Sint Maarten</td>
+                                </tr>
+                                <tr>
+                                    <td>126</td>
+                                    <td>Dieter Moore</td>
+                                    <td>Togo</td>
+                                </tr>
+                                <tr>
+                                    <td>127</td>
+                                    <td>Brennan Harding</td>
+                                    <td>Liechtenstein</td>
+                                </tr>
+                                <tr>
+                                    <td>128</td>
+                                    <td>Brian Carrillo</td>
+                                    <td>Palau</td>
+                                </tr>
+                                <tr>
+                                    <td>129</td>
+                                    <td>Adrian Bailey</td>
+                                    <td>Ireland</td>
+                                </tr>
+                                <tr>
+                                    <td>130</td>
+                                    <td>Derek Jacobson</td>
+                                    <td>Chile</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <p>Dieses Tabellenlayout funktioniert auf Grund der Integration des Scrollens bisher nur mit festen Spalten-Breiten.</p>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;table class=&quot;<em>table table-striped table-hover dna-table</em>&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;...&lt;/th&gt;
+            ...
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;...&lt;/td&gt;
+            ...
+        &lt;/tr&gt;
+        ...
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+            </article>
+
+            <!--Kachel-->
+
+            <article id="kacheln">
+                <h3 class="underline">Kacheln</h3>
+
+                <p>Kacheln sind typische Container-Elemente der Design DNA. Sie dienen zur Gruppierung und Hervorhebung von
+                    Inhalten.
+                </p>
+                <p>Sie basieren auf dem Bootstrap-Panel und sind entsprechend aufgebaut:</p>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;div class=&quot;<em>panel</em>&quot;&gt;
+    &lt;div class=&quot;<em>panel-body</em>&quot;&gt;
+    ...
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+                <div class="alert alert-warning map-alert">
+                    <h5>Ausrichtung von Kacheln</h5>
+                    <p>Um <strong>Panels</strong> innerhalb einer <strong><em>row</em></strong> des <a href="#layout-bootstrap">Bootstrap-Layout-Grids</a>                        korrekt auszurichten, benötigen diese zusätzlich zur Klasse <code>.row</code> die Klasse
+                        <strong><code>.row-panels</code></strong>. Dadurch bildet der Text aller rows eine Linie. </p>
+                </div>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;div class=&quot;<em>row row-panels</em>&quot;&gt;
+    &lt;div class=&quot;col-*-*&quot;&gt;
+        &lt;div class=&quot;panel&quot;&gt;
+            ...
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                <p>In der Design DNA gibt es vier verschiedene Styles für die Kacheln:</p>
+
+                <h4>Startseitenkachel</h4>
+
+                <p>Erscheint vor allem auf Startseiten und enthält oft Listen, Absprunglinks und beschreibende Texte.
+                </p>
+
+                <div class="map-sample-control genepool">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="panel dna-panel-start">
+                                <div class="panel-body">
+                                    <h2 class="h2">Startseitenkachel</h2>
+                                    <p>Oft sind hier Absprunglinks zu sehen.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="panel dna-panel-start">
+                                <div class="panel-body">
+                                    <h2 class="h2">&nbsp;</h2>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;div class=&quot;panel <em>dna-panel-start</em>&quot;&gt;...&lt;/div&gt;</code></pre>
+
+                <div class="alert alert-success map-alert">
+                    <h6><span class="glyphicon glyphicon-ok"></span>DO</h6>
+                    <ul>
+                        <li>Platziere sie zentral auf die Startseite</li>
+                        <li>Verwende etwa 2-4 Startseitenkacheln in einem bündigen Layout</li>
+                        <li>Fülle sie mit attraktivem Inhalt und den wichtigsten Startpunkten</li>
+                        <li>Achte auf ein passendes responsives Verhalten</li>
+                    </ul>
+                </div>
+                <div class="alert alert-danger map-alert">
+                    <h6><span class="glyphicon glyphicon-remove"></span>DON'T</h6>
+                    <ul>
+                        <li>Mische sie nicht mit anderen Kachel-Typen (Info-Kachel, Formularkachel,...) auf einer Seite</li>
+                        <li>Setze <strong>keine Formularelemente</strong> darin ein</li>
+                    </ul>
+                </div>
+
+                <h4>Cockpitkachel</h4>
+
+                <p>Erscheint vor allem in Cockpits und enthält aggregierte Informationen und Absprunglinks.</p>
+
+                <div class="map-sample-control genepool">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="panel dna-panel-cockpit">
+                                <div class="panel-body">
+                                    <h2 class="h2">Cockpitkachel</h2>
+                                    <p>Ich bin eine Cockpitkachel.</p>
+                                    <p>Hier dürfen keine Eingabefelder stehen!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="panel dna-panel-cockpit">
+                                <div class="panel-body">
+                                    <h2 class="h2">&nbsp;</h2>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;div class=&quot;panel <em>dna-panel-cockpit</em>&quot;&gt;...&lt;/div&gt;</code></pre>
+
+                <div class="alert alert-success map-alert">
+                    <h6><span class="glyphicon glyphicon-ok"></span>DO</h6>
+                    <ul>
+                        <li>Verwende mehrere Cockpitkacheln in einem bündigen Layout</li>
+                        <li>Aggregiere wichtige Inhalte und präsentiere diese attraktiv</li>
+                        <li>Achte auf ein passendes responsives Verhalten</li>
+                    </ul>
+                </div>
+                <div class="alert alert-danger map-alert">
+                    <h6><span class="glyphicon glyphicon-remove"></span>DON'T</h6>
+                    <ul>
+                        <li>Mische sie nicht mit anderen Kachel-Typen (Info-Kachel, Formularkachel,...) auf einer Seite</li>
+                        <li>Setze <strong>keine Formularelemente</strong> darin ein</li>
+                    </ul>
+                </div>
+
+                <h4>Info-Kachel</h4>
+                <p>Dient vor allem der Anzeige von aggregierten Informationen. Kann in Kombination mit der Formularkachel verwendet
+                    werden.
+                </p>
+
+                <div class="map-sample-control genepool">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="panel dna-panel-info">
+                                <div class="panel-body">
+                                    <p>Ich bin eine Informationskachel.</p>
+                                    <p>Hier dürfen keine Eingabefelder stehen!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="panel dna-panel-info">
+                                <div class="panel-body">
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;div class=&quot;panel <em>dna-panel-info</em>&quot;&gt;...&lt;/div&gt;</code></pre>
+
+                <div class="alert alert-success map-alert">
+                    <h6><span class="glyphicon glyphicon-ok"></span>DO</h6>
+                    <ul>
+                        <li>Verwende die Info-Kachel in Kombination mit der Formularkachel oder anderen Seitenelementen</li>
+                    </ul>
+                </div>
+                <div class="alert alert-danger map-alert">
+                    <h6><span class="glyphicon glyphicon-remove"></span>DO</h6>
+                    <ul>
+                        <li>Mische sie nicht mit den Kachel-Typen Startseitenkachel oder Cockpitkachel auf einer Seite</li>
+                        <li>Setze <strong>keine Formularelemente</strong> darin ein</li>
+                    </ul>
+                </div>
+
+
+                <h4>Formularkachel</h4>
+                <p>Dient der Anzeige von Formularen mit Eingabefeldern und anderen Controls. Kann in Kombination mit der Info-Kachel
+                    verwendet werden.</p>
+
+                <div class="map-sample-control genepool">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="panel dna-panel-form">
+                                <div class="panel-body">
+                                    <p>Ich bin eine Formularkachel.</p>
+                                    <p>Hier müssen noch ein paar Eingabefelder rein</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="panel dna-panel-form">
+                                <div class="panel-body">
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;div class=&quot;panel <em>dna-panel-form</em>&quot;&gt;...&lt;/div&gt;</code></pre>
+
+                <div class="alert alert-success map-alert">
+                    <h6><span class="glyphicon glyphicon-ok"></span>DO</h6>
+                    <ul>
+                        <li>Fülle sie mit <strong>Formularelementen</strong></li>
+                        <li>Verwende die Formular-Kachel in Kombination mit der Info-kachel oder anderen Seitenelementen</li>
+                    </ul>
+                </div>
+                <div class="alert alert-danger map-alert">
+                    <h6><span class="glyphicon glyphicon-remove"></span>DON'T</h6>
+                    <ul>
+                        <li>Mische sie nicht mit den Kachel-Typen Startseitenkachel oder Cockpitkachel auf einer Seite</li>
+                    </ul>
+                </div>
+
+            </article>
+
+            <!--Modal / Dialog-->
+
+            <article id="modal">
+                <h3 class="underline">Modal / Dialog</h3>
+
+                <p>Ein <em>Modal (engl.)</em> oder <em>modaler Dialog</em> ist ein Bereich, der als Teil einer grafischen Benutzeroberfläche
+                    virtuell über der Anwendung erscheint, um eine klar abgegrenzte Aufgabe zu erfüllen.
+                </p>
+                <p>Modale Dialoge sperren die darunterliegende Anwendung mit einem abdunkelnden Overlay, bis sie geschlossen
+                    werden. Dadurch unterbrechen sie die Nutzer in der normalen Anwendungsnutzung - z.B. kann die normale
+                    Navigation nicht verwendet werden. Daher sollten Modals nur <strong>sehr sparsam</strong> eingesetzt
+                    werden.
+                </p>
+                <p>In Webanwendungen sind Modals keine eigenen Fenster und lassen sich entsprechend nicht bewegen.
+                </p>
+
+                <div class="map-sample-control genepool">
+                    <div class="dna-modal" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="btn btn-light btn-img dna-close" aria-label="Schließen"><i class="icon" aria-hidden="true"></i></button>
+                            <div class="modal-header">
+                                <h2 class="h2">Modaler Dialog</h2>
+                            </div>
+                            <div class="modal-body">
+                                <p>In integrating non-aligned structures into existing legacy systems, a holistic gateway blueprint
+                                    is a backward compatible packaging tangible of immeasurable strategic value in right-sizing
+                                    conceptual frameworks when thinking outside the box.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Ok</button>
+                                <button type="button" class="btn btn-default">Abbrechen</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                </div>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> Angular-Komponente: <a href="https://git.bk.datev.de/datev-ria/datev-ria/blob/master/modules/angular2/src/components/datev-notification">DATEV Notification - Modal</a></h6>
+                <p><em>Anm.: Das Beispiel hier entspricht der Komponente nur in Teilen - der hier verwendete Code weicht ab und bietet nicht die volle Funktionalität.</em></p>
+
+                <div class="alert alert-danger map-alert">
+                    <h6><span class="glyphicon glyphicon-remove"></span>DON'T</h6>
+                    <ul>
+                        <li>Setze den Dialog nicht zur Anzeige von (Fehler-)Meldungen ein - nimm davon den <a href="#alert">Alert</a>.</li>
+                        <li>Verwende den Dialog nicht für deine regulären Inhalte und Prozesse.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!--Alert / Meldung-->
+
+            <article id="alert">
+                <h3 class="underline">Alert / Meldung</h3>
+                <p>Alerts geben kontextbezogene Rückmeldungen für typische Benutzeraktionen. Sie werden typischerweise für die
+                    Anzeige von übergreifenden <strong><a href="../conceptual-patterns/index.html#validierung">Validierungsergebnissen</a></strong>                    und Informationen verwendet.</p>
+                <!--<p><a href="../conceptual-patterns/index.html#validierung"><span class="glyphicon glyphicon-arrow-right"></span> Validierung</a></p>-->
+
+                <p>Alerts gibt es in fünf verschiedenen Varianten entsprechend dem Typen/Schweregrad <em>(Severity)</em> der
+                    Meldung:
+                    <ul>
+                        <li>Fehler</li>
+                        <li>Warnung</li>
+                        <li>Information</li>
+                        <li>Erfolg</li>
+                        <li>Neutral - <em>d.h. keine Severity</em></li>
+                    </ul>
+                </p>
+
+                <!--<p>Je nach Variante wird ein passendes Icon und ein farbiger Balken entlang der Headerkante eingefügt - Ausnahme
+                    ist der neutrale Alert.
+                </p>-->
+
+                <div class="map-sample-control genepool">
+                    <div class="dna-alert-container dna-alert-warning">
+                        <div class="alert dna-alert" role="alert">
+                            <button type="button" class="btn btn-light btn-img dna-close" title="Schließen" aria-label="Schließen"><i class="icon" aria-hidden="true"></i></button>
+
+                            <div class="dna-alert-content">
+                                <div class="dna-alert-icon"><i class="icon"></i></div>
+                                <div class="dna-alert-text">
+                                    <h5 class="h5 dna-alert-title">Alert-Titel</h5>
+                                    <p class="dna-alert-message">Dies ist eine Warnung</p>
+                                </div>
+                            </div>
+                            <div class="dna-alert-footer btn-bar">
+                                <button type="button" class="btn btn-default">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p><a href="map-layout-alerts.html"><span class="glyphicon glyphicon-arrow-right"></span> Beispiele: Alerts im Seitenkontext</a></p>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> Angular-Komponente: <a href="https://git.bk.datev.de/datev-ria/datev-ria/blob/master/modules/angular2/src/components/datev-notification">DATEV Notification - Alert</a></h6>
+                <p><em>Anm.: Das Beispiel hier entspricht der Komponente nur in Teilen - der hier verwendete Code weicht ab und bietet nicht die volle Funktionalität.</em></p>
+
+
+                <!-- TOAST -->
+
+
+
+
+            </article>
+
+
+
+
+            <!--<article id="lasche">
+                <h3 class="underline">Lasche</h3>
+            </article>-->
+            <!--<article id="datepicker">
+                <h3 class="underline">Datepicker</h3>
+            </article>-->
+
+            <article id="ladeanimationen">
+                <h3 class="underline">Ladeanimation</h3>
+
+                <h4>Dauerschleife</h4>
+
+                <div class="map-sample-control genepool">
+
+                    <div class="dna-loader-loop dna-loader-loop-lg">
+                        <span class="loaderOverlay"></span>
+                        <div class="loader">Loading...</div>
+                    </div>
+
+                    <div class="dna-loader-loop dna-loader-loop-md">
+                        <span class="loaderOverlay"></span>
+                        <div class="loader">Loading...</div>
+                    </div>
+
+                    <div class="dna-loader-loop dna-loader-loop-sm">
+                        <span class="loaderOverlay"></span>
+                        <div class="loader">Loading...</div>
+                    </div>
+
+                </div>
+                <!--<h4>Mit Fortschrittsangabe</h4>
+                <h4>Fortschrittsbalken</h4>-->
+            </article>
+
+            <!--<article id="meldungen">
+                <h3 class="underline">Meldungen</h3>
+
+                <h4>Darstellung</h4>
+                <h4>Meldungsarten</h4>
+                <h4>Validierung</h4>
+                <h4>Errorprovider</h4>
+            </article>-->
+            <!--<article id="businessgrafiken">
+                <h3>Businessgrafiken</h3>
+                <div class="underline-e"></div>
+                <h4>Welche Grafik?</h4>
+                <h4>Grafikarten</h4>
+                <h4>Darstellung</h4>
+                <h4>Farben</h4>
+            </article>-->
+            <!--<article id="icons">
+                <h3 class="underline-e">Icons</h3>
+                <h4>Icons in der Design DNA</h4>
+            </article>-->
+        </section>
+
+        <section id="beispiele" class="section-beispiele">
+            <div class="jumbotron">
+                <h2>Beispiele</h2>
+                <p>Seiten, Strukturen und Templates</p>
+            </div>
+            <article id="samples">
+                <h3 class="underline" id="samples-basics">Grundaufbau</h3>
+                <p><a href="map-layout-app.html">Grundaufbau einer Anwendung</a></p>
+                <p><a href="map-layout-header.html">Header-Typen</a></p>
+
+                <h3 class="underline" id="samples-content">Inhaltstypen</h3>
+                <p><a href="map-layout-form.html">Formulare</a></p>
+
+                <h3 class="underline" id="samples-notifications">Notifications</h3>
+                <p><a href="map-layout-alerts.html">Alerts im Seitenkontext</a></p>
+            </article>
+        </section>
+
+        <!--<section id="inspirationen">
+            <div class="jumbotron">
+                <h2>Inspirationen</h2>
+                <p>Leuchttürme, Beipielmasken,... Was zum Sehen und Staunen </p>
+            </div>
+
+            <article id="leuchttuerme">
+                <h3 class="underline">Leuchttürme</h3>
+                <h4>Lohn-Anwendung</h4>
+                <h4>VIWAS</h4>
+            </article>
+
+            <article id="samples">
+                <h3 class="underline">samples</h3>
+                <h4>...</h4>
+                            <p><a href="app-layout.html">Grundaufbau einer Anwendung</a></p>
+                <p><a href="form-layout.html">Grundaufbau von Formularen</a></p>
+                <h4>...</h4>
+            </article>
+        </section>-->
+        <!--<section id="feedback">
+            <div class="jumbotron">
+                <h2>Feedback</h2>
+                <p>Ergebnisse aus Benutzerlaboren...</p>
+            </div>
+
+            <article id="studien">
+                <h3 class="underline">Studien</h3>
+
+                <h4>Ergebnisse</h4>
+                <h4>Benutzerlabor</h4>
+            </article>
+        </section>-->
+    </main>
+
+</body>
+
+</html>

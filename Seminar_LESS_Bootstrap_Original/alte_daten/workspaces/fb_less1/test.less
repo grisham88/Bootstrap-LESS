@@ -1,0 +1,27 @@
+/* Ein CSS-Kommentar... */
+// Das ist eine Variable:
+@meinRot : rgb(189, 22, 22);
+@meinGruen : rgb(23, 119, 23);
+
+// Das ist ein Mixin (d.h.: eine Klasse):
+.textblockMixin {
+    padding: 10px;
+    margin: 16px 0; 
+}
+
+p {
+    color: @meinRot ;
+    // padding: 10px;
+    // margin: 16px 0;
+    // so wird das Mixin verwendet:
+    .textblockMixin;
+    border: 1px solid @meinRot ;
+}
+
+div {
+    color: @meinGruen;
+   // padding: 10px;
+   // margin: 16px 0;
+   .textblockMixin;
+    border: 1px solid @meinGruen;
+}

@@ -1,0 +1,120 @@
+/* Allgemeine Resets etc...*/
+
+body {
+    margin: 0;
+}
+
+/* Allgemeine, unspezifische Regeln */
+
+body {
+    font-size: 16px;
+    font-family: arial;
+}
+
+/* Layout */
+
+#nav {
+    float:left;
+    width: 150px;
+}
+
+#content {
+    margin-left: 170px;
+}
+
+/* Module */
+
+
+/* Panel */
+.panel {
+    border: 1px solid #000;
+    border-radius:10px;
+    padding: 20px;
+    margin:20px;
+}
+/* Panel-Elements */
+.panel_header {
+    background-color: #ddd;
+}
+
+.panel_text {
+    background-color: #eee;
+}
+
+.panel_buttoncontainer {
+    border:1px solid #aaa;
+    border-radius:5px;
+    padding: 5px;
+}
+
+.panel_button {
+    /*
+    width: 100px;
+    padding: 5px;
+    background-color: #ccc;
+    border: 1px solid #000;
+    border-radius:5px;
+    */
+}
+
+/* Panel-Modifier */
+
+/* Sub-Rolle, Variante */
+.panel-condensed {
+    padding: 10px;
+}
+
+/* per Script ... */
+.panel-text-active {
+    font-weight:bold;
+}
+
+/* Sub-Rolle, Variante */
+.panel_button-ok {
+    /*
+    background-color: lightblue;
+    */
+}
+.panel_button-no {
+    /*
+    background-color:pink;
+    */
+}
+
+/* Buttonmodul */
+.btn {
+    width: 100px;
+    padding: 5px;
+    font-size: 1em;
+    font-size: 1rem;
+}
+
+.btn-rounded {
+    border-radius:5px;
+}
+
+.btn-default {
+    background-color: #ccc;
+    border: 1px solid #000;
+    color:black;
+}
+.btn-default:hover {
+    background-color: #bbb;
+}
+
+.btn-red {
+    background-color: pink;
+    border: 1px solid red;
+    color:red; 
+}
+.btn-red:hover {
+    background-color: palevioletred;
+}
+.btn-green {
+    background-color: lightgreen;
+    border: 1px solid green;
+    color:green; 
+}
+.btn-green:hover {
+    background-color: darkseagreen;
+}

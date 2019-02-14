@@ -1,0 +1,27 @@
+
+.panel {
+    border:1px solid black;
+    border-radius: 5px; 
+    margin: 2em 0;
+
+    &_header {
+        padding: 10px;
+    }
+    &_body {
+        padding:10px;
+    }
+    &-info {
+        .panelColor(@info);
+    }
+    &-warnung {
+        .panelColor(@warnung)
+    }
+    &-success {
+        .panelColor(@success)
+    }
+    &-active {
+        & .panel_header {
+            font-style: italic;
+        }
+    }
+}

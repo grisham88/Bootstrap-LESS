@@ -1,0 +1,28 @@
+// soll in Ordner css/ abgelegt werden...
+
+// Modulklasse
+.btn {
+    .btnBasis();
+    .btnAusA();
+    &-default {
+        color: darken(@default, 20%);
+        background: lighten(@default, 10%);
+        &:hover {
+            background: lighten(@default, 20%); 
+        }
+    }
+    &-info {
+        .btnColors(@info);
+    }
+    &-warnung {
+        .btnColors(@warnung);
+    }
+    &-success {
+        .btnColors(@success);
+    }
+    &-big {
+        padding: 10px;
+        font-size: 1.2em;
+    }
+}
+

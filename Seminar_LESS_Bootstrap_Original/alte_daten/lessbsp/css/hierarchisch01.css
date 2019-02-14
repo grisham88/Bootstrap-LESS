@@ -1,0 +1,21 @@
+div#nav {
+  width: 200px;
+}
+div#nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+div#nav ul li {
+  margin-bottom: 3px;
+}
+div#nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+div#nav ul li a.active {
+  background-color: pink;
+}
+div#nav ul li a:hover {
+  color: red;
+}

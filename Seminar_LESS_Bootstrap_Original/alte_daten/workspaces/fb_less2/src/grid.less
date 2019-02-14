@@ -1,0 +1,28 @@
+@name: col;
+@n: 16;
+@basisbreite: 100%;
+@grideinheit: @basisbreite/@n;
+@gutterbreite: 0.5%;
+
+.grid {
+    width:100%;
+}
+.row {
+    width:100%;
+    clear:both;
+    float:left;
+}
+// i beginnt bei 1, n ist 8
+.doSomethingCool(@n, @i:1) when (@i <= @n) {
+
+    .@{name}-@{i} {
+        width: @grideinheit * @i - @gutterbreite*2;
+        margin: 5px @gutterbreite;
+        float:left;
+        background: #eee;
+    }
+
+    .doSomethingCool(@n, (@i + 1));
+}
+
+.doSomethingCool(@n);

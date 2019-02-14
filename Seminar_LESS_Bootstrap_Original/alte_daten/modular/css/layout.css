@@ -1,0 +1,15 @@
+/* Layout */
+
+.nav {
+    float:left;
+    width: 150px;
+}
+
+.nav-wide {
+    float:left;
+    width: 250px;
+}
+
+.content {
+    margin-left: 170px;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>DATEV Design DNA - Formulare</title>
+
+    <!-- DNA-theme -->
+    <link href="../assets/css/dna-theme.css" rel="stylesheet">
+    <!-- Projektspezifische Styles -->
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../assets/js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../assets/js/bootstrap.js"></script>
+</head>
+
+<body class="pattern-library pattern-library-sample">
+    <header class="map-header clearfix">
+        <a href="index.html#beispiele"><i class="glyphicon glyphicon-menu-left" aria-hidden="true"></i> zurück</a>
+        <a href="#" class="pull-right"><i class="glyphicon glyphicon-menu-up" aria-hidden="true"></i> top</a>
+    </header>
+    <main>
+        <h3>Beispiel für Formulare</h3>
+
+        <div class="genepool map-sample-app map-sample-app-slim">
+            <div class="dna-wrapper">
+                <div class="dna-page">
+                    <div class="map-main">
+                        <div class="panel dna-panel-form">
+                            <div class="panel-body">
+                                <form class="form-horizontal">
+                                    <div class="row row-form">
+                                        <label class="control-label col-sm-3" for="beispielInput">Label:</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" íd="beispielInput" />
+                                        </div>
+                                    </div>
+                                    <div class="row row-form">
+                                        <label class="control-label col-sm-3" for="weiteresInput">Weiteres Label:</label>
+
+                                        <div class="col-sm-5">
+                                            <input class="form-control" íd="weiteresInput" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <pre class="map-code"><code>&lt;div class=&quot;panel dna-panel-form&quot;&gt;
+    &lt;div class=&quot;panel-body&quot;&gt;
+        &lt;form class=&quot;form-horizontal&quot;&gt;
+            &lt;div class=&quot;row row-form&quot;&gt;
+                &lt;label class=&quot;control-label col-sm-3&quot; for=&quot;beispielInput&quot;&gt;Label:&lt;/label&gt;
+                &lt;div class=&quot;col-sm-10&quot;&gt;
+                    &lt;input class=&quot;form-control&quot; íd=&quot;beispielInput&quot; /&gt;
+                &lt;/div&gt; 
+            &lt;/div&gt;
+            &lt;div class=&quot;row row-form&quot;&gt;
+                &lt;label class=&quot;control-label col-sm-3&quot; for=&quot;weiteresInput&quot;&gt;Label:&lt;/label&gt;
+                &lt;div class=&quot;col-sm-5&quot;&gt;
+                    &lt;input class=&quot;form-control&quot; íd=&quot;weiteresInput&quot; /&gt;
+                &lt;/div&gt; 
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+        <div class="genepool map-sample-app">
+            <div class="dna-wrapper">
+                <div class="dna-page">
+                    <div class="map-main">
+                        <div class="panel dna-panel-form">
+                            <div class="panel-body">
+                                <form class="form-horizontal">
+                                    <h4 class="h4">Formularteil mit 2 Blöcken</h4>
+                                    <div class="row row-form margin-bottom-lg">
+                                        <!--Block oben links-->
+                                        <div class="form-section col-md-9">
+                                            <div class="row row-form">
+                                                <label class="control-label col-sm-6" for="input1">Label:</label>
+                                                <div class="col-sm-12 col-md-10">
+                                                    <input class="form-control" íd="input1" />
+                                                </div>
+                                            </div>
+                                            <div class="row row-form">
+                                                <label class="col-sm-6 control-label" for="input2">Langes Label:</label>
+                                                <div class="col-sm-12 col-md-10">
+                                                    <input class="form-control" íd="input2" />
+                                                </div>
+                                            </div>
+                                            <div class="row row-form">
+                                                <label class="col-sm-6 control-label" for="input3">Label:</label>
+                                                <div class="col-sm-12 col-md-10">
+                                                    <input id="input3" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row row-form">
+                                                <label class="col-sm-6 control-label" for="input4">Kurzes Eingabefeld:</label>
+                                                <div class="col-sm-4">
+                                                    <input type="text" id="input4" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Block oben rechts -->
+                                        <div class="form-section col-md-9">
+                                            <div class="row row-form">
+                                                <label class="col-sm-6 col-md-8 col-lg-6 control-label" for="input5">Besonders langes Label:</label>
+                                                <div class="col-sm-12 col-md-10 col-lg-12">
+                                                    <input class="form-control" íd="input5" />
+                                                </div>
+                                            </div>
+                                            <div class="row row-form">
+                                                <label class="col-sm-6 col-md-8 col-lg-6 control-label" for="input6">Label:</label>
+                                                <div class="col-sm-12 col-md-10 col-lg-12">
+                                                    <input id="input6" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-section">
+
+                                        <h4 class="h4">Formularteil mit 2 Zeilen</h4>
+
+                                        <div class="row row-form">
+                                            <label class="col-sm-6 col-md-3 control-label">Zweiteiliges Input:</label>
+                                            <label class="sr-only" for="input7">Teil 1:</label>
+                                            <div class="col-sm-3 col-md-1 ">
+                                                <input type="text" id="input7" class="form-control">
+                                            </div>
+                                            <label class="sr-only" for="input8">Teil 2:</label>
+                                            <div class="col-sm-9 col-md-4 ">
+                                                <input type="text" id="input8" class="form-control">
+                                            </div>
+
+                                            <label class="col-sm-6 col-md-4 col-lg-3 control-label col-md-offset-1" for="input9">Weiteres Feld:</label>
+                                            <div class="col-sm-12 col-md-5 col-lg-6">
+                                                <input id="input9" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row row-form">
+                                            <label class="col-sm-6 col-md-3 control-label" for="input10">Label:</label>
+                                            <div class="col-sm-12 col-md-5">
+                                                <input id="input10" class="form-control">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>DATEV Design DNA - Grundaufbau</title>
+
+    <!-- DNA-theme -->
+    <link href="../assets/css/dna-theme.css" rel="stylesheet">
+    <!-- Projektspezifische Styles -->
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../assets/js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../assets/js/bootstrap.js"></script>
+</head>
+
+<body class="pattern-library pattern-library-sample">
+    <header class="map-header clearfix">
+        <a href="index.html#beispiele"><i class="glyphicon glyphicon-menu-left" aria-hidden="true"></i> zurück</a>
+        <a href="#" class="pull-right"><i class="glyphicon glyphicon-menu-up" aria-hidden="true"></i> top</a>
+    </header>
+    <main>
+        <article id="layout-alert">
+
+            <h2>Alerts</h2>
+
+            <p>Alerts geben kontextbezogene Rückmeldungen für typische Benutzeraktionen.</p>
+
+            <p><a href="index.html#alert"><span class="glyphicon glyphicon-arrow-right"></span> Oberflächenelement Alert</a></p>
+
+            <p>Alerts gibt es in fünf verschiedenen Varianten entsprechend dem Typen/Schweregrad der Meldung:
+                <ul>
+                    <li><a href="alert-error">Fehler</a></li>
+                    <li><a href="alert-warning">Warnung</a></li>
+                    <li><a href="alert-info">Information</a></li>
+                    <li><a href="alert-success">Erfolg</a></li>
+                    <li><a href="alert-neutral">Neutral</a></li>
+                </ul>
+            </p>
+
+            <h3>Darstellung</h3>
+            <p>Alerts werden am oberen rechten Rand der Seite, direkt unterhalb des Headers angezeigt und ermöglichen bei Anzeige
+                weiterhin die Bearbeitung der Seite.</p>
+            <p>Die Alerts reagieren responsiv auf die Größe des Viewports. Bei Screengröße XS werden sie auf voller Breite unterhalb
+                des Headers dargstellt und scrollen mit.</p>
+            <p>Treten mehrere Alerts auf, werden diese untereinander dargestellt</p>
+
+
+            <h3>Beispiele</h3>
+
+            <h4 id="alert-error">Fehler</h4>
+            <div class="genepool map-sample-app">
+                <div class="dna-wrapper">
+                    <div class="dna-page dna-page-header-fixed">
+                        <header class="dna-header">
+                            <img src="../assets/images/pi-generic-48x48.png" class="dna-header-icon" title="Moderne Webapp" alt="Programm-Icon der Modernen Webapp"
+                            />
+                            <h2 class="h2 dna-header-title margin-top-xs">Beispiel-Anwendung</h2>
+                        </header>
+                        <div class="dna-alert-container dna-alert-error">
+                            <div class="alert dna-alert" role="alert">
+                                <button type="button" class="btn btn-light btn-img dna-close" title="Schließen" aria-label="Schließen"><i class="icon" aria-hidden="true"></i></button>
+
+                                <div class="dna-alert-content">
+                                    <div class="dna-alert-icon"><i class="icon"></i></div>
+                                    <div class="dna-alert-text">
+                                        <h5 class="h5 dna-alert-title">Alert-Titel</h5>
+                                        <p class="dna-alert-message">Dies ist ein Fehler</p>
+                                    </div>
+                                </div>
+                                <div class="dna-alert-footer btn-bar">
+                                    <button type="button" class="btn btn-default">Ok</button>
+                                </div>
+                            </div>
+                        </div>
+                        <main>
+                            <div class="dna-container-scroll">
+                                <div class="dummy-container">
+                                    Content
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+
+            <h4 id="alert-warning">Warnung</h4>
+            <div class="genepool map-sample-app map-sample-app-slim">
+                <div class="dna-wrapper">
+                    <div class="dna-page dna-page-header-fixed">
+                        <header class="dna-header">
+                            <img src="../assets/images/pi-generic-48x48.png" class="dna-header-icon" title="Moderne Webapp" alt="Programm-Icon der Modernen Webapp"
+                            />
+                            <h2 class="h2 dna-header-title margin-top-xs">Beispiel-Anwendung</h2>
+                        </header>
+                        <div class="dna-alert-container dna-alert-warning">
+                            <div class="alert dna-alert" role="alert">
+                                <button type="button" class="btn btn-light btn-img dna-close" title="Schließen" aria-label="Schließen"><i class="icon" aria-hidden="true"></i></button>
+
+                                <div class="dna-alert-content">
+                                    <div class="dna-alert-icon"><i class="icon"></i></div>
+                                    <div class="dna-alert-text">
+                                        <h5 class="h5 dna-alert-title">Alert-Titel</h5>
+                                        <p class="dna-alert-message">Dies ist eine Warnung</p>
+                                    </div>
+                                </div>
+                                <div class="dna-alert-footer btn-bar">
+                                    <button type="button" class="btn btn-default">Ok</button>
+                                </div>
+                            </div>
+                        </div>
+                        <main>
+                            <div class="dna-container-scroll">
+                                <div class="dummy-container">
+                                    Content
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+
+            <h4 id="alert-info">Information</h4>
+            <div class="genepool map-sample-app map-sample-app-slim">
+                <div class="dna-wrapper">
+                    <div class="dna-page dna-page-header-fixed">
+                        <header class="dna-header">
+                            <img src="../assets/images/pi-generic-48x48.png" class="dna-header-icon" title="Moderne Webapp" alt="Programm-Icon der Modernen Webapp"
+                            />
+                            <h2 class="h2 dna-header-title margin-top-xs">Beispiel-Anwendung</h2>
+                        </header>
+                        <div class="dna-alert-container dna-alert-information">
+                            <div class="alert dna-alert" role="alert">
+                                <button type="button" class="btn btn-light btn-img dna-close" title="Schließen" aria-label="Schließen"><i class="icon" aria-hidden="true"></i></button>
+
+                                <div class="dna-alert-content">
+                                    <div class="dna-alert-icon"><i class="icon"></i></div>
+                                    <div class="dna-alert-text">
+                                        <h5 class="h5 dna-alert-title">Alert-Titel</h5>
+                                        <p class="dna-alert-message">Dies ist eine Information</p>
+                                    </div>
+                                </div>
+                                <div class="dna-alert-footer btn-bar">
+                                    <button type="button" class="btn btn-default">Ok</button>
+                                </div>
+                            </div>
+                        </div>
+                        <main>
+                            <div class="dna-container-scroll">
+                                <div class="dummy-container">
+                                    Content
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+
+            <h4 id="alert-success">Erfolg</h4>
+            <div class="genepool map-sample-app map-sample-app-slim">
+                <div class="dna-wrapper">
+                    <div class="dna-page dna-page-header-fixed">
+                        <header class="dna-header">
+                            <img src="../assets/images/pi-generic-48x48.png" class="dna-header-icon" title="Moderne Webapp" alt="Programm-Icon der Modernen Webapp"
+                            />
+                            <h2 class="h2 dna-header-title margin-top-xs">Beispiel-Anwendung</h2>
+                        </header>
+                        <div class="dna-alert-container dna-alert-success">
+                            <div class="alert dna-alert" role="alert">
+                                <button type="button" class="btn btn-light btn-img dna-close" title="Schließen" aria-label="Schließen"><i class="icon" aria-hidden="true"></i></button>
+
+                                <div class="dna-alert-content">
+                                    <div class="dna-alert-icon"><i class="icon"></i></div>
+                                    <div class="dna-alert-text">
+                                        <h5 class="h5 dna-alert-title">Alert-Titel</h5>
+                                        <p class="dna-alert-message">Dies ist ein Erfolg</p>
+                                    </div>
+                                </div>
+                                <div class="dna-alert-footer btn-bar">
+                                    <button type="button" class="btn btn-default">Ok</button>
+                                </div>
+                            </div>
+                        </div>
+                        <main>
+                            <div class="dna-container-scroll">
+                                <div class="dummy-container">
+                                    Content
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+
+            <h4 id="alert-neutral">Neutral</h4>
+            <div class="genepool map-sample-app map-sample-app-slim">
+                <div class="dna-wrapper">
+                    <div class="dna-page dna-page-header-fixed">
+                        <header class="dna-header">
+                            <img src="../assets/images/pi-generic-48x48.png" class="dna-header-icon" title="Moderne Webapp" alt="Programm-Icon der Modernen Webapp"
+                            />
+                            <h2 class="h2 dna-header-title margin-top-xs">Beispiel-Anwendung</h2>
+                        </header>
+                        <div class="dna-alert-container">
+                            <div class="alert dna-alert" role="alert">
+                                <button type="button" class="btn btn-light btn-img dna-close" title="Schließen" aria-label="Schließen"><i class="icon" aria-hidden="true"></i></button>
+
+                                <div class="dna-alert-content">
+                                    <div class="dna-alert-icon"><i class="icon"></i></div>
+                                    <div class="dna-alert-text">
+                                        <h5 class="h5 dna-alert-title">Alert-Titel</h5>
+                                        <p class="dna-alert-message">Dies ist ein neutrale Meldung</p>
+                                    </div>
+                                </div>
+                                <div class="dna-alert-footer btn-bar">
+                                    <button type="button" class="btn btn-default">Ok</button>
+                                </div>
+                            </div>
+                        </div>
+                        <main>
+                            <div class="dna-container-scroll">
+                                <div class="dummy-container">
+                                    Content
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+
+    </main>
+</body>
+
+</html>

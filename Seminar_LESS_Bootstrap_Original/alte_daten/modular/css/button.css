@@ -1,0 +1,37 @@
+/* Buttonmodul */
+.btn {
+    width: 100px;
+    padding: 5px;
+    font-size: 1em;
+    font-size: 1rem;
+}
+
+.btn-rounded {
+    border-radius:5px;
+}
+
+.btn-default {
+    background-color: #ccc;
+    border: 1px solid #000;
+    color:black;
+}
+.btn-default:hover {
+    background-color: #bbb;
+}
+
+.btn-red {
+    background-color: pink;
+    border: 1px solid red;
+    color:red; 
+}
+.btn-red:hover {
+    background-color: palevioletred;
+}
+.btn-green {
+    background-color: lightgreen;
+    border: 1px solid green;
+    color:green; 
+}
+.btn-green:hover {
+    background-color: darkseagreen;
+}

@@ -1,0 +1,71 @@
+h1 {
+  color: black;
+}
+@media (min-width: 480px) {
+  h1 {
+    color: red;
+  }
+}
+@media (min-width: 640px) {
+  h1 {
+    color: green;
+  }
+}
+@media (min-width: 720px) {
+  h1 {
+    color: blue;
+  }
+}
+p {
+  color: black;
+}
+@media (min-width: 480px) {
+  p {
+    color: red;
+  }
+}
+@media (min-width: 640px) {
+  p {
+    color: green;
+  }
+}
+@media (min-width: 720px) {
+  p {
+    color: blue;
+  }
+}
+/* Mobile First */
+/* so müsste es geschrieben werden (ohne LESS):
+    h1 {
+        color:black;
+    }
+
+    p {
+        color:black;
+    }
+
+    @media (min-width : 480px )  {
+        h1 {
+            color:red;
+        }
+        p {
+            color:red;
+        }
+    }
+    @media (min-width : 640px )  {
+        h1 {
+            color:green;
+        }
+        p {
+            color:lightgreen;
+        }
+    }
+    @media (min-width : 720px )  {
+        h1 { 
+            color:blue;
+        }
+        p {
+            color:lightblue;
+        }
+    } 
+*/

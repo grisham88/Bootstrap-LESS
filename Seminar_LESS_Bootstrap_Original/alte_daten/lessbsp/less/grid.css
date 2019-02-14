@@ -1,0 +1,167 @@
+.grid-col-1 {
+  color: black;
+  float: left;
+  width: 110px;
+  margin: 5px 5px 5px 5px;
+  background-color: #ccc;
+  min-height: 30px;
+}
+.grid-col-1:first-child {
+  width: 115px;
+  margin: 5px 5px 5px 0;
+}
+.grid-col-1:last-child {
+  width: 115px;
+  margin: 5px 0 5px 5px;
+}
+.grid-col-1:only-child {
+  width: 120px;
+  margin: 5px 0 5px 0;
+}
+.grid-col-2 {
+  color: black;
+  float: left;
+  width: 230px;
+  margin: 5px 5px 5px 5px;
+  background-color: #ccc;
+  min-height: 30px;
+}
+.grid-col-2:first-child {
+  width: 235px;
+  margin: 5px 5px 5px 0;
+}
+.grid-col-2:last-child {
+  width: 235px;
+  margin: 5px 0 5px 5px;
+}
+.grid-col-2:only-child {
+  width: 240px;
+  margin: 5px 0 5px 0;
+}
+.grid-col-3 {
+  color: black;
+  float: left;
+  width: 350px;
+  margin: 5px 5px 5px 5px;
+  background-color: #ccc;
+  min-height: 30px;
+}
+.grid-col-3:first-child {
+  width: 355px;
+  margin: 5px 5px 5px 0;
+}
+.grid-col-3:last-child {
+  width: 355px;
+  margin: 5px 0 5px 5px;
+}
+.grid-col-3:only-child {
+  width: 360px;
+  margin: 5px 0 5px 0;
+}
+.grid-col-4 {
+  color: black;
+  float: left;
+  width: 470px;
+  margin: 5px 5px 5px 5px;
+  background-color: #ccc;
+  min-height: 30px;
+}
+.grid-col-4:first-child {
+  width: 475px;
+  margin: 5px 5px 5px 0;
+}
+.grid-col-4:last-child {
+  width: 475px;
+  margin: 5px 0 5px 5px;
+}
+.grid-col-4:only-child {
+  width: 480px;
+  margin: 5px 0 5px 0;
+}
+.grid-col-5 {
+  color: black;
+  float: left;
+  width: 590px;
+  margin: 5px 5px 5px 5px;
+  background-color: #ccc;
+  min-height: 30px;
+}
+.grid-col-5:first-child {
+  width: 595px;
+  margin: 5px 5px 5px 0;
+}
+.grid-col-5:last-child {
+  width: 595px;
+  margin: 5px 0 5px 5px;
+}
+.grid-col-5:only-child {
+  width: 600px;
+  margin: 5px 0 5px 0;
+}
+.grid-col-6 {
+  color: black;
+  float: left;
+  width: 710px;
+  margin: 5px 5px 5px 5px;
+  background-color: #ccc;
+  min-height: 30px;
+}
+.grid-col-6:first-child {
+  width: 715px;
+  margin: 5px 5px 5px 0;
+}
+.grid-col-6:last-child {
+  width: 715px;
+  margin: 5px 0 5px 5px;
+}
+.grid-col-6:only-child {
+  width: 720px;
+  margin: 5px 0 5px 0;
+}
+.grid-col-7 {
+  color: black;
+  float: left;
+  width: 830px;
+  margin: 5px 5px 5px 5px;
+  background-color: #ccc;
+  min-height: 30px;
+}
+.grid-col-7:first-child {
+  width: 835px;
+  margin: 5px 5px 5px 0;
+}
+.grid-col-7:last-child {
+  width: 835px;
+  margin: 5px 0 5px 5px;
+}
+.grid-col-7:only-child {
+  width: 840px;
+  margin: 5px 0 5px 0;
+}
+.grid-col-8 {
+  color: black;
+  float: left;
+  width: 950px;
+  margin: 5px 5px 5px 5px;
+  background-color: #ccc;
+  min-height: 30px;
+}
+.grid-col-8:first-child {
+  width: 955px;
+  margin: 5px 5px 5px 0;
+}
+.grid-col-8:last-child {
+  width: 955px;
+  margin: 5px 0 5px 5px;
+}
+.grid-col-8:only-child {
+  width: 960px;
+  margin: 5px 0 5px 0;
+}
+.grid-row {
+  color: black;
+  width: 960px;
+  clear: both;
+  float: left;
+  border: 1px solid #000;
+}

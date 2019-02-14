@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>DATEV DNA Pattern Library - Konzepte</title>
+
+    <!-- DNA-theme -->
+    <link href="../assets/css/dna-theme.css" rel="stylesheet">
+    <!-- Projektspezifische Styles -->
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../assets/js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../assets/js/bootstrap.js"></script>
+</head>
+
+<body class="pattern-library map-layout-base">
+
+    <!------------------------------------------------------------------------------------------------------------------------------->
+    <!--                                                    NAVIGATION                                                             -->
+    <!------------------------------------------------------------------------------------------------------------------------------->
+
+    <aside>
+        <nav class="map-nav">
+            <ul>
+                <li><a href="../index.html"><span class="glyphicon glyphicon glyphicon-menu-left" aria-hidden="true"></span> start</a></li>
+            </ul>
+
+            <h4><a href="#dna-experience">DATEV-Experience</a></h4>
+            <ul>
+                <li><a href="#ux-prinzipien">UX-Prinzipien</a></li>
+                <li><a href="#konzeptionelle-merkmale">Konzeptionelle Merkmale</a></li>
+            </ul>
+
+            <h4><a href="#grundprinzipien">Grundprinzipien</a></h4>
+            <ul>
+                <li><a href="#usability">Usability</a></li>
+                <li><a href="#lighweight-first">Lightweight First</a></li>
+                <li><a href="#accessibility">Accessibility</a></li>
+                <li><a href="#responsiveness">Responsiveness</a></li>
+                <li><a href="#asynchronism">Asynchronism</a></li>
+                <li><a href="#komponentenorientiert">Komponentenorientiert</a></li>
+                <li><a href="#touch-bedienbarkeit">Touch-Bedienbarkeit</a></li>
+            </ul>
+
+            <h4><a href="#patterns">Patterns</a></h4>
+            <ul>
+                <!--<li><a href="#laden-sperren">Laden/Sperren von Komponenten</a></li>-->
+                <li><a href="#navigation">Navigation</a></li>
+                <li><a href="#validierung">Validierung</a></li>
+                <!--<li><a href="#autokorrektur">Autokorrektur</a></li>-->
+                <li><a href="#speichern">Speichern (Implizit/Explizit)</a></li>
+                <!--<li><a href="#authentifizierung">Authentifizierung</a></li>-->
+                <!--<li><a href="#messaging">Messaging (Lokal/Global)</a></li>-->
+                <li><a href="#liste-vs-tabelle">Liste vs. Tabelle</a></li>
+                <!--<li><a href="#tabContol-tabs">TabContol/Tabs</a></li>-->
+                <!--<li><a href="#autarke-komponenten">Autarke Komponenten</a></li>-->
+                <!--<li><a href="#commanding">Globale/Lokale Commanding-Pattern</a></li>-->
+            </ul>
+
+            <div class="map-nav-up">
+                <a href="#"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span> nach oben</a>
+            </div>
+        </nav>
+
+        <div class="map-aside-bottom">
+            <div class="map-contact">
+                <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> <a href="mailto:ng2bs-support@datev.de">Kontakt: ng2bs-team</a>
+            </div>
+            <div class="map-copyright">&#169; DATEV eG 2016</div>
+        </div>
+    </aside>
+
+    <!------------------------------------------------------------------------------------------------------------------------------->
+    <!--                                                          MAIN                                                             -->
+    <!------------------------------------------------------------------------------------------------------------------------------->
+
+    <main>
+        <section id="start" class="page-header">
+            <div class="intro">
+                <h1>Konzeptuelle Patterns</h1>
+                <h4>Konzepte moderner DATEV-Anwendungen und der Design DNA</h4>
+                <p>Die hier beschriebenen Konzeptuellen Patterns machen in ihrer Kombination mit den <a href="../visual-patterns/index.html">Visuellen Patterns</a>                    die DATEV-Design DNA aus. Der konsequente Einsatz in Produkt und Kommunikation ist ein MUSS und die Grundvoraussetzung
+                    für deren Wirksamkeit.</p>
+                <p>Technische Basis für Webanwendungen ist HTML5 mit den Frameworks und Angular 2 und Bootstrap 3</p>
+                <p>Die Grundtechnologie für bestehende Produkte wird mit der Einführung der Design DNA nicht infrage gestellt,
+                    daher gibt es bei der Umsetzung der einzelnen Merkmale Einschränkungen auf unterschiedlichen Technologien.</p>
+            </div>
+        </section>
+
+        <section id="dna-experience" class="section-experience">
+            <div class="jumbotron">
+                <h2>Die DATEV-Experience</h2>
+                <p>Werte, Prinzipien und Merkmale für eine markenorientierte Designstrategie und eine ganzheitliche, konsistente
+                    und eigenständige DATEV-User Experience</p>
+            </div>
+            <article id="ux-prinzipien">
+                <h3>DATEV-UX-Prinzipien</h3>
+                <p>Anwendungen der DATEV sollen folgende Prinzipien repräsentieren:</p>
+                <h4 class="h2">Alles da und trotzdem einfach​</h4>
+                <p>Der Anwender hat bei DATEV-Software das Gefühl der Sicherheit, alle benötigten Funktionen und Informationen
+                    zur Verfügung zu haben, jedoch sind diese nicht omnipräsent an der Oberfläche dargestellt. Die Oberflächen
+                    sind klar und aufgeräumt gestaltet, so dass der Anwender auf einen Blick die wichtigsten Informationen
+                    erkennen und bearbeiten kann. Kontextbezogene Funktionen werden dynamisch und punktuell eingesetzt, so
+                    dass die Komplexität der Oberfläche, nicht aber die Komplexität der Anwendung, reduziert wird. </p>
+
+                <h4 class="h2">Mit professionellen Lösungen schnell zum Ziel</h4>
+                <p>DATEV-Anwendungen sind professionell, sowohl aus fachlichen als auch aus gestalterischen Gesichtspunkten.
+                    Sie überzeugen durch eine kontextbezogene und bedarfsgerechte Aufbereitung der Informationen, deren visuelle
+                    Umsetzung von hoher handwerklicher Qualität zeugt.
+                </p>
+                <p>Schon während der Konzeption stehen der Anwender, und die Bedürfnisse der unterschiedlichen Ziel- und Berufsgruppen.
+                    im Mittelpunkt. Durch eine prozessorientierte Gestaltung und performante Umsetzung der DATEV-Anwendungen
+                    kann der Nutzer effizient und zielführend seine Aufgaben erledigen. Er navigiert schnell und präzise
+                    durch die Anwendungen und wird in seinem Arbeitsrhythmus optimal unterstützt.</p>
+
+                <h4 class="h2">Sicher und verlässlich</h4>
+                <p>DATEV-Anwendungen vermitteln Sicherheit und Verlässlichkeit durch eine konsistente Umsetzung der Interaktionsmetaphern.
+                    Stringente und gut durchdachte Konzepte zum Einsatz von Oberflächenpatterns, Grafiken und Icons ermöglichen
+                    dem Anwender ein schnelles Zurechtfinden in den unterschiedlichen DATEV-Anwendungen.
+                </p>
+                <p>Sicherheit wird nicht um jeden Preis erzwungen, vielmehr wird der Anwender durch geschickte ergonomische
+                    Lösungen zu einer sicheren Nutzung der DATEV-Anwendungen motiviert, ohne ihn in seinem Workflow zu bremsen.
+                </p>
+                <h4 class="h2">Software, die mit- und vordenkt</h4>
+                <p>DATEV-Software unterstützt den Anwender durch zielgerichtete Informationen und kontextbezogene Funktionen,
+                    die nutzbringend zum richtigen Zeitpunkt verfügbar sind. Der Anwender muss nicht langwierig suchen, sondern
+                    bekommt passgenaue Unterstützung.
+                </p>
+                <p>Der Anwender hat schnell Zugriffsmöglichkeiten auf benötigte Informationen aus dem aktuellen Kontext – auch
+                    wenn diese , aus anderen Anwendungen stammen und alsoder eine kombinierte Sammlung Kombination von Informationen
+                    aus unterschiedlichen Anwendungen sind. Software, die "mitdenkt", unterstützt den Nutzer aktiv, beispielsweise
+                    durch intelligente Vorschlagslisten bei Suchen und Sammlungen.
+
+                </p>
+                <h4 class="h2">Programmiert für Freunde</h4>
+                <p>DATEV-Anwendungen vermitteln die partnerschaftliche Beziehung zwischen dem Unternehmen und seinen Mitgliedern
+                    bzw. Anwendern. Die Ansprache ist eine freundliche, mit einem kleinen Augenzwinkern, um Nähe und Sympathie
+                    zu vermitteln. Dies beginnt mit der Software, bezieht jedoch das gesamte DATEV-Ökosystem mit ein. Bei
+                    jedem Berührungspunkt mit DATEV wird dem Anwender auf eine freundliche und zuvorkommende Art und Weise
+                    begegnet. Die Tonalität ist hell, freundlich und ruhig, und durch emotionale Gestaltungselemente wird
+                    der menschenorientierte Aspekt in der Oberflächengestaltung transportiert.
+                </p>
+                <p>Somit wird eine emotionale Bindung angeregt und eine gute User Experience geschaffen. Die Gestaltung berücksichtigt
+                    den Grundgedanken, dass die Software für alle Anwender gleichermaßen, nicht für einen bestimmten Kernbereich
+                    entwickelt wird. Durch das Gestaltungskonzept "Design für Alle" werden zahlreiche Aspekte der Gebrauchstauglichkeit
+                    einer Anwendung berücksichtigt.
+                </p>
+                <p>Die freundliche Ansprache, kann zum Beispiel in Fehlermeldungen eingesetzt werden. Formulierungen wie "Leider
+                    ist ein unbekannter Fehler aufgetreten." oder "Es tut uns leid, dass dieser unbekannte Fehler aufgetreten
+                    ist." sind gut geeignet, um partnerschaftlich in Fehlersituationen zur reagieren. Zudem können Handlungsabfolgen
+                    und Anleitungen einfach und sympathisch vermittelt werden ohne dabei die Sachlichkeit zu verlieren.
+                </p>
+                <h4 class="h2">Software, die begeistert​</h4>
+                <p>Die Begeisterung für DATEV-Anwendungen entsteht aus der Summe aller UX-Prinzipien. Durch lebendige und erstklassige
+                    Vorreiter kann Begeisterung und Neugierde geweckt werden, um so wegweisende Innovationen für neue Produktlösungen
+                    aufzuzeigen. Die unterschiedlichen Zielgruppen, wie beispielsweise Mandanten, sollen durch passgenaue,
+                    unverwechselbare und frische Produkte begeistert werden.
+                </p>
+                <p> Insbesondere Online und mobil können neue Konzepte flexibel und offensiv für den sich wandelnden Markt gestaltet
+                    werden. </p>
+
+            </article>
+
+            <article id="konzeptionelle-merkmale">
+                <h3>Konzeptionelle Gestaltungsmerkmale der Design DNA</h3>
+
+                <p>Gestaltungsmerkmale sind Stilelemente, die in ihrer Kombination die DATEV-Design DNA ausmachen. Der konsequente
+                    Einsatz in Kommunikation und Produkt ist ein MUSS und die Grundvoraussetzung für deren Wirksamkeit. Die
+                    Grundtechnologie der Produkte wird mit der Einführung der Design DNA nicht infrage gestellt, daher gibt
+                    es bei der Umsetzung der einzelnen Merkmale Einschränkungen auf unterschiedlichen Technologien. Außerdem
+                    gibt es in den unterschiedlichen Medien (z.B. datev.de, Printkommunikation) Gestaltungsfreiräume.</p>
+
+                <h4>Reduktion aufs Wesentliche</h4>
+                <p>
+                    Auf den Oberflächen wird nur das dargestellt, was der Nutzer gerade benötigt.
+                </p>
+                <p>
+                    Die visuelle Erscheinungsform der UI Elemente wird auf ein benötigtes Minimum reduziert. Überflüssige Elemente wie komplexe
+                    Rahmen werden entfernt.
+                </p>
+
+                <h4>Vereinfachung durch Entzerrung</h4>
+                <p>
+                    Wo Informationen nicht weiter sinnvoll reduziert werden können, eine weitere Reduktion aber gewünscht ist, soll die Informationsdarbietung
+                    entzerrt werden. Die Abläufe in der Software bilden die Prozesse der Nutzer ab und nur jeweils die sinnvollen
+                    Informationen und Funktionen werden nacheinander angeboten. Typische Abläufe gehen von Übersichtsseiten
+                    zu Detail- und Bearbeitungsmasken.
+                </p>
+
+                <h4>Schrittweise Erhöhung der Informationsdichte</h4>
+                <p>
+                    Den Anwendungsfällen der Nutzer folgend werden nach und nach mehr Informationen dargestellt, wenn dies die Effizienz der
+                    Benutzung steigert.
+                </p>
+                <p>
+                    Funktionalitäten mit werden entsprechend ihrer Nutzungshäufigkeit und Wichtigkeit für den Nutzer priorisieert und unterschiedlich
+                    zur Verfügung gestellt: Primäre und häufige Funktionen sind direkt am entsprechenden Inhalt im Zugriff,
+                    weitergehende Funktionalitäten sind erst über einen weiteren Schritt oder im Hintergrund verfügbar.
+                </p>
+            </article>
+        </section>
+
+        <section id="grundprinzipien" class="section-prinzipien">
+            <div class="jumbotron">
+                <h2>Grundprinzipien moderner Anwendungen</h2>
+                <p>Basis der Entwicklung von modernen Anwendungen</p>
+            </div>
+            <article>
+                <h3 class="underline" id="usability">User Experience & Usability</h3>
+                <blockquote>
+                    <p><strong>Usability</strong> übersetzt man am besten mit <em>Gebrauchstauglichkeit</em> oder <em>Benutzerfreundlichkeit</em>.
+                        Usability bezeichnet das Ausmaß, in dem ein Produkt, System oder Dienst durch bestimmte Benutzer
+                        in einem bestimmten Anwendungskontext genutzt werden kann, um bestimmte Ziele effektiv, effizient
+                        und zufriedenstellend zu erreichen. </p>
+                    <p> Gute Usability wird in der Regel gar nicht explizit wahrgenommen, schlechte hingegen schon.</p>
+
+                    <p>Wichtig ist Usability bei allen Produkten mit einer Schnittstelle zwischen Mensch und Technik bzw. zwischen
+                        Mensch und Maschine. Ob Software, Websites, mobile Endgeräte, medizinische Geräte oder komplexe Anlagen
+                        zur Maschinensteuerung im Beruf, sie alle profitieren von einer guten Gebrauchstauglichkeit. </p>
+
+                    <p><strong>User Experience</strong> erweitert den Begriff Usability um ästhetische und emotionale Faktoren
+                        wie eine ansprechende, „begehrenswerte” Gestaltung, Aspekte der Vertrauensbildung oder Spaß bei der
+                        Nutzung (Joy of use). </p>
+                    <p>
+                        Quelle: <a href="https://i/www.usability.de/usability-user-experience.html">usabilty.de</a>
+                    </p>
+                </blockquote>
+                <p>In der DATEV ist die User Experience über die <a href="#ux-prinzipien">UX-Prinzipien</a> festgelegt. Diese
+                    sind die Zielwerte jeder DATEV-Anwendung.</p>
+            </article>
+
+            <article>
+                <h3 class="underline" id="lighweight-first">Lightweight first</h3>
+                <p>
+                    Die Realisierung einer modernen Front-End-Anwendung erfolgt stets unter der Prämisse Lightweight-first . Dabei gelten im
+                    Sinne einer leichtgewichtigen Oberflächenentwicklung primär folgende, übergeordnete Leitsätze:
+                </p>
+
+                <h4>Einfachheit</h4>
+                <p>"Starte so einfach wie möglich": Anforderungen an das Front-End sollten stets auf Basis einer möglichst wenig
+                    komplexen visuellen Darstellungsform realisiert werden. Dies gewährleistet eine robuste und gleichwohl
+                    schnell umsetz- wie anpassbare Anwendungsoberfläche.
+                </p>
+                <p>So können beispielsweise in der Praxis oftmals aufwändig entwickelte Grid Controls mit weitreichenden Funktionen
+                    wie Gruppierungen, Sortierungen oder Spaltenkonfigurationen durch einfachere Oberflächenelemnte ersetzt
+                    werden. Passend für den entsprechenden UseCase konzipierte Tabellen- oder Listendarstellungen ohne diese
+                    übergreifenden Spezialfunktionen sind deutlich einfacher zu implementieren, ohne dass dabei Einbußen
+                    im Benutzererlebnis hingenommen werden müssen.
+                </p>
+
+                <h4>Orientierung am Webstandard</h4>
+                <p>"Setze auf Standards": Im Browser-Kontext sollte die Verwendung existierender Web Standards und Standardlösungen
+                    immer als erste Option in der Umsetzung betrachtet werden. So ist zum Beispiel immer zu prüfen, ob anstatt
+                    eines aufwändig eigenhändig entwickelten Eingabe-Controls nicht etwa native HTML5 &lt;input&gt;-Attribute
+                    die identische oder annähernde Funktionalität abbilden können.
+                </p>
+
+                <h4>Orientierung am Framework</h4>
+                <p>
+                    "Arbeite niemals gegen dein technisches Rahmenwerk": Es sollte stets im Einklang mit den technischen Prinzipien der verwendeten
+                    Bibliotheken und Frameworks entwickelt und deren Kernkonzepte nicht durch inkompatiblen Programmcode
+                    außer Kraft gesetzt werden. Im Umgang mit Bootstrap als Oberflächen-Bibliothek bedeutet dies beispielsweise
+                    die Nutzung der integrierten Theming-Option statt des willkürlichen Überschreibens von CSS-Selektoren
+                    des Bootstrap-Stylesheets. Im Kontext von Angular 2 dagegen muss zum Beispiel stets dessen grundsätzliche
+                    Komponentenorientierung berücksichtigt werden.
+                </p>
+
+                <h4>Wirtschaftlichkeit</h4>
+                <p>
+                    "Stößt du an Grenzen, erwäge die Betriebswirtschaftlichkeit einer komplexen Umsetzung": Reichen für die Umsetzung bestimmter
+                    Use Cases die geltenden Prinzipien auch nach praktischer Erprobung nicht aus, um eine angemessenen Funktionsumfang
+                    und Usability zu gewährleisten, muss die Wirtschaftlichkeit einer Speziallösung überprüft und darf nicht
+                    "um jeden Preis" erzwungen werden. So kann der Einsatz einer Fremdkomponente situationsbezogen den zeitlichen
+                    Aufwand zur Umsetzung eines konkreten Features deutlich verringern, wie wenn die entsprechende Funktionalität
+                    eigenhändig "von Grund auf" neu entwickelt werden würde. Im Gegenzug dazu kann ein aus Kundensicht wichtiges
+                    Feature auch aufwändiger selbst umgesetzt werden, wenn hierdurch der Gesamtwert der Anwendung signifikant
+                    gesteigert wird.
+                </p>
+
+                <h4>Bewusste Entscheidungen</h4>
+                <p>
+                    "Entscheide Dich bewusst für die Lösung": Die Entscheidung für eine aufwändigere Lösung Speziallösung im Sinne der Usability
+                    darf immer nur im klaren Bewusstsein der daraus potenziell resultierenden Auswirkungen / Risiken auf
+                    die weitere Entwicklung der Anwendung getroffen werden. So steigen für komplexe Programmteile Fehleranfälligkeit
+                    und Wartungsaufwand deutlich an, während sich gleichzeitig deren Flexibilität verringert. Entscheidungen
+                    für aufwändigere Lösungen müssen daher bezüglich ihrer Wirtschaftlichkeit betrachtet werden.
+                </p>
+            </article>
+
+            <article>
+                <h3 class="underline" id="accessibility">Accessibility</h3>
+                <blockquote>
+                    <p><em>"The power of the Web is in its universality. Access by everyone regardless of disability is an essential
+                        aspect."</em></p>
+                    <p> Tim Berners-Lee, W3C Director and inventor of the World Wide Web</p>
+                </blockquote>
+
+                <h4>Typische Barrieren</h4>
+                <ul>
+                    <li>Schlechter Farbkontrast</li>
+                    <li>Mangelhafte Bedienbarkeit mit Tastatur</li>
+                    <li>Zu kurze Timeouts</li>
+                    <li>Fehlende Semantik</li>
+                    <li>Intellektuelle Überforderung</li>
+                </ul>
+
+                <h4>Gestaltungsprinzipien</h4>
+                <ol>
+                    <li>Wahrnehmbarkeit</li>
+                    <li>Bedienbarkeit</li>
+                    <li>Verständlichkeit</li>
+                    <li>Robustheit</li>
+                </ol>
+
+                <h5>Prinzip 1: <strong>Wahrnehmbar</strong></h5>
+                <p>Informationen und Bestandteile der Benutzerschnittstelle müssen den Benutzern so präsentiert werden, dass
+                    diese sie wahrnehmen können.</p>
+                <ul>
+                    <li>Alle Nicht-Text-Inhalte (Grafische Elemente) sind mit einer Textalternative versehen</li>
+                    <li>Es stehen Untertitel für Audio- und Videodateien („zeitbasierte Medien“) zur Verfügung</li>
+                    <li>Anpassbare Inhalte ermöglichen unterschiedliche Darstellungsarten, ohne dass Information und Struktur
+                        verloren geht (z.B. einfacheres Layout)</li>
+                    <li>Gute Wahrnehmbarkeit des Inhalts und Unterscheidbarkeit von Vorder- und Hintergrund (z. B. Kontraste,
+                        Farben, Schriftgrößen)</li>
+                </ul>
+
+                <h5>Prinzip 2: <strong>Bedienbar</strong></h5>
+                <p>Alle Bestandteile der Benutzerschnittstelle und Navigation müssen bedienbar sein.</p>
+                <ul>
+                    <li>Durchgängige Bedienbarkeit mit Tastatur</li>
+                    <li>Ausreichend Zeit gewähren (z.B. bei Zeitlimits; anhalten, beenden und ausblenden beweglicher oder aktualisierender
+                        Information ermöglichen)</li>
+                    <li>Das Design verursacht keine epileptischen Anfälle (Häufigkeit des Aufblitzens von Inhalten maximal 3x
+                        pro Sekunde)</li>
+                    <li>Es werden Navigationshilfen angeboten, z.B. Umgehungsmöglichkeiten für wiederholende Elemente; Titel
+                        beschreiben Thema und Zweck der Seite/eines Links; Informationen über Position (Fokus) innerhalb
+                        der Webseite</li>
+                </ul>
+
+                <h5>Prinzip 3: <strong>Verständlich</strong></h5>
+                <p>Informationen und Bedienung der Benutzerschnittstelle müssen verständlich sein.</p>
+                <ul>
+                    <li>Inhalt muss lesbar und verständlich sein (Einfache Sprache, auch durch Programme erkennbar)</li>
+                    <li>Die Webseite muss vorhersehbar aussehen und funktionieren (z.B. Fokusänderung ändert nicht unerwartet
+                        Inhalt der Seite; Einheitlichkeit wiederholender Navigation; Elemente mit gleicher Funktionalität
+                        einheitlich bezeichnen)</li>
+                    <li>Es werden Hilfen bei der Eingabe geboten (Beschriftungen, Anweisungen, Fehlererkennung mit Beschreibung
+                        für Benutzer)</li>
+                </ul>
+
+                <h5>Prinzip 4: <strong>Robust</strong></h5>
+                <p>Inhalte müssen robust genug sein, damit sie zuverlässig von einer großen Auswahl an Benutzeragenten einschließlich
+                    assistierender Techniken interpretiert werden können.</p>
+                <ul>
+                    <li>Die Kompatibilität mit Browsern („Benutzeragenten“) und Hilfsmitteln („Assistiven Technologien“) soll
+                        maximiert sein; Setzt korrekte Semantik voraus entsprechend der Spezifikation der verwendeten Programmiersprache
+                    </li>
+                </ul>
+
+                <h4>Integration</h4>
+                <p>Für eine Accessibility Integration sind folgende Punkte notwendig:</p>
+                <ol>
+                    <li>Konzeptionelle Überlegungen (z. B. »Welcher Aufbau unterstützt die Navigation mit Bedienhilfen?«)</li>
+                    <li>Design (z. B. »Sind die Kontrastwerte der Bedienelemente und Schriften stark genug?«)</li>
+                    <li>Entwicklung: (z. B. »Sind sinnvolle, beschreibende Infotexte für Bedienelemente hinterlegt ?«) --> Semantik</li>
+                    <li>Testing (z. B. »Wurde die App ausreichend mit blinden und sehbehinderten Nutzern getestet?«)</li>
+                </ol>
+
+
+                <h4>Universal Design</h4>
+                <p>Universelles Design ist Barrierefreiheit aus der Sicht von Produktentwicklern</p>
+
+                <ol>
+                    <li>Universelle Usability</li>
+                    <li>Anpassungsfähigkeit, z.B. Einstellbarkeit von Schriftgrößen und Farbkontrasten für den Ausgleich einer
+                        Sehbehinderung
+                    </li>
+                    <li>Schnittstellen für technische Hilfen, Ein barrierefreies Produkt hat Schnittstellen für den Anschluss
+                        assistierender Geräte, z. B. Screenreader oder Braille-Zeile</li>
+                </ol>
+
+                <p><i>Quelle: Was bringen uns barrierefreie Apps? VON STEFAN SCHUHMANN</i></p>
+
+                <h4>Lightweight First?</h4>
+                <p>Welche Fälle/Features umgesetzt werden muss eine bewusste Entscheidung sein unter Berücksichtigung welche
+                    Konsequenzen daraus entstehen (Betriebswirtschaftliche Aspekte, etc.)</p>
+
+                <h5>Interne Quellen</h5>
+                <ul>
+                    <li><a href="https://sharepoint.bk.datev.de/sites/PwsOnline/Dokumente/Produkte/AnoUebergreifend/Fachkonzepte/Barrierefreiheit%20Bonhag.pptx">Präsentation "Barrierefreitheit"</a>                        von Wolfgang Bonhag (DATEV e.G. intern)</li>
+                    <li><a href="https://sharepoint.bk.datev.de/sites/PwsOnline/Dokumente/Produkte/AnoUebergreifend/Fachkonzepte/Barrierefreiheit%20Patrick.pptx">Präsentation "Barrierefreitheit"</a>                        von Patrick Burger (DATEV e.G. intern)</li>
+                </ul>
+
+                <h4>Accessibilty Guidelines und Standards</h4>
+                <p>Von der Web Accessibility Initiative (WAI) innerhalb des W3C:</p>
+
+                <h5>Web Content Accessibility Guidelines WCAG 2.0</h5>
+                <ul>
+                    <li><a href="http://www.w3.org/WAI/intro/wcag.php">WCAG Überblick</a> mit vielen weiterführenden Links</li>
+                    <li><a href="http://i/www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines WCAG 2.0</a> - Technical
+                        Standard
+                    </li>
+                    <li><a href="http://i/www.w3.org/Translations/WCAG20-de/">Web Content Accessibility Guidelines WCAG 2.0 auf deutsch</a>                        - Technischer Standard </li>
+                    <li><a href="http://i/www.w3.org/WAI/WCAG20/glance/">Schnelleinstieg in die WCAG 2.0</a></li>
+
+                </ul>
+                <h5>Accessible Rich Internet Applications Suite ARIA 1.0</h5>
+                <ul>
+                    <li><a href="https://www.w3.org/WAI/intro/aria">ARIA Überblick</a> mit vielen weiterführenden Links</li>
+                    <li><a href="http://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA) 1.0</a> - Technical
+                        Standard
+                    </li>
+                    <li><a href="http://www.w3.org/TR/wai-aria-practices/">WAI-ARIA Authoring Practices 1.1</a></li>
+                </ul>
+
+            </article>
+
+            <article>
+                <h3 class="underline" id="responsiveness">Responsiveness</h3>
+                <p>
+                    Die Gestaltung und Realisierung von webbasierten Benutzeroberflächen erfolgt nach den Prinzipien des Responsive Design. Im
+                    Zentrum steht dabei die stete Gewährleistung einer kontextgerechten Aufbereitung von Bedienelementen
+                    und Datendarstellung durch Techniken wie flexible Layoutgrid-Systeme und CSS Media Queries. Insbesondere
+                    aufgrund der endlosen Vielfalt an unterschiedlichen mobilen Endgeräten ist diese Vorgehensweise für moderne
+                    Webanwendungen alternativlos. Responsive Design muss von Beginn an als Grundmanifest der UI-Entwicklung
+                    verstanden und umgesetzt werden, da eine nachträgliche oder willkürliche Implementierung von Adaptivität
+                    / Responsivität für bereits bestehende statische Oberflächen nur unter teils erheblichem Mehraufwand
+                    vorgenommen werden kann. Fortgeschrittene Kenntnisse in HTML und CSS sind dafür unabdingbar. Responsive
+                    Design steht ebenso in direktem Zusammenhang mit Lightweight-First. Wird beispielsweise für eine gezielte
+                    Layout-Sollbruchstelle die Änderung eines gesamten Bedienparadigmas definiert, so entspricht dies nicht
+                    mehr dem Mantra einer leichtgewichtigen Konzeption und bedarf einer genauen Prüfung.
+                </p>
+                <p>
+                    Siehe auch: Glossar <a target="_blanc" href="https://sharepoint.bk.datev.de/sites/tll/glossar/Seiten/Responsive%20Web%20Design.aspx">Responsive Web Design</a>
+                </p>
+            </article>
+
+            <article>
+                <h3 class="underline" id="asynchronism">Asynchronism</h3>
+                <p>
+                    In der Online-Welt ist die asynchrone Verarbeitung von Aktionen de facto Standard. Daher ist es umso wichtiger bei der Entwicklung
+                    von Modern Apps damit umzugehen.
+                </p>
+                <p>
+                    Besonders wichtig sind Szenarien, wie das Datenladen/-speichern vom/am Server. Zu beachten ist das Verhalten der Anwendung,
+                    so dass dem Benutzer Möglichkeiten zur Interaktion bleiben, bzw. der Benutzer Feedback bekommt, welche
+                    Aktionen aktuell laufen und wie dessen Fortschritt ist.
+                </p>
+                <p>
+                    Genauere Konzepte zur Behandlung von Asychronität werden in den Kapiteln "Laden" und "Speichern" vorgestellt.
+                </p>
+            </article>
+
+            <article>
+                <h3 class="underline" id="komponentenorientiert">Komponentenorientiertheit</h3>
+                <p>todo!</p>
+            </article>
+
+            <article>
+                <h3 class="underline" id="touch-bedienbarkeit">Touch-Bedienbarkeit</h3>
+                <p>
+                    Systeme, die mit Touch bedienbar sind haben andere Anforderungen an die Bedienoberfläche als herkömmliche Systeme mit Maus
+                    und Tastatur. Das betrifft unter anderem die Größe der Bedienelemente. Der Finger als Eingabemedium ist
+                    im Gegensatz zur Maus deutlich größer und braucht daher auch eine größere Fläche um ein Ziel sicher treffen
+                    zu können. Zudem kommen "natürliche" Interaktionen mit der Oberfläche wie durch Gesten. Eine Beschränkung
+                    ist weiterhin dass der Hover-State der Maus standardmäßig nicht per Touch auslösbar ist.
+                </p>
+                <figure>
+                    <img src="../assets/images/touch/touch_001.png" alt="Graph of target size vs. % of missed taps" />
+                    <figcaption>Verfehlte Taps (in %) bezogen auf die Größe des Ziels | Quelle: Microsoft</figcaption>
+                </figure>
+
+                <h4>Größe der Bedienelemente</h4>
+                <p>
+                    Je größer das Bedienelement ist, desto sicherer wird es getroffen. Jedoch muss man die Größe des Elementes gegen den normalerweise
+                    begrenzten Platz abwägen. Als Richtlinie wird meistens eine Größe zwischen 5 und 9 mm empfohlen. Für
+                    die Bedienung per Touch ist die <em>physikalische Größe</em> der Bedienelemente wichtig,
+                    da bei modernen Geräten die Pixeldichten variieren und daher kein verlässliches Maß mehr geben.</p>
+
+                <p>Wie groß ein Bedienelement sein sollte, hängt von verschiedenen Faktoren ab:</p>
+                <ul>
+                    <li>Häufigkeit der Nutzung</li>
+                    <li>Konsequenz bei Fehlern (wie schnell/mit wie vielen Aktionen komme ich zum Ausgangzustand zurück?)</li>
+                    <li>Position und umgebender Inhalt</li>
+                    <li>…</li>
+                </ul>
+                <p>Wichtig ist zudem der Abstand (Padding) zwischen Bedienelementen. Dieser sollte <strong>mindestens 2 mm</strong>                    betragen.</p>
+
+                <h5><strong>7x7 mm</strong>: Empfohlene Mindestgröße</h5>
+                <p>Gute Größe für normal häufig benutzte Bedienflächen und wenn Fehler schnell behoben werden können.</p>
+
+                <h5><strong>9x9 mm</strong>: Für genaues Arbeiten</h5>
+                <p>Wenn eine Aktion häufig ausgeführt wird oder die Zielaktion weitreichende Konsequenzen hat (z.B. Löschen),
+                    ist eine Größe von 9x9 mm empfehlenswert.</p>
+
+                <h5><strong>5x5 mm</strong>: Bei Platzmangel</h5>
+                <p>Ist wenig Platz vorhanden, kann die Größe bis auf 5x5 mm sinken. Eine versehentliche Berührung des Bedienelementes
+                    sollte aber schnell zu korrigieren sein, wenn versehentlich berührt wird. Hier ist das Padding besonders
+                    wichtig.
+                </p>
+
+                <h5>Größe des sichtbaren Bedienelementes</h5>
+                <p>Die Bedienfläche eines Controls muss nicht unbedingt zu 100% sichtbar sein; jedoch sollte mindestens 60%
+                    der Bedienfläche gefüllt sein. Zusätzlich ist das Padding zu berücksichtigen.</p>
+                <figure>
+                    <img src="../assets/images/touch/touch_005.png" alt="Size of visual target vs. actual target" />
+                </figure>
+
+                <hr>
+                <p>Quellen:</p>
+                <ul>
+                    <li><a href="http:/i/developer.microsoft.com/de-de/windows/design/inputs-devices" target="_blank">Micrsoft "Touch interaction design for Windows Store apps"</a></li>
+                    <li>Guidelines for targeting (Windows Store apps)
+                        <ul>
+                            <li><a href="http://i/msdn.microsoft.com/en-us/library/windows/apps/hh465326.aspx" target="_blanc">Microsoft guideline</a></li>
+                            <li><a href="https://i/help.ubuntu.com/community/UMEGuide/DesigningForFingerUIs" target="_blanc">UMEGuide - Designing For Finger UIs</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>Gestensteuerung</h4>
+                <p>Die Standard-Gesten der (Multi-)Touch-Bedienung müssen in den Anwendungen unterstützt werden. Zudem können
+                    etablierte Gesten-Patterns wie z.B. das Herein-Swipen des Navigation-Drawers verwendet werden.
+                </p>
+                <table class="table">
+                    <tr>
+                        <td><img src="../assets/images/touch/touch_006.png" alt="Geste 'tap'" /></td>
+                        <td>Tap</td>
+                        <td>Kurzes Antippen eines Elements</td>
+                        <td>Eine Aktion ausführen, Auswahl z. B. Öffnen einer Anwendung oder Tap auf ein Control, um den Inhalt
+                            zu bearbeiten</td>
+                    </tr>
+                    <tr>
+                        <td><img src=" ../assets/images/touch/touch_007.png " alt="Geste 'drag'" /></td>
+                        <td>Drag</td>
+                        <td>Streifen über das Display</td>
+                        <td>Ziehen und Verschieben von Elementen, langsames Scrollen</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/touch/touch_008.png " alt="Geste 'flick'" /></td>
+                        <td>Flick</td>
+                        <td>Schnelles Wischen über das Display</td>
+                        <td>Schnelles Scrollen, Wechseln der Ansicht</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/touch/touch_009.png " alt="Geste 'swipe'" /></td>
+                        <td>Swipe</td>
+                        <td>Kurze Wischbewegung</td>
+                        <td>Lässt in Tabellen-Ansichten den Löschen-Button erscheinen, Öffnen des Navigation-Drawers</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/touch/touch_010.png " alt="Geste 'double tap'" /></td>
+                        <td>Double tap</td>
+                        <td>Kurzes doppeltes Antippen eines Elements</td>
+                        <td>Herein- und Herauszoomen, Fullscreen - normale Ansicht</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/touch/touch_011.png " alt="Geste 'pinch open'" /></td>
+                        <td>Pinch open</td>
+                        <td>Zwei Finger auseinanderbewegen</td>
+                        <td>Heranzoomen, z. B. bei Dokumenten</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/touch/touch_012.png " alt="Geste 'pinch close'" /></td>
+                        <td>Pinch close</td>
+                        <td>Zwei Finger zusammenführen</td>
+                        <td>Herauszoomen, z. B. bei Dokumenten</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/touch/touch_013.png " alt="Geste 'touch and hold'" /></td>
+                        <td>Touch and hold</td>
+                        <td>Langes Antippen eines Elements</td>
+                        <td>Vergrößerte Darstellung bei Texteingaben für die Cursor-Position</td>
+                    </tr>
+                </table>
+
+                <h5>Zoom</h5>
+                <p>Generell soll im Content-Bereich eine Zoomfunktion angeboten werden, sofern dies dem Anwender einen Mehrwert
+                    bietet. Dies ist zum Beispiel bei Dokumenten der Fall. Beim Zoom ist zu beachten, dass der Content vergrößert
+                    wird, jedoch keine Bedienelemente und Icons. Beim Zoomen kommen die Gesten "Pinch open " zum Vergrößern
+                    und "Pinch close " zum Verkleinern zum Einsatz</p>
+
+                <h5>Scrollen</h5>
+                <p>Sobald der Inhalt einer Anwendung größer als der Screen ist, erscheint eine Scrollbar. Es kann mit den Gesten
+                    "Drag" und "Flick" gescrollt werden.</p>
+
+                <p>Eigene Gesten zu entwicklen empfiehlt sich nicht. Diese dürfen nur nach rigorosem Nutzertest mit erfolgreichem
+                    Feedback verwendet werden.</p>
+
+
+                <p>Siehe auch: <a href="https://sharepoint.bk.datev.de/sites/ux/DotNetStyleguide/Seiten/GestenUndInteraktionen_iOS.aspx "
+                        target="_blanc ">Gesten und Interaktionen - iOS</a></p>
+
+
+                <h4>Systemfeedback und Hover-State</h4>
+                <p>Jede Berührung wird vom System als Eingabe erkannt. Daher sollten Eingaben nicht sofort bei der Berührung
+                    des Touchscreen verarbeitet werden, sondern erst, wenn der Anwender den Finger wieder vom Bildschirm
+                    nimmt. Die aktuelle Position kann durch Wischen über den Bildschirm verändert und dadurch die Interaktion
+                    abgebrochen werden.</p>
+
+                <p>Da auf der großen Mehrzahl der Touchgeräte kein Hover-State erkannt wird, darf dieser Zustand nicht der alleinige
+                    Trigger für Interaktionen sein. Zulässig wäre aber eine Auslösung der Interaktion sowohl durch Hover
+                    als auch durch Klick/Tab.</p>
+
+                <p>Während des Kontakts mit einer interaktiven Fläche auf der Oberfläche muss ein visuelles Feedback gegeben
+                    werden. Das visuelle Feedback sollte dabei so erscheinen, dass es von der Hand/dem Finger nicht verdeckt
+                    wird. Für Maus-Nutzer ist das Feedback auf Hover ebenso relevant, daher ist die ideale Lösung eine zweistufige
+                    Feedback-Darstellung, die sowohl den hover- als auch (in anderer Form) den active-State visualisiert.</p>
+
+                <p>(Quelle: Arthur, Clark & Weiss, 2010)</p>
+                <p>Eingefügt aus <a href="https://sharepoint.bk.datev.de/sites/ux/DotNetStyleguide/Seiten/Interaktion_Mobil.aspx "
+                        target="_blanc ">Interaktion Mobil</a></p>
+
+
+                <h5>Formulare</h5>
+                <p>Bei dem Ausfüllen von Formularen auf mobilen Geräten ist zu beachten, dass hier auch mit einer On-Screen-Tastatur
+                    gearbeitet wird. Hierbei ist wichtig, dass sowohl das aktive Eingabefeld als auch sein Label bei geöffneter
+                    Tastatur zu sehen sein muss. Zudem sollte auch das folgende Eingabefeld sichtbar sein, damit ein Wechsel
+                    dorthin ohne das Schließen der Tastatur möglich ist. Um dies zu erreichen müssen die Abstände nah genug
+                    sein - jedoch nicht so nah, dass eine fehlerfreie Bedienung nicht mehr möglich ist.
+                </p>
+            </article>
+        </section>
+
+        <section id="patterns" class="section-patterns">
+            <div class="jumbotron">
+                <h2>Patterns</h2>
+                <p>Best practices und Vorgaben</p>
+            </div>
+
+            <!--<h3 class="underline " id="anwendungslayout ">Anwendungslayout (Responsive)
+            </h3>
+            <div></div>-->
+
+            <!--<h3 class="underline " id="laden-sperren ">Laden/Sperren von Komponenten
+            </h3>
+            <div></div>-->
+
+            <article>
+                <h3 class="underline" id="navigation">Navigation</h3>
+                <p>In einer modernen (Web-)Anwendung sind alle Seiten über einen eindeutigen DeepLink erreichbar.</p>
+
+                <p>Die grundlegenden Navigationskonzepte sind: </p>
+                <ul>
+                    <li>Navigation im Kontext innerhalb des Contents</li>
+                    <li>Navigation im Header (und Footer)</li>
+                    <li>Navigation über die Schublade</li>
+                </ul>
+
+
+                <h4>Navigation im Kontext</h4>
+                <p>Die Navigation in Anwendungen muss auf Grund des Komponentenkonzepts vollständig <strong>innerhalb des Contents</strong>                    funktionieren können. Die wichtigsten Funktionen und Absprungpunkte des aktuellen Kontextes sollten dabei
+                    direkt und offensichtlich verfügbar sein.</p>
+
+                <p>Um weiterhin überblickbare Oberflächen (<a href="../visual-patterns/index.html#prinzipien">Reduktion</a>)
+                    zu gewährleisten, müssen Prozesse und Inhalte gegebenenfalls entzerrt (<a href="../visual-patterns/index.html#prinzipien">Entzerrung</a>)
+                    werden.
+                </p>
+
+                <p>Typische Controls zur Navigation innerhalb des Contents sind: </p>
+                <ul>
+                    <li><a href="../visual-patterns/index.html#absprungliste">Absprunglisten</a></li>
+                    <li><a href="../visual-patterns/index.html#lists">Listen (Master-Detail-Patterns)</a></li>
+                    <li><a href="../visual-patterns/index.html#button">(Prozess-)Buttons</a></li>
+                    <li><a href="../visual-patterns/index.html#link">Links</a></li>
+                    <li><a href="../visual-patterns/index.html#link-text">Links im Fließtext</a></li>
+                    <li>Tabs</li>
+                </ul>
+
+                <p>Weniger wichtige Punkte können in --> (Overflow-)Menüs als PopUp verfügbar gemacht werden.</p>
+
+                <h4>Tabs</h4>
+                <p>Tabs erlauben das Springen zwischen mehreren parallelen Kontexten. Tabs können immer als vertiefende Navigation
+                    innerhalb einer Seite verwendet werden.</p>
+                <p>Als primäre Navigation einer Anwendung können Tabs eingesetzt werden, solange nicht zu viele parallele Ebenen
+                    vorliegen. Zudem sollte die gleiche Navigation dann nicht über die Schublade abgebildet sein. Prozessschritte
+                    sollten nicht über Tabs abgebildet werden.</p>
+
+                <h4>Navigation im Header</h4>
+                <p>Im Header können übergreifende Absprungpunkte, die immer verfügbar sein sollen, erscheinen, wie zum Beispiel
+                    der Absprung zur Hilfe oder eine Suchzeile. Zusätzlich kann eine --> Breadcrumb eingebunden werden, die
+                    den hierarchischen Pfad der aktuellen Seite anzeigt und Absprünge in darüberliegende Seiten erlaubt.</p>
+                <p>Sofern es einen Footer gibt, können hier Absprungpunkte zu sekundären Inhalten angeboten werden. Beispiel:
+                    Impressum.
+                </p>
+
+                <h4>Navigation über die "Schublade "</h4>
+                <p>Die Schublade dient der "infrequent navigation " und enthält eine Sammlung von Absprungpunkten, die vor allem
+                    dem schnellen Springen zu weit entfernten Programmteilen ermöglicht. Die Navigationsstrukturen in der
+                    Schublade sollten über die Anwendung hinweg stabil bleiben, um eine einfache Orientierung zu gewährleisten.</p>
+
+                <p>Typische Controls zur Navigation innerhalb der Schublade sind: </p>
+                <ul>
+                    <li>--> Tree</li>
+                    <li><a href="../visual-patterns/index.html#link">Links</a></li>
+                </ul>
+                <p>Die Inhalte müssen redaktionell gepflegt werden, d.h. sie können eine Auswahl aus den verfügbaren Absprüngen
+                    darstellen. Bei komplexen Informationsarchitekturen muss zum Beispiel nicht jede Ebene abgebildet werden.</p>
+
+                <h4>Browser-Spezifika</h4>
+                <p>Zusätzlich kommen über den Browser noch weitere Navigationsarten hinzu: </p>
+                <ul>
+                    <li>DeepLink via URL</li>
+                    <li>Zurück/Vorwärts-Button des Browsers ( Browserhistorie)</li>
+                    <li>Ablaufsteuerung
+                        <ul>
+                            <li>Schließen des Browsers</li>
+                            <li>Refresh (F5)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+                <h4>Prozesse aus technischer Sicht</h4>
+
+                <p>Die Navigation teilt sich in die Subprozesse "Seite verlassen" und "Seite erreichen".</p>
+                <figure>
+                    <img src="../assets/images/navigation/nav_01.png" alt="Navigationsprozess top-level">
+                    <figcaption>Navigationsprozess</figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/images/navigation/nav_02.png" alt="Prozess Seite verlassen">
+                    <figcaption>Prozess "Seite verlassen"</figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/images/navigation/nav_03.png" alt="Prozess Seite erreichen">
+                    <figcaption>Prozess "Seite erreichen"</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h3 class="underline" id="validierung">Validierung</h3>
+                <figure>
+                    <img src="../assets/images/validation/val_01.png" alt="Prozess der Validierung (kurz)">
+                    <figcaption>Prozess "Eingabe und Validierung (kurz)"</figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/images/validation/val_02.png" alt="Prozess der Validierung">
+                    <figcaption>Prozess "Validierung"</figcaption>
+                </figure>
+            </article>
+
+            <!--<h3 class="underline " id="autokorrektur ">Autokorrektur</h3>
+            <div></div>-->
+            <article>
+                <h3 class="underline" id="speichern">Speichern (Implizit/Explizit)</h3>
+                <figure>
+                    <img src="../assets/images/save/save_01.png" alt="Speichern-Prozess">
+                    <figcaption>Prozess "Speichern"</figcaption>
+                </figure>
+            </article>
+
+            <!--<h3 class="underline " id="authentifizierung ">Authentifizierung</h3>
+            <div></div>-->
+
+            <!--<h3 class="underline " id="messaging ">Messaging (Lokal/Global)</h3>
+            <div></div>-->
+
+            <article>
+                <h3 class="underline" id="liste-vs-tabelle">Liste vs. Tabelle</h3>
+                <h4>Listen</h4>
+                <p>Listen dienen der Auflistung von gleichartigen Datensätzen. Listen können von einfachen Aufzählungen bis
+                    zu komplexen Darstellungen mit einer Vielzahl von Informationen pro Datensatz reichen. Listeneinträge
+                    sind gleichartig aufgebaut und gestaltet, sodass eine Vergleichbarkeit gewährleistet ist. Die verschiedenen
+                    Daten eines Datensatzes können diverse Medientypen beinhalten und unterschiedlich dargestellt werden
+                    - z.B. können wichtige Daten hervorgehoben werden. Listen sind in der Regel nach dem wichtigsten oder
+                    sinnvollsten Datentyp sortiert, z.B. chronologisch.</p>
+
+                <h5>Responsiveness</h5>
+                <p>Die Darstellung von Listen kann und sollte sich mit der Größe des Viewports verändern, um alle Informationen
+                    adäquat anzuzeigen.</p>
+
+                <p>Listen können folgende Operationen featuren:</p>
+                <ul>
+                    <li>Auswahl eines oder mehrerer Einträge</li>
+                    <li>Suche nach Einträgen</li>
+                    <li>Sortierung nach verschiedenen Kriterien, d.h. die Reihenfolge wird angepasst</li>
+                    <li>Filterung nach verschiedenen Kriterien, d.h. nur bestimmte Einträge werden angezeigt</li>
+                </ul>
+                <p>In modernen Webanwendungen werden diese Operationen insbesondere bei großen Datenmengen serverseitig durchgeführt.</p>
+
+                <h5>Umgang mit großen Datenmengen</h5>
+                <p>Bei einer großen Anzahl von Datensätzen dürfen diese nicht alle an den Client ausgeliefert werden. Es werden
+                    nur die Daten geladen, die der Nutzer aktuell benötigt (sieht) bzw. in der direkten Zukunft verwenden
+                    wird. Weitere Daten werden dynamisch nachgeladen.</p>
+
+                <p>Kein Feature einer Liste ist: </p>
+                <ul>
+                    <li>Ein- und Ausblenden von bestimmten Daten der Datensätze</li>
+                </ul>
+
+
+                <h5>Anwendungsszenarien</h5>
+                <p>Neben der reinen Auflistung von Daten dienen Listen auch häufig als inhaltsgetriebene Navigation: die einzelnen
+                    Listeneinträge sind Absprungpunkte in Detailansichten oder Bearbeitung des Datensatzes. Der Absprung
+                    kann dabei auf eine neue Seite führen oder nach dem Master-Detail-Pattern erfolgen (d.h. Liste und Detailansicht
+                    sind auf einer Seite zu sehen).</p>
+
+                <h5>Gestaltung</h5>
+                <p>Listen können sehr verschieden gestaltet sein. Wichtig ist dabei vor allem die Gleichförmigkeit von Item
+                    zu Item und deren eindeutige Abtrennung.</p>
+                <p>Siehe: <a href="../visual-patterns/index.html#lists">Listen</a></p>
+
+
+                <h4>Tabellen</h4>
+                <p>Tabellen dienen zur vergleichenden Darstellung von mehrdimensionalen Datensätzen. Jeder Datensatz wird in
+                    einer Zeile über mehrere Spalten hinweg angezeigt. Die Größe einer Zelle und damit seiner Inhalte ist
+                    begrenzt, insbesondere durch die Höhe der Zeile. Häufig werden standardisierte Darstellungsformen verwendet,
+                    um die Lesbarkeit zu verbessern und Vergleichbarkeit über mehrere Tabellen hinweg zu ermöglichen - ein
+                    Beispiel hierfür ist die BWA.</p>
+
+                <h5>Responsiveness</h5>
+                <p>Die Darstellung von Tabellen kann sich an die Größe des Viewports nur begrenzt anpassen, es muss ggf. horizontal
+                    gescrollt werden.</p>
+
+                <p>Tabellen können folgende Features haben: </p>
+                <ul>
+                    <li>Auswahl eines oder mehrerer Einträge</li>
+                    <li>Suche</li>
+                    <li>Filterung</li>
+                    <li>Sortierung oder Mehrfachsortierung</li>
+                    <li>Ein- und Ausblendung von Spalten</li>
+                    <li>Veränderung der Anordnung von Spalten</li>
+                </ul>
+                <p>Suche, Filterung und Sortierung werden in modernen Webanwendungen serverseitig durchgeführt. </p>
+
+
+                <h4>Prinzipien</h4>
+
+                <h5>List-first</h5>
+                <p>Für eine Auflistung von Datensätzen sollte, wenn möglich, immer die Listendarstellung gewählt werden. Diese
+                    bietet eine individuelle und flexiblere Darstellung der Daten. Tabellen sollten nur verwendet werden,
+                    wenn diese Darstellungsform eindeutige Vorteile bietet.</p>
+
+                <h5>Gestaltungspflicht</h5>
+                <p>"Listen brauchen Designer " - Listen müssen je nach Inhalt unterschiedlich und für jede Liste einzeln gestaltet
+                    werden. Die angezeigten Daten müssen sorgfältig und für den UseCase entsprechend ausgewählt werden, da
+                    ein Ein- und Ausblenden einzelner Daten in der Regel nicht möglich ist.</p>
+
+                <h5>Responsive Item Design</h5>
+                <p>Listen können und sollten sich an die Größe des Viewports anpassen. Das Umbrechen der Zeilen innerhalb eines
+                    Listen-Items sowie die Veränderung von Größen ist dabei eine legitime Gestaltungsmethode. Standardmäßig
+                    sollten auf allen Viewports die gleichen Daten eingezeigt werden. Daten auf Grund eines kleineren Viewports
+                    auszublenden empfiehlt sich nur in seltenen Fällen.</p>
+
+                <h5>Listenoperationen als Patterns</h5>
+                <p>Listenoperationen wie Filtern, Suchen oder Sortieren folgen Patterns, die bei allen Listen wie auch bei Tabellen
+                    konsistent eingesetzt werden.</p>
+
+
+                <h4>Schnellerfassung</h4>
+                <p>Erfassungen in Tabellen oder Listen sollten außerhalb stattfinden in einem Master-Detail-Pattern. Ein Beispiel
+                    hierfür ist die Buchungszeile.</p>
+                <p>Zu beachten ist. dass die Schnellerfassung per Tastatur ist auf kleinen Bildschirmen bzw. in mobilen Szenarien
+                    kein sinnvolles Szenario ist. Wenn möglich sollten die Daten auf anderen Wegen erfasst werden, z.B. per
+                    Scan.
+                </p>
+
+            </article>
+
+            <!--<h3 class="underline " id="tabContol-tabs ">TabContol/Tabs</h3>
+            <div></div>-->
+
+            <!--<h3 class="underline " id="autarke-komponenten ">Autarke Komponenten</h3>
+            <div></div>-->
+
+            <!--<h3 class="underline " id="commanding ">Globale/Lokale Commanding-Pattern</h3>
+            <div></div>-->
+        </section>
+
+    </main>
+</body>
+
+</html>

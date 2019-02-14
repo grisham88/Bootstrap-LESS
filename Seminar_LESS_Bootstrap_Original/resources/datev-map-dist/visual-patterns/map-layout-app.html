@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>DATEV Design DNA - Grundaufbau</title>
+
+    <!-- DNA-theme -->
+    <link href="../assets/css/dna-theme.css" rel="stylesheet">
+    <!-- Projektspezifische Styles -->
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../assets/js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../assets/js/bootstrap.js"></script>
+</head>
+
+<body class="pattern-library pattern-library-sample">
+    <header class="map-header clearfix">
+        <a href="index.html#beispiele"><i class="glyphicon glyphicon-menu-left" aria-hidden="true"></i> zurück</a>
+        <a href="#" class="pull-right"><i class="glyphicon glyphicon-menu-up" aria-hidden="true"></i> top</a>
+    </header>
+    <main>
+        <h2>Anwendungsaufbau Beispiele</h2>
+
+        <ul class="table-of-contents">
+            <li><a href="#app-fixed-width">Basisaufbau Fixed-width Layout</a></li>
+            <li><a href="#app-fixed-width-footer">Fixed-width Layout mit Footer</a></li>
+            <li><a href="#app-fluid">Basisaufbau Fluid Layout</a></li>
+        </ul>
+
+        <article id="app-fixed-width">
+            <h3>Basisaufbau fixed-width Layout</h3>
+            <p>Das Layout besteht aus Header und Main-Bereich. Es skaliert bis zu einer maximalen Breite von 960px - danach
+                ist der Content horizontal zentriert.</p>
+            <div class="genepool map-sample-app map-sample-app-scroll">
+                <div class="dna-page dna-page-fixed dna-page-header-fixed">
+                    <!-- Header -->
+                    <header class="dna-header">
+                        <img src="../assets/images/pi-generic-48x48.png" class="dna-header-icon" />
+                        <h2 class="dna-header-title">Beispiel-Anwendung</h2>
+                    </header>
+                    <main>
+                        <div class="dna-container">
+                            <h1 class="h1">Überschrift</h1>
+                            <div class="dummy-container">
+                                Content
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+            <p>Hierfür muss dem äußersten Container <code>.dna-page</code> eine feste Breite zugewiesen werden.</p>
+            <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+            <pre class="map-code"><code>&lt;body class=&quot;genepool&quot;&gt;
+    &lt;div class=&quot;dna-page&quot;&gt;
+        &lt;header class="dna-header"&gt;
+            ...
+        &lt;/header&gt;
+        &lt;main&gt;
+            ...
+        &lt;/main&gt;
+    &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+
+            <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> CSS</h6>
+            <pre class="map-code"><code>.dna-page {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    overflow: initial;
+}</code></pre>
+        </article>
+
+        <article id="app-fixed-width-footer">
+            <h3>Fixed-width Layout mit Footer</h3>
+            <p>Das Layout besteht aus Header, Main-Bereich und Footer</p>
+            <div class="genepool map-sample-app map-sample-app-scroll">
+                <div class="dna-page dna-page-fixed">
+                    <!-- Header -->
+                    <header class="dna-header">
+                        <img src="../assets/images/pi-generic-48x48.png" class="dna-header-icon" />
+                        <h2 class="dna-header-title">Beispiel-Anwendung</h2>
+                    </header>
+                    <main>
+                        <div class="dna-container">
+                            <h1 class="h1">Überschrift</h1>
+                            <div class="dummy-container">
+                                Content
+                            </div>
+                        </div>
+                    </main>
+                    <footer class="dna-footer">
+                        Footer
+                    </footer>
+                </div>
+            </div>
+            <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+            <pre class="map-code"><code>&lt;body class=&quot;genepool&quot;&gt;
+    &lt;div class=&quot;dna-page&quot;&gt;
+        &lt;header class="dna-header"&gt;
+            ...
+        &lt;/header&gt;
+        &lt;main&gt;
+            ...
+        &lt;/main&gt;
+        &lt;footer class="dna-footer"&gt;
+            ...
+        &lt;/footer&gt;
+    &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+        </article>
+
+
+        <article id="app-fluid">
+            <h3>Basisaufbau Fluid Layout</h3>
+            <p>Das Layout besteht aus Header und Main-Bereich. Es skaliert beliebig.</p>
+            <div class="genepool map-sample-app">
+                <div class="dna-page dna-page-header-fixed">
+                    <!-- Header -->
+                    <header class="dna-header">
+                        <img src="../assets/images/pi-generic-48x48.png" class="dna-header-icon" />
+                        <h2 class="dna-header-title">Beispiel-Anwendung</h2>
+                    </header>
+                    <main>
+                        <div class="dna-container">
+                            <h1 class="h1">Überschrift</h1>
+                            <div class="dummy-container">
+                                Content
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+            <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+            <pre class="map-code"><code>&lt;body class=&quot;genepool&quot;&gt;
+    &lt;div class=&quot;dna-page&quot;&gt;
+        &lt;header class="dna-header"&gt;
+            ...
+        &lt;/header&gt;
+        &lt;main&gt;
+            ...
+        &lt;/main&gt;
+    &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+        </article>
+
+        <article id="app-fluid-sidebar">
+            <h3>Fluid Layout mit Schublade</h3>
+            <p>Das Layout besteht aus Seite und Schublade. Die Seite enthält Header und Main-Bereich und skaliert beliebig.
+                Die Schublade öffnet sich zu einer festen Breite. Sie schiebt sich bei großen Screengrößen neben die Seite
+                und bei kleinen Screengrößen legt sie sich darüber.
+            </p>
+            <div class="genepool map-sample-app">
+                <div class="dna-wrapper">
+                    <aside id="dna-sidebar" class="dna-sidebar">
+                        <button id="dna-sidebar-toggle" class="dna-sidebar-toggle" type="button" aria-controls="dna-sidebar"></button>
+                        <div class="dna-sidebar-body">
+                        </div>
+                    </aside>
+                    <div class="dna-page dna-page-header-fixed">
+                        <!-- Header -->
+                        <header class="dna-header">
+                            <img src="../assets/images/pi-generic-48x48.png" class="dna-header-icon" />
+                            <h2 class="dna-header-title">Beispiel-Anwendung</h2>
+                        </header>
+                        <main>
+                            <div class="dna-container container-scroll">
+                                <h1 class="h1">Überschrift</h1>
+                                <div class="dummy-container">
+                                    Content
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $('#dna-sidebar-toggle').click(function() {
+                    $('#dna-sidebar').toggleClass( "open" );
+                });
+            </script>
+            <p>Die Schublade ist eine Angular-Komponente: <code>&lt;datev-sidebar&gt;</code>. Sie wird parallel zur <code>.dna-page</code>                
+                in den DOM eingefügt. Das gemeinsame Parent ist der <code>.dna-wrapper</code>, der auch für den dunklen Rand sorgt.</p>
+
+                <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+                <pre class="map-code"><code>&lt;body class=&quot;genepool&quot;&gt;
+    &lt;div class=&quot;<em>dna-wrapper</em>&quot;&gt;
+        &lt;<em>datev-sidebar</em>&gt;
+            ...
+        &lt;/datev-sidebar&gt;
+        &lt;div class=&quot;dna-page&quot;&gt;
+            ...
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+        </article>
+
+    </main>
+</body>
+
+</html>

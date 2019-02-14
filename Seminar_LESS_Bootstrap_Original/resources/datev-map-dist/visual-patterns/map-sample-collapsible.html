@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>DATEV Design DNA - Grundaufbau</title>
+
+    <!-- DNA-theme -->
+    <link href="../assets/css/dna-theme.css" rel="stylesheet">
+    <!-- Projektspezifische Styles -->
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../assets/js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../assets/js/bootstrap.js"></script>
+</head>
+
+<body class="pattern-library pattern-library-sample">
+    <header class="map-header clearfix">
+        <a href="index.html#beispiele"><i class="glyphicon glyphicon-menu-left" aria-hidden="true"></i> zurück</a>
+        <a href="#" class="pull-right"><i class="glyphicon glyphicon-menu-up" aria-hidden="true"></i> top</a>
+    </header>
+    <main>
+        <article id="sample-collapsible">
+
+            <h2>Collapsible</h2>
+
+            <div class="map-sample-control genepool">
+                <div class="dna-collapsible dna-collapsible-light">
+                    <a class="dna-collapsible-bar" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        <span class="dna-collapsible-bar-icon"><i class="icon-arrow"></i></span>
+                        <h4 class="dna-collapsible-bar-title h4">Titel geschlossen</h4>
+                    </a>
+                    <div class="collapse" id="collapseExample">
+                        <div class="dna-collapsible-body">
+                            <p>Stuff</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-sample-control genepool">
+                <div class="dna-collapsible dna-collapsible-light open">
+                    <a class="dna-collapsible-bar" role="button" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                        <span class="dna-collapsible-bar-icon"><i class="icon-arrow"></i></span>
+                        <h4 class="dna-collapsible-bar-title h4">Titel geöffnet</h4>
+                    </a>
+                    <div class="collapse dna-collapsible-body" id="collapseExample2">
+                        <p>Stuff</p>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $('.collapse').collapse()
+            </script>
+
+            <!--<div class="genepool map-sample-app map-sample-app-slim">
+                <div class="dna-wrapper">
+                    <div class="dna-page dna-page-header-fixed">
+                        <header class="dna-header">
+                            <img src="../assets/images/pi-generic-48x48.png" class="dna-header-icon" title="Moderne Webapp" alt="Programm-Icon der Modernen Webapp"
+                            />
+                            <h2 class="h2 dna-header-title margin-top-xs">Beispiel-Anwendung</h2>
+                        </header>
+                        <div class="dna-alert-container dna-alert-warning">
+                            <div class="alert dna-alert" role="alert">
+                                <button type="button" class="btn btn-light btn-img dna-close" title="Schließen" aria-label="Schließen"><i class="icon" aria-hidden="true"></i></button>
+
+                                <div class="dna-alert-content">
+                                    <div class="dna-alert-icon"><i class="icon"></i></div>
+                                    <div class="dna-alert-text">
+                                        <h5 class="h5 dna-alert-title">Alert-Titel</h5>
+                                        <p class="dna-alert-message">Dies ist eine Warnung</p>
+                                    </div>
+                                </div>
+                                <div class="dna-alert-footer btn-bar">
+                                    <button type="button" class="btn btn-default">Ok</button>
+                                </div>
+                            </div>
+                        </div>
+                        <main>
+                            <div class="dna-container-scroll">
+                                <div class="dummy-container">
+                                    Content
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>-->
+
+
+        </article>
+
+    </main>
+</body>
+
+</html>

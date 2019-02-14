@@ -1,0 +1,36 @@
+.btn {
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #cdcdcd;
+  border: 1px solid #676767;
+}
+.btn:hover {
+  background: #ececec;
+}
+.blue-btn {
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #9999ff;
+  border: 1px solid #0000cc;
+}
+.blue-btn:hover {
+  background: #d4ebf2;
+}
+.red-btn {
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #ff9999;
+  border: 1px solid #cc0000;
+}
+.red-btn:hover {
+  background: #ffcccc;
+}

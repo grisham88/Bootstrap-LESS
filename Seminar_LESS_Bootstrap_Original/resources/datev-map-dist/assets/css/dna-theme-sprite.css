@@ -1,0 +1,186 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-ci-arrow-jumplist {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -101px -72px;
+  width: 6px;
+  height: 12px;
+}
+.icon-ci-dna-lasche {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: 0px 0px;
+  width: 16px;
+  height: 43px;
+}
+.icon-ci_dna_checkbox_checked {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -64px -43px;
+  width: 20px;
+  height: 20px;
+}
+.icon-ci_dna_checkbox_checked_dis {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -60px -67px;
+  width: 20px;
+  height: 20px;
+}
+.icon-ci_dna_checkbox_mixed {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -88px 0px;
+  width: 20px;
+  height: 20px;
+}
+.icon-ci_dna_checkbox_unchecked {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -88px -20px;
+  width: 20px;
+  height: 20px;
+}
+.icon-ci_dna_checkbox_unchecked_dis {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -24px -43px;
+  width: 20px;
+  height: 20px;
+}
+.icon-ci_dna_radio_checked {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -44px -43px;
+  width: 20px;
+  height: 20px;
+}
+.icon-ci_dna_radio_checked_dis {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -40px -67px;
+  width: 20px;
+  height: 20px;
+}
+.icon-ci_dna_radio_unchecked {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: 0px -67px;
+  width: 20px;
+  height: 20px;
+}
+.icon-ci_dna_radio_unchecked_dis {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -20px -67px;
+  width: 20px;
+  height: 20px;
+}
+.icon-fi-fehler-13x13 {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -77px -87px;
+  width: 13px;
+  height: 13px;
+}
+.icon-fi-fehler_16x16 {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -16px -87px;
+  width: 16px;
+  height: 16px;
+}
+.icon-fi_information_13x13 {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -64px -87px;
+  width: 13px;
+  height: 13px;
+}
+.icon-fi_information_16x16 {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -88px -40px;
+  width: 16px;
+  height: 16px;
+}
+.icon-fi_kalender_16x16 {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -88px -56px;
+  width: 16px;
+  height: 16px;
+}
+.icon-fi_vorwaertsblaettern_16x16 {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -64px -24px;
+  width: 16px;
+  height: 16px;
+}
+.icon-fi_warnung_13x13 {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -88px -72px;
+  width: 13px;
+  height: 13px;
+}
+.icon-fi_warnung_16x16 {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -16px -24px;
+  width: 16px;
+  height: 16px;
+}
+.icon-fi_zurueckblaettern_16x16 {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: 0px -87px;
+  width: 16px;
+  height: 16px;
+}
+.icon-si_fehler_24x24 {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -64px 0px;
+  width: 24px;
+  height: 24px;
+}
+.icon-si_information_24x24 {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: 0px -43px;
+  width: 24px;
+  height: 24px;
+}
+.icon-si_ok_24x24 {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -16px 0px;
+  width: 24px;
+  height: 24px;
+}
+.icon-si_warnung_24x24 {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -40px 0px;
+  width: 24px;
+  height: 24px;
+}
+.icon-sli_angemeldet_16x16 {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -32px -87px;
+  width: 16px;
+  height: 16px;
+}
+.icon-sli_breadcrumb-pfeil {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -80px -67px;
+  width: 8px;
+  height: 18px;
+}
+.icon-sli_schliessen_background-light_16x16 {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -40px -24px;
+  width: 16px;
+  height: 16px;
+}
+.icon-sli_schliessen_gross_background-light_16x16 {
+  background-image: url(../images/dna-theme-sprite.png);
+  background-position: -48px -87px;
+  width: 16px;
+  height: 16px;
+}

@@ -1,0 +1,32 @@
+// Buttonmixins:
+
+.btnColors(@color) {
+    color: darken(@color, 20%);
+    background: lighten(@color, 10%);
+    &:hover {
+        background: lighten(@color, 20%); 
+    }
+}
+.btnBasis() {
+    padding: 10px;
+    border:none;
+    outline:none;
+}
+.btnAusA() {
+    text-decoration: none;
+    display:inline-block;
+    font-family: verdana;
+    font-size: 1em;
+}
+
+// Panelmixins:
+
+.panelColor(@color) {
+    border-color: @color;  
+    & .mypanel_header {
+        color:@color;
+    }
+    & .mypanel_body {
+        background: lighten(@color, 30%)
+    }
+}

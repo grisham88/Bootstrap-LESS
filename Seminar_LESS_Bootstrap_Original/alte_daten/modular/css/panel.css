@@ -1,0 +1,45 @@
+/* Panel */
+.panel {
+    border: 1px solid #000;
+    border-radius:10px;
+    padding: 20px;
+    margin:20px;
+}
+/* Panel-Elements */
+.panel_header {
+    background-color: #ddd;
+}
+
+.panel_text {
+    background-color: #eee;
+}
+
+.panel_buttoncontainer {
+    border:1px solid #aaa;
+    border-radius:5px;
+    padding: 5px;
+}
+
+.panel_button {
+
+}
+
+/* Panel-Modifier */
+
+/* Sub-Rolle, Variante */
+.panel-condensed {
+    padding: 10px;
+}
+
+/* per Script ... */
+.panel-text-active {
+    font-weight:bold;
+}
+
+/* Sub-Rolle, Variante */
+.panel_button-ok {
+
+}
+.panel_button-no {
+
+}

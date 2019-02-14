@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>DATEV Design DNA - Grundaufbau</title>
+
+    <!-- DNA-theme -->
+    <link href="../assets/css/dna-theme.css" rel="stylesheet">
+    <!-- Projektspezifische Styles -->
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../assets/js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../assets/js/bootstrap.js"></script>
+</head>
+
+<body class="pattern-library pattern-library-sample">
+    <header class="map-header clearfix">
+        <a href="index.html#beispiele"><i class="glyphicon glyphicon-menu-left" aria-hidden="true"></i> zurück</a>
+        <a href="#" class="pull-right"><i class="glyphicon glyphicon-menu-up" aria-hidden="true"></i> top</a>
+    </header>
+    <main>
+        <h2>Header-Typen</h2>
+
+        <ul class="table-of-contents">
+            <li><a href="#header-code">Code-Basis</a></li>
+            <li><a href="#dna-header">DNA-Header</a></li>
+            <li><a href="#header-fixed">Fixed Header</a></li>
+            <li><a href="#header-fixed-extended">Fixed Header Extended</a></li>
+            <li><a href="#header-fixed-complex">Komplexe Header-Beispiele</a></li>
+        </ul>
+
+        <p>Je nach verwendeter Klasse gibt es verschiedene Standard-Header-Typen. Alle reagieren responsive: Bei kleinen Viewports
+            scrollt der Header mit und wird insgesamt kleiner.</p>
+        <p><span class="glyphicon glyphicon-exclamation-sign"></span> <strong>Wichtig: Die folgenden Implementierungen haben Beispiel-Charakter und sind keine festen Vorgaben</strong>.
+            Der Header sollte an die Anforderungen der Anwendung angepasst werden.</p>
+
+        <article id="header-code">
+            <h3>Code-Basis</h3>
+            <p>Das grundsätzliche Verhalten wird über die Klasse <code><strong>.dna-header</strong></code> zugewiesen. Weitere
+                Klassen für den Inhalt des Headers steuern die Gestaltung innerhalb.</p>
+            <dl>
+                <dt><code>.dna-header-icon</code></dt>
+                <dd>Größe und Postionierung des Programm-Icons</dd>
+
+                <dt><code>.dna-header-title</code></dt>
+                <dd>Hauptüberschrift, typischerweise eine <code>h2</code></dd>
+
+                <dt><code>.dna-header-sub</code></dt>
+                <dd>Weitere Überschrift, kleiner; typischerweise eine <code>h3</code></dd>
+
+                <dt><code>.dna-header-function</code></dt>
+                <dd>Container für Funktionen im Header, z.B. Login-Button, Suche,...; Per default rechtsbündig;</dd>
+
+                <dt><code>.dna-header-breadcrumb</code></dt>
+                <dd>Container für die Breadcrumb</dd>
+
+                <dt><code>.dna-header-main</code></dt>
+                <dd>Optionaler Container für Icon, Titel und Breadcrumb</dd>
+
+                <dt><code>.dna-header-item</code></dt>
+                <dd>Generische Klasse für Elemente innerhalb des Headers - verwenden, wenn kein anderes passt.</dd>
+            </dl>
+        </article>
+
+        <article id="dna-header">
+            <h3>DNA-Header</h3>
+            <p>Einfachster Einsatz des Headers</p>
+            <div class="genepool map-sample-app map-sample-app-slim">
+                <div class="dna-wrapper">
+                    <div class="dna-page">
+                        <header class="dna-header">
+                            <img src="../assets/images/pi-generic-48x48.png" class="dna-header-icon" title="Moderne Webapp" alt="Programm-Icon der Modernen Webapp"
+                            />
+                            <h2 class="h2 dna-header-title margin-top-xs">Beispiel-Anwendung</h2>
+                        </header>
+                        <main>
+                            <div class="container dummy-container">
+                                Content
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+            <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+            <pre class="map-code"><code>&lt;header class=&quot;<em>dna-header</em>&quot;&gt;
+    &lt;img class=&quot;<em>dna-header-icon</em>&quot; src=&quot;...&quot; title=&quot;...&quot; alt=&quot;...&quot;/&gt;
+    &lt;h2 class=&quot;h2 <em>dna-header-title</em>&quot;&gt;Beispiel-Anwendung&lt;/h2&gt;
+&lt;/header&gt;</code></pre>
+            <p>Anmerkung: Die Einbettung des Icons ist hier nicht optimal und sollte über background-images gelöst werden.</p>
+        </article>
+
+        <article id="header-fixed">
+            <h3>Fixed Header</h3>
+            <h4 id="header-fixed-breadcrumb">Fixed Header nur mit Icon und Titel</h4>
+            <div class="genepool map-sample-app map-sample-app-slim">
+                <div class="dna-wrapper">
+                    <div class="dna-page dna-page-header-fixed">
+                        <header class="dna-header">
+                            <img src="../assets/images/pi-generic-48x48.png" class="dna-header-icon" title="Moderne Webapp" alt="Programm-Icon der Modernen Webapp"
+                            />
+                            <h2 class="h2 dna-header-title margin-top-xs">Beispiel-Anwendung</h2>
+                        </header>
+                        <main>
+                            <div class="dna-container-scroll">
+                                <div class="dummy-container">
+                                    Content
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+            <p>Soll der Header fest am oberen Ende der Seite hängen, muss der Parent des Headers die Klasse <code>.dna-page-header-fixed</code>                erhalten. Zusätzlich muss der Content in einen scrollbaren Container gesetzt werden: <code>.dna-container-scroll</code>.
+                Das Scrollverhalten ändert sich automatisch mit dem Umbruch zum Phone-Breakpoint. Dann scrollt der Header
+                automtisch mit dem Content.</p>
+            <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+            <pre class="map-code"><code>&lt;div class=&quot;dna-page <em>dna-page-header-fixed</em>&quot;&gt;
+    &lt;header class=&quot;<em>dna-header</em>&quot;&gt;
+        &lt;img src=&quot;...&quot; class=&quot;dna-header-icon&quot; title=&quot;...&quot; alt=&quot;...&quot;/&gt;
+        &lt;h2 class=&quot;h2 dna-header-title&quot;&gt;...&lt;/h2&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;div class=&quot;<em>dna-container-scroll</em>&quot;&gt;&lt;/div&gt;
+    &lt;/main&gt;
+&lt;/div&gt;</code></pre>
+
+            <h4 id="header-fixed-breadcrumb">Fixed Header mit Breadcrumb</h4>
+            <div class="genepool map-sample-app map-sample-app-slim">
+                <div class="dna-wrapper">
+                    <div class="dna-page dna-page-header-fixed">
+                        <header class="dna-header">
+                            <div class="dna-header-icon">
+                                <img src="../assets/images/pi-generic-48x48.png" title="Moderne Webapp" alt="Programm-Icon der Modernen Webapp" />
+                            </div>
+                            <h2 class="dna-header-title">Beispiel-Anwendung</h2>
+                            <div class="dna-header-breadcrumb">
+                                <nav role="navigation" class="dna-breadcrumb">
+                                    <p id="breadcrumb-label" class="dna-breadcrumb-label">Du bist hier:</p>
+                                    <ol class="breadcrumb" aria-labelledby="breadcrumb-label">
+                                        <li class="dna-breadcrumb-item"><a href="..." title="...">Platzhalter</a></li>
+                                        <li class="dna-breadcrumb-item"><a href="..." title="...">Breadcrumb</a></li>
+                                        <li class="dna-breadcrumb-item active"><a href="..." title="...">Komponente</a></li>
+                                    </ol>
+                                </nav>
+
+                            </div>
+                        </header>
+                        <main>
+                            <div class="container-fluid dna-container-scroll">
+                                <div class="dummy-container">
+                                    Content
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+            <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+            <pre class="map-code"><code>&lt;div class=&quot;dna-page dna-page-header-fixed&quot;&gt;
+    &lt;header class=&quot;dna-header&quot;&gt;
+        &lt;div class=&quot;dna-header-icon&quot;&gt;
+            &lt;img src=&quot;...&quot;  title=&quot;...&quot; alt=&quot;...&quot;/&gt;
+        &lt;/div&gt;
+        &lt;h2 class=&quot;dna-header-title&quot;&gt;...&lt;/h2&gt;
+        &lt;div class=&quot;<em>dna-header-breadcrumb</em>&quot;&gt;
+            &lt;datev-breadcrumb&gt;&lt;/datev-breadcrumb&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;div class=&quot;dna-container-scroll&quot;&gt;&lt;/div&gt;
+    &lt;/main&gt;
+&lt;/div&gt;</code></pre>
+        </article>
+
+        <article id="header-fixed-extended">
+            <h3>Fixed Header Extended</h3>
+            <p>Reicht der Fixed Header von Höhe nicht aus, gibt es eine Extended Variante: <code>.dna-page-header-fixed-extended</code></p>
+            <div class="genepool map-sample-app map-sample-app-slim">
+                <div class="dna-wrapper">
+                    <div class="dna-page dna-page-header-fixed-extended">
+                        <header class="dna-header">
+                            <div class="dna-header-icon">
+                                <img src="../assets/images/pi-generic-48x48.png" title="Moderne Webapp" alt="Programm-Icon der Modernen Webapp" />
+                            </div>
+                            <div class="margin-bottom-sm">
+                                <h2 class="dna-header-title">Beispiel-Anwendung</h2>
+                                <h3 class="dna-header-title-sub hidden-xs">Details der Beispiel-Anwendung</h3>
+                            </div>
+                            <div class="dna-header-breadcrumb">
+                                <nav role="navigation" class="dna-breadcrumb">
+                                    <p id="breadcrumb-label" class="dna-breadcrumb-label">Du bist hier:</p>
+                                    <ol class="breadcrumb" aria-labelledby="breadcrumb-label">
+                                        <li class="dna-breadcrumb-item"><a href="..." title="...">Platzhalter</a></li>
+                                        <li class="dna-breadcrumb-item"><a href="..." title="...">Breadcrumb</a></li>
+                                        <li class="dna-breadcrumb-item active"><a href="..." title="...">Komponente</a></li>
+                                    </ol>
+                                </nav>
+
+                            </div>
+                        </header>
+
+                        <main>
+                            <div class="dna-container-scroll">
+                                <div class="dummy-container">
+                                    Content
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+            <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+            <pre class="map-code"><code>&lt;div class=&quot;dna-page <em>dna-page-header-fixed-extended</em>&quot;&gt;
+    &lt;header class=&quot;dna-header&quot;&gt;
+        &lt;div class=&quot;dna-header-icon&quot;&gt;
+            &lt;img src=&quot;...&quot; title=&quot;...&quot; alt=&quot;...&quot;/&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;margin-bottom-md&quot;&gt;
+            &lt;h2 class=&quot;dna-header-title&quot;&gt;...&lt;/h2&gt;
+            &lt;h3 class=&quot;dna-header-title-sub&quot;&gt;...&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;dna-header-breadcrumb&quot;&gt;
+            &lt;datev-breadcrumb&gt;&lt;/datev-breadcrumb&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;div class=&quot;dna-container-scroll&quot;&gt;&lt;/div&gt;
+    &lt;/main&gt;
+&lt;/div&gt;</code></pre>
+        </article>
+
+        <article id="header-fixed-complex">
+            <h3>Komplexe Header-Beispiele</h3>
+            <p>Header können komplexer werden - hier sind einige mögliche Umsetzungen dargestellt. Zum einen kann das Layout
+                durch floats erzeugt werden, zum anderen kann die CSS3-Technik Flexbox verwendet werden - diese wird jedoch
+                vom internet Explorer (fast) gar nciht unterstützt. Daher sollte immer ein entsprechendes Code-Backup gesetzt
+                werden, wenn Flexbox verwendet wird.</p>
+            <h4>Komplexer Header mit Floats</h4>
+            <div class="genepool map-sample-app map-sample-app-slim">
+                <div class="dna-wrapper">
+                    <div class="dna-page dna-page-header-fixed-extended">
+                        <header class="dna-header map-test-header-complex">
+                            <div class="dna-header-main">
+                                <div class="dna-header-icon">
+                                    <img src="../assets/images/pi-generic-48x48.png" />
+                                </div>
+                                <div class="margin-bottom-sm">
+                                    <h3 class="dna-header-title-sub hidden-xs">Beispiel-Anwendung</h3>
+                                    <h2 class="dna-header-title">Details des aktuellen Kontextes</h2>
+                                </div>
+                                <div class="dna-header-breadcrumb">
+                                    <nav role="navigation" class="dna-breadcrumb">
+                                        <p id="breadcrumb-label" class="dna-breadcrumb-label">Du bist hier:</p>
+                                        <ol class="breadcrumb" aria-labelledby="breadcrumb-label">
+                                            <li class="dna-breadcrumb-item"><a href="..." title="...">Platzhalter</a></li>
+                                            <li class="dna-breadcrumb-item"><a href="..." title="...">Breadcrumb</a></li>
+                                            <li class="dna-breadcrumb-item active"><a href="..." title="...">Komponente</a></li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="dna-header-function">
+                                <button class="btn btn-light margin-bottom-lg"><img class="icon" src="../assets/images/sli_angemeldet_16x16.png" /><span class="hidden-xs">Max Mustermann abmelden</span></button>
+                                <div>
+                                    <input type="text" class="form-control hidden-xs" aria-label="Suche" placeholder="Suche">
+                                    <button class="btn btn-light btn-img visible-xs-inline-block" type="submit"><img class="icon" src="../assets/images/fi_suche_16x16.png"></button>
+                                </div>
+                            </div>
+                        </header>
+                        <main>
+                            <div class="container-fluid dna-container-scroll">
+                                <div class="dummy-container">
+                                    Content
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+            <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+            <pre class="map-code"><code>&lt;header class=&quot;dna-header&quot;&gt;
+    &lt;div class=&quot;dna-header-main&quot;&gt;
+        &lt;div class=&quot;dna-header-icon&quot;&gt;...&lt;/div&gt;
+        &lt;div class=&quot;margin-bottom-sm&quot;&gt;
+            &lt;h2 class=&quot;dna-header-title&quot;&gt;...&lt;/h2&gt;
+            &lt;h3 class=&quot;dna-header-title-sub&quot;&gt;...&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;dna-header-breadcrumb&quot;&gt;
+            &lt;datev-breadcrumb&gt;&lt;/datev-breadcrumb&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;dna-header-function&quot;&gt;
+        &lt;button&gt;...&lt;/button&gt;
+        &lt;input/&gt;
+    &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+            <p>Für das gezeigte Verhalten ist individueller HTML- und CSS-Code notwenig</p>
+
+
+            <h4 id="header-fixed-complex-flex">Komplexer Header Flexbox</h4>
+            <p>Struktur analog zum Beispiel darüber - Umsetzung jedoch mit Flexbox</p>
+            <div class="genepool map-sample-app map-sample-app-slim">
+                <div class="dna-wrapper">
+                    <div class="dna-page dna-page-header-fixed-extended">
+                        <header class="dna-header flex map-test-header-flex-1">
+                            <div class="dna-header-main">
+                                <div class="dna-header-icon">
+                                    <img src="../assets/images/pi-generic-48x48.png" />
+                                </div>
+                                <div class="dna-header-item margin-bottom-sm">
+                                    <h2 class="dna-header-title">Beispiel-Anwendung</h2>
+                                    <h3 class="dna-header-title-sub hidden-xs">Details der Beispiel-Anwendung</h3>
+                                </div>
+                                <div class="dna-header-breadcrumb">
+                                    <nav role="navigation" class="dna-breadcrumb">
+                                        <p id="breadcrumb-label" class="dna-breadcrumb-label">Du bist hier:</p>
+                                        <ol class="breadcrumb" aria-labelledby="breadcrumb-label">
+                                            <li class="dna-breadcrumb-item"><a href="..." title="...">Platzhalter</a></li>
+                                            <li class="dna-breadcrumb-item"><a href="..." title="...">Breadcrumb</a></li>
+                                            <li class="dna-breadcrumb-item active"><a href="..." title="...">Komponente</a></li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="dna-header-function">
+                                <div>
+                                    <button class="btn btn-light"><img class="icon" src="../assets/images/sli_angemeldet_16x16.png" /><span class="hidden-xs">Max Mustermann abmelden</span></button>
+                                </div>
+                                <div>
+                                    <input type="text" class="form-control hidden-xs margin-top-lg" aria-label="Suche" placeholder="Suche">
+                                    <button class="btn btn-light btn-img visible-xs-inline-block" type="submit"><img class="icon" src="../assets/images/fi_suche_16x16.png"></button>
+                                </div>
+                            </div>
+                        </header>
+                        <main>
+                            <div class="container-fluid dna-container-scroll">
+                                <div class="dummy-container">
+                                    Content
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+            <h6 class="map-code-heading"><span class="glyphicon glyphicon-console"></span> HTML</h6>
+            <pre class="map-code"><code>&lt;header class=&quot;dna-header <em>flex</em>&quot;&gt;
+    ...
+&lt;/header&gt;</code></pre>
+            <p>Für das gezeigte Verhalten ist individueller HTML- und CSS-Code notwenig</p>
+
+            <h4 id="header-fixed-complex-flex">Komplexer Header Flexbox 2</h4>
+            <p> Mit Hilfe der CSS-Flexbox-Technik lässt sich das Verhalten vor allem bei kleinen Breakpoints weiter optimieren.
+                Hier positioniert sich das Layout so um, dass die Breadcrumb unten den volle Breite nutzen kann hat.</p>
+            <div class="genepool map-sample-app map-sample-app-slim">
+                <div class="dna-wrapper">
+                    <div class="dna-page dna-page-header-fixed-extended">
+                        <header class="dna-header flex map-test-header-flex-3">
+                            <div class="dna-header-icon">
+                                <img src="../assets/images/pi-generic-48x48.png" />
+                            </div>
+                            <div class="dna-header-item margin-bottom-sm">
+                                <h2 class="dna-header-title">Beispiel-Anwendung</h2>
+                                <h3 class="dna-header-title-sub hidden-xs">Details der Beispiel-Anwendung</h3>
+                            </div>
+                            <div class="dna-header-breadcrumb">
+                                <nav role="navigation" class="dna-breadcrumb">
+                                    <p id="breadcrumb-label" class="dna-breadcrumb-label">Du bist hier:</p>
+                                    <ol class="breadcrumb" aria-labelledby="breadcrumb-label">
+                                        <li class="dna-breadcrumb-item"><a href="..." title="...">Platzhalter</a></li>
+                                        <li class="dna-breadcrumb-item"><a href="..." title="...">Breadcrumb</a></li>
+                                        <li class="dna-breadcrumb-item active"><a href="..." title="...">Komponente</a></li>
+                                    </ol>
+                                </nav>
+                            </div>
+                            <div class="dna-header-function">
+                                <div>
+                                    <button class="btn btn-light"><img class="icon" src="../assets/images/sli_angemeldet_16x16.png" /><span class="hidden-xs">Max Mustermann abmelden</span></button>
+                                </div>
+                                <div>
+                                    <input type="text" class="form-control hidden-xs" aria-label="Suche" placeholder="Suche">
+                                    <button class="btn btn-light btn-img visible-xs-inline-block" type="submit"><img class="icon" src="../assets/images/fi_suche_16x16.png"></button>
+                                </div>
+                            </div>
+                        </header>
+                        <main>
+                            <div class="container-fluid dna-container-scroll">
+                                <div class="dummy-container">
+                                    Content
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+            <p><span class="glyphicon glyphicon-exclamation-sign"></span> Für das gezeigte Verhalten ist individueller HTML-
+                und CSS-Code notwenig</p>
+        </article>
+
+    </main>
+</body>
+
+</html>
