@@ -1,0 +1,56 @@
+@basisfarbe: #555;
+
+@defaultfarbe: @basisfarbe;
+@warnfarbe: red;
+@successfarbe: rgb(46, 194, 125);
+@infofarbe: blue;
+
+@defaultTextFarbe: darken(@defaultfarbe, 10%);
+@defaultBorderFarbe: darken(@defaultfarbe, 10%);
+@defaultBgFarbe: lighten(@defaultfarbe, 30%);
+
+@warnTextFarbe: darken(@warnfarbe, 10%);
+@warnBorderFarbe: darken(@warnfarbe, 10%);
+@warnBgFarbe: lighten(@warnfarbe, 30%);
+
+@basislaenge: 15px;
+@standardpadding: @basislaenge @basislaenge @basislaenge*2 @basislaenge*3;
+@standardmargin: @basislaenge*2;
+
+h1 {
+    color: @defaultTextFarbe;
+    border: 1px solid @defaultBorderFarbe;
+    background-color: @defaultBgFarbe; 
+    
+    // Kommentare mit // werden nicht nach .css kompiliert
+    // color: darken(@basisfarbe, 10%);
+    // border: 1px solid darken(@basisfarbe, 10%);
+    // background-color: lighten(@basisfarbe, 30%);
+    padding: @standardpadding;
+    margin: @standardmargin;
+}
+
+p {
+    color: @defaultTextFarbe;
+    border: 1px solid @defaultBorderFarbe;
+    background-color: @defaultBgFarbe; 
+    
+    // Kommentare mit /**/ werden nach .css kompiliert
+    /* 
+    color: darken(@basisfarbe, 10%);
+    border: 1px solid @basisfarbe;
+    background-color: lighten(@basisfarbe, 30%);
+    */
+    padding: @standardpadding;
+    margin: @standardmargin;
+}
+
+p.warning {
+    color: @warnTextFarbe;
+    border: 1px solid @warnBorderFarbe;
+    background-color: @warnBgFarbe;
+}
+
+p.komplement{
+    color: @komplement;
+}

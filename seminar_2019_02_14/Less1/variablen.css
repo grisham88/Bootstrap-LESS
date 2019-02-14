@@ -1,0 +1,27 @@
+h1 {
+  color: #808080;
+  border: 1px solid #808080;
+  background-color: #4d4d4d;
+  padding: 15px 15px 30px 30px;
+  margin: 30px;
+}
+p {
+  color: #808080;
+  border: 1px solid #808080;
+  background-color: #4d4d4d;
+  /* 
+    color: darken(@basisfarbe, 10%);
+    border: 1px solid @basisfarbe;
+    background-color: lighten(@basisfarbe, 30%);
+    */
+  padding: 15px 15px 30px 30px;
+  margin: 30px;
+}
+p.warning {
+  color: #cc0000;
+  border: 1px solid #cc0000;
+  background-color: #ff9999;
+}
+p.komplement {
+  color: #00ffff;
+}

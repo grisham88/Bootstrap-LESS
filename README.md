@@ -13,7 +13,7 @@ Inhalt
 	* 2.1. [Modulares CSS](#ModularesCSS)
 	* 2.2. [Beispiel classes und ids](#Beispielclassesundids)
 	* 2.3. [Beispiel only classes](#Beispielonlyclasses)
-	* 2.4. [Lelesss](#Less)
+	* 2.4. [Less](#Less)
 		* 2.4.1. [ Beispiele](#Beispiele)
 	* 2.5. [Bootstrap](#Bootstrap-1)
 
@@ -43,37 +43,45 @@ Inhalt
 
 ###  1.3. <a name='ExtensionsfrVSCode'></a>Extensions für VS Code
 Installationen durchführen für folgende Extensions:
-- Angular Language Service
 - Debugger for Chrome
 - npm
-- TSLint
 - Material Icon Theme
 - CSS Formatter
-- json2ts
-    json kopieren und dann mittels STRG + ALT + X wird das Interface dazu eingetragen an der markierten Stelle
+- Stylesheet Formatter
+- Beautify css/sass/scss/less
 - Deutsches Studio falls gewünscht
     - German Language Pack for Visual Studio Code
     - sonst ist Englisch der empfohlene Standard
         - über F1 kann mittels "> Configure Display Language" die Spracheinstellung geändert werden
 - Über Datei bzw. File, Automatische Speichern/Autosave aktivieren
+- Easy LESS
+    - "Compile-on-save" for LESS stylesheets without using a build task.
 
 ###  1.4. <a name='EmmetCheatsheets'></a>Emmet Cheatsheets
 - https://docs.emmet.io/cheat-sheet/
 
 ###  1.5. <a name='Bootstrap'></a>Bootstrap
+Eingabe im Terminal
+
 Installation: 
 ```html
 npm install --save @ng-bootstrap/ng-bootstrap
 ```
 
 ###  1.6. <a name='LESS'></a>LESS
+Eingabe im Terminal
+
 Installation: 
 ```html
 npm install -g less
 ```
-Abfrage der Version: 
-```html
+Abfrage der Version: ```html
 lessc --version
+```
+
+.less zu .css wandeln
+```html
+lessc variablen.less variablen.css
 ```
 
 ##  2. <a name='Bootstrap-1'></a>Bootstrap
@@ -343,7 +351,122 @@ Eigenschaften:
 - Extensions
 - Mediaqueries
 
+Nutzung des Farbrads mit Komplentärfarben für Farbharmonien
+
 ####  2.4.1. <a name='Beispiele'></a> Beispiele
+LESS-Datei
+```less
+@basisfarbe: #999;
+
+@defaultfarbe: @basisfarbe;
+@warnfarbe: red;
+
+@komplement: spin(@warnfarbe, 180);
+
+@successfarbe: rgb(46, 194, 125);
+@infofarbe: blue;
+
+@defaultTextFarbe: darken(@defaultfarbe, 10%);
+@defaultBorderFarbe: darken(@defaultfarbe, 10%);
+@defaultBgFarbe: darken(@defaultfarbe, 30%);
+
+@warnTextFarbe: darken(@warnfarbe, 10%);
+@warnBorderFarbe: darken(@warnfarbe, 10%);
+@warnBgFarbe: lighten(@warnfarbe, 30%);
+
+@basislaenge: 10px;
+@standardpadding: @basislaenge @basislaenge @basislaenge*2 @basislaenge*2;
+@standarmargin : @basislaenge*2;
+
+h1 {
+    color: @defaultTextFarbe;
+    border: 1px solid @defaultBorderFarbe;
+    background-color: @defaultBgFarbe; 
+    
+    // Kommentare mit // werden nicht nach .css kompiliert
+    // color: darken(@basisfarbe, 10%);
+    // border: 1px solid darken(@basisfarbe, 10%);
+    // background-color: lighten(@basisfarbe, 30%);
+    padding: @standardpadding;
+    margin: @standarmargin;
+}
+
+p {
+    color: @defaultTextFarbe;
+    border: 1px solid @defaultBorderFarbe;
+    background-color: @defaultBgFarbe; 
+    
+    // Kommentare mit /**/ werden nach .css kompiliert
+    /* 
+    color: darken(@basisfarbe, 10%);
+    border: 1px solid @basisfarbe;
+    background-color: lighten(@basisfarbe, 30%);
+    */
+    padding: @standardpadding;
+    margin: @standarmargin;
+}
+
+p.warning {
+    color: @warnTextFarbe;
+    border: 1px solid @warnBorderFarbe;
+    background-color: @warnBgFarbe;
+}
+
+p.komplement{
+    color: @komplement;
+}
+```
+Konvertierte CSS-Datei
+```css
+h1 {
+  color: #808080;
+  border: 1px solid #808080;
+  background-color: #4d4d4d;
+  padding: 10px 10px 20px 20px;
+  margin: 20px;
+}
+p {
+  color: #808080;
+  border: 1px solid #808080;
+  background-color: #4d4d4d;
+  /* 
+    color: darken(@basisfarbe, 10%);
+    border: 1px solid @basisfarbe;
+    background-color: lighten(@basisfarbe, 30%);
+    */
+  padding: 10px 10px 20px 20px;
+  margin: 20px;
+}
+p.warning {
+  color: #cc0000;
+  border: 1px solid #cc0000;
+  background-color: #ff9999;
+}
+p.komplement {
+  color: #00ffff;
+}
+```
+Zugehörige Anzeige in html
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Variablen in LESS</title>
+    <link rel="stylesheet" href="variablen.css">
+</head>
+
+<body>
+    <h1>Variablen in LESS</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, pariatur aspernatur velit quidem voluptate illum.
+    </p>
+    <p class="warning">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+</body>
+</html>
+```
 
 ###  2.5. <a name='Bootstrap-1'></a>Bootstrap
 - CSS-Framework
