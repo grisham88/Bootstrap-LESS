@@ -19,6 +19,7 @@ Inhalt
 		* 2.4.3. [Hierarchien](#Hierarchien)
 		* 2.4.4. [Module](#Module)
 		* 2.4.5. [Gridsystem](#Gridsystem)
+		* 2.4.6. [Responsive CSS](#ResponsiveCSS)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -1383,4 +1384,70 @@ Zugehörige Anzeige in html
 </body>
 
 </html>
+```
+
+####  2.4.6. <a name='ResponsiveCSS'></a>Responsive CSS
+- https://scotch.io/courses/getting-started-with-less/responsive-and-media-queries
+
+#####  2.4.6.1. <a name='BeispielGridsystem'></a>Beispiel Responsive CSS
+```less
+// Responsive === MediaQueries !!
+h1 {
+    // Default (Mobile First)
+    color: red;
+    // kleine Geräte
+    @media (min-width: 480px) {
+        color: green;
+    }
+    // mittlere Geräte
+    @media (min-width:600px) {
+        color: blue;
+    }
+}
+
+p {
+    color: black;
+    // kleine Geräte
+    @media (min-width: 480px) {
+        color: green;
+    }
+    // mittlere Geräte
+    @media (min-width:600px) {
+        color: blue;
+    }
+}
+```
+Konvertierte css aus less
+```css
+h1 {
+  color: red;
+}
+
+@media (min-width: 480px) {
+  h1 {
+    color: green;
+  }
+}
+
+@media (min-width: 600px) {
+  h1 {
+    color: blue;
+  }
+}
+
+p {
+  color: black;
+}
+
+@media (min-width: 480px) {
+  p {
+    color: green;
+  }
+}
+
+@media (min-width: 600px) {
+  p {
+    color: blue;
+  }
+}
 ```
