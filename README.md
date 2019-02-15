@@ -34,6 +34,7 @@ Inhalt
 	* 3.3. [Grundlagen](#Grundlagen)
 	* 3.4. [Tabellen](#Tabellen)
 	* 3.5. [Utilities](#Utilities)
+	* 3.6. [Grids](#Grids)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -2045,6 +2046,113 @@ Aufruf der vordefinierten bootstrap.css-Datei über html
         <p class="text-center">
             Hier ist Text!
         </p>
+    </div>
+</body>
+
+</html>
+```
+
+###  3.6. <a name='Grids'></a>Grids
+- https://getbootstrap.com/docs/4.0/layout/grid/
+
+Geräteklassen (Darstellung für verschiedene Geräte)
+- https://getbootstrap.com/docs/4.0/layout/grid/#grid-options
+  - xs -> "extra small"
+  - sm -> "small"
+  - md -> "medium"
+  - lg -> "large"
+  - Angabe von verschiedenen Gerätklassen als class-Angabe möglich,
+  sodass eine Webseite auf verschiedenen Geräte automatisch unterschiedlich dargestellt wird
+
+Gridbasis mit class:
+- .container
+
+Gridzeile mit class:
+- .row
+
+Grid-items mit class:
+- .col-xs-1
+- .
+- .
+- .col-xs-12
+- .col-sm-1
+- .
+- .
+- .col-sm-12
+- .col-md-...
+- .col-lg-...
+- ACHTUNG
+  - Gibt es 12 Spalten und man möchte eine Zeile ausfüllen,
+  so müssen die col-classes zusammen immer 12 (z.B. 4+4+4) ergeben
+
+Aufruf der vordefinierten bootstrap.css-Datei über html
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap: Grid</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Grids in Bootstrap</h1>
+        <!-- wir verwenden das Gridsystem: -->
+        <div class="row">
+            <!-- 3 Spalten für Xtra-Small Devices: -->
+            <div class="col-xs-4">
+                <b>"col-xs-4"</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis doloribus beatae minima?</div>
+            <div class="col-xs-4">
+                <b>"col-xs-4"</b>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus mollitia ad adipisci!</div>
+            <div class="col-xs-4">
+                <b>"col-xs-4"</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum beatae molestiae id.</div>
+        </div>
+        <div class="row">
+            <!-- 3 Spalten für Small Devices: -->
+            <div class="col-sm-4">
+                <b>"col-sm-4"</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis doloribus beatae minima?</div>
+            <div class="col-sm-4">
+                <b>"col-sm-4"</b>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus mollitia ad adipisci!</div>
+            <div class="col-sm-4">
+                <b>"col-xs-4"</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum beatae molestiae id.</div>
+        </div>
+        <div class="row">
+            <!-- 3 Spalten für Small Devices, 2 für MD: -->
+            <div class="col-sm-4 col-md-6">
+                <b>"col-sm-4 col-md-6"</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis doloribus beatae minima?</div>
+            <div class="col-sm-4  col-md-6">
+                <b>"col-sm-4 col-md-6"</b>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus mollitia ad adipisci!</div>
+            <div class="col-sm-4 col-md-12">
+                <b>"col-xs-4 col-md-6"</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum beatae molestiae id.</div>
+        </div>
+        <div class="row">
+            <!-- 4 Spalten für Small Devices, 4 für MD: -->
+            <div class="col-sm-6 col-md-3">
+                <b>"col-sm-4 col-md-6"</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis doloribus beatae minima?</div>
+            <div class="col-sm-6  col-md-3">
+                <b>"col-sm-4 col-md-6"</b>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus mollitia ad adipisci!</div>
+            <div class="col-sm-6 col-md-3">
+                <b>"col-xs-4 col-md-6"</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum beatae molestiae id.</div>
+            <div class="col-sm-6 col-md-3">
+                <b>"col-xs-4 col-md-6"</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum beatae molestiae id.</div>
+        </div>
     </div>
 </body>
 
