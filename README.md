@@ -47,6 +47,7 @@ Inhalt
 	* 3.10. [Navigationen](#Navigationen)
 	* 3.11. [Collapsible](#Collapsible)
 	* 3.12. [Dropdown](#Dropdown)
+	* 3.13. [Navbar](#Navbar)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -1693,6 +1694,9 @@ Aufruf der .css-Datei über HTML
 </body>
 ```
 
+Vorschau  
+![Modulares CSS - Classes vs. Ids](images/Modulares_CSS_Classes_vs_Ids.png)
+
 ####  3.1.2. <a name='BeispielOnlyClasses'></a>Beispiel Only Classes
 ```css
 <style>
@@ -1871,6 +1875,9 @@ Aufruf der .css-Datei über HTML
     </div>
 </body>
 ```
+
+Vorschau  
+![Modulares CSS - Only Classes](images/Modulares_CSS_Only_Classes.png)
 
 ###  3.2. <a name='Nutzung'></a>Nutzung
 - [Installation](#BootstrapInstallation)
@@ -2811,4 +2818,67 @@ Vorschau
 
 ![Dropdown geöffnet](images/Bootstrap_Dropdown_geöffnet.png)
 
-![](2019-02-15-15-13-43.png)
+###  3.13. <a name='Navbar'></a>Navbar
+- https://getbootstrap.com/docs/4.0/components/navbar/
+- https://getbootstrap.com/docs/3.3/examples/navbar/
+- https://www.w3schools.com/bootstrap/bootstrap_navbar.asp
+
+Aufruf der vordefinierten bootstrap.css-Datei über HTML
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap: Navbar</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    Navbar im Container:
+    <div class="container">
+
+        <nav class="navbar navbar-default">
+            <!-- Child-Container: header-->
+            <div class="navbar-header">
+                <!-- Home-Link ist navbar-brand: -->
+                <a href="#" class="navbar-brand">Home</a>
+            </div>
+            <!-- Child-Container: collapser-->
+            <div class="navbar-collapse">
+
+            </div>
+        </nav>
+    </div>
+    Navbar enthält Container
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Child-Container: header-->
+            <div class="navbar-header">
+                <!-- Home-Link ist navbar-brand: -->
+                <a href="#" class="navbar-brand">Home</a>
+            </div>
+            <!-- Child-Container: collapser-->
+            <div class="navbar-collapse">
+
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h3>Navbars ...</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam earum atque dolor, magni dignissimos
+            perspiciatis itaque labore debitis sapiente recusandae, ab animi assumenda blanditiis tempore.</p>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+
+</html>
+```
+
+Vorschau  
+
+![Navbar](images/Bootstrap_Navbar.png)
