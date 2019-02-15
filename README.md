@@ -7,8 +7,8 @@ Inhalt
 	* 1.2. [Hilfsfunktionen für VS Code](#HilfsfunktionenfrVSCode)
 	* 1.3. [Extensions für VS Code](#ExtensionsfrVSCode)
 	* 1.4. [Emmet Cheatsheets](#EmmetCheatsheets)
-	* 1.5. [Bootstrap Installation](#BootstrapInstallation)
-	* 1.6. [LESS Installation](#LESSInstallation)
+	* 1.5. [LESS Installation](#LESSInstallation)
+	* 1.6. [Bootstrap Installation](#BootstrapInstallation)
 * 2. [LESS](#LESS)
 	* 2.1. [Variablen](#Variablen)
 		* 2.1.1. [Beispiele mit Variablen](#BeispielemitVariablen)
@@ -35,6 +35,8 @@ Inhalt
 	* 3.4. [Tabellen](#Tabellen)
 	* 3.5. [Utilities](#Utilities)
 	* 3.6. [Grids](#Grids)
+		* 3.6.1. [Beispiel Grids](#BeispielGrids)
+		* 3.6.2. [Beispiel Offsets](#BeispielOffsets)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -82,7 +84,23 @@ Installationen durchführen für folgende Extensions:
 ###  1.4. <a name='EmmetCheatsheets'></a>Emmet Cheatsheets
 - https://docs.emmet.io/cheat-sheet/
 
-###  1.5. <a name='BootstrapInstallation'></a>Bootstrap Installation
+###  1.5. <a name='LESSInstallation'></a>LESS Installation
+Eingabe im Terminal
+
+Installation: 
+```html
+npm install -g less --save-dev
+```
+Abfrage der Version: 
+```html
+lessc --version
+```
+.less zu .css wandeln
+```html
+lessc variablen.less variablen.css
+```
+
+###  1.6. <a name='BootstrapInstallation'></a>Bootstrap Installation
 Anleitung im Web:
 - https://getbootstrap.com/docs/4.1/getting-started/download/
 
@@ -108,22 +126,6 @@ npm WARN bootstrap1@1.0.0 No repository field.
 + bootstrap@3.3.7
 added 1 package from 1 contributor and audited 1 package in 1.467s
 found 0 vulnerabilities
-```
-
-###  1.6. <a name='LESSInstallation'></a>LESS Installation
-Eingabe im Terminal
-
-Installation: 
-```html
-npm install -g less --save-dev
-```
-Abfrage der Version: 
-```html
-lessc --version
-```
-.less zu .css wandeln
-```html
-lessc variablen.less variablen.css
 ```
 
 ##  2. <a name='LESS'></a>LESS
@@ -2034,15 +2036,17 @@ Aufruf der vordefinierten bootstrap.css-Datei über html
         <p class="pull-left">Left: Lorem ipsum dolor sit amet consectetur.</p>
         <p class="pull-right">Right: Lorem ipsum dolor sit amet consectetur.</p>
 
-        <p>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
-            accusantium quidem similique dolores aliquid deserunt adipisci eius vel ut dignissimos corporis nisi quas,
-            error necessitatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Praesentium accusantium quidem
+            similique dolores aliquid deserunt adipisci eius vel ut dignissimos
+            corporis nisi quas, error necessitatibus.</p>
         <p>
             <img src="pics/bild.jpg" alt="Ein Bild" class="center-block">
         </p>
-        <p>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-            dignissimos facilis, quam debitis odit assumenda, quis voluptatum numquam, doloribus optio et nobis quae
-            architecto nemo.</p>
+        <p>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Harum dignissimos facilis, quam
+            debitis odit assumenda, quis voluptatum numquam, doloribus optio
+            et nobis quae architecto nemo.</p>
         <p class="text-center">
             Hier ist Text!
         </p>
@@ -2085,6 +2089,14 @@ Grid-items mit class:
   - Gibt es 12 Spalten und man möchte eine Zeile ausfüllen,
   so müssen die col-classes zusammen immer 12 (z.B. 4+4+4) ergeben
 
+Offset:
+- https://getbootstrap.com/docs/4.0/layout/grid/#offsetting-columns
+  - .col-xs-offset-1..11
+  - .col-sm-offset-1..11
+  - .col-md-offset-1..11
+  - .col-lg-offset-1..11
+
+####  3.6.1. <a name='BeispielGrids'></a>Beispiel Grids
 Aufruf der vordefinierten bootstrap.css-Datei über html
 ```html
 <!DOCTYPE html>
@@ -2152,6 +2164,47 @@ Aufruf der vordefinierten bootstrap.css-Datei über html
             <div class="col-sm-6 col-md-3">
                 <b>"col-xs-4 col-md-6"</b>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum beatae molestiae id.</div>
+        </div>
+    </div>
+</body>
+
+</html>
+```
+
+####  3.6.2. <a name='BeispielOffsets'></a>Beispiel Offsets
+Aufruf der vordefinierten bootstrap.css-Datei über html
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap: Grid</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Grids in Bootstrap (Offsets)</h1>
+        <p>Offsets wirken wie Itembreiten für alle Geräte AB der Definition.
+            Sie können aber widerrufen werden. S.u.</p>
+        <!-- wir verwenden das Gridsystem: -->
+        <div class="row">
+            <!-- 3 Spalten für Small Devices (Lücke!): -->
+            <div class="col-sm-3">
+                <b>"col-sm-3"</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Reiciendis doloribus beatae minima?</div>
+            <div class="col-sm-3 col-sm-offset-2 col-md-offset-0">
+                <b>"col-sm-3"</b>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus mollitia ad adipisci!</div>
+            <div class="col-sm-3 col-sm-offset-1">
+                <b>"col-xs-3"</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Rerum beatae molestiae id.</div>
         </div>
     </div>
 </body>

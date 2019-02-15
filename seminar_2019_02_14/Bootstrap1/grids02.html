@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap: Grid</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Grids in Bootstrap (Offsets)</h1>
+        <p>Offsets wirken wie Itembreiten für alle Geräte AB der Definition.
+            Sie können aber widerrufen werden. S.u.</p>
+        <!-- wir verwenden das Gridsystem: -->
+        <div class="row">
+            <!-- 3 Spalten für Small Devices (Lücke!): -->
+            <div class="col-sm-3">
+                <b>"col-sm-3"</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Reiciendis doloribus beatae minima?</div>
+            <div class="col-sm-3 col-sm-offset-2 col-md-offset-0">
+                <b>"col-sm-3"</b>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus mollitia ad adipisci!</div>
+            <div class="col-sm-3 col-sm-offset-1">
+                <b>"col-xs-3"</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Rerum beatae molestiae id.</div>
+        </div>
+    </div>
+</body>
+
+</html>
