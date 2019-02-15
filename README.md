@@ -266,6 +266,8 @@ Zugehörige Anzeige in html
 
 ###  2.2. <a name='Mixins'></a>Mixins
 - http://lesscss.org/features/#mixins-feature
+- http://lesscss.org/features/#mixins-feature-selectors-in-mixins
+- http://lesscss.org/features/#mixins-feature-not-outputting-the-mixin
 
 ####  2.2.1. <a name='BeispielMixinVariantenNormalParametermixins'></a>Beispiel Mixin Varianten (Normal/Parametermixins)
 
