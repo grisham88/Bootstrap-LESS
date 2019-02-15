@@ -1455,3 +1455,307 @@ p {
 
 ####  2.4.7. <a name='Importe'></a>Importe
 - http://lesscss.org/features/#import-atrules-feature
+- Importreihenfolge spielt eine Rolle
+
+#####  2.4.7.1. <a name='BeispielImporte'></a>Beispiel Importe
+Einstellung das die .css Dateien in einer Datei landen beim umwandeln von less nach css
+```json
+{
+    "less.compile": {
+        "out": "${workspaceRoot}\\css\\style.css",
+        "main": "style.less",
+        "compress": false
+    }
+}
+```
+Import anderer .less Dateien in eine einzige
+```less
+// Variablen
+@import 'variablen';
+
+// Mixins
+@import 'mixins';
+
+// Normalisierungen und Resets
+@import 'normalize';
+
+// Module
+@import 'grid';
+@import 'button';
+@import 'panel';
+
+// Modifier
+@import 'modifier';
+```
+Konvertierte css aus less wird in einer style.css gespeichert und nicht in einzelne, wie z.B. mixins.css, panel.css etc...
+```css
+body {
+  margin: 0;
+}
+
+.grid {
+  width: 100%;
+}
+
+.grid_row {
+  width: 100%;
+  clear: both;
+  float: left;
+}
+
+.grid-col-1 {
+  width: 7.33333333%;
+  margin: 5px 0.5%;
+  background-color: #eee;
+  float: left;
+}
+
+.grid-col-2 {
+  width: 15.66666667%;
+  margin: 5px 0.5%;
+  background-color: #eee;
+  float: left;
+}
+
+.grid-col-3 {
+  width: 24%;
+  margin: 5px 0.5%;
+  background-color: #eee;
+  float: left;
+}
+
+.grid-col-4 {
+  width: 32.33333333%;
+  margin: 5px 0.5%;
+  background-color: #eee;
+  float: left;
+}
+
+.grid-col-5 {
+  width: 40.66666667%;
+  margin: 5px 0.5%;
+  background-color: #eee;
+  float: left;
+}
+
+.grid-col-6 {
+  width: 49%;
+  margin: 5px 0.5%;
+  background-color: #eee;
+  float: left;
+}
+
+.grid-col-7 {
+  width: 57.33333333%;
+  margin: 5px 0.5%;
+  background-color: #eee;
+  float: left;
+}
+
+.grid-col-8 {
+  width: 65.66666667%;
+  margin: 5px 0.5%;
+  background-color: #eee;
+  float: left;
+}
+
+.grid-col-9 {
+  width: 74%;
+  margin: 5px 0.5%;
+  background-color: #eee;
+  float: left;
+}
+
+.grid-col-10 {
+  width: 82.33333333%;
+  margin: 5px 0.5%;
+  background-color: #eee;
+  float: left;
+}
+
+.grid-col-11 {
+  width: 90.66666667%;
+  margin: 5px 0.5%;
+  background-color: #eee;
+  float: left;
+}
+
+.grid-col-12 {
+  width: 99%;
+  margin: 5px 0.5%;
+  background-color: #eee;
+  float: left;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  font-family: verdana;
+  font-size: 1em;
+}
+
+.btn-default {
+  color: #777777;
+  background-color: #c3c3c3;
+}
+
+.btn-default:hover {
+  background-color: #dddddd;
+}
+
+.btn-warnung {
+  color: #601515;
+  background-color: #d43a3a;
+}
+
+.btn-warnung:hover {
+  background-color: #dd6464;
+}
+
+.btn-info {
+  color: #0c2a0c;
+  background-color: #2da22d;
+}
+
+.btn-info:hover {
+  background-color: #3ac83a;
+}
+
+.btn-success {
+  color: #24246a;
+  background-color: #5f5fc8;
+}
+
+.btn-success:hover {
+  background-color: #8585d5;
+}
+
+.panel {
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin: 2em 0;
+}
+
+.panel_header {
+  padding: 10px;
+}
+
+.panel_body {
+  padding: 10px;
+}
+
+.panel-default {
+  border-color: #aaa;
+}
+
+.panel-default .panel_header {
+  color: #aaa;
+}
+
+.panel-default .panel_body {
+  background-color: #f6f6f6;
+}
+
+.panel-info {
+  border-color: #227a22;
+}
+
+.panel-info .panel_header {
+  color: #227a22;
+}
+
+.panel-info .panel_body {
+  background-color: #62d362;
+}
+
+.panel-warnung {
+  border-color: #b42727;
+}
+
+.panel-warnung .panel_header {
+  color: #b42727;
+}
+
+.panel-warnung .panel_body {
+  background-color: #e68e8e;
+}
+
+.panel-success {
+  border-color: #3e3eb6;
+}
+
+.panel-success .panel_header {
+  color: #3e3eb6;
+}
+
+.panel-success .panel_body {
+  background-color: #ababe2;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+```
+Aufruf der einzigen .css-Datei über html
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test der Styles und Module</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1>Meine Testseite</h1>
+    <h2>Buttons:</h2>
+    <p><button class="btn btn-warnung">Roter Button</button></p>
+    <h2>Panels</h2>
+    <div class="panel panel-default">
+        <!-- panel -->
+        <!-- panel_header -->
+        <h1 class="panel_header">Panelheader</h1>
+        <!-- panel_body -->
+        <div class="panel_body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatibus?</div>
+    </div>
+    <div class="panel panel-info">
+        <!-- panel -->
+        <!-- panel_header -->
+        <h1 class="panel_header">Panelheader</h1>
+        <!-- panel_body -->
+        <div class="panel_body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatibus?</div>
+    </div>
+    <h2>Grid</h2>
+    <div class="grid">
+        <div class="grid_row">
+            <div class="grid-col-3">3 Einheiten Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Dolore fugit magni inventore!</div>
+            <div class="grid-col-5">5 Einheiten Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ut
+                doloribus voluptas similique amet in?</div>
+            <div class="grid-col-4">4 Einheiten</div>
+        </div>
+        <div class="grid_row">
+            <div class="grid-col-4">4 Einheiten</div>
+            <div class="grid-col-4">4 Einheiten</div>
+            <div class="grid-col-4">4 Einheiten</div>
+        </div>
+        <div class="grid_row">
+            <div class="grid-col-6">6 Einheiten</div>
+            <div class="grid-col-2">2 Einheiten</div>
+            <div class="grid-col-4">4 Einheiten</div>
+        </div>
+    </div>
+</body>
+
+</html>
+```
