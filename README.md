@@ -7,7 +7,7 @@ Inhalt
 	* 1.2. [Hilfsfunktionen für VS Code](#HilfsfunktionenfrVSCode)
 	* 1.3. [Extensions für VS Code](#ExtensionsfrVSCode)
 	* 1.4. [Emmet Cheatsheets](#EmmetCheatsheets)
-	* 1.5. [Bilder von Webseiten aufnehmen](#BildervonWebseitenaufnehmen)
+	* 1.5. [Bilder/Gifs von Webseiten aufnehmen](#BilderGifsvonWebseitenaufnehmen)
 	* 1.6. [LESS Installation](#LESSInstallation)
 	* 1.7. [Bootstrap Installation](#BootstrapInstallation)
 * 2. [LESS](#LESS)
@@ -41,6 +41,7 @@ Inhalt
 		* 3.6.3. [Beispiel Push & Pull](#BeispielPushPull)
 		* 3.6.4. [Beispiel Zeigen und Verstecken](#BeispielZeigenundVerstecken)
 	* 3.7. [Panels](#Panels)
+	* 3.8. [Buttons](#Buttons)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -88,7 +89,7 @@ Installationen durchführen für folgende Extensions:
 ###  1.4. <a name='EmmetCheatsheets'></a>Emmet Cheatsheets
 - https://docs.emmet.io/cheat-sheet/
 
-###  1.5. <a name='BildervonWebseitenaufnehmen'></a>Bilder/Gifs von Webseiten aufnehmen
+###  1.5. <a name='BilderGifsvonWebseitenaufnehmen'></a>Bilder/Gifs von Webseiten aufnehmen
 - Screenshots der Webseite - FireShot
   - https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg?hl=de
 - How to add GIFs to your GitHub README
@@ -2461,8 +2462,54 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
         </div>
     </div>
 </body>
-<img src="FireShot Pro Screen Capture #002 - 'Bootstrap_ Panels' - 127_0_0_1_5500_panels_html.png"
-     alt="Markdown Monster icon"/>
+
 </html>
 ```
- ![Bootstrap_ Panels](FireShot Pro Screen Capture #002 - 'Bootstrap_ Panels' - 127_0_0_1_5500_panels_html.png)
+
+![Panels](/images/'Bootstrap_ Panels' - 127_0_0_1_5500_panels_html.png)
+
+###  3.8. <a name='Buttons'></a>Buttons
+- https://www.w3schools.com/bootstrap/bootstrap_buttons.asp
+- https://getbootstrap.com/docs/4.0/components/buttons/
+
+Aufruf der vordefinierten bootstrap.css-Datei über HTML
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap: Buttons</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Buttons in Bootstrap</h1>
+        <div class="row">
+            <div class="col-xs-4">
+                <button class="btn btn-default">Default-Button</button>
+                <button class="btn btn-primary">Primary-Button</button>
+                <button class="btn btn-success">Success-Button</button>
+                <button class="btn btn-info">Info-Button</button>
+                <button class="btn btn-warning">Warning-Button</button>
+                <button class="btn btn-danger">Danger-Button</button>
+            </div>
+            <div class="col-xs-4">
+                <button class="btn btn-default">Default-Button</button>
+                <input class="btn btn-default" type="button" value="Input-Button">
+                <a class="btn btn-default" href="">Anker-Button</a>
+            </div>
+            <div class="col-xs-4">
+                <button class="btn btn-primary btn-sm">Primary-Small</button>
+                <button class="btn btn-primary">Primary-Button</button>
+                <button class="btn btn-primary btn-lg">Primary-Large</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+```
