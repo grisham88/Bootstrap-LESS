@@ -314,7 +314,7 @@ Zugehörige Anzeige in html
 ```
 
 Vorschau  
-![LESS Variablen](images/LESS_Variablen.png)
+![LESS Variablen](images/LESS_Variablen_.png)
 
 ###  2.2. <a name='Mixins'></a>Mixins
 - http://lesscss.org/features/#mixins-feature
@@ -459,7 +459,7 @@ Zugehörige Anzeige in html
 ```
 
 Vorschau  
-![Mixins](images/LESS_Mixins.png)
+![Mixins](images/LESS_Mixins_.png)
 
 ###  2.3. <a name='Hierarchien'></a>Hierarchien
 - Hierarchische Menüstruktur (Hierarchie)
@@ -562,7 +562,7 @@ Zugehörige Anzeige in html
 
 Vorschau 
 
-![Hierarchien](images/LESS_Hierarchien.png)
+![Hierarchien](images/LESS_Hierarchien_.png)
 
 ####  2.3.2. <a name='BeispielHierarchienModule'></a>Beispiel Hierarchien & Module
 ```less
@@ -766,7 +766,7 @@ Zugehörige Anzeige in html
 ```
 
 Vorschau  
-![Buttons](images/LESS_Buttons.png)
+![Buttons](images/LESS_Buttons_.png)
 
 ####  2.4.2. <a name='BeispielStylesundModule'></a>Beispiel Styles und Module
 button.less
