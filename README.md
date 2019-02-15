@@ -2057,6 +2057,9 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 </html>
 ```
 
+Vorschau  
+![Tabellen](images/Bootstrap_Tabellen.png)
+
 ###  3.5. <a name='Utilities'></a>Utilities
 - https://getbootstrap.com/docs/4.2/layout/utilities-for-layout/
 
@@ -2098,6 +2101,9 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 
 </html>
 ```
+
+Vorschau  
+![Utilities](images/Bootstrap_Utilities.png)
 
 ###  3.6. <a name='Grids'></a>Grids
 - https://getbootstrap.com/docs/4.0/layout/grid/
@@ -2800,3 +2806,5 @@ Vorschau
 ![Dropdown geschlossen](images/Bootstrap_Dropdown_geschlossen.png)
 
 ![Dropdown geöffnet](images/Bootstrap_Dropdown_geöffnet.png)
+
+![](2019-02-15-15-13-43.png)
