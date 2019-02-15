@@ -1,4 +1,4 @@
-# Bootstrap-LESS Seminar
+# Bootstrap & LESS (RIA) Seminar
 
 Inhalt
 <!-- vscode-markdown-toc -->
@@ -9,18 +9,27 @@ Inhalt
 	* 1.4. [Emmet Cheatsheets](#EmmetCheatsheets)
 	* 1.5. [Bootstrap Installation](#BootstrapInstallation)
 	* 1.6. [LESS Installation](#LESSInstallation)
-* 2. [Bootstrap](#Bootstrap)
-	* 2.1. [Modulares CSS](#ModularesCSS)
-	* 2.2. [Beispiel classes und ids](#Beispielclassesundids)
-	* 2.3. [Beispiel only classes](#Beispielonlyclasses)
-	* 2.4. [Less](#Less)
-		* 2.4.1. [Variablen](#Variablen)
-		* 2.4.2. [Mixins](#Mixins)
-		* 2.4.3. [Hierarchien](#Hierarchien)
-		* 2.4.4. [Module](#Module)
-		* 2.4.5. [Gridsystem](#Gridsystem)
-		* 2.4.6. [Responsive CSS](#ResponsiveCSS)
-		* 2.4.7. [Importe](#Importe)
+* 2. [LESS](#LESS)
+	* 2.1. [Variablen](#Variablen)
+		* 2.1.1. [Beispiele mit Variablen](#BeispielemitVariablen)
+	* 2.2. [Mixins](#Mixins)
+		* 2.2.1. [Beispiel Mixin Varianten (Normal/Parametermixins)](#BeispielMixinVariantenNormalParametermixins)
+	* 2.3. [Hierarchien](#Hierarchien)
+		* 2.3.1. [Beispiel Hierarchien](#BeispielHierarchien)
+		* 2.3.2. [Beispiel Hierarchien & Module](#BeispielHierarchienModule)
+	* 2.4. [Module](#Module)
+		* 2.4.1. [Beispiel Module](#BeispielModule)
+		* 2.4.2. [Beispiel Styles und Module](#BeispielStylesundModule)
+	* 2.5. [Gridsystem](#Gridsystem)
+		* 2.5.1. [Beispiel Gridsystem](#BeispielGridsystem)
+	* 2.6. [Responsive CSS](#ResponsiveCSS)
+		* 2.6.1. [Beispiel Responsive CSS](#BeispielResponsiveCSS)
+	* 2.7. [Importe](#Importe)
+		* 2.7.1. [Beispiel Importe](#BeispielImporte)
+* 3. [Bootstrap](#Bootstrap)
+	* 3.1. [Modulares CSS](#ModularesCSS)
+		* 3.1.1. [Beispiele classes und ids](#Beispieleclassesundids)
+		* 3.1.2. [Beispiel only classes](#Beispielonlyclasses)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -89,278 +98,19 @@ lessc --version
 lessc variablen.less variablen.css
 ```
 
-##  2. <a name='Bootstrap'></a>Bootstrap
-- CSS-Framework
-	- Version 3 -> 3.3.7 Less  
-	- Version 4 -> 4.x SASS
-- Modulares CSS
-
-###  2.1. <a name='ModularesCSS'></a>Modulares CSS
-Großes Webprojekt
-- Unübersichtlich
-	- Nomenklatur
-- Unvorhersehbar
-- bläht sich auf
-- unwartbar
-
-Jedes Modul ist für sich geschlossen, Änderungen beeinflussen nicht andere Module  
-
-Spezifizität:
-	- gleichmäßig
-	- nur CSS-Klassen keine ID-Selektoren (Dynamische Webseite)
-	- ID Selektoren sind bei statische Webseiten in Ordnung
-
-Keine Elementnamen sondern Rollen -> Nomenklatur
-
-SMACSS Richtlinie
-- Jonathan Snookes (Urheber)
-- smacss.com (PDF zugänglich)
-- Aufbau:
-	- Modul -> widget
-		- Elements -> widget_element (_)
-			- State Modifier -> widget-modifier (-)
-
-BEM (Yandex)
-- en.bem.info/methodology
-- Block Element Modifier
-	- block
-		- block__element
-			- block--modifier
-
-###  2.2. <a name='Beispielclassesundids'></a>Beispiel classes und ids
-```css
-<style>
-	#content .meinwidget {
-		border: 1px solid #000;
-		border-radius: 5px;
-		padding: 10px;
-	}
-
-	.meinwidget h2 {
-		color: red;
-		background-color: #fff;
-	}
-
-	#content .meinwidget p {
-		background-color: #fff;
-	}
-
-	#content .active {
-		background-color: #ddd;
-	}
-</style>
-```
-```html
-<body>
-    <div id="content">
-        <h1>Modulares CSS - classes und ids</h1>
-        <div class="meinwidget">
-            <h2 class="headline active">Überschrift des Widgets</h2>
-                <p class="active">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, voluptatem
-                    asperiores? Odio
-                    adipisci illo nam.</p>
-                <p>
-                    <button>Ja </button>
-                    <button>Nein</button>
-                </p>
-                <p>Soll anders aussehen...</p>
-        </div>
-    </div>
-</body>
-```
-
-###  2.3. <a name='Beispielonlyclasses'></a>Beispiel only classes
-```css
-<style>
-        /* à la SCSS */
-
-        /* Resets */
-        body {
-            margin: 0;
-        }
-
-        /* Layout */
-        /* Kennzeichnung der Klassen mit l- */
-
-        .l-nav {
-            width: 150px;
-            float: left;
-        }
-
-        .l-content {
-            margin-left: 170px;
-        }
-
-        .l-nav-reverse {
-            float: right;
-        }
-
-        .l-content-reverse {
-            margin-left: 0;
-            margin-right: 170px;
-        }
-
-        /* Generische Styles */
-
-        /* Schriftgrößen, Abstände, etc. allgemein ... */
-
-        /* Modul meinwidget */
-        .meinwidget {
-            border: 1px solid #000;
-            border-radius: 5px;
-            padding: 10px;
-        }
-
-        /* Kennzeichnung eines Elements mit ..._... */
-        .meinwidget_headline {
-            color: red;
-            background-color: #fff;
-        }
-
-        .meinwidget_content {
-            background-color: #fff;
-        }
-
-        .meinwidget_content-active {
-            /* Moduleigener Modifer */
-            background-color: #ddd;
-        }
-
-        .meinwidget_buttoncontainer {
-            padding: 5px;
-        }
-
-        .meinwidget_button {}
-
-        /* Modul btn */
-        .btn {
-            /* Basisklasse */
-            padding: 5px;
-            border-radius: 3px;
-            min-width: 80px;
-        }
-
-        .btn-default {
-            /* Modifierklasse */
-            background-color: #ddd;
-            border: 1px solid #000;
-        }
-
-        .btn-default:hover {
-            /* Modifierklasse */
-            background-color: rgb(235, 235, 235);
-            border: 1px solid #000;
-        }
-
-        .btn-info {
-            /* Modifierklasse */
-            background-color: lightblue;
-            border: 1px solid blue;
-        }
-
-        .btn-info:hover {
-            /* Modiferklasse */
-            background-color: rgb(205, 230, 238);
-            border: 1px solid blue;
-        }
-
-        .btn-success {
-            /* Modifierklasse */
-            background-color: lightgreen;
-            border: 1px solid green;
-        }
-
-        .btn-success:hover {
-            /* Modiferklasse */
-            background-color: rgb(177, 241, 177);
-            border: 1px solid green;
-        }
-
-        .meinwidget_subline {
-            color: #000;
-        }
-
-        /* States bzw. Modifer */
-
-        /* Idee: Präfixes, z.B. 
-            l- (Layout), 
-            u- (Utility), 
-            t- (Theme), 
-            is-, has-, did-, can- (Zustand) 
-        */
-
-        .is-active {
-            background-color: #ddd;
-        }
-
-        .has-sidebar {
-            padding-left: 20px;
-        }
-
-        .is-disabled {
-            color: #999;
-        }
-
-        /* layout */
-        .l-big-padding {
-            padding: 15px;
-        }
-
-        /* utility */
-        .u-float-left {
-            float: left;
-        }
-
-        .u-float-right {
-            float: right;
-        }
-</style>
-```
-```html
-<body>
-    <div class="nav nav-reverse">
-        <ul>
-            <li><a href="">Beispielnav</a></li>
-            <li><a href="">Beispielnav</a></li>
-            <li><a href="">Beispielnav</a></li>
-            <li><a href="">Beispielnav</a></li>
-            <li><a href="">Beispielnav</a></li>
-        </ul>
-    </div>
-    <div class="content content-reverse">
-        <h1>Modulares CSS - Only Classes</h1>
-        <div class="meinwidget">
-            <h2 class="meinwidget_headline">Überschrift des Widgets</h2>
-            <p class="meinwidget_content">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, voluptatem
-                asperiores? Odio
-                adipisci illo nam.</p>
-            <p class="meinwidget_buttoncontainer">
-                <button class="btn btn-success meinwidget_button meinwidget_button-ja">Ja </button>
-                <button class="btn btn-info meinwidget_button meinwidget_button-nein">Nein</button>
-                <input type="button" value="Vielleicht"
-                    class="btn btn-default meinwidget_button meinwidget_button-vielleicht">
-            </p>
-            <p class="meinwidget_subline">Soll anders aussehen...</p>
-        </div>
-    </div>
-</body>
-```
-###  2.4. <a name='Less'></a>Less
+##  2. <a name='LESS'></a>LESS
 - Alex Sellier (Urheber)
 - CSS Präprozessor
 - Superset von CSS (.CSS kann zu .Less-Datei gemacht werden)
 - lesscss.org
 
 Eigenschaften:
-- Mixins  
-    - Variablen
-    - Mixins
-    - Hierachien
-    - Module
-    - Gridsystem
-    - Responsive CSS
+- Variablen
+- Mixins
+- Hierachien
+- Module
+- Gridsystem
+- Responsive CSS
 - Importe
 - Funktionen
 - Extensions
@@ -368,10 +118,10 @@ Eigenschaften:
 
 Nutzung des Farbrads mit Komplentärfarben für Farbharmonien
 
-####  2.4.1. <a name='Variablen'></a>Variablen
+###  2.1. <a name='Variablen'></a>Variablen
 - http://lesscss.org/features/#variables-feature
 
-#####  2.4.1.1 <a name='BeispielemitVariablen'></a>Beispiele mit Variablen
+####  2.1.1. <a name='BeispielemitVariablen'></a>Beispiele mit Variablen
 LESS-Datei
 ```less
 @basisfarbe: #999;
@@ -487,10 +237,10 @@ Zugehörige Anzeige in html
 </html>
 ```
 
-####  2.4.2. <a name='Mixins'></a>Mixins
+###  2.2. <a name='Mixins'></a>Mixins
 - http://lesscss.org/features/#mixins-feature
 
-##### 2.4.2.1. <a name='BeispielMixinVariantenNormalParametermixins'></a>Beispiel Mixin Varianten (Normal/Parametermixins)
+####  2.2.1. <a name='BeispielMixinVariantenNormalParametermixins'></a>Beispiel Mixin Varianten (Normal/Parametermixins)
 
 ```less
 // Wir betrachten Mixins...
@@ -627,13 +377,13 @@ Zugehörige Anzeige in html
 </html>
 ```
 
-####  2.4.3. <a name='Hierarchien'></a>Hierarchien
+###  2.3. <a name='Hierarchien'></a>Hierarchien
 - Hierarchische Menüstruktur (Hierarchie)
     - z.B. Menu Parentselektor
 - https://css-tricks.com/strategies-keeping-css-specificity-low/
 - http://lesscss.org/features/#parent-selectors-feature
 
-#####  2.4.3.1. <a name='BeispielHierarchien'></a>Beispiel Hierarchien
+####  2.3.1. <a name='BeispielHierarchien'></a>Beispiel Hierarchien
 ```less
 div#navigation {
     width: 170px;
@@ -726,7 +476,7 @@ Zugehörige Anzeige in html
 </html>
 ```
 
-##### 2.4.3.2. <a name='BeispielHierarchienModule'></a>Beispiel Hierarchien & Module
+####  2.3.2. <a name='BeispielHierarchienModule'></a>Beispiel Hierarchien & Module
 ```less
 // ein Textmodul (oder so)
 .text {
@@ -798,11 +548,11 @@ Konvertierte css aus less
 }
 ```
 
-####  2.4.4. <a name='Module'></a>Module
+###  2.4. <a name='Module'></a>Module
 - https://css-tricks.com/css-modules-part-1-need/
 - Beispiel mit Buttons
 
-#####  2.4.4.1. <a name='BeispielModule'></a>Beispiel Module
+####  2.4.1. <a name='BeispielModule'></a>Beispiel Module
 ```less
 // Variablen
 @default: #aaa;
@@ -927,7 +677,7 @@ Zugehörige Anzeige in html
 </html>
 ```
 
-#####  2.4.4.2. <a name='BeispielStylesundModule'></a>Beispiel Styles und Module
+####  2.4.2. <a name='BeispielStylesundModule'></a>Beispiel Styles und Module
 button.less
 ```less
 // Variablen
@@ -1178,14 +928,14 @@ Zugehörige Anzeige in html
 </html>
 ```
 
-####  2.4.5. <a name='Gridsystem'></a>Gridsystem
+###  2.5. <a name='Gridsystem'></a>Gridsystem
 - https://designshack.net/articles/css/introducing-the-less-css-grid/
 
 Nutzung von Funktionen:
 - http://lesscss.org/features/#mixins-feature-loops-feature
 - http://lesscss.org/features/#mixins-feature-mixin-guards-feature
 
-#####  2.4.5.1. <a name='BeispielGridsystem'></a>Beispiel Gridsystem
+####  2.5.1. <a name='BeispielGridsystem'></a>Beispiel Gridsystem
 ```less
 // Gridmodul
 @selektor: col;
@@ -1387,10 +1137,10 @@ Zugehörige Anzeige in html
 </html>
 ```
 
-####  2.4.6. <a name='ResponsiveCSS'></a>Responsive CSS
+###  2.6. <a name='ResponsiveCSS'></a>Responsive CSS
 - https://scotch.io/courses/getting-started-with-less/responsive-and-media-queries
 
-#####  2.4.6.1. <a name='BeispielGridsystem'></a>Beispiel Responsive CSS
+####  2.6.1. <a name='BeispielResponsiveCSS'></a>Beispiel Responsive CSS
 ```less
 // Responsive === MediaQueries !!
 h1 {
@@ -1453,11 +1203,11 @@ p {
 }
 ```
 
-####  2.4.7. <a name='Importe'></a>Importe
+###  2.7. <a name='Importe'></a>Importe
 - http://lesscss.org/features/#import-atrules-feature
 - Importreihenfolge spielt eine Rolle
 
-#####  2.4.7.1. <a name='BeispielImporte'></a>Beispiel Importe
+####  2.7.1. <a name='BeispielImporte'></a>Beispiel Importe
 Einstellung das die .css Dateien in einer Datei landen beim umwandeln von less nach css
 ```json
 {
@@ -1479,6 +1229,9 @@ Import anderer .less Dateien in eine einzige
 // Normalisierungen und Resets
 @import 'normalize';
 
+// Layout & Basestyles
+@import 'responsive';
+
 // Module
 @import 'grid';
 @import 'button';
@@ -1486,6 +1239,8 @@ Import anderer .less Dateien in eine einzige
 
 // Modifier
 @import 'modifier';
+
+// ggfs. Themes
 ```
 Konvertierte css aus less wird in einer style.css gespeichert und nicht in einzelne, wie z.B. mixins.css, panel.css etc...
 ```css
@@ -1756,6 +1511,284 @@ Aufruf der einzigen .css-Datei über html
         </div>
     </div>
 </body>
-
 </html>
+```
+
+##  3. <a name='Bootstrap'></a>Bootstrap
+- CSS-Framework
+	- Version 3 -> 3.3.7 Less  
+	- Version 4 -> 4.x SASS
+- https://getbootstrap.com/
+
+- Modulares CSS
+- Einsatzgrund: Zeitfaktor
+    - vorderfinierte Klassen
+- Gestaltungsraster
+    - Grid
+- Verlässlichkeit
+    - Kompatibel
+- Responsives Verhalten
+    - meist inklusive
+- Resets / Normalisierung
+    - inklusive
+
+Alternative zu Bootstrap
+- Foundation
+    - https://foundation.zurb.com/
+- Angular Material
+    - https://material.angular.io/
+- PrimeNg
+    - https://www.primefaces.org/primeng/#/
+
+###  3.1. <a name='ModularesCSS'></a>Modulares CSS
+Großes Webprojekt
+- Unübersichtlich
+	- Nomenklatur
+- Unvorhersehbar
+- bläht sich auf
+- unwartbar
+
+Jedes Modul ist für sich geschlossen, Änderungen beeinflussen nicht andere Module  
+
+Spezifizität:
+	- gleichmäßig
+	- nur CSS-Klassen keine ID-Selektoren (Dynamische Webseite)
+	- ID Selektoren sind bei statische Webseiten in Ordnung
+
+Keine Elementnamen sondern Rollen -> Nomenklatur
+
+SMACSS Richtlinie
+- Jonathan Snookes (Urheber)
+- smacss.com (PDF zugänglich)
+- Aufbau:
+	- Modul -> widget
+		- Elements -> widget_element (_)
+			- State Modifier -> widget-modifier (-)
+
+BEM (Yandex)
+- en.bem.info/methodology
+- Block Element Modifier
+	- block
+		- block__element
+			- block--modifier
+
+####  3.1.1. <a name='Beispieleclassesundids'></a>Beispiele classes und ids
+```css
+<style>
+	#content .meinwidget {
+		border: 1px solid #000;
+		border-radius: 5px;
+		padding: 10px;
+	}
+
+	.meinwidget h2 {
+		color: red;
+		background-color: #fff;
+	}
+
+	#content .meinwidget p {
+		background-color: #fff;
+	}
+
+	#content .active {
+		background-color: #ddd;
+	}
+</style>
+```
+```html
+<body>
+    <div id="content">
+        <h1>Modulares CSS - classes und ids</h1>
+        <div class="meinwidget">
+            <h2 class="headline active">Überschrift des Widgets</h2>
+                <p class="active">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, voluptatem
+                    asperiores? Odio
+                    adipisci illo nam.</p>
+                <p>
+                    <button>Ja </button>
+                    <button>Nein</button>
+                </p>
+                <p>Soll anders aussehen...</p>
+        </div>
+    </div>
+</body>
+```
+
+####  3.1.2. <a name='Beispielonlyclasses'></a>Beispiel only classes
+```css
+<style>
+        /* à la SCSS */
+
+        /* Resets */
+        body {
+            margin: 0;
+        }
+
+        /* Layout */
+        /* Kennzeichnung der Klassen mit l- */
+
+        .l-nav {
+            width: 150px;
+            float: left;
+        }
+
+        .l-content {
+            margin-left: 170px;
+        }
+
+        .l-nav-reverse {
+            float: right;
+        }
+
+        .l-content-reverse {
+            margin-left: 0;
+            margin-right: 170px;
+        }
+
+        /* Generische Styles */
+
+        /* Schriftgrößen, Abstände, etc. allgemein ... */
+
+        /* Modul meinwidget */
+        .meinwidget {
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        /* Kennzeichnung eines Elements mit ..._... */
+        .meinwidget_headline {
+            color: red;
+            background-color: #fff;
+        }
+
+        .meinwidget_content {
+            background-color: #fff;
+        }
+
+        .meinwidget_content-active {
+            /* Moduleigener Modifer */
+            background-color: #ddd;
+        }
+
+        .meinwidget_buttoncontainer {
+            padding: 5px;
+        }
+
+        .meinwidget_button {}
+
+        /* Modul btn */
+        .btn {
+            /* Basisklasse */
+            padding: 5px;
+            border-radius: 3px;
+            min-width: 80px;
+        }
+
+        .btn-default {
+            /* Modifierklasse */
+            background-color: #ddd;
+            border: 1px solid #000;
+        }
+
+        .btn-default:hover {
+            /* Modifierklasse */
+            background-color: rgb(235, 235, 235);
+            border: 1px solid #000;
+        }
+
+        .btn-info {
+            /* Modifierklasse */
+            background-color: lightblue;
+            border: 1px solid blue;
+        }
+
+        .btn-info:hover {
+            /* Modiferklasse */
+            background-color: rgb(205, 230, 238);
+            border: 1px solid blue;
+        }
+
+        .btn-success {
+            /* Modifierklasse */
+            background-color: lightgreen;
+            border: 1px solid green;
+        }
+
+        .btn-success:hover {
+            /* Modiferklasse */
+            background-color: rgb(177, 241, 177);
+            border: 1px solid green;
+        }
+
+        .meinwidget_subline {
+            color: #000;
+        }
+
+        /* States bzw. Modifer */
+
+        /* Idee: Präfixes, z.B. 
+            l- (Layout), 
+            u- (Utility), 
+            t- (Theme), 
+            is-, has-, did-, can- (Zustand) 
+        */
+
+        .is-active {
+            background-color: #ddd;
+        }
+
+        .has-sidebar {
+            padding-left: 20px;
+        }
+
+        .is-disabled {
+            color: #999;
+        }
+
+        /* layout */
+        .l-big-padding {
+            padding: 15px;
+        }
+
+        /* utility */
+        .u-float-left {
+            float: left;
+        }
+
+        .u-float-right {
+            float: right;
+        }
+</style>
+```
+```html
+<body>
+    <div class="nav nav-reverse">
+        <ul>
+            <li><a href="">Beispielnav</a></li>
+            <li><a href="">Beispielnav</a></li>
+            <li><a href="">Beispielnav</a></li>
+            <li><a href="">Beispielnav</a></li>
+            <li><a href="">Beispielnav</a></li>
+        </ul>
+    </div>
+    <div class="content content-reverse">
+        <h1>Modulares CSS - Only Classes</h1>
+        <div class="meinwidget">
+            <h2 class="meinwidget_headline">Überschrift des Widgets</h2>
+            <p class="meinwidget_content">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, voluptatem
+                asperiores? Odio
+                adipisci illo nam.</p>
+            <p class="meinwidget_buttoncontainer">
+                <button class="btn btn-success meinwidget_button meinwidget_button-ja">Ja </button>
+                <button class="btn btn-info meinwidget_button meinwidget_button-nein">Nein</button>
+                <input type="button" value="Vielleicht"
+                    class="btn btn-default meinwidget_button meinwidget_button-vielleicht">
+            </p>
+            <p class="meinwidget_subline">Soll anders aussehen...</p>
+        </div>
+    </div>
+</body>
 ```
