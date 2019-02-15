@@ -2425,6 +2425,11 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 
 </html>
 ```
+Vorschau mit verschiedenen Geräteklassen 
+![Zeigen & Verstecken - X-Small](images/Bootstrap_Grid_Zeige&Verstecken_X-Small.png)
+![Zeigen & Verstecken - Small](images/Bootstrap_Grid_Zeige&Verstecken_Small.png)
+![Zeigen & Verstecken - Medium](images/Bootstrap_Grid_Zeige&Verstecken_Medium.png)
+![Zeigen & Verstecken - Large](images/Bootstrap_Grid_Zeige&Verstecken_Large.png)
 
 ###  3.7. <a name='Panels'></a>Panels
 - https://www.w3schools.com/bootstrap/bootstrap_panels.asp
@@ -2692,7 +2697,6 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 
 Vorschau  
 ![](images/Bootstrap_Navigationen.png)
-
 
 ###  3.11. <a name='Collapsible'></a>Collapsible
 - https://getbootstrap.com/docs/4.1/components/collapse/
