@@ -3015,6 +3015,140 @@ Vorschau (Mobile aufgeklappt)
 ###  3.14. <a name='berschreibenvonBootstrapclasses'></a>Überschreiben von Bootstrap classes
 - [Dokumentation zu Easy LESS](https://github.com/mrcrowl/vscode-easy-less)
 - Modifikation der settings.json
-```json
+    ```json
+    {
+        // Modifikation für Easy LESS notwendig
+        "less.compile": {
+            // Ausgabe der .css Dateien in einer .css in einem bestimmten Pfad
+            "out": "${workspaceRoot}\\dist\\css\\bootstrap.css",
+            // nur bootstrap.less zu bootstrap.css umwandeln, da sonst alles .less-Dateien konvertiert werden
+            "main": "bootstrap.less",
+            "compress": false
+        }
+    }
+    ```
+- Modifikation der bootstrap.less
+```less
+/*!
+ * Bootstrap v3.4.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
 
+// Core variables and mixins
+@import "variables.less";
+// ### MODS: ### /
+@import "variables.mod.less";
+@import "mixins.less";
+
+// Reset and dependencies
+@import "normalize.less";
+@import "print.less";
+@import "glyphicons.less";
+
+// Core CSS
+@import "scaffolding.less";
+@import "type.less";
+@import "code.less";
+@import "grid.less";
+@import "tables.less";
+@import "forms.less";
+@import "buttons.less";
+
+// Components
+@import "component-animations.less";
+@import "dropdowns.less";
+@import "button-groups.less";
+@import "input-groups.less";
+@import "navs.less";
+@import "navbar.less";
+@import "breadcrumbs.less";
+@import "pagination.less";
+@import "pager.less";
+@import "labels.less";
+@import "badges.less";
+@import "jumbotron.less";
+@import "thumbnails.less";
+@import "alerts.less";
+@import "progress-bars.less";
+@import "media.less";
+@import "list-group.less";
+@import "panels.less";
+@import "responsive-embed.less";
+@import "wells.less";
+@import "close.less";
+
+// Components w/ JavaScript
+@import "modals.less";
+@import "tooltip.less";
+@import "popovers.less";
+@import "carousel.less";
+
+// Utility classes
+@import "utilities.less";
+@import "responsive-utilities.less";
 ```
+Aufruf der modifzierten bootstrap.css-Datei über HTML
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap: Buttons</title>
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Buttons in Bootstrap</h1>
+        <div class="row">
+            <div class="col-xs-4">
+                <button class="btn btn-default">Default-Button</button>
+                <button class="btn btn-primary">Primary-Button</button>
+                <button class="btn btn-success">Success-Button</button>
+                <button class="btn btn-info">Info-Button</button>
+                <button class="btn btn-warning">Warning-Button</button>
+                <button class="btn btn-danger">Danger-Button</button>                
+            </div>
+            <div class="col-xs-4">
+                <button class="btn btn-default">Default-Button</button>
+                <input class="btn btn-default" type="button" value="Input-Button">
+                <a class="btn btn-default" href="">Anker-Button</a>
+            </div>
+            <div class="col-xs-4">
+                <button class="btn btn-primary btn-sm">Primary-Small</button>
+                <button class="btn btn-primary">Primary-Button</button>
+                <button class="btn btn-primary btn-lg">Primary-Large</button>
+            </div>
+        </div>
+        <h1>Formulare</h1>
+        <p>Formulare müssen die class="form" erhalten.</p>
+        <form action="#" class="form">
+
+            <div class="form-group">
+                <label for="usr">User</label>
+                <input class="form-control" type="text" id="usr" name="user"> 
+            </div>
+            <div class="form-group">
+                    <label for="pw">Passwort</label>
+                    <input class="form-control" type="text" id="pw" name="user"> 
+            </div>
+            <div class="form-group"></div>
+                <!-- Buttons NICHT als form-control! -->
+                <input class="btn btn-primary" type="submit" value="Abschicken">
+            </div>
+
+
+        </form>
+    </div>
+</body>
+</html>
+```
+
+Vorschau (Buttons)  
+![Bootstrap Modifiziert Buttons](images/Bootstrap_Modifiziert_Buttons.png)
+
+Vorschau (Navbar)  
+
+![Bootstrap Modifiziert Navbar](images/Bootstrap_Modifiziert_Navbar.png)

@@ -1,6 +1,9 @@
 {
+    // Modifikation für Easy LESS notwendig
     "less.compile": {
-        "out": false,
+        // Ausgabe der .css Dateien in einer .css in einem bestimmten Pfad
+        "out": "${workspaceRoot}\\dist\\css\\bootstrap.css",
+        // nur bootstrap.less zu bootstrap.css umwandeln, da sonst alles .less-Dateien konvertiert werden
         "main": "bootstrap.less",
         "compress": false
     }
