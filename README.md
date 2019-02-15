@@ -7,8 +7,9 @@ Inhalt
 	* 1.2. [Hilfsfunktionen für VS Code](#HilfsfunktionenfrVSCode)
 	* 1.3. [Extensions für VS Code](#ExtensionsfrVSCode)
 	* 1.4. [Emmet Cheatsheets](#EmmetCheatsheets)
-	* 1.5. [LESS Installation](#LESSInstallation)
-	* 1.6. [Bootstrap Installation](#BootstrapInstallation)
+	* 1.5. [Bilder von Webseiten aufnehmen](#BildervonWebseitenaufnehmen)
+	* 1.6. [LESS Installation](#LESSInstallation)
+	* 1.7. [Bootstrap Installation](#BootstrapInstallation)
 * 2. [LESS](#LESS)
 	* 2.1. [Variablen](#Variablen)
 		* 2.1.1. [Beispiele mit Variablen](#BeispielemitVariablen)
@@ -39,6 +40,7 @@ Inhalt
 		* 3.6.2. [Beispiel Offsets](#BeispielOffsets)
 		* 3.6.3. [Beispiel Push & Pull](#BeispielPushPull)
 		* 3.6.4. [Beispiel Zeigen und Verstecken](#BeispielZeigenundVerstecken)
+	* 3.7. [Panels](#Panels)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -86,7 +88,10 @@ Installationen durchführen für folgende Extensions:
 ###  1.4. <a name='EmmetCheatsheets'></a>Emmet Cheatsheets
 - https://docs.emmet.io/cheat-sheet/
 
-###  1.5. <a name='LESSInstallation'></a>LESS Installation
+###  1.5. <a name='BildervonWebseitenaufnehmen'></a>Bilder von Webseiten aufnehmen
+- https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg?hl=de
+
+###  1.6. <a name='LESSInstallation'></a>LESS Installation
 Eingabe im Terminal
 
 Installation: 
@@ -102,7 +107,7 @@ lessc --version
 lessc variablen.less variablen.css
 ```
 
-###  1.6. <a name='BootstrapInstallation'></a>Bootstrap Installation
+###  1.7. <a name='BootstrapInstallation'></a>Bootstrap Installation
 Anleitung im Web:
 - https://getbootstrap.com/docs/4.1/getting-started/download/
 
@@ -2335,7 +2340,13 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 <body>
     <div class="container">
         <h1>Grids in Bootstrap (Zeigen und Verstecken)</h1>
-        <p>Ein- und Ausblenden von Items im Grid mit show und hide</p>
+        <p>Ein- und Ausblenden von Items im Grid mit visible und hidden</p>
+        <!-- Block nur für jeweilige Geräteklasse sichtbar: -->
+        <h3 class="visible-xs-block">X-Small</h3>
+        <h3 class="visible-sm-block">Small</h3>
+        <h3 class="visible-md-block">Medium</h3>
+        <h3 class="visible-lg-block">Large</h3>
+
         <!-- wir verwenden das Gridsystem: -->
         <div class="row">
             <!-- 3 Spalten für Small Devices: -->
@@ -2352,7 +2363,7 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Rerum beatae molestiae id.</div>
             <div class="col-sm-4 hidden-sm">
-                <b>Item 4</b>Versteckt für SM!
+                <b>Item 4</b> <u>Versteckt</u> für SM! Also NUR für SM!!!
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Rerum beatae molestiae id.</div>
         </div>
@@ -2370,7 +2381,7 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Rerum beatae molestiae id.</div>
             <div class="col-sm-4 col-md-3 visible-md">
-                <b>Item 4</b>Versteckt für SM!
+                <b>Item 4</b><u>Sichtbar</u> für MD! Also NUR für MD!!!
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Rerum beatae molestiae id.</div>
         </div>
@@ -2379,3 +2390,7 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 
 </html>
 ```
+
+###  3.7. <a name='Panels'></a>Panels
+- https://www.w3schools.com/bootstrap/bootstrap_panels.asp
+- https://mdbootstrap.com/docs/jquery/components/panels/

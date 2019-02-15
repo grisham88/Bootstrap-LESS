@@ -12,7 +12,13 @@
 <body>
     <div class="container">
         <h1>Grids in Bootstrap (Zeigen und Verstecken)</h1>
-        <p>Ein- und Ausblenden von Items im Grid mit show und hide</p>
+        <p>Ein- und Ausblenden von Items im Grid mit visible und hidden</p>
+        <!-- Block nur für jeweilige Geräteklasse sichtbar: -->
+        <h3 class="visible-xs-block">X-Small</h3>
+        <h3 class="visible-sm-block">Small</h3>
+        <h3 class="visible-md-block">Medium</h3>
+        <h3 class="visible-lg-block">Large</h3>
+
         <!-- wir verwenden das Gridsystem: -->
         <div class="row">
             <!-- 3 Spalten für Small Devices: -->
@@ -29,7 +35,7 @@
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Rerum beatae molestiae id.</div>
             <div class="col-sm-4 hidden-sm">
-                <b>Item 4</b>Versteckt für SM!
+                <b>Item 4</b> <u>Versteckt</u> für SM! Also NUR für SM!!!
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Rerum beatae molestiae id.</div>
         </div>
@@ -47,7 +53,7 @@
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Rerum beatae molestiae id.</div>
             <div class="col-sm-4 col-md-3 visible-md">
-                <b>Item 4</b>Versteckt für SM!
+                <b>Item 4</b><u>Sichtbar</u> für MD! Also NUR für MD!!!
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Rerum beatae molestiae id.</div>
         </div>
