@@ -1492,7 +1492,7 @@ body {
   float: right;
 }
 ```
-Aufruf der einzigen .css-Datei über html
+Aufruf der einzigen .css-Datei über HTML
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -1630,7 +1630,7 @@ BEM (Yandex)
 	}
 </style>
 ```
-Aufruf der .css-Datei über html
+Aufruf der .css-Datei über HTML
 ```html
 <body>
     <div id="content">
@@ -1798,7 +1798,7 @@ Aufruf der .css-Datei über html
         }
 </style>
 ```
-Aufruf der .css-Datei über html
+Aufruf der .css-Datei über HTML
 ```html
 <body>
     <div class="nav nav-reverse">
@@ -1838,7 +1838,7 @@ Aufruf der .css-Datei über html
 ###  3.3. <a name='Grundlagen'></a>Grundlagen
 - https://www.bootstrapworld.de/layout-grundlagen.html
 
-Aufruf der vordefinierten bootstrap.css-Datei über html
+Aufruf der vordefinierten bootstrap.css-Datei über HTML
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -1891,7 +1891,7 @@ Aufruf der vordefinierten bootstrap.css-Datei über html
 ###  3.4. <a name='Tabellen'></a>Tabellen
 - https://getbootstrap.com/docs/4.0/content/tables/
 
-Aufruf der vordefinierten bootstrap.css-Datei über html
+Aufruf der vordefinierten bootstrap.css-Datei über HTML
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -2019,7 +2019,7 @@ Aufruf der vordefinierten bootstrap.css-Datei über html
 ###  3.5. <a name='Utilities'></a>Utilities
 - https://getbootstrap.com/docs/4.2/layout/utilities-for-layout/
 
-Aufruf der vordefinierten bootstrap.css-Datei über html
+Aufruf der vordefinierten bootstrap.css-Datei über HTML
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -2118,7 +2118,7 @@ Zeigen & Verstecken:
     - .visible-print
 
 ####  3.6.1. <a name='BeispielGrids'></a>Beispiel Grids
-Aufruf der vordefinierten bootstrap.css-Datei über html
+Aufruf der vordefinierten bootstrap.css-Datei über HTML
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -2193,7 +2193,7 @@ Aufruf der vordefinierten bootstrap.css-Datei über html
 ```
 
 ####  3.6.2. <a name='BeispielOffsets'></a>Beispiel Offsets
-Aufruf der vordefinierten bootstrap.css-Datei über html
+Aufruf der vordefinierten bootstrap.css-Datei über HTML
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -2234,7 +2234,7 @@ Aufruf der vordefinierten bootstrap.css-Datei über html
 ```
 
 ####  3.6.3. <a name='BeispielPushPull'></a>Beispiel Push & Pull
-Aufruf der vordefinierten bootstrap.css-Datei über html
+Aufruf der vordefinierten bootstrap.css-Datei über HTML
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -2319,7 +2319,7 @@ Aufruf der vordefinierten bootstrap.css-Datei über html
 ```
 
 ####  3.6.4. <a name='BeispielZeigenundVerstecken'></a>Beispiel Zeigen und Verstecken
-Aufruf der vordefinierten bootstrap.css-Datei über html
+Aufruf der vordefinierten bootstrap.css-Datei über HTML
 ```html
 <!DOCTYPE html>
 <html lang="en">
