@@ -88,8 +88,11 @@ Installationen durchführen für folgende Extensions:
 ###  1.4. <a name='EmmetCheatsheets'></a>Emmet Cheatsheets
 - https://docs.emmet.io/cheat-sheet/
 
-###  1.5. <a name='BildervonWebseitenaufnehmen'></a>Bilder von Webseiten aufnehmen
-- https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg?hl=de
+###  1.5. <a name='BildervonWebseitenaufnehmen'></a>Bilder/Gifs von Webseiten aufnehmen
+- Screenshots der Webseite - FireShot
+  - https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg?hl=de
+- How to add GIFs to your GitHub README
+  - https://medium.com/@josephcardillo/how-to-add-gifs-to-your-github-readme-89c74da2ce47
 
 ###  1.6. <a name='LESSInstallation'></a>LESS Installation
 Eingabe im Terminal
@@ -2328,7 +2331,6 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 ```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -2394,3 +2396,7 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 ###  3.7. <a name='Panels'></a>Panels
 - https://www.w3schools.com/bootstrap/bootstrap_panels.asp
 - https://mdbootstrap.com/docs/jquery/components/panels/
+
+Aufruf der vordefinierten bootstrap.css-Datei über HTML
+```html
+```
