@@ -1815,3 +1815,4 @@ BEM (Yandex)
 
 ###  3.2. <a name='Nutzung'></a>Nutzung
 - [Installation & Einsatz](#BootstrapInstallationEinsatz)
+- Installationen werden in der package.json hinterlegt für das gewählte Projekt
