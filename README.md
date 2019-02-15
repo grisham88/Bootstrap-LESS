@@ -2399,4 +2399,69 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 
 Aufruf der vordefinierten bootstrap.css-Datei über HTML
 ```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap: Panels</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Panels in Bootstrap</h1>
+        <!-- Panel -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2>Default Panel</h2>
+            </div>
+            <div class="panel-body">
+                Ein Panel präsentiert Inhalte.
+                Lorem ipsum dolor sit, amet consectetur adipisicing
+                elit.</div>
+            <div class="panel-footer">Das ist der Footer...</div>
+        </div>
+
+        <!-- Umfärben des Footers geht nicht: 
+             .panel .panel-footer {
+                 background-color:lightgrey;
+             }
+               // wirkt nicht!
+              .bg-primary { 
+                  color:white;
+                  background-color: blue;
+              }
+
+            <div class="panel-footer bg-primary">...  </div>
+        -->
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h2>Primary Panel</h2>
+            </div>
+            <div class="panel-body">
+                Ein Panel präsentiert Inhalte.
+                Lorem ipsum dolor sit, amet consectetur adipisicing
+                elit.</div>
+            <div class="panel-footer">Das ist der Footer...</div>
+        </div>
+
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h2>Success Panel</h2>
+            </div>
+            <div class="panel-body">
+                Ein Panel präsentiert Inhalte.
+                Lorem ipsum dolor sit, amet consectetur adipisicing
+                elit.</div>
+            <div class="panel-footer">Das ist der Footer...</div>
+        </div>
+    </div>
+</body>
+
+</html>
 ```
+ ![Bootstrap_ Panels](pics\FireShot Pro Screen Capture #002 - 'Bootstrap_ Panels' - 127_0_0_1_5500_panels_html.png)
