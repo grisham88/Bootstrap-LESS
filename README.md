@@ -2754,3 +2754,49 @@ Vorschau (Collapser 1 aufgeklappt)
 
 Vorschau (Collapers 1 & 2 aufgeklappt)  
 ![Collapers 1 & 2 aufgeklappt](images/Bootstrap_Collapser1+2_aufgeklappt.png)
+
+###  3.11. <a name='Collapsible'></a>Dropdown
+- https://getbootstrap.com/docs/4.0/components/dropdowns/
+- https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp
+
+Aufruf der vordefinierten bootstrap.css-Datei über HTML
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap: Dropdown</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dropdown</h1>
+        <div class="dropdown">
+            <button data-toggle="dropdown" data-target="#" class="btn btn-default">
+                Dropdown-Trigger
+                <span class="caret"></span>
+            </button>
+            <!-- ul>li*4>a{Link $} -->
+            <ul class="dropdown-menu">
+                <li><a href="">Link 1</a></li>
+                <li><a href="">Link 2</a></li>
+                <li><a href="">Link 3</a></li>
+                <li><a href="">Link 4</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+
+</html>
+```
+
+Vorschau  
+![Dropdown geschlossen](images/Bootstrap_Dropdown_geschlossen.png)
+
+![Dropdown geöffnet](images/Bootstrap_Dropdown_geöffnet.png)
