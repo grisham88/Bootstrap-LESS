@@ -7,7 +7,7 @@ Inhalt
 	* 1.2. [Hilfsfunktionen für VS Code](#HilfsfunktionenfrVSCode)
 	* 1.3. [Extensions für VS Code](#ExtensionsfrVSCode)
 	* 1.4. [Emmet Cheatsheets](#EmmetCheatsheets)
-	* 1.5. [Bootstrap Installation & Einsatz](#BootstrapInstallationEinsatz)
+	* 1.5. [Bootstrap Installation](#BootstrapInstallation)
 	* 1.6. [LESS Installation](#LESSInstallation)
 * 2. [LESS](#LESS)
 	* 2.1. [Variablen](#Variablen)
@@ -31,6 +31,7 @@ Inhalt
 		* 3.1.1. [Beispiele classes und ids](#Beispieleclassesundids)
 		* 3.1.2. [Beispiel only classes](#Beispielonlyclasses)
 	* 3.2. [Nutzung](#Nutzung)
+	* 3.3. [Grundlagen](#Grundlagen)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -75,16 +76,18 @@ Installationen durchführen für folgende Extensions:
 ###  1.4. <a name='EmmetCheatsheets'></a>Emmet Cheatsheets
 - https://docs.emmet.io/cheat-sheet/
 
-###  1.5. <a name='BootstrapInstallationEinsatz'></a>Bootstrap Installation
+###  1.5. <a name='BootstrapInstallation'></a>Bootstrap Installation
+Anleitung im Web:
+- https://getbootstrap.com/docs/4.1/getting-started/download/
+
 Eingabe im Terminal
 
 Vorbereitung: 
 ```html
 npm --version
 npm init
-
-alles mit Enter bestätigen (Außer Angaben sind gewünscht)
 ```
+alles mit Enter bestätigen (Außer Angaben sind gewünscht)  
 
 Installation: 
 ```html
@@ -1615,6 +1618,7 @@ BEM (Yandex)
 	}
 </style>
 ```
+Aufruf der .css-Datei über html
 ```html
 <body>
     <div id="content">
@@ -1782,6 +1786,7 @@ BEM (Yandex)
         }
 </style>
 ```
+Aufruf der .css-Datei über html
 ```html
 <body>
     <div class="nav nav-reverse">
@@ -1814,5 +1819,31 @@ BEM (Yandex)
 ```
 
 ###  3.2. <a name='Nutzung'></a>Nutzung
-- [Installation & Einsatz](#BootstrapInstallationEinsatz)
-- Installationen werden in der package.json hinterlegt für das gewählte Projekt
+- [Installation](#BootstrapInstallation)
+- Installationen werden für das gewählte Projekt in der package.json hinterlegt
+- Aktualisierung von Bootstrap mittels "npm install", damit werden die Sources frisch geholt
+
+###  3.3. <a name='Grundlagen'></a>Grundlagen
+Aufruf der vordefinierten bootstrap.css-Datei über html
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap: Grundlagen</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <h1>Bootstrap CSS</h1>
+    <p>Praktisch, dass ich das nicht alles stylen muss. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Aspernatur, veniam.</p>
+    <h2>Typographie ist vorgegeben</h2>
+    <p>Mal sehen, wie das aussieht... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, natus!</p>
+</body>
+
+</html>
+```
