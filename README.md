@@ -2472,7 +2472,7 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 </html>
 ```
 
-Vorschau
+Vorschau  
 ![Panels](images/Bootstrap_Panels.png)
 
 ###  3.8. <a name='ButtonsFormulare'></a>Buttons & Formulare
@@ -2538,7 +2538,7 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 </html>
 ```
 
-Vorschau 
+Vorschau  
 ![](images/Bootstrap_Buttons&Formulare.png)
 
 ###  3.9. <a name='Formulare'></a>Formulare
@@ -2614,5 +2614,5 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 </html>
 ```
 
-Vorschau
+Vorschau  
 ![](images/Bootstrap_Formulare.png)
