@@ -32,6 +32,7 @@ Inhalt
 		* 3.1.2. [Beispiel only classes](#Beispielonlyclasses)
 	* 3.2. [Nutzung](#Nutzung)
 	* 3.3. [Grundlagen](#Grundlagen)
+	* 3.4. [Tabellen](#Tabellen)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -1837,12 +1838,164 @@ Aufruf der vordefinierten bootstrap.css-Datei über html
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 
+<body class="bg-primary">
+    <div class="container-fluid">
+        <h1>Bootstrap CSS</h1>
+        <p>Praktisch, dass ich das nicht alles stylen muss.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Aspernatur, veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Odio in fuga, tempora necessitatibus, magnam fugiat consectetur modi reiciendis sed,
+            consequuntur architecto. Quia delectus quod quaerat dolorum ut distinctio vel sunt!</p>
+        <h2>Typographie ist vorgegeben</h2>
+        <p>Mal sehen, wie das aussieht... Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Assumenda, natus!
+        </p>
+        <ul>
+            <li>Listenelement als Beispiel</li>
+            <li>Listenelement als Beispiel</li>
+            <li>Listenelement als Beispiel</li>
+            <li>Listenelement als Beispiel</li>
+            <li>Listenelement als Beispiel</li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Bootstrap CSS</h1>
+        <p>Praktisch, dass ich das nicht alles stylen muss.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Aspernatur, veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Odio in fuga, tempora necessitatibus, magnam fugiat consectetur modi reiciendis sed,
+            consequuntur architecto. Quia delectus quod quaerat dolorum ut distinctio vel sunt!</p>
+        <h2>Typographie ist vorgegeben</h2>
+        <p>Mal sehen, wie das aussieht... Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Assumenda, natus!
+        </p>
+    </div>
+</body>
+
+</html>
+```
+
+###  3.4. <a name='Tabellen'></a>Tabellen
+Aufruf der vordefinierten bootstrap.css-Datei über html
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap: Tabellen</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
 <body>
-    <h1>Bootstrap CSS</h1>
-    <p>Praktisch, dass ich das nicht alles stylen muss. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Aspernatur, veniam.</p>
-    <h2>Typographie ist vorgegeben</h2>
-    <p>Mal sehen, wie das aussieht... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, natus!</p>
+    <div class="container">
+        <h1>Tabellen</h1>
+        <p>Normale Tabelle mit Bootstrap-Styling: class="table"</p>
+        <!-- table>tr*3>td{Dummyinhalt}*4 -->
+        <!-- Basisklasse -->
+        <table class="table">
+            <tr>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+            </tr>
+            <tr>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+            </tr>
+            <tr>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+            </tr>
+        </table>
+        <p>Tabelle mit Gitter: class="table table-bordered"</p>
+        <!-- table>tr*3>td{Dummyinhalt}*4 -->
+        <!-- Basisklasse mit Modifier-->
+        <table class="table table-bordered">
+            <tr>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+            </tr>
+            <tr>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+            </tr>
+            <tr>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+            </tr>
+        </table>
+        <p>Tabelle mit Gitter und BG: class="table table-bordered table-striped"</p>
+        <!-- table>tr*3>td{Dummyinhalt}*4 -->
+        <!-- Basisklasse mit Modifiers -->
+        <table class="table table-bordered table-striped">
+            <tr>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+            </tr>
+            <tr>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+            </tr>
+            <tr>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+            </tr>
+        </table>
+        <p>Tabelle mit Gitter, BG und Hover: class="table table-bordered table-striped table-hover"</p>
+        <!-- Basisklasse mit Modifiers-->
+        <table class="table table-bordered table-striped table-hover">
+            <tr>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+            </tr>
+            <tr>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+            </tr>
+            <tr>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+            </tr>
+            <tr>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+            </tr>
+            <tr>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+                <td>Dummyinhalt</td>
+            </tr>
+        </table>
+    </div>
 </body>
 
 </html>
