@@ -42,6 +42,7 @@ Inhalt
 		* 3.6.4. [Beispiel Zeigen und Verstecken](#BeispielZeigenundVerstecken)
 	* 3.7. [Panels](#Panels)
 	* 3.8. [Buttons & Formulare](#ButtonsFormulare)
+	* 3.9. [Formulare](#Formulare)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -87,6 +88,7 @@ Installationen durchführen für folgende Extensions:
     - Ausführen mit STRG + SHIFT + P
         - Eingabe von "Generate TOC for markdown" + ENTER
     - Markdown Preview Github Styling
+    - Paste Image (Bilder direkt einfügen in .md)
 
 ###  1.4. <a name='EmmetCheatsheets'></a>Emmet Cheatsheets
 - https://docs.emmet.io/cheat-sheet/
@@ -2465,19 +2467,12 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
             <div class="panel-footer">Das ist der Footer...</div>
         </div>
     </div>
-    <p>
-        <img width="460" height="300" src="http://www.fillmurray.com/460/300">
-    </p>
-    <p>
-        <img src="images/Bootstrap_ Panels.png" width="220" height="240" />
-    </p>
-    <img src="/images/Bootstrap_ Panels.png?raw=true" width="100" height="100" />
 </body>
 
 </html>
 ```
-
-![Panels](Bootstrap_ Panels.png)
+Vorschau HTML (Panels)
+![Panels](Bootstrap_Panels.png)
 
 ###  3.8. <a name='ButtonsFormulare'></a>Buttons & Formulare
 - https://www.w3schools.com/bootstrap/bootstrap_buttons.asp
@@ -2536,6 +2531,79 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
             <input class="btn btn-primary" type="submit" value="Abschicken">
     </div>
     </form>
+    </div>
+</body>
+
+</html>
+```
+
+###  3.9. <a name='Formulare'></a>Formulare
+- https://www.bootstrapworld.de/formular.html
+- https://getbootstrap.com/docs/4.0/components/forms/
+
+Aufruf der vordefinierten bootstrap.css-Datei über HTML
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap: Formulare</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Formulare</h1>
+        <p>Formulare müssen die class="form" erhalten. Sind linear angeordnet.</p>
+        <form action="#" class="form">
+
+            <div class="form-group">
+                <label for="usr">User</label>
+                <input class="form-control" type="text" id="usr" name="user">
+            </div>
+            <div class="form-group">
+                <label for="pw">Passwort</label>
+                <input class="form-control" type="text" id="pw" name="user">
+            </div>
+            <div class="form-group">
+                <!-- Buttons NICHT als form-control! -->
+                <input class="btn btn-primary" type="submit" value="Abschicken">
+            </div>
+        </form>
+        <p>Es gibt eine Variante: class="form-horizontal". HTML muss erheblich umgebaut werden.</p>
+        <form action="#" class="form-horizontal">
+
+            <div class="form-group">
+                <label for="usr" class="col-sm-2">User</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" id="usr" name="user">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pw" class="col-sm-2">Passwort</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" id="pw" name="user">
+                </div>
+
+            </div>
+            <div class="form-group">
+                <!-- Buttons NICHT als form-control! -->
+                <div class="col-sm-10 col-sm-push-2">
+                    <input class="btn btn-primary" type="submit" value="Abschicken">
+                </div>
+            </div>
+        </form>
+        <p>Kleine Formulare als "form-inline"</p>
+        <form action="#" class="form-inline">
+            <div class="form-group">
+                <label for="s">Suche:</label>
+                <input type="text" class="form-control">
+            </div>
+            <input type="button" class="btn btn-success" value="Suche">
+        </form>
     </div>
 </body>
 
