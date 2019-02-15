@@ -30,8 +30,8 @@ Inhalt
 		* 2.7.1. [Beispiel Importe](#BeispielImporte)
 * 3. [Bootstrap](#Bootstrap)
 	* 3.1. [Modulares CSS](#ModularesCSS)
-		* 3.1.1. [Beispiele classes und ids](#Beispieleclassesundids)
-		* 3.1.2. [Beispiel only classes](#Beispielonlyclasses)
+		* 3.1.1. [Beispiel Classes und Ids](#BeispielClassesundIds)
+		* 3.1.2. [Beispiel Only Classes](#BeispielOnlyClasses)
 	* 3.2. [Nutzung](#Nutzung)
 	* 3.3. [Grundlagen](#Grundlagen)
 	* 3.4. [Tabellen](#Tabellen)
@@ -46,6 +46,7 @@ Inhalt
 	* 3.9. [Formulare](#Formulare)
 	* 3.10. [Navigationen](#Navigationen)
 	* 3.11. [Collapsible](#Collapsible)
+	* 3.12. [Dropdown](#Dropdown)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -1648,7 +1649,7 @@ BEM (Yandex)
 		- block__element
 			- block--modifier
 
-####  3.1.1. <a name='Beispieleclassesundids'></a>Beispiele classes und ids
+####  3.1.1. <a name='BeispielClassesundIds'></a>Beispiel Classes und Ids
 ```css
 <style>
 	#content .meinwidget {
@@ -1692,7 +1693,7 @@ Aufruf der .css-Datei über HTML
 </body>
 ```
 
-####  3.1.2. <a name='Beispielonlyclasses'></a>Beispiel only classes
+####  3.1.2. <a name='BeispielOnlyClasses'></a>Beispiel Only Classes
 ```css
 <style>
         /* à la SCSS */
@@ -1928,6 +1929,9 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 
 </html>
 ```
+
+Vorschau  
+![Grundlagen](images/Bootstrap_Grundlagen.png)
 
 ###  3.4. <a name='Tabellen'></a>Tabellen
 - https://getbootstrap.com/docs/4.0/content/tables/
@@ -2761,7 +2765,7 @@ Vorschau (Collapser 1 aufgeklappt)
 Vorschau (Collapers 1 & 2 aufgeklappt)  
 ![Collapers 1 & 2 aufgeklappt](images/Bootstrap_Collapser1+2_aufgeklappt.png)
 
-###  3.11. <a name='Collapsible'></a>Dropdown
+###  3.12. <a name='Dropdown'></a>Dropdown
 - https://getbootstrap.com/docs/4.0/components/dropdowns/
 - https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp
 
