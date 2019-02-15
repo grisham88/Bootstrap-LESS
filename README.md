@@ -50,6 +50,7 @@ Inhalt
 	* 3.13. [Navbar](#Navbar)
 		* 3.13.1. [Beispiel Navbar](#BeispielNavbar)
 		* 3.13.2. [Beispiel Navbar mit Collapser](#BeispielNavbarmitCollapser)
+	* 3.14. [Überschreiben von Bootstrap classes](#berschreibenvonBootstrapclasses)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -989,7 +990,7 @@ Zugehörige Anzeige in html
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test der Styles und Module</title>
+    <title>Test der Styles und Module</title> 
     <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="css/panel.css">
 </head>
@@ -1004,19 +1005,24 @@ Zugehörige Anzeige in html
         <!-- panel_header -->
         <h1 class="panel_header">Panelheader</h1>
         <!-- panel_body -->
-        <div class="panel_body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatibus?</div>
+        <div class="panel_body">Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Ipsum, voluptatibus?</div>
     </div>
     <div class="panel panel-info">
         <!-- panel -->
         <!-- panel_header -->
         <h1 class="panel_header">Panelheader</h1>
         <!-- panel_body -->
-        <div class="panel_body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatibus?</div>
+        <div class="panel_body">Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Ipsum, voluptatibus?</div>
     </div>
 </body>
 
 </html>
 ```
+
+Vorschau  
+![LESS Styles & Modules](images/LESS_Styles_Modules.png)
 
 ###  2.5. <a name='Gridsystem'></a>Gridsystem
 - https://designshack.net/articles/css/introducing-the-less-css-grid/
@@ -1181,6 +1187,7 @@ Zugehörige Anzeige in html
     <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="css/panel.css">
     <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -1193,22 +1200,29 @@ Zugehörige Anzeige in html
         <!-- panel_header -->
         <h1 class="panel_header">Panelheader</h1>
         <!-- panel_body -->
-        <div class="panel_body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatibus?</div>
+        <div class="panel_body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Ipsum, voluptatibus?</div>
     </div>
     <div class="panel panel-info">
         <!-- panel -->
         <!-- panel_header -->
         <h1 class="panel_header">Panelheader</h1>
         <!-- panel_body -->
-        <div class="panel_body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatibus?</div>
+        <div class="panel_body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Ipsum, voluptatibus?</div>
     </div>
     <h2>Grid</h2>
     <div class="grid">
         <div class="grid_row">
-            <div class="grid-col-3">3 Einheiten Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Dolore fugit magni inventore!</div>
-            <div class="grid-col-5">5 Einheiten Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ut
-                doloribus voluptas similique amet in?</div>
+            <div class="grid-col-3">
+                3 Einheiten Lorem ipsum dolor sit amet consectetur.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolore fugit magni inventore!</div>
+            <div class="grid-col-5">
+                5 Einheiten Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eum ut doloribus voluptas similique amet in?</div>
             <div class="grid-col-4">4 Einheiten</div>
         </div>
         <div class="grid_row">
@@ -1226,6 +1240,14 @@ Zugehörige Anzeige in html
 
 </html>
 ```
+
+Vorschau (Medium)
+
+![LESS Grid Medium](images/LESS_Grid_Medium.png)
+
+Vorschau (Small)
+
+![LESS Grid Small](images/LESS_Grid_Small.png)
 
 ###  2.6. <a name='ResponsiveCSS'></a>Responsive CSS
 - https://scotch.io/courses/getting-started-with-less/responsive-and-media-queries
@@ -1571,22 +1593,29 @@ Aufruf der einzigen .css-Datei über HTML
         <!-- panel_header -->
         <h1 class="panel_header">Panelheader</h1>
         <!-- panel_body -->
-        <div class="panel_body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatibus?</div>
+        <div class="panel_body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+            voluptatibus?</div>
     </div>
     <div class="panel panel-info">
         <!-- panel -->
         <!-- panel_header -->
         <h1 class="panel_header">Panelheader</h1>
         <!-- panel_body -->
-        <div class="panel_body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatibus?</div>
+        <div class="panel_body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+            voluptatibus?</div>
     </div>
     <h2>Grid</h2>
     <div class="grid">
         <div class="grid_row">
-            <div class="grid-col-3">3 Einheiten Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Dolore fugit magni inventore!</div>
-            <div class="grid-col-5">5 Einheiten Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ut
-                doloribus voluptas similique amet in?</div>
+            <div class="grid-col-3">
+                3 Einheiten Lorem ipsum dolor sit amet consectetur. Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Dolore fugit magni
+                inventore!</div>
+            <div class="grid-col-5">
+                5 Einheiten Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Eum ut doloribus voluptas similique amet in?</div>
             <div class="grid-col-4">4 Einheiten</div>
         </div>
         <div class="grid_row">
@@ -1601,8 +1630,12 @@ Aufruf der einzigen .css-Datei über HTML
         </div>
     </div>
 </body>
+
 </html>
 ```
+
+Vorschau  
+![LESS Importe](images/LESS_Imports.png)
 
 ##  3. <a name='Bootstrap'></a>Bootstrap
 - CSS-Framework
@@ -2978,3 +3011,10 @@ Vorschau (Mobile geschlossen)
 Vorschau (Mobile aufgeklappt)
 
 ![Navbar Collapser Mobile geschlossen](images/Bootstrap_Navbar_Collapser_Mobile_aufgeklappt.png)
+
+###  3.14. <a name='berschreibenvonBootstrapclasses'></a>Überschreiben von Bootstrap classes
+- [Dokumentation zu Easy LESS](https://github.com/mrcrowl/vscode-easy-less)
+- Modifikation der settings.json
+```json
+
+```
