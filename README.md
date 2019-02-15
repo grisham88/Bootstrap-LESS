@@ -37,6 +37,8 @@ Inhalt
 	* 3.6. [Grids](#Grids)
 		* 3.6.1. [Beispiel Grids](#BeispielGrids)
 		* 3.6.2. [Beispiel Offsets](#BeispielOffsets)
+		* 3.6.3. [Beispiel Push & Pull](#BeispielPushPull)
+		* 3.6.4. [Beispiel Zeigen und Verstecken](#BeispielZeigenundVerstecken)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -2096,6 +2098,25 @@ Offset:
   - .col-md-offset-1..11
   - .col-lg-offset-1..11
 
+Push & Pull:
+- https://getbootstrap.com/docs/3.4/css/#grid-column-ordering
+
+Zeigen & Verstecken:
+- https://v4-alpha.getbootstrap.com/layout/responsive-utilities/
+- Verstecken
+  - .hidden
+    - .hidden-xs
+    - .hidden-sm
+    - .hidden-md
+    - .hidden-lg
+    - .hidden-print
+    - vererbt sich nicht
+  - .visible
+    - .visible-xs-inline
+    - .visible-xs-block
+    - .visible-xs-inline-block    
+    - .visible-print
+
 ####  3.6.1. <a name='BeispielGrids'></a>Beispiel Grids
 Aufruf der vordefinierten bootstrap.css-Datei über html
 ```html
@@ -2203,6 +2224,153 @@ Aufruf der vordefinierten bootstrap.css-Datei über html
                 Delectus mollitia ad adipisci!</div>
             <div class="col-sm-3 col-sm-offset-1">
                 <b>"col-xs-3"</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Rerum beatae molestiae id.</div>
+        </div>
+    </div>
+</body>
+
+</html>
+```
+
+####  3.6.3. <a name='BeispielPushPull'></a>Beispiel Push & Pull
+Aufruf der vordefinierten bootstrap.css-Datei über html
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap: Grid</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Grids in Bootstrap (Push und Pull)</h1>
+        <p>Verschieben und Vertauschen von Items im Grid mit Push und Pull</p>
+        <!-- wir verwenden das Gridsystem: -->
+        <div class="row">
+            <!-- 3 Spalten für Small Devices: -->
+            <div class="col-sm-4  bg-danger">
+                <b>Item 1</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Reiciendis doloribus beatae minima?</div>
+            <div class="col-sm-4 bg-info">
+                <b>Item 2</b>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus mollitia ad adipisci!</div>
+            <div class="col-sm-4">
+                <b>Item 3</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Rerum beatae molestiae id.</div>
+        </div>
+        <div class="row">
+            <!-- 3 Spalten für Small Devices: -->
+            <div class="col-sm-4 col-sm-push-4 bg-danger">
+                <b>Item 1</b> Wird gepusht!
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Reiciendis doloribus beatae minima?</div>
+            <div class="col-sm-4 bg-info">
+                <b>Item 2</b>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus mollitia ad adipisci!</div>
+            <div class="col-sm-4">
+                <b>Item 3</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Rerum beatae molestiae id.</div>
+        </div>
+        <div class="row">
+            <!-- 3 Spalten für Small Devices: -->
+            <div class="col-sm-4 bg-danger">
+                <b>Item 1</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Reiciendis doloribus beatae minima?</div>
+            <div class="col-sm-4 col-sm-pull-4  bg-info">
+                <b>Item 2</b> Wird gepullt! (Verdeckt Item 1)
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus mollitia ad adipisci!</div>
+            <div class="col-sm-4">
+                <b>Item 3</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Rerum beatae molestiae id.</div>
+        </div>
+        <div class="row">
+            <!-- 3 Spalten für Small Devices: -->
+            <div class="col-sm-4  col-sm-push-4 col-md-push-0 bg-danger">
+                <b>Item 1</b> Wird gepusht!
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Reiciendis doloribus beatae minima?</div>
+            <div class="col-sm-4 col-sm-pull-4 col-md-pull-0 bg-info">
+                <b>Item 2</b> Wird gepullt! (Verdeckt Item 1)
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus mollitia ad adipisci!</div>
+            <div class="col-sm-4">
+                <b>Item 3</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Rerum beatae molestiae id.</div>
+        </div>
+    </div>
+</body>
+
+</html>
+```
+
+####  3.6.4. <a name='BeispielZeigenundVerstecken'></a>Beispiel Zeigen und Verstecken
+Aufruf der vordefinierten bootstrap.css-Datei über html
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap: Grid</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Grids in Bootstrap (Zeigen und Verstecken)</h1>
+        <p>Ein- und Ausblenden von Items im Grid mit show und hide</p>
+        <!-- wir verwenden das Gridsystem: -->
+        <div class="row">
+            <!-- 3 Spalten für Small Devices: -->
+            <div class="col-sm-4  bg-danger">
+                <b>Item 1</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Reiciendis doloribus beatae minima?</div>
+            <div class="col-sm-4 bg-info">
+                <b>Item 2</b>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus mollitia ad adipisci!</div>
+            <div class="col-sm-4">
+                <b>Item 3</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Rerum beatae molestiae id.</div>
+            <div class="col-sm-4 hidden-sm">
+                <b>Item 4</b>Versteckt für SM!
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Rerum beatae molestiae id.</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4  col-md-3 bg-danger">
+                <b>Item 1</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Reiciendis doloribus beatae minima?</div>
+            <div class="col-sm-4 col-md-3 bg-info">
+                <b>Item 2</b>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus mollitia ad adipisci!</div>
+            <div class="col-sm-4 col-md-3">
+                <b>Item 3</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Rerum beatae molestiae id.</div>
+            <div class="col-sm-4 col-md-3 visible-md">
+                <b>Item 4</b>Versteckt für SM!
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Rerum beatae molestiae id.</div>
         </div>
