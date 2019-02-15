@@ -12,17 +12,31 @@
         <div class="container">
             <!-- Child-Container: header-->
             <div class="navbar-header">
+                <button 
+                    data-toggle="collapse"
+                    data-target="#navbarCollapse"
+                    class="navbar-toggle collapsed">
+                        <span class="sr-only">Toggle-Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                </button>
                 <!-- Home-Link ist navbar-brand: -->
                 <a href="#" class="navbar-brand">Home</a>
             </div>
-            <!-- Child-Container: collapser-->
-            <div class="navbar-collapse">
+            <!-- Child-Container: collapser braucht ID!-->
+            <div class="navbar-collapse collapse" id="navbarCollapse">
                 <!-- ul>li*4>a{Navbartest} -->
-                <ul>
+                <ul class="nav navbar-nav">
                     <li><a href="">Navbartest</a></li>
                     <li><a href="">Navbartest</a></li>
                     <li><a href="">Navbartest</a></li>
                     <li><a href="">Navbartest</a></li>
+                </ul>
+                <!-- 2. Menü -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="">Impressum</a></li>
+                    <li><a href="">AGB</a></li>
                 </ul>
             </div>
         </div>    

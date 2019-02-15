@@ -48,6 +48,8 @@ Inhalt
 	* 3.11. [Collapsible](#Collapsible)
 	* 3.12. [Dropdown](#Dropdown)
 	* 3.13. [Navbar](#Navbar)
+		* 3.13.1. [Beispiel Navbar](#BeispielNavbar)
+		* 3.13.2. [Beispiel Navbar mit Collapser](#BeispielNavbarmitCollapser)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -103,8 +105,6 @@ Installationen durchführen für folgende Extensions:
   - https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg?hl=de
 - How to add GIFs to your GitHub README
   - https://medium.com/@josephcardillo/how-to-add-gifs-to-your-github-readme-89c74da2ce47
-- markdown-magic-local-image
-    - https://github.com/stevenbenisek/markdown-magic-local-image
 
 ###  1.6. <a name='LESSInstallation'></a>LESS Installation
 Eingabe im Terminal
@@ -2823,6 +2823,7 @@ Vorschau
 - https://getbootstrap.com/docs/3.3/examples/navbar/
 - https://www.w3schools.com/bootstrap/bootstrap_navbar.asp
 
+####  3.13.1. <a name='BeispielNavbar'></a>Beispiel Navbar
 Aufruf der vordefinierten bootstrap.css-Datei über HTML
 ```html
 <!DOCTYPE html>
@@ -2868,8 +2869,9 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
     </nav>
     <div class="container">
         <h3>Navbars ...</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam earum atque dolor, magni dignissimos
-            perspiciatis itaque labore debitis sapiente recusandae, ab animi assumenda blanditiis tempore.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam earum
+            atque dolor, magni dignissimos perspiciatis itaque labore debitis
+            sapiente recusandae, ab animi assumenda blanditiis tempore.</p>
     </div>
 
     <script src="node_modules/jquery/dist/jquery.js"></script>
@@ -2882,3 +2884,75 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 Vorschau  
 
 ![Navbar](images/Bootstrap_Navbar.png)
+
+####  3.13.2. <a name='BeispielNavbarmitCollapser'></a>Beispiel Navbar mit Collapser
+Aufruf der vordefinierten bootstrap.css-Datei über HTML
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap: Navbar</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Child-Container: header-->
+            <div class="navbar-header">
+                <button data-toggle="collapse" data-target="#navbarCollapse"
+                class="navbar-toggle collapsed">
+                    <span class="sr-only">Toggle-Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Home-Link ist navbar-brand: -->
+                <a href="#" class="navbar-brand">Home</a>
+            </div>
+            <!-- Child-Container: collapser braucht ID!-->
+            <div class="navbar-collapse collapse" id="navbarCollapse">
+                <!-- ul>li*4>a{Navbartest} -->
+                <ul class="nav navbar-nav">
+                    <li><a href="">Navbartest</a></li>
+                    <li><a href="">Navbartest</a></li>
+                    <li><a href="">Navbartest</a></li>
+                    <li><a href="">Navbartest</a></li>
+                </ul>
+                <!-- 2. Menü -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="">Impressum</a></li>
+                    <li><a href="">AGB</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h3>Navbars ...</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam earum
+            atque dolor, magni dignissimos perspiciatis itaque labore debitis
+            sapiente recusandae, ab animi assumenda blanditiis tempore.</p>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+
+</html>
+```
+
+Vorschau (Desktop)  
+
+![Navbar Collapser Desktop](images/Bootstrap_Navbar_Collapser_Desktop.png)
+
+Vorschau (Mobile geschlossen)
+
+![Navbar Collapser Mobile geschlossen](images/Bootstrap_Navbar_Collapser_Mobile_geschlossen.png)
+
+Vorschau (Mobile aufgeklappt)
+
+![Navbar Collapser Mobile geschlossen](images/Bootstrap_Navbar_Collapser_Mobile_aufgeklappt.png)
