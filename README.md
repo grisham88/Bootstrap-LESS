@@ -33,6 +33,7 @@ Inhalt
 	* 3.2. [Nutzung](#Nutzung)
 	* 3.3. [Grundlagen](#Grundlagen)
 	* 3.4. [Tabellen](#Tabellen)
+	* 3.5. [Utilities](#Utilities)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -71,6 +72,9 @@ Installationen durchführen für folgende Extensions:
     - sonst ist Englisch der empfohlene Standard
         - über F1 kann mittels "> Configure Display Language" die Spracheinstellung geändert werden
 - Über Datei bzw. File, Automatische Speichern/Autosave aktivieren
+- Markdown TOC von Jeffrey Kern
+  - Ausführen mit STRG + SHIFT + P
+    - Eingabe von "Generate TOC for markdown" + ENTER
 - Easy LESS
     - "Compile-on-save" for LESS stylesheets without using a build task.
 
@@ -1825,6 +1829,8 @@ Aufruf der .css-Datei über html
 - Aktualisierung von Bootstrap mittels "npm install", damit werden die Sources frisch geholt
 
 ###  3.3. <a name='Grundlagen'></a>Grundlagen
+- https://www.bootstrapworld.de/layout-grundlagen.html
+
 Aufruf der vordefinierten bootstrap.css-Datei über html
 ```html
 <!DOCTYPE html>
@@ -1876,6 +1882,8 @@ Aufruf der vordefinierten bootstrap.css-Datei über html
 ```
 
 ###  3.4. <a name='Tabellen'></a>Tabellen
+- https://getbootstrap.com/docs/4.0/content/tables/
+
 Aufruf der vordefinierten bootstrap.css-Datei über html
 ```html
 <!DOCTYPE html>
@@ -1995,6 +2003,46 @@ Aufruf der vordefinierten bootstrap.css-Datei über html
                 <td>Dummyinhalt</td>
             </tr>
         </table>
+    </div>
+</body>
+
+</html>
+```
+
+###  3.5. <a name='Utilities'></a>Utilities
+- https://getbootstrap.com/docs/4.2/layout/utilities-for-layout/
+
+Aufruf der vordefinierten bootstrap.css-Datei über html
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap: Utilities</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Utilities</h1>
+        <p class="pull-left">Left: Lorem ipsum dolor sit amet consectetur.</p>
+        <p class="pull-right">Right: Lorem ipsum dolor sit amet consectetur.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
+            accusantium quidem similique dolores aliquid deserunt adipisci eius vel ut dignissimos corporis nisi quas,
+            error necessitatibus.</p>
+        <p>
+            <img src="pics/bild.jpg" alt="Ein Bild" class="center-block">
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+            dignissimos facilis, quam debitis odit assumenda, quis voluptatum numquam, doloribus optio et nobis quae
+            architecto nemo.</p>
+        <p class="text-center">
+            Hier ist Text!
+        </p>
     </div>
 </body>
 
