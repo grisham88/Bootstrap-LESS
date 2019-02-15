@@ -1,0 +1,7 @@
+{
+    "less.compile": {
+        "out": false,
+        "main": "bootstrap.less",
+        "compress": false
+    }
+}
