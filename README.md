@@ -2705,4 +2705,52 @@ Vorschau
 
 Aufruf der vordefinierten bootstrap.css-Datei über HTML
 ```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap: Collapsible</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Collapsible</h1>
+        <p>
+            <a href="#myCollapser1" data-toggle="collapse" class="btn">Collapser 1</a>
+
+            <button class="btn btn-default" data-target="#myCollapser2" 
+            data-toggle="collapse">Collapser 2</button>
+        </p>
+        <div id="myCollapser1" class="collapse bg-success">
+            <h3>Collapser 1</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Ex voluptatum laborum eligendi modi sit
+                aperiam!</p>
+        </div>
+        <div id="myCollapser2" class="collapse bg-info">
+            <h3>Collapser 2</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Ex voluptatum laborum eligendi modi sit
+                aperiam!</p>
+        </div>
+        <p>Ein Collapser ist ein Container, der ausgeblendet ist, aber bei Bedarf...</p>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+
+</html>
 ```
+
+Vorschau (Alles collapsed)  
+![Alles collapsed](images/Bootstrap_alles_collapsed.png)
+
+Vorschau (Collapser 1 aufgeklappt)  
+![Collapser 1 aufgeklappt](images/Bootstrap_Collapser1_aufgeklappt.png)
+
+Vorschau (Collapers 1 & 2 aufgeklappt)  
+![Collapers 1 & 2 aufgeklappt](images/Bootstrap_Collapser1+2_aufgeklappt.png)
