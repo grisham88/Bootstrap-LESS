@@ -41,7 +41,7 @@ Inhalt
 		* 3.6.3. [Beispiel Push & Pull](#BeispielPushPull)
 		* 3.6.4. [Beispiel Zeigen und Verstecken](#BeispielZeigenundVerstecken)
 	* 3.7. [Panels](#Panels)
-	* 3.8. [Buttons](#Buttons)
+	* 3.8. [Buttons & Formulare](#ButtonsFormulare)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -75,25 +75,29 @@ Installationen durchführen für folgende Extensions:
 - CSS Formatter
 - Stylesheet Formatter
 - Beautify css/sass/scss/less
+- Easy LESS
+    - "Compile-on-save" for LESS stylesheets without using a build task.
 - Deutsches Studio falls gewünscht
     - German Language Pack for Visual Studio Code
     - sonst ist Englisch der empfohlene Standard
         - über F1 kann mittels "> Configure Display Language" die Spracheinstellung geändert werden
 - Über Datei bzw. File, Automatische Speichern/Autosave aktivieren
-- Markdown TOC von Jeffrey Kern
-  - Ausführen mit STRG + SHIFT + P
-    - Eingabe von "Generate TOC for markdown" + ENTER
-- Easy LESS
-    - "Compile-on-save" for LESS stylesheets without using a build task.
+- Markdown Tools
+    - Markdown TOC von Jeffrey Kern
+    - Ausführen mit STRG + SHIFT + P
+        - Eingabe von "Generate TOC for markdown" + ENTER
+    - Markdown Preview Github Styling
 
 ###  1.4. <a name='EmmetCheatsheets'></a>Emmet Cheatsheets
 - https://docs.emmet.io/cheat-sheet/
 
-###  1.5. <a name='BilderGifsvonWebseitenaufnehmen'></a>Bilder/Gifs von Webseiten aufnehmen
+###  1.5. <a name='BilderGifsvonWebseitenaufnehmen'></a>Bilder/Gifs von Webseiten aufnehmen 
 - Screenshots der Webseite - FireShot
   - https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg?hl=de
 - How to add GIFs to your GitHub README
   - https://medium.com/@josephcardillo/how-to-add-gifs-to-your-github-readme-89c74da2ce47
+- markdown-magic-local-image
+    - https://github.com/stevenbenisek/markdown-magic-local-image
 
 ###  1.6. <a name='LESSInstallation'></a>LESS Installation
 Eingabe im Terminal
@@ -2461,14 +2465,21 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
             <div class="panel-footer">Das ist der Footer...</div>
         </div>
     </div>
+    <p>
+        <img width="460" height="300" src="http://www.fillmurray.com/460/300">
+    </p>
+    <p>
+        <img src="images/Bootstrap_ Panels.png" width="220" height="240" />
+    </p>
+    <img src="/images/Bootstrap_ Panels.png?raw=true" width="100" height="100" />
 </body>
 
 </html>
 ```
 
-![Panels](/images/'Bootstrap_ Panels' - 127_0_0_1_5500_panels_html.png)
+![Panels](Bootstrap_ Panels.png)
 
-###  3.8. <a name='Buttons'></a>Buttons
+###  3.8. <a name='ButtonsFormulare'></a>Buttons & Formulare
 - https://www.w3schools.com/bootstrap/bootstrap_buttons.asp
 - https://getbootstrap.com/docs/4.0/components/buttons/
 
@@ -2508,6 +2519,23 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
                 <button class="btn btn-primary btn-lg">Primary-Large</button>
             </div>
         </div>
+        <h1>Formulare</h1>
+        <p>Formulare müssen die class="form" erhalten.</p>
+        <form action="#" class="form">
+
+            <div class="form-group">
+                <label for="usr">User</label>
+                <input class="form-control" type="text" id="usr" name="user">
+            </div>
+            <div class="form-group">
+                <label for="pw">Passwort</label>
+                <input class="form-control" type="text" id="pw" name="user">
+            </div>
+            <div class="form-group"></div>
+            <!-- Buttons NICHT als form-control! -->
+            <input class="btn btn-primary" type="submit" value="Abschicken">
+    </div>
+    </form>
     </div>
 </body>
 
