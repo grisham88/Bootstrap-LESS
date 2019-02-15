@@ -38,9 +38,9 @@ Inhalt
 	* 3.5. [Utilities](#Utilities)
 	* 3.6. [Grids](#Grids)
 		* 3.6.1. [Beispiel Grids](#BeispielGrids)
-		* 3.6.2. [Beispiel Offsets](#BeispielOffsets)
-		* 3.6.3. [Beispiel Push & Pull](#BeispielPushPull)
-		* 3.6.4. [Beispiel Zeigen und Verstecken](#BeispielZeigenundVerstecken)
+		* 3.6.2. [Offset](#Offset)
+		* 3.6.3. [Push & Pull](#PushPull)
+		* 3.6.4. [ Zeigen und Verstecken](#ZeigenundVerstecken)
 	* 3.7. [Panels](#Panels)
 	* 3.8. [Buttons & Formulare](#ButtonsFormulare)
 	* 3.9. [Formulare](#Formulare)
@@ -2145,35 +2145,15 @@ Grid-items mit class:
 - .col-sm-12
 - .col-md-...
 - .col-lg-...
-- ACHTUNG
-  - Gibt es 12 Spalten und man möchte eine Zeile ausfüllen,
+
+ACHTUNG
+- Gibt es 12 Spalten und man möchte eine Zeile ausfüllen,
   so müssen die col-classes zusammen immer 12 (z.B. 4+4+4) ergeben
 
-Offset:
-- https://getbootstrap.com/docs/4.0/layout/grid/#offsetting-columns
-  - .col-xs-offset-1..11
-  - .col-sm-offset-1..11
-  - .col-md-offset-1..11
-  - .col-lg-offset-1..11
-
-Push & Pull:
-- https://getbootstrap.com/docs/3.4/css/#grid-column-ordering
-
-Zeigen & Verstecken:
-- https://v4-alpha.getbootstrap.com/layout/responsive-utilities/
-- Verstecken
-  - .hidden
-    - .hidden-xs
-    - .hidden-sm
-    - .hidden-md
-    - .hidden-lg
-    - .hidden-print
-    - vererbt sich nicht
-  - .visible
-    - .visible-xs-inline
-    - .visible-xs-block
-    - .visible-xs-inline-block    
-    - .visible-print
+Weitere Möglichkeiten
+- Offset
+- Push & Pull
+- Zeigen & Verstecken
 
 ####  3.6.1. <a name='BeispielGrids'></a>Beispiel Grids
 Aufruf der vordefinierten bootstrap.css-Datei über HTML
@@ -2249,8 +2229,14 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 
 </html>
 ```
+####  3.6.2. <a name='Offset'></a>Offset
+- https://getbootstrap.com/docs/4.0/layout/grid/#offsetting-columns
+  - .col-xs-offset-1..11
+  - .col-sm-offset-1..11
+  - .col-md-offset-1..11
+  - .col-lg-offset-1..11
 
-####  3.6.2. <a name='BeispielOffsets'></a>Beispiel Offsets
+#####  3.6.2.1 <a name='BeispielOffsets'></a>Beispiel
 Aufruf der vordefinierten bootstrap.css-Datei über HTML
 ```html
 <!DOCTYPE html>
@@ -2290,8 +2276,10 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 
 </html>
 ```
+####  3.6.3. <a name='PushPull'></a>Push & Pull
+- https://getbootstrap.com/docs/3.4/css/#grid-column-ordering
 
-####  3.6.3. <a name='BeispielPushPull'></a>Beispiel Push & Pull
+#####  3.6.3.1 <a name='BeispielPushPull'></a>Beispiel
 Aufruf der vordefinierten bootstrap.css-Datei über HTML
 ```html
 <!DOCTYPE html>
@@ -2376,7 +2364,24 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 </html>
 ```
 
-####  3.6.4. <a name='BeispielZeigenundVerstecken'></a>Beispiel Zeigen und Verstecken
+####  3.6.4. <a name='ZeigenundVerstecken'></a> Zeigen und Verstecken
+- https://v4-alpha.getbootstrap.com/layout/responsive-utilities/
+- Verstecken
+  - .hidden
+    - .hidden-xs
+    - .hidden-sm
+    - .hidden-md
+    - .hidden-lg
+    - .hidden-print
+    - vererbt sich nicht
+- Zeigen
+  - .visible
+    - .visible-xs-inline
+    - .visible-xs-block
+    - .visible-xs-inline-block    
+    - .visible-print
+
+#####  3.6.4.1 <a name='BeispielZeigenundVerstecken'></a>Beispiel
 Aufruf der vordefinierten bootstrap.css-Datei über HTML
 ```html
 <!DOCTYPE html>
