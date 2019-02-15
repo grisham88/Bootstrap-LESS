@@ -7,7 +7,7 @@ Inhalt
 	* 1.2. [Hilfsfunktionen für VS Code](#HilfsfunktionenfrVSCode)
 	* 1.3. [Extensions für VS Code](#ExtensionsfrVSCode)
 	* 1.4. [Emmet Cheatsheets](#EmmetCheatsheets)
-	* 1.5. [Bootstrap Installation](#BootstrapInstallation)
+	* 1.5. [Bootstrap Installation & Einsatz](#BootstrapInstallationEinsatz)
 	* 1.6. [LESS Installation](#LESSInstallation)
 * 2. [LESS](#LESS)
 	* 2.1. [Variablen](#Variablen)
@@ -30,6 +30,7 @@ Inhalt
 	* 3.1. [Modulares CSS](#ModularesCSS)
 		* 3.1.1. [Beispiele classes und ids](#Beispieleclassesundids)
 		* 3.1.2. [Beispiel only classes](#Beispielonlyclasses)
+	* 3.2. [Nutzung](#Nutzung)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -74,12 +75,30 @@ Installationen durchführen für folgende Extensions:
 ###  1.4. <a name='EmmetCheatsheets'></a>Emmet Cheatsheets
 - https://docs.emmet.io/cheat-sheet/
 
-###  1.5. <a name='BootstrapInstallation'></a>Bootstrap Installation
+###  1.5. <a name='BootstrapInstallationEinsatz'></a>Bootstrap Installation
 Eingabe im Terminal
+
+Vorbereitung: 
+```html
+npm --version
+npm init
+
+alles mit Enter bestätigen (Außer Angaben sind gewünscht)
+```
 
 Installation: 
 ```html
-npm install --save @ng-bootstrap/ng-bootstrap
+npm install bootstrap@3.3.7
+```
+Ergebnis:
+```html
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN bootstrap1@1.0.0 No description
+npm WARN bootstrap1@1.0.0 No repository field.
+
++ bootstrap@3.3.7
+added 1 package from 1 contributor and audited 1 package in 1.467s
+found 0 vulnerabilities
 ```
 
 ###  1.6. <a name='LESSInstallation'></a>LESS Installation
@@ -87,7 +106,7 @@ Eingabe im Terminal
 
 Installation: 
 ```html
-npm install -g less
+npm install -g less --save-dev
 ```
 Abfrage der Version: 
 ```html
@@ -1521,16 +1540,17 @@ Aufruf der einzigen .css-Datei über html
 - https://getbootstrap.com/
 
 - Modulares CSS
-- Einsatzgrund: Zeitfaktor
-    - vorderfinierte Klassen
-- Gestaltungsraster
-    - Grid
-- Verlässlichkeit
-    - Kompatibel
-- Responsives Verhalten
-    - meist inklusive
-- Resets / Normalisierung
-    - inklusive
+- Einsatzgründe
+  - Zeitfaktor
+      - vorderfinierte Klassen
+  - Gestaltungsraster
+      - Grid
+  - Verlässlichkeit
+      - Kompatibel
+  - Responsives Verhalten
+      - meist inklusive
+  - Resets / Normalisierung
+      - inklusive
 
 Alternative zu Bootstrap
 - Foundation
@@ -1792,3 +1812,6 @@ BEM (Yandex)
     </div>
 </body>
 ```
+
+###  3.2. <a name='Nutzung'></a>Nutzung
+- [Installation & Einsatz](#BootstrapInstallationEinsatz)
