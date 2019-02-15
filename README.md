@@ -10,6 +10,7 @@ Inhalt
 	* 1.5. [Bilder/Gifs von Webseiten aufnehmen](#BilderGifsvonWebseitenaufnehmen)
 	* 1.6. [LESS Installation](#LESSInstallation)
 	* 1.7. [Bootstrap Installation](#BootstrapInstallation)
+		* 1.7.1. [jQuery Installation](#jQueryInstallation)
 * 2. [LESS](#LESS)
 	* 2.1. [Variablen](#Variablen)
 		* 2.1.1. [Beispiele mit Variablen](#BeispielemitVariablen)
@@ -43,6 +44,8 @@ Inhalt
 	* 3.7. [Panels](#Panels)
 	* 3.8. [Buttons & Formulare](#ButtonsFormulare)
 	* 3.9. [Formulare](#Formulare)
+	* 3.10. [Navigationen](#Navigationen)
+	* 3.11. [Collapsible](#Collapsible)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -134,6 +137,7 @@ Installation:
 ```html
 npm install bootstrap@3.3.7
 ```
+
 Ergebnis:
 ```html
 npm notice created a lockfile as package-lock.json. You should commit this file.
@@ -143,6 +147,28 @@ npm WARN bootstrap1@1.0.0 No repository field.
 + bootstrap@3.3.7
 added 1 package from 1 contributor and audited 1 package in 1.467s
 found 0 vulnerabilities
+```
+
+####  1.7.1. <a name='jQueryInstallation'></a>jQuery Installation
+Vorbereitung: 
+```html
+npm view jquery versions
+```
+
+Installation: 
+```html
+npm install jquery @2.2.4
+```
+
+Ergebnis:
+```html
+npm WARN bootstrap1@1.0.0 No description
+npm WARN bootstrap1@1.0.0 No repository field.
+
++ jquery@2.2.4
+added 1 package from 1 contributor and audited 2 packages in 1.565s
+found 1 high severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
 ```
 
 ##  2. <a name='LESS'></a>LESS
@@ -2539,7 +2565,7 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 ```
 
 Vorschau  
-![](images/Bootstrap_Buttons&Formulare.png)
+![Buttons & Formulare](images/Bootstrap_Buttons&Formulare.png)
 
 ###  3.9. <a name='Formulare'></a>Formulare
 - https://www.bootstrapworld.de/formular.html
@@ -2615,4 +2641,64 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 ```
 
 Vorschau  
-![](images/Bootstrap_Formulare.png)
+![Formulare](images/Bootstrap_Formulare.png)
+
+###  3.10. <a name='Navigationen'></a>Navigationen
+- https://getbootstrap.com/docs/4.0/components/navbar/
+- https://getbootstrap.com/docs/4.0/components/navs/
+- https://bootsnipp.com/tags/navigation
+
+Aufruf der vordefinierten bootstrap.css-Datei über HTML
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap: Navigationen</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Navigationen</h1>
+        <p>Eine Navigation hat die Basisklasse "nav".
+            Hier mit dem Modifier "nav-pills". Das zweite Item ist "active".
+        </p>
+        <!-- ul>li*4>a{Test} -->
+        <ul class="nav nav-pills">
+            <li><a href="">Test</a></li>
+            <li class="active"><a href="">Test</a></li>
+            <li><a href="">Test</a></li>
+            <li><a href="">Test</a></li>
+        </ul>
+        <p>Eine Navigation hat die Basisklasse "nav".
+            Hier mit dem Modifier "nav-tabs". Das zweite Item ist "active".
+        </p>
+        <!-- ul>li*4>a{Test} -->
+        <ul class="nav nav-tabs">
+            <li><a href="">Test</a></li>
+            <li class="active"><a href="">Test</a></li>
+            <li><a href="">Test</a></li>
+            <li><a href="">Test</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
+```
+
+Vorschau  
+![](images/Bootstrap_Navigationen.png)
+
+
+###  3.11. <a name='Collapsible'></a>Collapsible
+- https://getbootstrap.com/docs/4.1/components/collapse/
+- https://www.w3schools.com/bootstrap/bootstrap_collapse.asp
+- [jQuery Installation](#jQueryInstallation)
+
+Aufruf der vordefinierten bootstrap.css-Datei über HTML
+```html
+```
