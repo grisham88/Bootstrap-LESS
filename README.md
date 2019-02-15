@@ -2461,7 +2461,8 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
         </div>
     </div>
 </body>
-
+<img src="FireShot Pro Screen Capture #002 - 'Bootstrap_ Panels' - 127_0_0_1_5500_panels_html.png"
+     alt="Markdown Monster icon"/>
 </html>
 ```
- ![Bootstrap_ Panels](pics\FireShot Pro Screen Capture #002 - 'Bootstrap_ Panels' - 127_0_0_1_5500_panels_html.png)
+ ![Bootstrap_ Panels](FireShot Pro Screen Capture #002 - 'Bootstrap_ Panels' - 127_0_0_1_5500_panels_html.png)
