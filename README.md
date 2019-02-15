@@ -2276,6 +2276,10 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 
 </html>
 ```
+
+Vorschau  
+![Grid Offsets](images/Bootstrap_Grid_Offsets.png)
+
 ####  3.6.3. <a name='PushPull'></a>Push & Pull
 - https://getbootstrap.com/docs/3.4/css/#grid-column-ordering
 
@@ -2448,10 +2452,10 @@ Aufruf der vordefinierten bootstrap.css-Datei über HTML
 </html>
 ```
 Vorschau mit verschiedenen Geräteklassen 
-![Zeigen & Verstecken - X-Small](images/Bootstrap_Grid_Zeige&Verstecken_X-Small.png)
-![Zeigen & Verstecken - Small](images/Bootstrap_Grid_Zeige&Verstecken_Small.png)
-![Zeigen & Verstecken - Medium](images/Bootstrap_Grid_Zeige&Verstecken_Medium.png)
-![Zeigen & Verstecken - Large](images/Bootstrap_Grid_Zeige&Verstecken_Large.png)
+![Grid Zeigen & Verstecken - X-Small](images/Bootstrap_Grid_Zeige&Verstecken_X-Small.png)
+![Grid Zeigen & Verstecken - Small](images/Bootstrap_Grid_Zeige&Verstecken_Small.png)
+![Grid Zeigen & Verstecken - Medium](images/Bootstrap_Grid_Zeige&Verstecken_Medium.png)
+![Grid Zeigen & Verstecken - Large](images/Bootstrap_Grid_Zeige&Verstecken_Large.png)
 
 ###  3.7. <a name='Panels'></a>Panels
 - https://www.w3schools.com/bootstrap/bootstrap_panels.asp
